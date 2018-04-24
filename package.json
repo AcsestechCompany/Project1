@@ -2,6 +2,7 @@
   "name": "reactjs",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage":"https://AcsestechCompany.github.io/Project/",
   "scripts": {
     "start": "npm run build",
     "build": "webpack-dev-server --mode development --content-base=src/public --inline --hot --history-api-fallback",
