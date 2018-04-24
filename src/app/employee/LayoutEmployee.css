@@ -1,0 +1,119 @@
+.hyperLinkEmployee{
+color:black !important;
+font-weight:200;
+}
+
+.dateStyle{
+  border:1px solid #D0D3D4;
+  padding-left: 1vw;
+  height:2.3vw;
+  padding-bottom:1vw;
+}
+.labelStyle1{
+  font-size:0.8vw;
+  margin-bottom:-1vw;
+  font-weight: lighter;
+}
+.slideremp{
+position:relative;
+right:2vw;
+bottom:13.8vw;
+}
+.empName{
+  color:#FF9527;
+ position:relative;
+ top:-0.7vw;
+  font-size:0.77vw;
+  text-align:center;
+}
+.pagination{
+position:relative;
+top:0.7vw;
+bottom:1vw;
+right:-50vw;
+font-size:2vw;
+  color:grey;
+}
+#btnManual{
+position:relative;
+left:1vw;
+box-shadow:none;
+}
+#btnAuto{
+position:relative;
+left:2vw;
+box-shadow:none;
+}
+
+.empDesign{
+margin-top:0.5vw;
+font-size:0.8vw;
+color:#566573  ;
+}
+.empId{
+margin-top:-1vw;
+font-size:0.8vw;
+color:#787878;
+}
+.empPhone{
+font-size:0.8vw;
+color:#787878;
+position:relative;
+top:-1vw;
+}
+.overtimeDiv{
+  margin-left:8vw;
+  color:grey;
+}
+.overtimePay{
+  position:relative;
+  left:1.3vw;
+}
+.enableBtn{
+  margin-left:2vw;
+  height:2vw;
+  width:4.5vw;
+  font-size:0.8vw;
+}
+
+.disableBtn{
+  margin-left:1vw;
+  height:2vw;
+  width:4.5vw;
+  font-size:0.8vw;
+}
+.formStyle{
+  padding-top:1.5vw;
+  padding-bottom:1vw;
+}
+#inputstyle{
+  width:100%;
+  height:2vw;
+  font-size:0.7vw;
+  box-shadow:none !important;
+   border-color:#D7D7D7 !important;
+}
+
+#buttonstyle{
+  border-color:#FF7F27 !important;
+  margin-top:1vw;
+  color:grey;
+  width:12%;
+  font-size:0.9vw;
+  height:2vw;
+}
+.inputStyle{
+height:2vw;
+width:50%;
+font-size: 0.7vw;
+box-shadow:none !important;
+ border-color:#D7D7D7 !important;
+}
+#inputstyle1{
+  width:50%;
+  height:2vw;
+  font-size: 0.7vw;
+  margin-bottom:1vw;
+  box-shadow:none !important;
+   border-color:#D7D7D7 !important;
+}

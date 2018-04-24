@@ -1,0 +1,261 @@
+.containerRegistration{
+  background-color:#2C3E50;
+  margin:0 auto;
+  width:100%;
+min-height:814.3px;
+overflow:hidden;
+}
+@media screen and (max-width: 1366px) {
+  .containerRegistration{
+    background-color:#2C3E50;
+    margin:0 auto;
+    width:100%;
+  min-height:642.5px;
+  overflow:hidden;
+  }
+  #submit{
+    position:relative;
+    top:2vw;
+    background-color:#2C3E50 !important;
+    border:0.5px solid #B6E3EF;
+    width:15%;
+    left:10.9vw;
+  }
+
+}
+.logo{
+  font-size:2vw;
+  font-family:serif;
+  color:red;
+  position:relative;
+  left:8vw;
+}
+.footerLine{
+  padding-left:8vw;
+    background-color:#2C3E50;
+}
+.footerSpan{
+float:right;
+position:relative;
+right:6.5vw;
+}
+.footerText{
+  position:relative;
+  color:white !important;
+  font-size:0.7vw;
+  font-family:sans-serif;
+}
+.text{
+  color:white;
+  position:relative;
+  top:5.3vw;
+  left:8vw;
+  font-size:1.2vw;
+  font-family:sans-serif;
+}
+.floatingtext{
+  font-size:0.9vw;
+  position:relative;
+  left:63vw;
+  color:#D0D3D4;
+
+}
+#forminput{
+  border-color:#B6E3EF   !important;
+  background-color:#2C3E50;
+  box-shadow:none;
+  color:white;
+ width:30%;
+}
+#forminput1{
+  border-color:white  !important;
+  background-color:#2C3E50;
+  box-shadow:none;
+  color:white;
+ width:30%;
+}
+form#ios input[type=password]{
+    height: 50px;
+    width: 40px;
+    text-align: center;
+    font-size: 2em;
+    border:none;
+    border-bottom:1px solid #B6E3EF;
+    background-color:#2C3E50 !important;
+    position:relative;
+    left:8vw;
+}
+form#ios input[type=password]:focus{
+  box-shadow:red;
+
+}
+
+.registration{
+  position:relative;
+  top:5vw;
+  left:33vw;
+}
+.registrationheader{
+  position:relative;
+  bottom:3vw;
+  left:12vw;
+  color:red;
+  font-size:1vw;
+}
+.registrationheaderLogin{
+  position:relative;
+  bottom:3vw;
+  left:13vw;
+  color:red;
+  font-size:1vw;
+}
+.lasttext{
+  color:white !important;
+  text-decoration: none !important;
+  position:relative;
+  top:3vw;
+  left:10vw;
+}
+.lasttext1{
+  color:white !important;
+  position:relative;
+  top:4vw;
+  left:6vw;
+  font-size:0.75vw;
+}
+.lasttext2{
+  position:relative;
+  left:8vw;
+  color:white !important;
+}
+.hyperlink1{
+  color:white !important;
+  text-decoration: none !important;
+}
+.otptext{
+  color:white;
+}
+.ptext{
+  position:relative;
+  left:3vw;
+  color:white;
+}
+#submit{
+  position:relative;
+  top:2vw;
+  background-color:#2C3E50 !important;
+  border:0.5px solid #B6E3EF;
+  width:9%;
+  left:10.9vw;
+}
+#submitLink{
+  background-color:#2C3E50 !important;
+  border-color:#B6E3EF   !important;
+  text-decoration:none !important;
+ color:white !important;
+}
+.hyperlink{
+  color:#D0D3D4 !important;
+  text-decoration: none !important;
+}
+.list{
+  position:relative;
+  top:2vw;
+  font-size:0.9vw;
+}
+.rowStyle{
+  position:relative;
+  left:8vw;
+  top:7vw;
+margin-right:12.5vw;
+}
+.insidefloating{
+  position:relative;
+right:3vw;
+}
+#imgStyle{
+  width:19vw;
+  height:18vw;
+}
+#imgStyle1{
+  width:19vw;
+  height:18vw;
+  transition-delay: 5s !important;
+}
+#cardStyle{
+  background-color: #9DB4D2;
+  height:18vw;
+}
+#cardStyle2{
+  background-color: #9DB4D2;
+  height:18vw;
+}
+#featureHeading{
+  color:white;
+  font-size:1.5vw;
+  position:relative;
+  right:7vw;
+}
+#featuretext{
+  position:relative;
+  top:3vw;
+  right:7vw;
+  font-size:1vw;
+  color:white;
+}
+.list li{
+  padding-bottom:0.7vw;
+}
+.back{
+  float:right;
+  position:relative;
+  top:10vw;
+  right:6.5vw;
+  color:white;
+}
+.floatingtext1{
+  font-size:0.9vw;
+  position:relative;
+bottom:1.8vw;
+  left:88vw;
+  color:#D0D3D4;
+}
+.insidefloating1{
+    font-size:0.9vw;
+  position:relative;
+  right:3vw;
+}
+.hrStyle{
+  background-color:red;
+  position:relative;
+  top:4vw;
+  left:8vw;
+  margin-right:13.2vw;
+}
+.pagetext{
+  color:#D0D3D4;
+  font-size:0.9vw;
+  font-family:sans-serif;
+  position:relative;
+  top:4vw;
+  left:8vw;
+}
+.content{
+  position:relative;
+  top:4vw;
+}
+.formstyle{
+  position:relative;
+  top:3vw;
+  left:3vw;
+}
+#viewfeatures{
+  position:relative;
+  top:15vw;
+  left:7.8vw;
+  background-color:#2C3E50 !important;
+  border-color:white !important;
+  border:0.5px solid white;
+  color:white;
+  width:14%;
+}

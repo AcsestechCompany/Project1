@@ -1,0 +1,208 @@
+
+
+.cardStyle1{
+  height:16vw;
+   background-color:#FFFFFF;
+   border:none;
+   box-shadow:-0.01px 3px 8px 0.1px 	gray;
+}
+.pagination{
+position:relative;
+left:17vw;
+font-size:0.5vw;
+  color:grey;
+}
+.holidaysCard{
+  border:none;
+}
+#holidaysLeft{
+  color:gray;
+  position:relative;
+right:1vw;
+width:100vw;
+}
+#holidaysRight{
+  color:gray;
+  position:relative;
+  left:1vw;
+}
+#repoteesLeft{
+  color:gray;
+  position:relative;
+right:4.5vw;
+}
+#repoteesRight{
+  color:gray;
+  position:relative;
+  left:3.3vw;
+}
+.circleAlignment{
+  position:relative;
+  left:3.8vw;
+  top:-0.5vw;
+}
+.cardStyle2{
+  height:12vw;
+   background-color:#FFFFFF;
+   border:none;
+   box-shadow:-0.01px 3px 8px 0.1px 	gray;
+   width:103%;
+}
+.cardStyle3{
+  height:12vw;
+margin-left:1vw;
+margin-right:-0.5vw;
+   background-color:#FFFFFF;
+   border:none;
+   box-shadow:-0.01px 3px 8px 0.1px 	gray;
+
+}
+.cardStyle4{
+  height:12vw;
+margin-left:0.4vw;
+margin-right:-0.15vw;
+   background-color:#FFFFFF;
+   border:none;
+ box-shadow:-0.01px 3px 8px 0.1px 	gray;
+
+}
+
+
+
+.giftIcon{
+  color:gray;
+  position:relative;
+bottom:-0.25vw;
+right:0.5vw;
+}
+.anouncementStyle{
+  color:gray;
+  position:relative;
+  left:0.3vw;
+  top:0.2vw;
+}
+.calendarText{
+position:relative;
+top:0.4vw;
+font-size:0.65vw;
+right:2vw;
+left:-0.6vw;
+}
+#empCalendar{
+  position: relative;
+  top:0.23vw;
+  right:0.5vw;
+}
+.empicons{
+
+  color:black;
+  margin-left:24.8vw;
+  margin-top:-2.3vw;
+  font-size:0.2vw;
+}
+
+.linkDepartment{
+  color:white !important;
+  text-decoration: none;
+}
+.linkmore{
+  color:gray !important;
+  text-decoration:none;
+  font-size:0.7vw;
+}
+.cardStyle{
+  height:5vw;
+ background-color:#FFFFFF;
+ border-color:#B2BABB  ;
+ box-shadow:-0.01px 1px 1px 0.1px 	#D0D3D4;
+ text-align:justify;
+ color:red;
+}
+#droptoggle{
+  background-color:orange;
+  color:blue;
+  border:1px solid white;
+}
+#dropitem:hover{
+background-color:white !important;
+color:orange;
+}
+#dropitem{
+  cursor:pointer;
+}
+.empRow{
+  margin-left:1.3vw;
+  margin-top:1.2vw;
+  color:gray;
+  font-size:0.8vw;
+}
+.empTextP{
+  padding-right:3.7vw;
+}
+.empTextA{
+  position:relative;
+  left:-0.3vw;
+}
+.empTextOL{
+  position:relative;
+  left:2.8vw;
+}
+.empTextL{
+  position: relative;
+  left:6vw;
+}
+.empTextOT{
+  position: relative;
+  left:9.5vw;
+}
+
+.transition{
+  text-align:center;
+}
+
+.holidayIconR{
+  color:lightgray;
+  position:relative;
+  bottom:5.5vw;
+  margin-left:12vw;
+
+}
+.holidayTextR{
+
+  margin-top:-0.5vw;
+  font-size:0.8vw;
+  color:blue;
+}
+.holidayTitleR{
+  color:orange;
+  font-size:3vw;
+
+}
+.holidayDayR{
+  color:black;
+  margin-top:-3vw;
+  font-size:0.8vw;
+}
+.holidayIconL{
+  color:lightgray;
+  position:relative;
+  top:2vw;
+  right:5vw;
+}
+.holidayTextL{
+
+  margin-top:-0.5vw;
+  font-size:0.8vw;
+  color:blue;
+}
+.holidayTitleL{
+  color:orange;
+  font-size:3vw;
+
+}
+.holidayDayL{
+  color:black;
+  margin-top:-7vw;
+  font-size:0.8vw;
+
+}
