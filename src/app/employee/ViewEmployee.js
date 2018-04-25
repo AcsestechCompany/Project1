@@ -1,10 +1,11 @@
 import React from "react";
-import {empDesign,empPhone,empId,pagination} from "./LayoutEmployee.css";
+import {empDesign,empPhone,empId,pagination,paginationtext} from "./LayoutEmployee.css";
 import Icon from 'react-icons-kit';
 import { search } from 'react-icons-kit/icomoon/search';
 import { filter } from 'react-icons-kit/fa/filter';
 import { smallRight } from 'react-icons-kit/entypo/';
 import {pageHeading,hrStyle,arrow,orange,floatRight,buttonStyle,displayContainer} from "../Layout.css";
+import {dropitem} from "../home/Home.css";
 import {Link} from "react-router-dom";
 import {CardTemplate} from "./CardTemplate";
 import {EmployeeList} from "./EmployeeList";
@@ -72,7 +73,22 @@ export class ViewEmployee extends React.Component{
       <Header1/>
       <div className={displayContainer}>
 <p className={pageHeading}>
-Employee List<span  className={floatRight}> <Icon icon={search} style={{position:'relative',right:'3vw'}}/><Icon icon={filter} /></span></p>
+Employee List<span  className={floatRight}> <Icon icon={search} style={{position:'relative',right:'3vw'}}/>
+<div class="dropdown" style={{position:'relative',right:'10vw'}}>
+<button class="btn  dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+style={{width:'3vw'}}
+>
+<Icon icon={filter} />
+</button>
+
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" id={dropitem}>Departments</a>
+    <a class="dropdown-item" id={dropitem}>Designation</a>
+
+  </div>
+</div>
+</span></p>
 <hr className={hrStyle}/>
 <Link to="/AddEmployee"><button className="btn btn-outline-warning" id={buttonStyle}>
 Add New Employee</button></Link>
@@ -81,9 +97,9 @@ Add New Employee</button></Link>
 {second}
 {third}
 <p className={pagination}>
-<span onClick={this.first.bind(this)} style={{cursor:'pointer',border:'1px solid red'}}> 1 </span>
-<span onClick={this.second.bind(this)} style={{cursor:'pointer'}}> 2 </span>
-<span onClick={this.third.bind(this)} style={{cursor:'pointer'}}> 3 </span>
+<span onClick={this.first.bind(this)} id={paginationtext}> 1 </span>
+<span onClick={this.second.bind(this)} id={paginationtext}> 2 </span>
+<span onClick={this.third.bind(this)} id={paginationtext}> 3 </span>
 ></p>
   </div>
   <Footer/>

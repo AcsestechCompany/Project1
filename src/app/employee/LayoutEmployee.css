@@ -31,10 +31,17 @@ bottom:13.8vw;
 .pagination{
 position:relative;
 top:0.5vw;
-bottom:1vw;
-right:-50vw;
-font-size:2vw;
+margin-bottom:2vw;
+right:-56vw;
+font-size:1vw;
   color:grey;
+  height:5vw;
+}
+#paginationtext{
+  border:1px solid orange;
+  border-style:ridge;
+  cursor:pointer;
+margin-right:0.5vw;
 }
 #btnManual{
 position:relative;
