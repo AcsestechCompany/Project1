@@ -91,7 +91,7 @@ export class EmployeeList1 extends React.Component{
 <p className={empId}>E153</p>
 <p className={empPhone}>9786456787</p>
 </CardTemplate>
-<CardTemplate text={"david"}>
+<CardTemplate text={"David"}>
 <p className={empDesign}>Test engineer</p>
 <p className={empId}>E153</p>
 <p className={empPhone}>9786456787</p>

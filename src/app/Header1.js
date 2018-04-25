@@ -47,7 +47,7 @@ render() {
           <UncontrolledDropdown nav inNavbar className={navitemStyle}>
                 <DropdownToggle nav style={{color:'white'}}>LEAVES & TIME<Icon icon={angleDown} className={downIcon} /></DropdownToggle>
               <DropdownMenu className={dropDownStyle}>
-                <DropdownItem id={dropItem}><Link to="/EditLeave" id={hyperLink}>Leave List</Link></DropdownItem>
+                <DropdownItem id={dropItem}><Link to="/Leaves" id={hyperLink}>Leave List</Link></DropdownItem>
             <DropdownItem id={dropItem}><Link to="/Attendance" id={hyperLink}>Attendance List</Link></DropdownItem>
                 </DropdownMenu>
             </UncontrolledDropdown>
