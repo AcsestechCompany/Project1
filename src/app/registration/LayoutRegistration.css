@@ -155,7 +155,7 @@ form#ios input[type=password]:focus{
  color:white !important;
 }
 .hyperlink{
-  color:#D0D3D4 !important;
+  color:#FFFFFF !important;
   text-decoration: none !important;
 }
 .list{
@@ -217,8 +217,8 @@ right:3vw;
   font-size:0.9vw;
   position:relative;
 bottom:1.8vw;
-  left:88vw;
-  color:#D0D3D4;
+  left:89.4vw;
+  color:#FFFFFF;
 }
 .insidefloating1{
     font-size:0.9vw;
@@ -252,7 +252,7 @@ bottom:1.8vw;
 #viewfeatures{
   position:relative;
   top:15vw;
-  left:7.8vw;
+  left:8vw;
   background-color:#2C3E50 !important;
   border-color:white !important;
   border:0.5px solid white;

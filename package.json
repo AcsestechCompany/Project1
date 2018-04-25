@@ -2,7 +2,7 @@
   "name": "reactjs",
   "version": "1.0.0",
   "main": "index.js",
-  "homepage":"https://AcsestechCompany.github.io/Project1/",
+  "homepage": "https://AcsestechCompany.github.io/Project1/",
   "scripts": {
     "start": "npm run build",
     "build": "webpack-dev-server --mode development --content-base=src/public --inline --hot --history-api-fallback",
@@ -33,6 +33,13 @@
     "react-router-dom": "^4.2.2",
     "react-shapes": "^0.1.0",
     "reactstrap": "^5.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AcsestechCompany/Project1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AcsestechCompany/Project1/issues"
   },
   "description": ""
 }
