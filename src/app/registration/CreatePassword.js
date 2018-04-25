@@ -1,7 +1,7 @@
 import React from "react";
 import {LogoHeader} from "./LogoHeader";
 import {containerRegistration,content,ptext,
-  registrationheader,registration,forminput,formstyle,submit,lasttext,hyperlink1,submitLink} from "./LayoutRegistration.css";
+  passwordheader,registration,forminput,formstyle,submit,lasttext,hyperlink1,submitLink} from "./LayoutRegistration.css";
 import {Link} from "react-router-dom";
 import {FooterText} from "./FooterText";
 
@@ -13,7 +13,7 @@ export class CreatePassword extends React.Component{
       <div className={content}>
       <LogoHeader/>
       <div className={registration}>
-      <p className={registrationheader}>Create Password</p>
+      <p className={passwordheader}>Create Password</p>
       <p className={ptext}>Thank you for registering and acivating your account with <span style={{color:'red'}}>H</span>rms.</p>
       <form className={formstyle}>
       <div class="form-group">

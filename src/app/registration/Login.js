@@ -23,9 +23,8 @@ export class Login extends React.Component{
     <input type="password" class="form-control" id={forminput}  placeholder="Password"/>
   </div>
 
-  <Link to="/VerifyAccount" ><button id={submit} class="btn btn-light" >
-
-  Submit
+  <Link to="/DemoPage"><button type="submit" class="btn btn-light" id={submit}>
+Submit
   </button></Link>
 
 </form>

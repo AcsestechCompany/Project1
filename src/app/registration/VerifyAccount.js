@@ -1,7 +1,7 @@
 import React from "react";
 import {LogoHeader} from "./LogoHeader";
-import {containerRegistration,content,registrationheader,registration,
-  forminputotp,submit,submitLink,lasttext1,lasttext2,hyperlink1,otptext,ios} from "./LayoutRegistration.css";
+import {containerRegistration,content,registrationheader,registration,otpdiv,
+  forminputotp,submit,submitLink,lasttext1,lasttext2,hyperlink1,otptext,ios,otptext1} from "./LayoutRegistration.css";
 import {Link} from "react-router-dom";
 import {Row} from "reactstrap";
 import {FooterText} from "./Footertext";
@@ -15,22 +15,25 @@ export class VerifyAccount extends React.Component{
       <LogoHeader/>
       <div className={registration}>
       <p className={registrationheader}>Verify Account</p>
-<p className={otptext}>OTP has been sent on your phone Number _ _ _ _ _ _ _660. please enter it below</p>
-<form>
+<p className={otptext1}>OTP has been sent on your phone Number 8106414656. please enter it below</p>
 
+<div className={otpdiv}>
 <form id={ios}>
-    <input type="password" maxlength="1" style={{marginRight:'1vw'}}/>
-    <input type="password" maxlength="1" style={{marginRight:'1vw'}}/>
-    <input type="password" maxlength="1" style={{marginRight:'1vw'}}/>
-    <input type="password" maxlength="1" style={{marginRight:'1vw'}}/>
-</form>
+    <input type="text" maxlength="1"  id={otptext}/>
+    <input type="text" maxlength="1"  id={otptext}/>
+    <input type="text" maxlength="1"  id={otptext}/>
+    <input type="text" maxlength="1" id={otptext}/>
+
 </form>
 
-  <Link to="/CreatePassword" ><button type="submit" class="btn btn-light" id={submit}>
+
+  <Link to="/CreatePassword"><button type="submit" class="btn btn-light" id={submit}>
 Submit
   </button></Link>
+  <p className={lasttext1}>Resend OTP<span ><Link to="/SignUp" className={lasttext2}>Change Number</Link></span></p>
+  </div>
 
-<p className={lasttext1}>Resend OTP<span ><Link to="/SignUp" className={lasttext2}>Change Number</Link></span></p>
+
       </div>
       </div>
       </div>
