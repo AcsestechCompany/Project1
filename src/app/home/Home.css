@@ -1,5 +1,4 @@
 
-
 .cardStyle1{
   height:16vw;
    background-color:#FFFFFF;
@@ -29,7 +28,7 @@ width:100vw;
 #repoteesLeft{
   color:gray;
   position:relative;
-right:4.5vw;
+  right:4.5vw;
 }
 #repoteesRight{
   color:gray;
@@ -50,8 +49,8 @@ right:4.5vw;
 }
 .cardStyle3{
   height:12vw;
-margin-left:1vw;
-margin-right:-0.5vw;
+  margin-left:1vw;
+   margin-right:-0.5vw;
    background-color:#FFFFFF;
    border:none;
    box-shadow:-0.01px 3px 8px 0.1px 	gray;
@@ -59,15 +58,15 @@ margin-right:-0.5vw;
 }
 .cardStyle4{
   height:12vw;
-margin-left:0.4vw;
-margin-right:-0.15vw;
+
+position:relative;
+left:0.5vw;
+width:97%;
    background-color:#FFFFFF;
    border:none;
  box-shadow:-0.01px 3px 8px 0.1px 	gray;
 
 }
-
-
 
 .giftIcon{
   color:gray;
@@ -84,8 +83,9 @@ right:0.5vw;
 .calendarText{
 position:relative;
 top:0.4vw;
-font-size:0.62vw;
 right:0.5vw;
+font-size:0.615vw;
+
 }
 #empCalendar{
   position: relative;

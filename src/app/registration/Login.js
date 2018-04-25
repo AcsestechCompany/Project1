@@ -1,7 +1,7 @@
 import React from "react";
 import {LogoHeader} from "./LogoHeader";
 import {containerRegistration,content,viewfeatures,
-  registrationheaderLogin,registration,forminput,submit,lasttext,hyperlink,submitLink} from "./LayoutRegistration.css";
+  registrationheaderLogin,registration,forminput,submit,lasttext3,hyperlink,submitLink} from "./LayoutRegistration.css";
 import {Link} from "react-router-dom";
 import {FooterText} from "./FooterText";
 
@@ -28,7 +28,7 @@ Submit
   </button></Link>
 
 </form>
-<p className={lasttext}>Create New user? <Link to="/SignUp" className={hyperlink}>Sign Up</Link></p>
+<p className={lasttext3}>Create New user? <Link to="/SignUp" className={hyperlink}>Sign Up</Link></p>
       </div>
       </div>
       </div>

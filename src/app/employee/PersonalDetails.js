@@ -6,7 +6,7 @@ import Icon from 'react-icons-kit';
 import { plus,arrowRight2 } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import {displayContainer,floatRight,arrowIcon,hrStyle,buttonStyle,pageHeading} from "../Layout.css";
-import {labelStyle,inputstyle,formStyle,inputStyle,
+import {labelStyle,inputstyle,formStyle,inputStyle,skipstyle,
   inputStyle1,labelStyle1,hyperLinkEmployee,slideremp} from "./LayoutEmployee.css";
   import {Header1} from "../Header1";
   import {Footer} from "../Footer";
@@ -98,7 +98,7 @@ export class PersonalDetails extends React.Component{
           </Row>
            <Link to="/ProfessionalDetails"><button type="button" class="btn btn-outline-warning" id={buttonStyle}>
              Save</button></Link>
-          <Link to="/ProfessionalDetails" className={hyperLinkEmployee} style={{position:'relative',top:'0.5vw',left:'0.5vw'}}>Skip</Link>
+          <Link to="/ProfessionalDetails" className={hyperLinkEmployee} id={skipstyle}>Skip</Link>
           <span className={floatRight}><Link to="/ProfessionalDetails" className={hyperLinkEmployee}>Next
           <Icon icon={arrowRight2} size={14} className={arrowIcon} /></Link></span>
           <div>

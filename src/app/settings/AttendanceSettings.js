@@ -1,16 +1,28 @@
 import React  from "react";
 import { Button, Form, FormGroup, Label, Input, FormText,Row } from 'reactstrap';
-import {DatePicker,TextField,Slider} from 'material-ui';
+import {DatePicker,TextField,Slider,TimePicker} from 'material-ui';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Link} from "react-router-dom";
 import Icon from 'react-icons-kit';
 import {labelStyle1,hyperLinkEmployee,overtimePay} from "../employee/LayoutEmployee.css";
 import {displayContainer,pageHeading,hrStyle,buttonStyle} from "../Layout.css";
 import {labelStyle,inputstyle,formStyle,inputStyle,textAreaStyle,hyperLink,floatRight,
-  inputStyle1,radiodiv} from "./LayoutSettings.css";
+  inputStyle1,radiodiv,timeStyle} from "./LayoutSettings.css";
 import {Header1} from "../Header1";
 import {Footer} from "../Footer";
 export class AttendanceSettings extends React.Component {
+  constructor(props) {
+   super(props);
+   this.state = {value24: null, value12: null};
+ }
+
+ handleChangeTimePicker24 = (event, date) => {
+   this.setState({value24: date});
+ };
+
+ handleChangeTimePicker12 = (event, date) => {
+   this.setState({value12: date});
+ };
   render() {
 
     return(
@@ -37,11 +49,32 @@ export class AttendanceSettings extends React.Component {
               <div class="form-row">
               <div class="col-md-3 mb-3">
               <label className={labelStyle1}>Work Start Time</label>
-             <input type="time" class="form-control" id={inputstyle} value=""/>
+              <MuiThemeProvider>
+              <TimePicker
+           format="ampm"
+           hintText="12hr Format"
+           value={this.state.value12}
+           onChange={this.handleChangeTimePicker12}
+           underlineStyle={{display: 'none'}}
+           className={timeStyle}
+
+           style={{border:'1px solid #D0D3D4',height:'2vw'}}
+         />
+         </MuiThemeProvider>
              </div>
              <div class="col-md-3 mb-3">
              <label className={labelStyle1}>Work End Time</label>
-            <input type="time" class="form-control" id={inputstyle} value=""/>
+             <MuiThemeProvider>
+             <TimePicker
+          format="ampm"
+          hintText="12hr Format"
+          value={this.state.value12}
+          onChange={this.handleChangeTimePicker12}
+          underlineStyle={{display: 'none'}}
+          className={timeStyle}
+          style={{border:'1px solid #D0D3D4',height:'2vw'}}
+        />
+        </MuiThemeProvider>
             </div>
             </div>
               <FormGroup>

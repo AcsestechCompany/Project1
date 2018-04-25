@@ -99,9 +99,9 @@ render() {
                 </DropdownMenu>
             </UncontrolledDropdown>
             <NavItem className={settingsIcon}><NavLink to="/CompanyDetails"><Icon icon={ic_settings} size={21} style={{color:'white'}}/></NavLink></NavItem>
-            <NavItem className={upperNavIcon}><Icon icon={userCircle} size={19} style={{color:'white'}}/></NavItem>
+
             <UncontrolledDropdown nav className={upperNav}>
-              <DropdownToggle nav style={{color:'white'}}>Enosh<Icon icon={angleDown} className={downIcon}/></DropdownToggle>
+              <DropdownToggle nav style={{color:'white'}}><Icon icon={userCircle} size={18} style={{color:'white'}} className={upperNavIcon}/></DropdownToggle>
               <DropdownMenu className={dropDownStyleProfile}>
                 <DropdownItem  className={dropItem}><NavLink to="/Profile" id={hyperLink}>Profile</NavLink></DropdownItem>
                 <DropdownItem  className={dropItem}><NavLink to="/Logout" id={hyperLink}>Logout</NavLink></DropdownItem>

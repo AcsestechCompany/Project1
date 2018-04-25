@@ -1,5 +1,5 @@
 import React from "react";
-import {containerRegistration,content,rowStyle,cardStyle,back,imgStyle,imgStyle1} from "./LayoutRegistration.css";
+import {containerRegistration,content,rowStyle1,cardStyle,back,imgStyle,imgStyle1} from "./LayoutRegistration.css";
 import {Row,Col,Card} from "reactstrap";
 import Icon from 'react-icons-kit';
 import { thinLeft } from 'react-icons-kit/entypo/thinLeft';
@@ -17,7 +17,7 @@ export class ViewFeatures extends React.Component{
       <div className={content}>
        <LogoHeader/>
 
-      <Row className={rowStyle}>
+      <Row className={rowStyle1}>
       <Col >
       <Link to="/ViewFeature1">
       <img class="animated slideInUp" src={require('../timeandattendance.jpg')} id={imgStyle} />

@@ -14,7 +14,7 @@ export class Home extends React.Component {
      return(
        <div>
        <Header1/>
-       <div className={displayHome} data-spy="scroll">
+       <div className={displayHome}>
         <FirstRow/>
       <SecondRow/>
       <ThirdRow/>
@@ -22,8 +22,6 @@ export class Home extends React.Component {
       </div>
         <Footer/>
    </div>
-
-
      );
   }
 }

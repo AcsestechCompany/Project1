@@ -7,11 +7,40 @@ import { smallRight } from 'react-icons-kit/entypo/';
 import {pageHeading,hrStyle,arrow,orange,floatRight,buttonStyle,displayContainer} from "../Layout.css";
 import {Link} from "react-router-dom";
 import {CardTemplate} from "./CardTemplate";
+import {EmployeeList} from "./EmployeeList";
 import {Header1} from "../Header1";
 import {Footer} from "../Footer";
 
 export class ViewEmployee extends React.Component{
+  constructor(props){
+    super(props);
+    this.second = this.second.bind(this);
+    this.state={
+      employees:true,
+      second:false
+    };
+  }
+
+  second(){
+    this.setState({
+      employees:false,
+      second:true
+
+    });
+  }
+  displayEmployees(){
+    if(this.state.employees){
+      return <EmployeeList/>;
+    }
+  }
+  displaySecond(){
+    if(this.state.second){
+      return <EmployeeList1/>;
+    }
+  }
   render() {
+    var employees=this.displayEmployees();
+    var second = this.displaySecond();
     return(
       <div>
       <Header1/>
@@ -21,94 +50,9 @@ Employee List<span  className={floatRight}> <Icon icon={search} /><Icon icon={fi
 <hr className={hrStyle}/>
 <Link to="/AddEmployee"><button className="btn btn-outline-warning" id={buttonStyle}>
 Add </button></Link>
-      <div class="row" style={{marginLeft:'0.4vw',marginTop:'1vw'}}>
-      <CardTemplate text={"Albert Walker"}>
-       <p className={empDesign}>Test Engineer</p>
-       <p className={empId}>E153</p>
-       <p className={empPhone}>9786456787</p>
-      </CardTemplate>
 
-<CardTemplate text={"Albert Walker"}>
- <p className={empDesign}>Test Engineer</p>
- <p className={empId}>E153</p>
- <p className={empPhone}>9786456787</p>
-</CardTemplate>
-<CardTemplate text={"Albert Walker"}>
- <p className={empDesign}>Test Engineer</p>
- <p className={empId}>E153</p>
- <p className={empPhone}>9786456787</p>
-</CardTemplate>
-<CardTemplate text={"david"}>
- <p className={empDesign}>Test engineer</p>
- <p className={empId}>E153</p>
- <p className={empPhone}>9786456787</p>
-</CardTemplate>
-<CardTemplate text={"Carol"}>
- <p className={empDesign}>Test engineer</p>
- <p className={empId}>E153</p>
- <p className={empPhone}>9786456787</p>
-</CardTemplate>
-</div>
-<div class="row" style={{marginLeft:'0.4vw',marginTop:'1vw'}}>
-
-<CardTemplate text={"Albert Walker"}>
-<p className={empDesign}>Test Engineer</p>
-<p className={empId}>E153</p>
-<p className={empPhone}>9786456787</p>
-</CardTemplate>
-<CardTemplate text={"Albert Walker"}>
- <p className={empDesign}>Test Engineer</p>
- <p className={empId}>E153</p>
- <p className={empPhone}>9786456787</p>
-</CardTemplate>
-<CardTemplate text={"Albert Walker"}>
-<p className={empDesign}>Test Engineer</p>
-<p className={empId}>E153</p>
-<p className={empPhone}>9786456787</p>
-</CardTemplate>
-<CardTemplate text={"Albert Walker"}>
-<p className={empDesign}>Test Engineer</p>
-<p className={empId}>E153</p>
-<p className={empPhone}>9786456787</p>
-</CardTemplate>
-<CardTemplate text={"Albert Walker"}>
-<p className={empDesign}>Test Engineer</p>
-<p className={empId}>E153</p>
-<p className={empPhone}>9786456787</p>
-</CardTemplate>
-
-</div>
-<div class="row" style={{marginLeft:'0.4vw',marginTop:'1vw'}}>
-<CardTemplate text={"Albert Walker"}>
- <p className={empDesign}>Test Engineer</p>
- <p className={empId}>E153</p>
- <p className={empPhone}>9786456787</p>
-</CardTemplate>
-
-<CardTemplate text={"Albert Walker"}>
-<p className={empDesign}>Test Engineer</p>
-<p className={empId}>E153</p>
-<p className={empPhone}>9786456787</p>
-</CardTemplate>
-<CardTemplate text={"Albert Walker"}>
-<p className={empDesign}>Test Engineer</p>
-<p className={empId}>E153</p>
-<p className={empPhone}>9786456787</p>
-</CardTemplate>
-<CardTemplate text={"david"}>
-<p className={empDesign}>Test engineer</p>
-<p className={empId}>E153</p>
-<p className={empPhone}>9786456787</p>
-</CardTemplate>
-<CardTemplate text={"Carol"}>
-<p className={empDesign}>Test engineer</p>
-<p className={empId}>E153</p>
-<p className={empPhone}>9786456787</p>
-</CardTemplate>
-
-</div>
-<p className={pagination}><span className={orange}>1</span> 2 3 4 5 ></p>
-
+{employees}
+<p className={pagination}>1<span onClick={this.second.bind(this)} style={{cursor:'pointer'}}> 2 </span> 3 4 5 ></p>
   </div>
   <Footer/>
   </div>

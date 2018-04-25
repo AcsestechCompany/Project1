@@ -7,8 +7,9 @@ import { arrowRight2, arrowLeft2,plus } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import {displayContainer,floatRight,arrowIcon,pageHeading,hrStyle,buttonStyle} from "../Layout.css";
 import {inputstyle,formStyle,inputStyle,hyperLinkEmployee,
-  inputStyle1,labelStyle1,enableBtn,disableBtn,
+  inputStyle1,labelStyle1,enableBtn,disableBtn,skipstyle,
   overtimeDiv,slideremp,dateStyle,overtimePay} from "./LayoutEmployee.css";
+  import {timeStyle} from "../settings/LayoutSettings.css";
   import {Header1} from "../Header1";
   import {Footer} from "../Footer";
 export class ProfessionalDetails extends React.Component{
@@ -20,8 +21,9 @@ export class ProfessionalDetails extends React.Component{
 <p className={pageHeading}>Professional Details</p>
 <hr className={hrStyle}/>
 <Row>
-<Col xs="10">
+  <Col xs="10">
       <Form className={formStyle}>
+
       <div class="form-row">
         <div class="col-md-3 mb-3">
           <label className={labelStyle1}>First Name</label>
@@ -70,7 +72,9 @@ export class ProfessionalDetails extends React.Component{
             <div class="col-md-3 mb-3">
               <label className={labelStyle1}>Date of Joining</label>
               <MuiThemeProvider>
-        <DatePicker hintText="date of joining" underlineStyle={{display: 'none'}} className={dateStyle} />
+        <DatePicker hintText="date of joining"
+ className={dateStyle}
+       style={{border:'1px solid #D0D3D4',height:'2vw',position:'relative'}} />
             </MuiThemeProvider>
             </div>
             <div class="col-md-3 mb-3">
@@ -111,14 +115,15 @@ export class ProfessionalDetails extends React.Component{
  <Link to="/ProfessionalDetails">
  <button type="button" class="btn btn-outline-warning"  id={buttonStyle}>Save</button>
  </Link>
- <Link to="/BankDetails" className={hyperLinkEmployee} style={{position:'relative',top:'0.5vw',left:'0.5vw'}}>Skip </Link>
+ <Link to="/BankDetails" className={hyperLinkEmployee} id={skipstyle}>Skip </Link>
              <span className={floatRight}>
 
              <Link to="/PersonalDetails" className={hyperLinkEmployee} style={{marginRight:'1vw'}}>
                <Icon icon={arrowLeft2} className={arrowIcon} size={14} />Prev </Link>
+
              <Link to="/BankDetails" className={hyperLinkEmployee}>Next
                <Icon icon={arrowRight2} className={arrowIcon} size={14}/></Link>
-          </span>
+             </span>
           </Col>
           <Col>
           <div className={floatRight} style={{fontSize:'0.9vw'}}>

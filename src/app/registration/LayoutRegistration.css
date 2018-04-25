@@ -2,17 +2,11 @@
   background-color:#2C3E50;
   margin:0 auto;
   width:100%;
-min-height:814.3px;
-overflow:hidden;
+height:634.5px;
+
 }
 @media screen and (max-width: 1366px) {
-  .containerRegistration{
-    background-color:#2C3E50;
-    margin:0 auto;
-    width:100%;
-  min-height:642.5px;
-  overflow:hidden;
-  }
+
   #submit{
     position:relative;
     top:2vw;
@@ -38,15 +32,19 @@ overflow:hidden;
 }
 .footerLine{
   padding-left:8vw;
+
     background-color:#2C3E50;
+    height:2vw;
 }
 .footerSpan{
 float:right;
 position:relative;
-right:5.3vw;
+top:0.6vw;
+right:5.6vw;
 }
 .footerText{
   position:relative;
+  bottom:0.5vw;
   color:white !important;
   font-size:0.7vw;
   font-family:sans-serif;
@@ -64,7 +62,6 @@ right:5.3vw;
   position:relative;
   left:63vw;
   color:#D0D3D4;
-
 }
 #forminput{
   border-color:#B6E3EF   !important;
@@ -117,7 +114,7 @@ box-shadow:red;
 .registration{
   position:relative;
   top:5vw;
-  left:33vw;
+  left:35vw;
 }
 .registrationheader{
   position:relative;
@@ -152,7 +149,14 @@ box-shadow:red;
   position:relative;
   top:4vw;
   left:6vw;
-  font-size:0.75vw;
+  font-size:0.85vw;
+}
+.lasttext3{
+  color:white;
+  position:relative;
+  top:4vw;
+  left:10vw;
+  font-size:0.75;
 }
 .lasttext2{
   position:relative;
@@ -193,12 +197,18 @@ box-shadow:red;
   top:7vw;
 margin-right:12.5vw;
 }
+.rowStyle1{
+  position:relative;
+  left:8.2vw;
+  top:7vw;
+margin-right:12.5vw;
+}
 .insidefloating{
   position:relative;
 right:3vw;
 }
 #imgStyle{
-  width:19vw;
+  width:19.8vw;
   height:18vw;
 }
 #imgStyle1{
@@ -234,14 +244,14 @@ right:3vw;
   float:right;
   position:relative;
   top:10vw;
-  right:6.5vw;
+  right:5.5vw;
   color:white;
 }
 .floatingtext1{
   font-size:0.9vw;
   position:relative;
 bottom:1.8vw;
-  left:89.4vw;
+  left:89vw;
   color:#FFFFFF;
 }
 .insidefloating1{
@@ -254,7 +264,7 @@ bottom:1.8vw;
   position:relative;
   top:4vw;
   left:8vw;
-  margin-right:13.2vw;
+  margin-right:13.5vw;
 }
 .pagetext{
   color:#D0D3D4;

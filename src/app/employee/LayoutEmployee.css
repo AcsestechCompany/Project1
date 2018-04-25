@@ -4,10 +4,12 @@ font-weight:200;
 }
 
 .dateStyle{
-  border:1px solid #D0D3D4;
-  padding-left: 1vw;
-  height:2.3vw;
-  padding-bottom:1vw;
+  padding-left:1vw;
+  padding-top:-1vw;
+}
+#skipstyle{
+  position:relative;
+  left:1vw;
 }
 .labelStyle1{
   font-size:0.8vw;
@@ -28,7 +30,7 @@ bottom:13.8vw;
 }
 .pagination{
 position:relative;
-top:0.7vw;
+top:0.5vw;
 bottom:1vw;
 right:-50vw;
 font-size:2vw;

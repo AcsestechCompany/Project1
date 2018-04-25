@@ -81,17 +81,18 @@ right:5vw;
 }
 .upperNavIcon{
   position:relative;
-  bottom:2.6vw;
+  bottom:-0.65vw;
+  left:-0.3vw;
   right:4.8vw;
 }
 .settingsIcon{
   position:relative;
-  bottom:2.6vw;
+  bottom:2.4vw;
   right:7vw;
 }
 .notificationIcon{
   position:relative;
-  bottom:3.5vw;
+  bottom:3.3vw;
 right:9vw;
 }
 .cardimgleft {
@@ -266,8 +267,9 @@ padding-top:-1.5vw;
   font-family:sans-serif;
 }
 .displayHome{
-  margin-top:-1.3vw;
-  padding:3vw 19vw 5vw 16vw;
+  margin-top:-1.47vw;
+  padding:3vw 19vw 6vw 16.9vw;
+  width:100.8%;
   background-color:#E5E5E5;
 }
 .displayContainer{
@@ -280,7 +282,7 @@ padding-top:-1.5vw;
 }
 .copyrighticon{
 position:relative;
-top:0.27vw;
+top:0.29vw;
 }
 .exploreDiv{
   width:100%;
