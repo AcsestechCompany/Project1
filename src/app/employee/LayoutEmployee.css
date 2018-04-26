@@ -37,11 +37,20 @@ font-size:1vw;
   color:grey;
   height:5vw;
 }
-#paginationtext{
-  border:1px solid orange;
-  border-style:ridge;
+#paginationtrue{
+  border:1px solid gray;
+  background-color:lime;
+  padding:0vw 0.4vw 0vw 0.2vw;
+  margin-right:0.5vw;
   cursor:pointer;
-margin-right:0.5vw;
+}
+#paginationfalse{
+  border:1px solid gray;
+  background-color:lightgray;
+  color:grey;
+  padding:0vw 0.4vw 0vw 0.2vw;
+  margin-right:0.5vw;
+  cursor:pointer;
 }
 #btnManual{
 position:relative;

@@ -274,7 +274,7 @@ padding-top:-1.5vw;
 }
 .displayContainer{
     background-color:#FFFFFF;
-    margin:3vw 16vw 0vw 16vw;
+    margin:3vw 16vw 0vw 16.8vw;
     min-height:600px;
     overflow: hidden;
     font-style:sans-serif;
@@ -328,6 +328,7 @@ margin-top:18.85vw;
   margin-top:-0.8vw;
   font-size:1vw;
   position:relative;
+
   right:1vw;
 }
 .linkStyle1{
@@ -371,6 +372,7 @@ font-size: 0.7vw;
 .pageHeading{
   color:#FF9527;
   margin-top:3vw;
+
   font-size:0.8vw;
   font-weight:200;
 }

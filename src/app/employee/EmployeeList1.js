@@ -14,9 +14,6 @@ export class EmployeeList1 extends React.Component{
   render() {
     return(
       <div>
-
-
-
       <div class="row" style={{marginLeft:'0.4vw',marginTop:'1vw'}}>
       <CardTemplate text={"Albert Walker"}>
        <p className={empDesign}>Test Engineer</p>
