@@ -5,7 +5,7 @@ import {empName} from "./LayoutEmployee.css";
 export class CardTemplate extends React.Component{
   render() {
     return(
-      <div class="card" id={cardStyle}>
+      <div class="card" id={cardStyle} style={{marginRight:'2.21vw'}}>
       <img class="card-img-top" src={require('./user1.png')} id={imgStyle}
    />
        <div class="card-body">

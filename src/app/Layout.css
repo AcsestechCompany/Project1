@@ -327,6 +327,8 @@ margin-top:18.85vw;
   background-color:#FF9527 !important;
   margin-top:-0.8vw;
   font-size:1vw;
+  position:relative;
+  right:1vw;
 }
 .linkStyle1{
   color:white !important;
