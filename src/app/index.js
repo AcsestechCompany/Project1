@@ -6,6 +6,7 @@ import {EmploymentStatus} from "./home/EmploymentStatus";
 import {EventsList} from "./home/EventsList";
 import {AnnouncementList} from "./home/AnnouncementList";
 import {DepartmentsPage} from "./home/DepartmentsPage";
+import {HolidayPage} from "./home/HolidayPage";
 import {Attendance} from "./Attendance";
 import {AttendanceSettings} from "./settings/AttendanceSettings";
 import {Payments} from "./payroll/Payments";
@@ -105,6 +106,7 @@ export class App extends React.Component {
               <Route path="/EmpDocs" component={EmpDocs}/>
               <Route path="/AdminUsers" component={AdminUsers}/>
               <Route path="/DemoPage" component={DemoPage}/>
+              <Route path="/HolidayPage" component={HolidayPage}/>
      </div>
 </Router>
 

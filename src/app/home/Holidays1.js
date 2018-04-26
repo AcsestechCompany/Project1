@@ -1,11 +1,12 @@
 import React from "react";
-import {holidaysCard,holidayTextR,holidayTitleR,holidayDayR,cardStyle4} from "./Home.css";
+import {holidaysCard,holidayTextR,holidayTitleR,holidayDayR,cardStyle4,linkDepartment} from "./Home.css";
 import {item} from "../Layout.css";
 import {CardHeader} from "./CardHeader";
 import {Card,CardText,Col} from "reactstrap";
 import { thinRight,thinLeft } from 'react-icons-kit/entypo';
 import {holidaysLeft,holidaysRight} from "./Home.css";
 import Icon from 'react-icons-kit';
+import {Link} from "react-router-dom";
 import { angleLeft,angleRight } from 'react-icons-kit/fa';
  import { ic_keyboard_arrow_left } from 'react-icons-kit/md/ic_keyboard_arrow_left';
 
@@ -16,6 +17,7 @@ import { angleLeft,angleRight } from 'react-icons-kit/fa';
    render() {
      return(
          <Col style={{marginRight:'-1vw'}}>
+           <Link to="HolidayPage" className={linkDepartment}>
          <Card body inverse className={cardStyle4} >
          <CardHeader text={"HOLIDAYS"}/>
            <div id="carouselExampleIndicators" class="carousel slide" data-interval="false" >
@@ -53,6 +55,7 @@ import { angleLeft,angleRight } from 'react-icons-kit/fa';
              </a>
            </div>
            </Card>
+           </Link>
            </Col>
      );
    }

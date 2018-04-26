@@ -16,7 +16,7 @@ export class DepartmentsPage extends React.Component{
       marketing:false,
       it:false,
       finance:false,
-      all:false
+      all:true
     };
   }
 financefunc(){

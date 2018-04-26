@@ -20,7 +20,7 @@ export class EmploymentStatus extends React.Component{
       onleave:false,
       late:false,
       overtime:false,
-      all:false
+      all:true
     }
   }
   presentfunc(){

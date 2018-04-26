@@ -73,7 +73,8 @@ export class ProfessionalDetails extends React.Component{
               <label className={labelStyle1}>Date of Joining</label>
               <MuiThemeProvider>
         <DatePicker hintText="date of joining"
- className={dateStyle}
+       className={dateStyle}
+       underlineStyle={display:'none'}
        style={{border:'1px solid #D0D3D4',height:'2vw',position:'relative'}} />
             </MuiThemeProvider>
             </div>
