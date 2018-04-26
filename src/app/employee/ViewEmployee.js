@@ -1,10 +1,10 @@
 import React from "react";
-import {empDesign,empPhone,empId,pagination,paginationtext,paginationtrue,paginationfalse} from "./LayoutEmployee.css";
+import {empDesign,empPhone,empId,pagination,paginationtext,paginationtrue,paginationfalse,searchstyle} from "./LayoutEmployee.css";
 import Icon from 'react-icons-kit';
 import { search } from 'react-icons-kit/icomoon/search';
 import { filter } from 'react-icons-kit/fa/filter';
 import { smallRight } from 'react-icons-kit/entypo/';
-import {pageHeading,hrStyle,arrow,orange,floatRight,buttonStyle,displayContainer} from "../Layout.css";
+import {pageHeading,hrStyle,arrow,orange,floatRight1,buttonStyle,displayContainer} from "../Layout.css";
 import {dropitem} from "../home/Home.css";
 import {Link} from "react-router-dom";
 import {CardTemplate} from "./CardTemplate";
@@ -75,9 +75,11 @@ export class ViewEmployee extends React.Component{
       <div className={displayContainer}>
 <p className={pageHeading}>
 Employee List
-<span  className={floatRight}>
-<Icon icon={search} style={{position:'relative',right:'3vw'}}/>
-<Icon icon={filter} style={{position:'relative',right:'2vw'}}/>
+<span  className={floatRight1}>
+<form >
+	<input type="search"  placeholder="Search" />
+</form>
+
 </span>
 </p>
 <hr className={hrStyle}/>

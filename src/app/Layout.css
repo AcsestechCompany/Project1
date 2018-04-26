@@ -3,6 +3,12 @@
 float:right;
 color:gray;
 }
+.floatRight1{
+float:right;
+position:relative;
+
+bottom:1.2vw;
+}
 .downIcon{
 position:relative;
 left:0.2vw;
@@ -272,14 +278,7 @@ padding-top:-1.5vw;
   width:100.8%;
   background-color:#E5E5E5;
 }
-.displayContainer{
-    background-color:#FFFFFF;
-    margin:3vw 16vw 0vw 16.8vw;
-    min-height:600px;
-    overflow: hidden;
-    font-style:sans-serif;
-    color:black;
-}
+
 .copyrighticon{
 position:relative;
 top:0.29vw;
@@ -323,13 +322,25 @@ margin-top:18.85vw;
 .formStyle{
   padding-top:1.5vw;
 }
+.displayContainer{
+    background-color:#FFFFFF;
+    padding:2vw 16vw 0vw 17vw;
+    min-height:600px;
+    overflow: hidden;
+    font-style:sans-serif;
+    color:black;
+}
+.pageHeading{
+  color:#FF9527;
+  font-size:0.8vw;
+  font-weight:200;
+}
 .hrStyle{
   background-color:#FF9527 !important;
   margin-top:-0.8vw;
   font-size:1vw;
   position:relative;
-
-  right:1vw;
+  right:0.2vw;
 }
 .linkStyle1{
   color:white !important;
@@ -369,13 +380,7 @@ font-size: 0.7vw;
   font-size:0.8vw;
   margin-bottom:-1vw;
 }
-.pageHeading{
-  color:#FF9527;
-  margin-top:3vw;
 
-  font-size:0.8vw;
-  font-weight:200;
-}
 .arrow{
   color:gray;
   position:relative;
