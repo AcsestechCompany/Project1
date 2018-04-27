@@ -6,7 +6,7 @@ import { pencil,bin,search } from 'react-icons-kit/icomoon';
 import { ic_delete, ic_create  } from 'react-icons-kit/md';
 import {Link} from "react-router-dom";
 import {activeStyle} from "../projects/Projects.css";
-import {orange,contentStyle,displayContainer,pageHeading,hrStyle,buttonStyle} from "../Layout.css";
+import {orange,contentStyle,displayContainer,pageHeading,hrStyle,buttonStyle,floatRight1} from "../Layout.css";
 import {hyperLink} from "../settings/LayoutSettings.css";
 import {Header1} from "../Header1";
 import {Footer} from "../Footer";
@@ -16,7 +16,13 @@ export class ClaimList extends React.Component{
       <div>
       <Header1/>
       <div className={displayContainer}>
-<p className={pageHeading}>Claims</p>
+<p className={pageHeading}>Claims
+<span  className={floatRight1}>
+<form >
+	<input type="search"  placeholder="Search" />
+</form>
+
+</span></p>
 <hr className={hrStyle}/>
 
 <table class="table table-bordered table-striped table-responsive-md" id={contentStyle}>

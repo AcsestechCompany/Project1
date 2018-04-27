@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 import { search } from 'react-icons-kit/icomoon/search';
 import {inProgress,closed} from "../projects/Projects.css";
 import {displayContainer,pageHeading,hrStyle,labelStyle,inputstyle,hyperLink,formStyle,inputStyle,textAreaStyle,tableDiv,
-  inputStyle1,labelStyle1,addNewDepartmentStyle,floatRight,buttonstyle,divStyle,radioStyle1,
+  inputStyle1,labelStyle1,addNewDepartmentStyle,floatRight1,buttonstyle,divStyle,radioStyle1,
   boxText,imageText,radioStyle,labelStyleRadio,imageInput,contentStyle,iconStyle,activeStyle,orange,exampletable} from "../Layout.css";
 import { ic_create,ic_delete  } from 'react-icons-kit/md';
 import {Header1} from "../Header1";
@@ -20,7 +20,14 @@ export class Payments extends React.Component{
       <div>
       <Header1/>
       <div className={displayContainer}>
-<p className={pageHeading}>Payments<span className={floatRight}><Icon icon={search}/></span></p>
+<p className={pageHeading}>Payments
+<span  className={floatRight1}>
+<form >
+	<input type="search"  placeholder="Search" />
+</form>
+
+</span>
+</p>
 <hr className={hrStyle}/>
 
 <table class="table table-bordered  table-responsive-md" id={exampletable}>

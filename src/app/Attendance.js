@@ -7,7 +7,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Icon from 'react-icons-kit';
 import { plus,pencil,bin,search } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
-import {displayContainer,pageHeading,hrStyle,activeStyle,orange,floatRight,exampletable} from "./Layout.css";
+import {displayContainer,pageHeading,hrStyle,activeStyle,orange,floatRight1,exampletable} from "./Layout.css";
 import { ic_create ,ic_delete } from 'react-icons-kit/md';
 import {Header1} from "./Header1";
 import {Footer} from "./Footer";
@@ -17,7 +17,14 @@ export class Attendance extends React.Component{
       <div>
       <Header1/>
       <div className={displayContainer}>
-<p className={pageHeading}>Attendance<span className={floatRight}></span></p>
+<p className={pageHeading}>Attendance
+<span  className={floatRight1}>
+<form >
+	<input type="search"  placeholder="Search" />
+</form>
+
+</span>
+</p>
 <hr className={hrStyle}/>
 
 <table class="table table-bordered  table-responsive-md" id={exampletable}>

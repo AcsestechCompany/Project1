@@ -17,10 +17,7 @@ export class EventsList extends React.Component{
       <div className={displayContainer}>
 
       <p className={pageHeading}>Events
-      <span className={searchfilter}>
-        <input type="text" class="form-control" placeholder="Search.." name="search" id={inputstyle1}/>
-        <button type="submit"><i class="fa fa-search"></i></button>
-    </span></p>
+  </p>
       <hr className={hrStyle}/>
       <table class="table table-bordered table-responsive-md" id={exampletable}>
       <thead className={orange}>

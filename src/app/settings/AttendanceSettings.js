@@ -1,27 +1,34 @@
 import React  from "react";
-import { Button, Form, FormGroup, Label, Input, FormText,Row } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, FormText,Row,Col } from 'reactstrap';
 import {DatePicker,TextField,Slider,TimePicker} from 'material-ui';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Link} from "react-router-dom";
 import Icon from 'react-icons-kit';
-import {labelStyle1,hyperLinkEmployee,overtimePay} from "../employee/LayoutEmployee.css";
-import {displayContainer,pageHeading,hrStyle,buttonStyle} from "../Layout.css";
-import {labelStyle,inputstyle,formStyle,inputStyle,textAreaStyle,hyperLink,floatRight,
+import {arrowRight2,arrowLeft2 } from 'react-icons-kit/icomoon';
+import {labelStyle1,hyperLinkEmployee,overtimePay,skipstyle,inputStyle,inputstyletextarea} from "../employee/LayoutEmployee.css";
+import {displayContainer,pageHeading,hrStyle,buttonStyle,arrowIcon,orange} from "../Layout.css";
+import {inputstyle,formStyle,textAreaStyle,hyperLink,floatRight,
   inputStyle1,radiodiv,timeStyle} from "./LayoutSettings.css";
 import {Header1} from "../Header1";
 import {Footer} from "../Footer";
 export class AttendanceSettings extends React.Component {
   constructor(props) {
    super(props);
-   this.state = {value24: null, value12: null};
+   this.state = {value24: null, valueStart: null,valueEnd: null,valueLateMark: null};
  }
 
  handleChangeTimePicker24 = (event, date) => {
    this.setState({value24: date});
  };
 
- handleChangeTimePicker12 = (event, date) => {
-   this.setState({value12: date});
+ handleChangeTimePickerStart = (event, date) => {
+   this.setState({valueStart: date});
+ };
+ handleChangeTimePickerEnd = (event, date) => {
+   this.setState({valueEnd: date});
+ };
+ handleChangeTimePickerLateMark = (event, date) => {
+   this.setState({valueLateMark: date});
  };
   render() {
 
@@ -31,30 +38,23 @@ export class AttendanceSettings extends React.Component {
              <div className={displayContainer}>
       <p className={pageHeading}>Attendance</p>
       <hr className={hrStyle}/>
+      <Row>
+      <Col xs="10">
             <Form className={formStyle}>
-            <div className={floatRight} style={{fontSize:'0.9vw'}}>
-            <p style={{marginTop:'1.5vw'}}>
-            <Link to="/CompanyDetails" className={hyperLinkEmployee}>Organization Details</Link></p>
-            <p><Link to="/AttendanceSettings" className={hyperLinkEmployee}>Attendance</Link></p>
-            <p><Link to="/AddLeave" className={hyperLinkEmployee}>Leave Types</Link></p>
-            <p><Link to="/AddComponent" className={hyperLinkEmployee}>Salary Cmponents</Link></p>
-            </div>
-            <MuiThemeProvider>
-               <Slider style={{height: 105,float:'right'}} axis="y-reverse" defaultValue={0.35} />
-               </MuiThemeProvider>
+
               <FormGroup>
                 <Label className={labelStyle1}>Shift Name</Label>
                 <Input className={inputStyle} type="text" name="" id="" placeholder="" />
               </FormGroup>
               <div class="form-row">
-              <div class="col-md-3 mb-3">
+              <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Work Start Time</label>
               <MuiThemeProvider>
               <TimePicker
            format="ampm"
            hintText="12hr Format"
-           value={this.state.value12}
-           onChange={this.handleChangeTimePicker12}
+           value={this.state.valueStart}
+           onChange={this.handleChangeTimePickerStart}
            underlineStyle={{display: 'none'}}
            className={timeStyle}
 
@@ -62,14 +62,14 @@ export class AttendanceSettings extends React.Component {
          />
          </MuiThemeProvider>
              </div>
-             <div class="col-md-3 mb-3">
+             <div class="col-md-5 mb-3">
              <label className={labelStyle1}>Work End Time</label>
              <MuiThemeProvider>
              <TimePicker
           format="ampm"
           hintText="12hr Format"
-          value={this.state.value12}
-          onChange={this.handleChangeTimePicker12}
+          value={this.state.valueEnd}
+          onChange={this.handleChangeTimePickerEnd}
           underlineStyle={{display: 'none'}}
           className={timeStyle}
           style={{border:'1px solid #D0D3D4',height:'2vw'}}
@@ -79,14 +79,24 @@ export class AttendanceSettings extends React.Component {
             </div>
               <FormGroup>
                    <Label className={labelStyle1}>Description</Label>
-                   <Input className={textAreaStyle} type="textarea" name="text" id="" />
+                   <Input id={inputstyletextarea} type="textarea" name="text"  />
                  </FormGroup>
                  <div class="form-row">
-                 <div class="col-md-3 mb-3">
+                 <div class="col-md-5 mb-3">
                  <label className={labelStyle1}>Late Mark After Time</label>
-                <input type="time" class="form-control" id={inputstyle} value=""/>
+                 <MuiThemeProvider>
+                 <TimePicker
+              format="ampm"
+              hintText="12hr Format"
+              value={this.state.valueEnd}
+              onChange={this.handleChangeTimePickerLateMark}
+              underlineStyle={{display: 'none'}}
+              className={timeStyle}
+              style={{border:'1px solid #D0D3D4',height:'2vw'}}
+            />
+            </MuiThemeProvider>
                 </div>
-                <div class="col-md-3 mb-3">
+                <div class="col-md-5 mb-3">
                  <label className={labelStyle1}>Over Time</label>
                  <select id="" class="form-control" id={inputstyle}>
                  <option >Enable</option>
@@ -114,18 +124,35 @@ export class AttendanceSettings extends React.Component {
             </div>
             </div>
                  </Form>
+                 </Col>
+                 <Col xs="2">
+                 <div className={floatRight} style={{fontSize:'0.9vw'}}>
+                 <p style={{marginTop:'3vw'}}>
+                 <Link to="/CompanyDetails" className={hyperLinkEmployee}>Organization Details</Link></p>
+                 <p><Link to="/AttendanceSettings" className={orange}>Attendance</Link></p>
+                 <p><Link to="/AddLeave" className={hyperLinkEmployee}>Leave Types</Link></p>
+                 <p><Link to="/AddComponent" className={hyperLinkEmployee}>Salary Cmponents</Link></p>
+                 </div>
+
+                    </Col>
+                 </Row>
+
               <Link to="/ViewShiftAttendance">
               <button className="btn btn-outline-primary " id={buttonStyle}>
               Save</button></Link>
-              <Link to="/CompanyDetails">
-              <button className="btn btn-outline-primary " id={buttonStyle}>
-              Back</button></Link>
-              <Link to="/AddLeave">
-              <button className="btn btn-outline-primary " id={buttonStyle}>
-              Next</button></Link>
-              <Link to="/AddLeave">
-              <button className="btn btn-outline-primary " id={buttonStyle} style={{border:'none'}}>
-              Skip this</button></Link>
+
+              <Link to="/AddLeave" className={hyperLinkEmployee} id={skipstyle}>Skip</Link>
+
+              <span className={floatRight}>
+
+              <Link to="/CompanyDetails" className={hyperLinkEmployee} style={{marginRight:'1vw'}}>
+
+                      <Icon icon={arrowLeft2} size={14} className={arrowIcon} />  Prev
+      </Link>
+
+              <Link to="/AddLeave" className={hyperLinkEmployee}>Next
+              <Icon icon={arrowRight2} size={14} className={arrowIcon} /></Link></span>
+
              </div>
              <Footer/>
              </div>

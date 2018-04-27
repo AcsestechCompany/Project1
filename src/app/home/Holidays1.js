@@ -17,9 +17,11 @@ import { angleLeft,angleRight } from 'react-icons-kit/fa';
    render() {
      return(
          <Col style={{marginRight:'-1vw'}}>
-           <Link to="HolidayPage" className={linkDepartment}>
-         <Card body inverse className={cardStyle4} >
+
+         <Card body inverse className={cardStyle4}>
+         <Link to="HolidayPage" className={linkDepartment}>
          <CardHeader text={"HOLIDAYS"}/>
+         </Link>
            <div id="carouselExampleIndicators" class="carousel slide" data-interval="false" >
 
              <div class="carousel-inner" >
@@ -55,7 +57,7 @@ import { angleLeft,angleRight } from 'react-icons-kit/fa';
              </a>
            </div>
            </Card>
-           </Link>
+
            </Col>
      );
    }

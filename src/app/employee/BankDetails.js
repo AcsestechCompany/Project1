@@ -6,9 +6,9 @@ import Icon from 'react-icons-kit';
 import {arrowLeft2, arrowRight2,pencil,search} from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import { ic_create,ic_delete } from 'react-icons-kit/md';
-import {displayContainer,arrowIcon,tableinput,contentStyle1,right,hrStyle,pageHeading} from "../Layout.css";
-import {hyperLinkEmployee,btnManual,btnAuto,labelStyle1} from "./LayoutEmployee.css";
-import {inputstyle,formStyle,inputStyle,floatRight,enableBtn,disableBtn,
+import {displayContainer,arrowIconL,arrowIconR,tableinput,contentStyle1,right,hrStyle,pageHeading,savebtn1,skip1,floatRight2,orange,bankdiv} from "../Layout.css";
+import {hyperLinkEmployee,btnManual,btnAuto,labelStyle1,inputStyle} from "./LayoutEmployee.css";
+import {inputstyle,formStyle,floatRight,enableBtn,disableBtn,
   inputStyle1,buttonstyle} from "./LayoutSettings.css";
 import {Manual} from "./Manual";
 import {Auto} from "./Auto";
@@ -65,41 +65,39 @@ var autocomponents = this.autodisplay();
 <p>
 <Link to="/PersonalDetails" className={hyperLinkEmployee}>Personal Details</Link></p>
 <p><Link to="/ProfessionalDetails" className={hyperLinkEmployee}>Professional Details</Link></p>
-<p><Link to="/BankDetails" className={hyperLinkEmployee}>Bank Details</Link></p>
+<p><Link to="/BankDetails" className={orange}>Bank Details</Link></p>
 <p><Link to="/LoginInfo" className={hyperLinkEmployee}>Login Information</Link></p>
 <p><Link to="/JobHistory" className={hyperLinkEmployee}>Job History</Link></p>
 <p><Link to="/EmpDocs" className={hyperLinkEmployee}>Employee Documents</Link></p>
 </div>
-<MuiThemeProvider>
-   <Slider style={{height: 164,float:'right'}} axis="y-reverse" defaultValue={0.43} />
-   </MuiThemeProvider>
+
 
       <div class="form-row">
-        <div class="col-md-3 mb-3">
+        <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Account Holder Name</label>
           <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
         </div>
-        <div class="col-md-3 mb-3">
+        <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Bank Name</label>
           <input type="text" class="form-control" id={inputstyle} placeholder="" />
         </div>
         </div>
         <div class="form-row">
-          <div class="col-md-3 mb-3">
+          <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Branch Name</label>
             <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
           </div>
-          <div class="col-md-3 mb-3">
+          <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Account Number</label>
             <input type="text" class="form-control" id={inputstyle} placeholder="" />
           </div>
           </div>
         <div class="form-row">
-          <div class="col-md-3 mb-3">
+          <div class="col-md-5 mb-3">
             <label className={labelStyle1}>IFSC Code</label>
             <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
           </div>
-          <div class="col-md-3 mb-3">
+          <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Account Type</label>
             <input type="text" class="form-control" id={inputstyle} placeholder="" />
           </div>
@@ -117,7 +115,7 @@ var autocomponents = this.autodisplay();
     <input type="text" class="form-control" id={tableinput} placeholder="" />
   </div>
   <form class="form-inline">
-<div class="form-group">
+<div class="form-group" style={{position:'relative',right:'2vw'}}>
 <label for="inputPassword6" className={labelStyle1}>Salary Break up</label>
 <button class="btn btn-outline-warning" onClick={this.nextmanual.bind(this)} id={btnManual}>Manual</button>
 <button class="btn btn-outline-warning" onClick={this.nextauto.bind(this)} id={btnAuto}>Auto</button>
@@ -126,17 +124,27 @@ var autocomponents = this.autodisplay();
 </div>
 {manualcomponents}
 {autocomponents}
-    <button class="btn btn-outline-warning"  >
-     <Link to="/LoginInfo" className={hyperLinkEmployee}>Save</Link></button>
-     <Link to="/LoginInfo" className={hyperLinkEmployee} style={{position:'relative',top:'0.5vw',left:'0.5vw'}}>Skip</Link>
+<div className={bankdiv}>
+<Link to="/LoginInfo">
+<button type="button" class="btn btn-outline-warning"  id={savebtn1}>Save</button>
+</Link>
+<Link to="/LoginInfo" id={skip1}>Skip </Link>
 
-          <span className={floatRight}>
+             <span className={floatRight2}>
 
-          <Link to="/ProfessionalDetails" className={hyperLinkEmployee} style={{marginRight:'1vw'}}>
-            <Icon icon={arrowLeft2} className={arrowIcon} size={14}  />Previous</Link>
-          <Link to="/LoginInfo" className={hyperLinkEmployee}>Next
-            <Icon icon={arrowRight2} className={arrowIcon} size={14} /></Link>
-       </span>
+
+             <Link to="/ProfessionalDetails" className={hyperLinkEmployee} style={{marginRight:'1vw'}}>
+             <button type="button" class="btn btn-light">
+             <Icon icon={arrowLeft2} className={arrowIconL} size={14} />Prev </button>
+               </Link>
+
+
+             <Link to="/LoginInfo" className={hyperLinkEmployee}>
+             <button type="button" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIconR} /></button>
+             </Link>
+                </span>
+                </div>
+
        </div>
        <Footer/>
        </div>

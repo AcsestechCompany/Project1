@@ -13,7 +13,7 @@ import {Link} from "react-router-dom";
 import { search } from 'react-icons-kit/icomoon/search';
 import {inProgress,closed} from "../projects/Projects.css";
 import {displayContainer,pageHeading,hrStyle,labelStyle,inputstyle,hyperLink,formStyle,inputStyle,textAreaStyle,tableDiv,
-  inputStyle1,labelStyle1,addNewDepartmentStyle,floatRight,verticalLine,dropDownInputStyle,buttonstyle,divStyle,radioStyle1,
+  inputStyle1,labelStyle1,addNewDepartmentStyle,floatRight1,verticalLine,dropDownInputStyle,buttonstyle,divStyle,radioStyle1,
   boxText,imageText,radioStyle,labelStyleRadio,imageInput,contentStyle,iconStyle,activeStyle,orange} from "../Layout.css";
 import { bin2 } from 'react-icons-kit/icomoon/bin2';
 import { glass2 } from 'react-icons-kit/icomoon/glass2';
@@ -28,7 +28,13 @@ export class Statement extends React.Component{
       <div>
       <Header1/>
       <div className={displayContainer}>
-<p className={pageHeading}>Statement</p>
+<p className={pageHeading}>Statement
+<span  className={floatRight1}>
+<form >
+	<input type="search"  placeholder="Search" />
+</form>
+
+</span></p>
 <hr className={hrStyle}/>
 
 <table class="table table-bordered table-striped table-responsive-md" id={contentStyle}>

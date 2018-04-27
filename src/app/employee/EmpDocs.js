@@ -6,7 +6,7 @@ import Icon from 'react-icons-kit';
 import { arrowRight2,arrowLeft2, plus  } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import {hyperLinkEmployee,labelStyle1} from "./LayoutEmployee.css";
-import {displayContainer,arrowIcon,hrStyle,pageHeading,buttonStyle} from "../Layout.css";
+import {displayContainer,arrowIconR,arrowIconL,skip1,savebtn1,floatRight2,hrStyle,pageHeading,buttonStyle,orange,bankdiv} from "../Layout.css";
 import {inputstylefile,formStyle,inputStyle,floatRight,enableBtn,disableBtn,
   inputstyle,}
   from "./LayoutSettings.css";
@@ -30,11 +30,9 @@ export class EmpDocs extends React.Component{
 <p><Link to="/BankDetails" className={hyperLinkEmployee}>Bank Details</Link></p>
 <p><Link to="/LoginInfo" className={hyperLinkEmployee}>Login Information</Link></p>
 <p><Link to="/JobHistory" className={hyperLinkEmployee}>Job History</Link></p>
-<p><Link to="/EmpDocs" className={hyperLinkEmployee}>Employee Documents</Link></p>
+<p><Link to="/EmpDocs" className={orange}>Employee Documents</Link></p>
 </div>
-<MuiThemeProvider>
-   <Slider style={{height: 164,float:'right'}} axis="y-reverse" defaultValue={1} />
-   </MuiThemeProvider>
+
       <Row>
         <div class="col-md-3 mb-3">
           <label className={labelStyle1}>Document Name</label>
@@ -43,20 +41,34 @@ export class EmpDocs extends React.Component{
         <div class="col-md-3 mb-3">
         <label className={labelStyle1}></label>
         <input type="file" class="form-control" id={inputstyle} placeholder="" />
+
+
         </div>
 
         </Row>
-        <button class="btn btn-outline-warning"  id={buttonStyle}>Submit</button>
+
 
 </Form>
 
-<div style={{marginTop:'10vw'}}>
-<Link to="/JobHistory" className={hyperLinkEmployee} style={{position:'relative',top:'0.5vw',left:'0.5vw'}}>Skip</Link>
-     <span className={floatRight}>
-     <Link to="/JobHistory" className={hyperLinkEmployee} style={{marginRight:'1vw'}}>
-       <Icon icon={arrowLeft2} className={arrowIcon} size={14}  />Previous</Link>
-  </span>
-          </div>
+<div className={bankdiv} style={{marginTop:'10vw'}}>
+
+<Link to="/ViewEmployee">
+<button type="button" class="btn btn-outline-warning"  id={savebtn1}>Submit</button>
+</Link>
+<Link to="/ViewEmployee" id={skip1}>Skip </Link>
+
+             <span className={floatRight2}>
+
+
+             <Link to="/JobHistory" className={hyperLinkEmployee} style={{marginRight:'1vw'}}>
+             <button type="button" class="btn btn-light">
+             <Icon icon={arrowLeft2} className={arrowIconL} size={14} />Prev </button>
+               </Link>
+
+
+
+                </span>
+</div>
        </div>
        <Footer/>
        </div>

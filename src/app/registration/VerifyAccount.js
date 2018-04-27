@@ -15,7 +15,7 @@ export class VerifyAccount extends React.Component{
       <LogoHeader/>
       <div className={registration}>
       <p className={registrationheader}>Verify Account</p>
-<p className={otptext1}>OTP has been sent on your phone Number 8106414656. please enter it below</p>
+<p className={otptext1}>OTP has been sent on your phone Number 8106414656. Please enter it below</p>
 
 <div className={otpdiv}>
 <form id={ios}>

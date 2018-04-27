@@ -3,10 +3,10 @@
 float:right;
 color:gray;
 }
+
 .floatRight1{
 float:right;
 position:relative;
-
 bottom:1.2vw;
 }
 .downIcon{
@@ -14,9 +14,24 @@ position:relative;
 left:0.2vw;
 top:0.25vw;
 }
-.arrowIcon{
+.arrowIconL{
 position:relative;
 top:0.18vw;
+right:0.5vw;
+}
+.arrowIconR{
+position:relative;
+top:0.18vw;
+left:0.5vw;
+}
+
+.orange:hover{
+  color:orange;
+}
+.floatRight3{
+  float:right;
+  position:relative;
+  bottom:1vw;
 }
 #buttonStyle{
   background-color:orange !important;
@@ -24,6 +39,30 @@ top:0.18vw;
   color:white !important;
   min-width:4vw;
   overflow:hidden;
+}
+#savebtn{
+margin-top:1vw;
+margin-bottom:2vw;
+}
+.floatRight2{
+
+color:gray;
+position:relative;
+top:2vw;
+left:41.5vw;
+
+}
+#savebtn1{
+position:relative;
+top:2vw;
+right:8vw;
+}
+#skip1{
+  position:relative;
+  top:2vw;
+  left:-7vw;
+  color:orange;
+
 }
 .searchfilter{
 float:right;
@@ -189,10 +228,52 @@ margin-top:-1vw;
   position:relative;
   top:2.84vw;
   left:-70px;
+  width:235px;
+  min-height:5.5vw;
+  overflow:hidden;
+  text-align:center;
+}
+.dropDownLeaves{
+  background-color:#2C3E50;
+  font-size:0.9vw;
+  border:none;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius:-20%;
+  position:relative;
+  top:2.84vw;
+  left:-70px;
   width:250px;
   min-height:5.5vw;
   overflow:hidden;
   text-align:center;
+}
+.dropDownPayroll{
+  background-color:#2C3E50;
+  font-size:0.9vw;
+  border:none;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius:-20%;
+  position:relative;
+  top:2.84vw;
+  left:-70px;
+  width:220px;
+  min-height:5.5vw;
+  overflow:hidden;
+  text-align:center;
+}
+.dropDownClaims{
+  background-color:#2C3E50;
+  font-size:0.9vw;
+  border:none;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius:-20%;
+  position:relative;
+  top:2.84vw;
+  left:-70px;
+  width:220px;
+  min-height:5.5vw;
+  overflow:hidden;
+text-align:center;
 }
 .dropDownStyleProfile{
   background-color:#2C3E50;
@@ -202,7 +283,7 @@ margin-top:-1vw;
   border-radius:-20%;
   position:relative;
   top:2.485vw;
-margin-right:2.5vw;
+margin-right:3.5vw;
   width:30px;
   min-height:5vw;
   overflow:hidden;
@@ -319,13 +400,21 @@ margin-top:18.85vw;
   float:right;
   margin-top:9vw;
 }
+input[type='file'] {
+color:transparent;
+border:none;
+}
+.bankdiv{
+  position:relative;
+ left:7.9vw;
+}
 .formStyle{
   padding-top:1.5vw;
 }
 .displayContainer{
     background-color:#FFFFFF;
     padding:2vw 16vw 0vw 17vw;
-    min-height:600px;
+    min-height:800px;
     overflow: hidden;
     font-style:sans-serif;
     color:black;

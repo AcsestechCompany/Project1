@@ -4,12 +4,16 @@ font-weight:200;
 }
 
 .dateStyle{
-  padding-left:1vw;
-  padding-top:-1vw;
+border:1px solid #D0D3D4;
+border-radius:4%;
+height:2vw;
+padding-bottom:2.5vw;
+padding-left:1vw;
 }
 #skipstyle{
   position:relative;
   left:1vw;
+  color:orange;
 }
 .labelStyle1{
   font-size:0.8vw;
@@ -89,27 +93,52 @@ top:-1vw;
 }
 .enableBtn{
   margin-left:2vw;
-  height:2vw;
-  width:4.5vw;
+  height:1.7vw;
+  width:6vw;
   font-size:0.8vw;
+  border:1px solid grey;
+}
+.enableBtnactive{
+  margin-left:2vw;
+  height:1.7vw;
+  width:6vw;
+  font-size:0.8vw;
+  background-color:#B5E61D;
+
 }
 
 .disableBtn{
-  margin-left:1vw;
-  height:2vw;
-  width:4.5vw;
+  height:1.7vw;
+  width:6vw;
+  margin-left:0.1vw;
   font-size:0.8vw;
+
+  border:1px solid grey;
+}
+.disableBtnactive{
+  height:1.7vw;
+  width:6vw;
+  font-size:0.8vw;
+background-color:red;
+
 }
 .formStyle{
   padding-top:1.5vw;
   padding-bottom:1vw;
 }
 #inputstyle{
-  width:100%;
+  width:98%;
   height:2vw;
   font-size:0.7vw;
   box-shadow:none !important;
    border-color:#D7D7D7 !important;
+}
+#inputstyletextarea{
+  width:82%;
+  height:3vw;
+  font-size:0.7vw;
+  box-shadow:none !important;
+  border-color:#D7D7D7 !important;
 }
 
 #buttonstyle{
@@ -122,7 +151,7 @@ top:-1vw;
 }
 .inputStyle{
 height:2vw;
-width:50%;
+width:82%;
 font-size: 0.7vw;
 box-shadow:none !important;
  border-color:#D7D7D7 !important;
@@ -150,6 +179,7 @@ input[type=search] {
 	padding: 9px 10px 9px 32px;
 	width: 55px;
   height:0.8vw;
+  color:grey;
 	-webkit-border-radius: 10em;
 	-moz-border-radius: 10em;
 	border-radius: 10em;

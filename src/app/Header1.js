@@ -6,7 +6,9 @@ import { arrowLeft2,spinner11 } from 'react-icons-kit/icomoon';
 import { ic_settings } from 'react-icons-kit/md/ic_settings';
 import {Collapse,Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,UncontrolledDropdown,DropdownToggle,DropdownMenu,DropdownItem} from 'reactstrap';
 import {dropDownStyle,hyperLink,hyperLinkLogo,dropdown,upperNav,dropItem,upperNavIcon,settingsIcon,dropNotify,
-  notificationIcon,dropdownContent,floatRight,cardimgleft,navitemStyle,navitemStyleHome,navStyle,downIcon,linkStyle1,dropDownStyleProfile} from "./Layout.css";
+  dropDownLeaves,dropDownClaims,dropDownPayroll,
+  notificationIcon,dropdownContent,floatRight,cardimgleft,navitemStyle,navitemStyleHome,
+  navStyle,downIcon,linkStyle1,dropDownStyleProfile} from "./Layout.css";
 import {cardStyle,cardText,cardTitle,imgStyle} from "./NotificationLayout.css";
 import {Card,CardTitle,CardText} from "reactstrap";
 export class Header1 extends React.Component {
@@ -46,21 +48,21 @@ render() {
             </UncontrolledDropdown>
           <UncontrolledDropdown nav inNavbar className={navitemStyle}>
                 <DropdownToggle nav style={{color:'white'}}>LEAVES & TIME<Icon icon={angleDown} className={downIcon} /></DropdownToggle>
-              <DropdownMenu className={dropDownStyle}>
+              <DropdownMenu className={dropDownLeaves}>
                 <DropdownItem id={dropItem}><Link to="/Leaves" id={hyperLink}>Leave List</Link></DropdownItem>
             <DropdownItem id={dropItem}><Link to="/Attendance" id={hyperLink}>Attendance List</Link></DropdownItem>
                 </DropdownMenu>
             </UncontrolledDropdown>
           <UncontrolledDropdown nav inNavbar className={navitemStyle}>
               <DropdownToggle nav  style={{color:'white'}}>CLAIMS<Icon icon={angleDown} className={downIcon} /></DropdownToggle>
-              <DropdownMenu className={dropDownStyle} >
+              <DropdownMenu className={dropDownClaims} >
                 <DropdownItem id={dropItem}><Link to="/AddClaims" id={hyperLink}>Add Claims</Link></DropdownItem>
                 <DropdownItem id={dropItem}><Link to="/ClaimList" id={hyperLink}>Claims List</Link></DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
             <UncontrolledDropdown nav inNavbar className={navitemStyle}>
               <DropdownToggle nav style={{color:'white'}}>PAYROLL<Icon icon={angleDown} className={downIcon}/></DropdownToggle>
-            <DropdownMenu className={dropDownStyle}>
+            <DropdownMenu className={dropDownPayroll}>
               <DropdownItem id={dropItem}><Link to="/Payments" id={hyperLink}>Payments</Link></DropdownItem>
               <DropdownItem id={dropItem}><Link to="/Process" id={hyperLink}>Process</Link></DropdownItem>
               <DropdownItem id={dropItem}><Link to="/Statement" id={hyperLink}>Statement</Link></DropdownItem>

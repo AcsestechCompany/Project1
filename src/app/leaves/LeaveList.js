@@ -4,7 +4,7 @@ import Icon from 'react-icons-kit';
 import { bin,search  } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import { ic_delete,ic_create  } from 'react-icons-kit/md';
-import {displayContainer,pageHeading,hrStyle,activeStyle,orange,floatRight,exampletable} from "../Layout.css";
+import {displayContainer,pageHeading,hrStyle,activeStyle,orange,floatRight1,exampletable} from "../Layout.css";
 import {Header1} from "../Header1";
 import {Footer} from "../Footer";
 
@@ -14,7 +14,13 @@ export class LeaveList extends React.Component{
       <div>
       <Header1/>
       <div className={displayContainer}>
-<p className={pageHeading}>Leave List<span className={floatRight}><Icon icon={search}/></span></p>
+<p className={pageHeading}>Leave List
+<span  className={floatRight1}>
+<form >
+	<input type="search"  placeholder="Search" />
+</form>
+
+</span></p>
 <hr className={hrStyle}/>
 
 <table class="table table-bordered table-striped table-responsive-md" id={exampletable}>
