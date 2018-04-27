@@ -16,13 +16,14 @@ export class LeaveList extends React.Component{
       <Header1/>
       <div className={displayContainer}>
 <p className={pageHeading}>Leave List
+</p>
+<hr className={hrStyle}/>
 <span  className={floatRight1}>
 <form>
 	<input type="search"  placeholder="Search" />
 </form>
 
-</span></p>
-<hr className={hrStyle}/>
+</span>
 
 <table class="table table-bordered table-striped table-responsive-md" id={exampletable}>
 <thead>

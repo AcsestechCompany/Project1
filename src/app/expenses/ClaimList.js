@@ -6,7 +6,7 @@ import { pencil,bin,search } from 'react-icons-kit/icomoon';
 import { ic_delete, ic_create  } from 'react-icons-kit/md';
 import {Link} from "react-router-dom";
 import {activeStyle} from "../projects/Projects.css";
-import {orange,contentStyle,displayContainer,pageHeading,hrStyle,buttonStyle,floatRight1} from "../Layout.css";
+import {orange,contentStyle,displayContainer,pageHeading,hrStyle,buttonStyle,floatRight1,exampletable,savebtn1,bankdiv} from "../Layout.css";
 import {hyperLink} from "../settings/LayoutSettings.css";
 import {Header1} from "../Header1";
 import {Footer} from "../Footer";
@@ -17,15 +17,16 @@ export class ClaimList extends React.Component{
       <Header1/>
       <div className={displayContainer}>
 <p className={pageHeading}>Claims
+</p>
+<hr className={hrStyle}/>
 <span  className={floatRight1}>
-<form >
+<form>
 	<input type="search"  placeholder="Search" />
 </form>
 
-</span></p>
-<hr className={hrStyle}/>
+</span>
 
-<table class="table table-bordered table-striped table-responsive-md" id={contentStyle}>
+<table class="table table-bordered table-striped table-responsive-md" id={exampletable}>
 <thead>
     <tr className={orange}>
           <th>Employee ID</th>
@@ -62,9 +63,11 @@ export class ClaimList extends React.Component{
 
      </tbody>
      </table>
-       <Link to="/AddClaims"><button className="btn btn-outline-warning" id={buttonStyle}>
+     <div className={bankdiv} style={{marginTop:'2vw'}}>
+       <Link to="/AddClaims"><button className="btn btn-outline-warning" id={savebtn1}>
 
        Add New Claim</button></Link>
+       </div>
       </div>
       <Footer/>
       </div>

@@ -14,7 +14,7 @@ import { search } from 'react-icons-kit/icomoon/search';
 import {inProgress,closed} from "../projects/Projects.css";
 import {displayContainer,pageHeading,hrStyle,labelStyle,inputstyle,hyperLink,formStyle,inputStyle,textAreaStyle,tableDiv,
   inputStyle1,labelStyle1,addNewDepartmentStyle,floatRight1,verticalLine,dropDownInputStyle,buttonstyle,divStyle,radioStyle1,
-  boxText,imageText,radioStyle,labelStyleRadio,imageInput,contentStyle,iconStyle,activeStyle,orange} from "../Layout.css";
+  boxText,imageText,radioStyle,labelStyleRadio,imageInput,contentStyle,iconStyle,activeStyle,orange,exampletable} from "../Layout.css";
 import { bin2 } from 'react-icons-kit/icomoon/bin2';
 import { glass2 } from 'react-icons-kit/icomoon/glass2';
 import { ic_delete } from 'react-icons-kit/md/ic_delete';
@@ -29,15 +29,16 @@ export class Statement extends React.Component{
       <Header1/>
       <div className={displayContainer}>
 <p className={pageHeading}>Statement
+</p>
+<hr className={hrStyle}/>
 <span  className={floatRight1}>
 <form >
 	<input type="search"  placeholder="Search" />
 </form>
 
-</span></p>
-<hr className={hrStyle}/>
+</span>
 
-<table class="table table-bordered table-striped table-responsive-md" id={contentStyle}>
+<table class="table table-bordered table-striped table-responsive-md" id={exampletable}>
 <thead>
       <tr className={orange}>
           <th>Employee ID</th>

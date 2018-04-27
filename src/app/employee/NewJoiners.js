@@ -14,16 +14,17 @@ export class NewJoiners extends React.Component{
       <Header1/>
       <div className={displayContainer}>
 <p className={pageHeading}>New Joiners
+
+</p>
+<hr className={hrStyle}/>
 <span  className={floatRight1}>
 <form >
 	<input type="search"  placeholder="Search" />
 </form>
 
 </span>
-</p>
-<hr className={hrStyle}/>
 
-      <div class="row" style={{marginLeft:'0.4vw',marginTop:'3vw'}}>
+      <div class="row" style={{marginLeft:'0.4vw',marginTop:'5vw'}}>
 
  <CardTemplate text={"Albert Walker"}>
   <p className={empDesign}>Test engineer</p>

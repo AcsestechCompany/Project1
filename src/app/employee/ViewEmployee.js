@@ -75,6 +75,12 @@ export class ViewEmployee extends React.Component{
       <div className={displayContainer}>
 <p className={pageHeading}>
 Employee List
+
+</p>
+<hr className={hrStyle}/>
+<p>
+<Link to="/AddEmployee"><button className="btn btn-outline-warning" id={buttonStyle}>
+Add New Employee</button></Link>
 <span  className={floatRight1}>
 <form >
 	<input type="search"  placeholder="Search" />
@@ -82,9 +88,6 @@ Employee List
 
 </span>
 </p>
-<hr className={hrStyle}/>
-<Link to="/AddEmployee"><button className="btn btn-outline-warning" id={buttonStyle}>
-Add New Employee</button></Link>
 
 {first}
 {second}

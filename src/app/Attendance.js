@@ -18,14 +18,15 @@ export class Attendance extends React.Component{
       <Header1/>
       <div className={displayContainer}>
 <p className={pageHeading}>Attendance
+
+</p>
+<hr className={hrStyle}/>
 <span  className={floatRight1}>
 <form >
 	<input type="search"  placeholder="Search" />
 </form>
 
 </span>
-</p>
-<hr className={hrStyle}/>
 
 <table class="table table-bordered  table-responsive-md" id={exampletable}>
 <thead>

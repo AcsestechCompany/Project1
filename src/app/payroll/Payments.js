@@ -21,14 +21,15 @@ export class Payments extends React.Component{
       <Header1/>
       <div className={displayContainer}>
 <p className={pageHeading}>Payments
+
+</p>
+<hr className={hrStyle}/>
 <span  className={floatRight1}>
 <form >
 	<input type="search"  placeholder="Search" />
 </form>
 
 </span>
-</p>
-<hr className={hrStyle}/>
 
 <table class="table table-bordered  table-responsive-md" id={exampletable}>
 <thead>

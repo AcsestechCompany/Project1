@@ -14,18 +14,20 @@ export class Leavers extends React.Component{
       <div className={displayContainer}>
 <p className={pageHeading}>Leavers
 
+</p>
+<hr className={hrStyle}/>
 <span  className={floatRight1}>
 <form >
 	<input type="search"  placeholder="Search" />
 </form>
-
-</span></p>
-<hr className={hrStyle}/>
+</span>
+<div style={{marginTop:'5vw'}}>
 <CardTemplate text={"Albert Walker"}>
  <p className={empDesign}>Test engineer</p>
  <p className={empId}>E153</p>
  <p className={empPhone}>9786456787</p>
 </CardTemplate>
+</div>
   </div>
   <Footer/>
   </div>

@@ -7,7 +7,7 @@ color:gray;
 .floatRight1{
 float:right;
 position:relative;
-bottom:1.2vw;
+
 }
 #link{
   color:white;
@@ -77,6 +77,8 @@ top:-1.5vw;
 left:6.2vw;
 }
 #exampletable{
+  position:relative;
+  top:3vw;
   text-align: center;
 }
 #exampletable tbody > tr:nth-child(2n+1) > td, #exampletable > tbody > tr:nth-child(2n+1) > th {
