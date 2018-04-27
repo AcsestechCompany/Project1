@@ -49,6 +49,7 @@ import {NewJoiners} from "./employee/NewJoiners";
 import {Leavers} from "./employee/Leavers";
 import {AdminUsers} from "./admin/AdminUsers";
 import {DemoPage} from "./DemoPage";
+import {Contactus} from "./Contactus";
 //import {Calendar1} from "./components/Calendar";
 //import "../styles.css";
 //import styles from "../styles.css";
@@ -107,6 +108,7 @@ export class App extends React.Component {
               <Route path="/AdminUsers" component={AdminUsers}/>
               <Route path="/DemoPage" component={DemoPage}/>
               <Route path="/HolidayPage" component={HolidayPage}/>
+              <Route path="/Contactus" component={Contactus}/>
      </div>
 </Router>
 

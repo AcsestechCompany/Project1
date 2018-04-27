@@ -9,6 +9,10 @@ float:right;
 position:relative;
 bottom:1.2vw;
 }
+#link{
+  color:white;
+  text-decoration:none;
+}
 .downIcon{
 position:relative;
 left:0.2vw;
