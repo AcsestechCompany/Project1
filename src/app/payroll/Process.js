@@ -23,7 +23,10 @@ export class Process extends React.Component{
        <div class="col-md-3 mb-3">
        <label className={labelStyle1}>Payment Type</label>
        <select id="" class="form-control" id={inputstyle}>
-       <option></option>
+       <option>Monthly</option>
+       <option>Weekly</option>
+       <option>Yearly</option>
+       <option>Quarterly</option>
        </select>
        </div>
 <div class="col-md-3 mb-3">
@@ -43,7 +46,7 @@ export class Process extends React.Component{
   </div>
   </div>
           </Form>
-    <button className="btn btn-outline-warning">Process</button>
+    <button className="btn btn-outline-warning" style={{marginRight:'0.5vw'}}>Process</button>
     <button className="btn btn-outline-warning">Cancel</button>
       </div>
       <Footer/>
