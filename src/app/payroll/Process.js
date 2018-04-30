@@ -37,13 +37,14 @@ export class Process extends React.Component{
   <div class="col-sm-6">
   <label className={labelStyle1}>Select Employees</label>
   <select id="" class="form-control" id={inputstyle}>
-  <option></option>
+  <option>Based on Designation</option>
+  <option>Based on Department</option>
   </select>
   </div>
   </div>
           </Form>
-    <button className="btn btn-outline-warning btn-sm" id={buttonStyle}>Process</button>
-    <button className="btn btn-outline-warning btn-sm" id={buttonStyle}>Cancel</button>
+    <button className="btn btn-outline-warning">Process</button>
+    <button className="btn btn-outline-warning">Cancel</button>
       </div>
       <Footer/>
       </div>
