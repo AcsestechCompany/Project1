@@ -7,7 +7,9 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Icon from 'react-icons-kit';
 import { plus,pencil,bin,search } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
-import {displayContainer,pageHeading,hrStyle,activeStyle,orange,floatRight1,exampletable} from "./Layout.css";
+import {displayContainer,pageHeading,hrStyle,activeStyle,orange,floatRight1,exampletable,labelStylepopup} from "./Layout.css";
+import {inputstyle,modalbutton,labelStyle1,labelStyle2} from "./admin/LayoutAdmin.css";
+
 import { ic_create ,ic_delete } from 'react-icons-kit/md';
 import {Header1} from "./Header1";
 import {Footer} from "./Footer";
@@ -45,8 +47,48 @@ export class Attendance extends React.Component{
          <td style={{textAlign:'center'}}></td>
          <td></td>
          <td></td>
-         <td><Icon icon={ic_create} size={20}/>
-             <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={20} />  </td>
+         <td>
+         <span class="btn btn-link" data-toggle="modal" id={modalbutton} data-target="#exampleModalCenter">
+           <Icon icon={ic_create} size={20}/>
+         </span>
+         <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+           <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <h5 class="modal-title" id="exampleModalLongTitle" className={orange}>Edit Leave</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                 </button>
+               </div>
+               <div class="modal-body">
+               <div class="form-row">
+                 <div class="col-md-6 mb-3">
+                   <label className={labelStylepopup}>Employee Name</label>
+                   <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+                 </div>
+                 <div class="col-md-6 mb-3">
+                   <label className={labelStylepopup}>Employee ID</label>
+                   <input type="text" class="form-control" id={inputstyle} placeholder="" />
+                 </div>
+                 </div>
+                 <div class="form-row">
+                   <div class="col-md-6 mb-3">
+                     <label className={labelStylepopup}>Remark</label>
+                     <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+                   </div>
+                   <div class="col-md-6 mb-3">
+                     <label className={labelStylepopup}>Reason for Absence</label>
+                     <input type="text" class="form-control" id={inputstyle} placeholder="" />
+                   </div>
+                   </div>
+            </div>
+                 <button type="button" class="btn btn-outline-warning" data-dismiss="modal" style={{marginLeft:'30vw',marginBottom:'3vw',width:'46%'}}>Save</button>
+
+             </div>
+           </div>
+         </div>
+
+             <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={20} /> </td>
      </tr>
      </tbody>
      </table>

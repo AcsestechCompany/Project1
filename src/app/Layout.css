@@ -28,6 +28,11 @@ position:relative;
 top:0.18vw;
 left:0.5vw;
 }
+.labelStylepopup{
+  text-align:center;
+  color:black;
+  font-size:0.9vw;
+}
 
 .orange:hover{
   color:orange;

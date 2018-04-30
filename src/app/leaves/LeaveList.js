@@ -6,6 +6,7 @@ import {Link} from "react-router-dom";
 import { ic_delete,ic_create  } from 'react-icons-kit/md';
 import {displayContainer,pageHeading,hrStyle,activeStyle,orange,floatRight1,exampletable,buttonStyle} from "../Layout.css";
 import {inputstyle,modalbutton,labelStyle1,labelStyle2} from "../admin/LayoutAdmin.css";
+import {labelStylepopup,savebtn1} from "../Layout.css";
 import {Header1} from "../Header1";
 import {Footer} from "../Footer";
 
@@ -65,41 +66,41 @@ export class LeaveList extends React.Component{
                 <div class="modal-body">
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
-                    <label className={labelStyle1}>Employee Name</label>
+                    <label className={labelStylepopup}>Employee Name</label>
                     <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
                   </div>
                   <div class="col-md-6 mb-3">
-                    <label className={labelStyle1}>Employee ID</label>
+                    <label className={labelStylepopup}>Employee ID</label>
                     <input type="text" class="form-control" id={inputstyle} placeholder="" />
                   </div>
                   </div>
                   <div class="form-row">
                     <div class="col-md-6 mb-3">
-                      <label className={labelStyle1}>Leave Name</label>
+                      <label className={labelStylepopup}>Leave Name</label>
                       <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
                     </div>
                     <div class="col-md-6 mb-3">
-                      <label className={labelStyle1}>Leave Type</label>
+                      <label className={labelStylepopup}>Leave Type</label>
                       <input type="text" class="form-control" id={inputstyle} placeholder="" />
                     </div>
                     </div>
                     <div class="form-row">
                       <div class="col-md-6 mb-3">
-                        <label className={labelStyle2}>Start Date</label>
+                        <label className={labelStylepopup}>Start Date</label>
                         <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label className={labelStyle1}>End Date</label>
+                        <label className={labelStylepopup}>End Date</label>
                         <input type="text" class="form-control" id={inputstyle} placeholder="" />
                       </div>
                       </div>
                       <div class="form-row">
                       <div class="col-md-6 mb-3">
-                        <label className={labelStyle1}>Reason</label>
+                        <label className={labelStylepopup}>Reason</label>
                         <input type="text" class="form-control" id={inputstyle} placeholder="" />
                       </div>
                       <div class="col-md-6 mb-3">
-                        <label className={labelStyle1}>Status</label>
+                        <label className={labelStylepopup}>Status</label>
                         <select class="form-control" id={inputstyle}>
                         <option>Approved</option>
                         <option>Pending</option>
@@ -108,7 +109,7 @@ export class LeaveList extends React.Component{
                       </div>
                     </div>
                 </div>
-                  <button type="button" class="btn btn-outline-warning" data-dismiss="modal" id={buttonStyle}>Save</button>
+                  <button type="button" class="btn btn-outline-warning" data-dismiss="modal" style={{marginLeft:'30vw',marginBottom:'3vw',width:'46%'}}>Save</button>
 
               </div>
             </div>

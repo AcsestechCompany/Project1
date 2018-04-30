@@ -63,8 +63,8 @@ export class ClaimList extends React.Component{
 
      </tbody>
      </table>
-     <div className={bankdiv} style={{marginTop:'2vw'}}>
-       <Link to="/AddClaims"><button className="btn btn-outline-warning" id={savebtn1}>
+     <div className={bankdiv} style={{marginTop:'7vw',marginLeft:'-7.7vw'}}>
+       <Link to="/AddClaims"><button className="btn btn-outline-warning" >
 
        Add New Claim</button></Link>
        </div>

@@ -6,7 +6,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Icon from 'react-icons-kit';
 import { plus,glass2,search } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
-import {displayContainer,pageHeading,hrStyle,buttonStyle} from "../Layout.css";
+import {displayContainer,pageHeading,hrStyle,buttonStyle,savebtn1} from "../Layout.css";
 import {dateStyle,labelStyle1} from "../employee/LayoutEmployee.css";
 import {labelStyle,inputstyle1,formStyle,inputStyle,textAreaStyle,hyperLink} from "../settings/LayoutSettings.css";
 import {inputstyle,addBtn,cancelBtn} from "../projects/Projects.css";
@@ -43,7 +43,7 @@ export class AddClaims extends React.Component{
                  <Input className={textAreaStyle} type="textarea" name="text" id="" />
                </FormGroup>
 
-           <Link to="/ExpenseList"><button className="btn btn-outline-primary btn-sm" id={buttonStyle}>
+           <Link to="/ExpenseList"><button className="btn btn-outline-warning" >
            Submit</button></Link>
           </Form>
       </div>
