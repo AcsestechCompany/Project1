@@ -20,7 +20,7 @@ export class CardHeaderEvents extends React.Component {
 handleChange = (event, index, value) => this.setState({value});
   render() {
     return(
-<p className={cardHeaderStyle}>EVENTS
+<p className={cardHeaderStyle}>Events
 <span className={right} ><Link to="/EventsList" className={linkmore}>View More ></Link></span>
 </p>
 );

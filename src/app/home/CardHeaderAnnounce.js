@@ -11,7 +11,7 @@ import {Link} from "react-router-dom";
 export class CardHeaderAnnounce extends React.Component {
   render() {
     return(
-<p className={cardHeaderStyle}>ANOUNCEMENTS
+<p className={cardHeaderStyle}>Announcements
 <span className={right} ><Link to="/AnnouncementList" className={linkmore}>View More ></Link></span>
 </p>
 

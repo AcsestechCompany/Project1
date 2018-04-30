@@ -7,7 +7,7 @@ import { plus,arrowRight2 } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import {displayContainer,floatRight,arrowIcon,hrStyle,buttonStyle,pageHeading,orange} from "../Layout.css";
 import {labelStyle,inputstyle,formStyle,inputStyle,skipstyle,inputstyletextarea,
-labelStyle1,hyperLinkEmployee,slideremp} from "./LayoutEmployee.css";
+labelStyle1,hyperLinkEmployee,slideremp,sliderline,sliderlineorange} from "./LayoutEmployee.css";
   import {Header1} from "../Header1";
   import {Footer} from "../Footer";
 
@@ -83,11 +83,21 @@ export class PersonalDetails extends React.Component{
                 </div>
           </Form>
           </Col>
-          <Col>  <div className={floatRight} style={{fontSize:'0.9vw'}}>
-            <p style={{marginTop:'3vw'}}>
-            <Link to="/PersonalDetails" className={orange} >Personal Details</Link></p>
-            <p><Link to="/ProfessionalDetails" className={hyperLinkEmployee} >Professional Details</Link></p>
-            <p><Link to="/BankDetails" className={hyperLinkEmployee}>Bank Details</Link></p>
+          <Col>  <div className={floatRight} style={{fontSize:'0.9vw',position:'relative',bottom:'-2.5vw'}}>
+            <p >
+
+            <Link to="/PersonalDetails" className={orange} >
+      Personal Details
+            </Link></p>
+            <p>
+            <Link to="/ProfessionalDetails" className={hyperLinkEmployee}>
+
+            Professional Details
+            </Link>
+            </p>
+            <p><Link to="/BankDetails" className={hyperLinkEmployee}>
+
+            Bank Details</Link></p>
             <p><Link to="/LoginInfo" className={hyperLinkEmployee}>Login Information</Link></p>
             <p><Link to="/JobHistory" className={hyperLinkEmployee}>Job History</Link></p>
             <p><Link to="/EmpDocs" className={hyperLinkEmployee}>Employee Documents</Link></p>

@@ -35,14 +35,14 @@ export class LoginInfo extends React.Component{
         </div>
         <FormGroup>
           <Label className={labelStyle1}>Auto Generated Password</Label>
-          <Input className={inputStyle} type="text" name="" id="" placeholder="" />
+          <Input className={inputStyle} type="text" name="" placeholder="" />
         </FormGroup>
       </Form>
 
       </Col>
       <Col>
-      <div className={floatRight} style={{fontSize:'0.9vw'}}>
-      <p style={{marginTop:'1.5vw'}}>
+      <div className={floatRight} style={{fontSize:'0.9vw',marginTop:'2.5vw'}}>
+      <p>
       <Link to="/PersonalDetails" className={hyperLinkEmployee}>Personal Details</Link></p>
       <p><Link to="/ProfessionalDetails" className={hyperLinkEmployee}>Professional Details</Link></p>
       <p><Link to="/BankDetails" className={hyperLinkEmployee}>Bank Details</Link></p>

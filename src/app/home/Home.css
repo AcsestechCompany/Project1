@@ -82,18 +82,22 @@ right:0.5vw;
 }
 .calendarText{
 position:relative;
-top:0.4vw;
-right:0.5vw;
-font-size:0.615vw;
+right:0.7vw;
+bottom:0.3vw;
+
+
+float:right;
+font-size:0.7vw;
+
 
 }
 #empCalendar{
   position: relative;
   top:0.23vw;
-  right:0.5vw;
+  right:1.5vw;
+
 }
 .empicons{
-
   color:black;
   margin-left:24.8vw;
   margin-top:-2.3vw;
@@ -107,7 +111,7 @@ font-size:0.615vw;
 .linkmore{
   color:gray !important;
   text-decoration:none;
-  font-size:0.7vw;
+  font-size:0.75vw;
 }
 .cardStyle{
   height:5vw;
@@ -131,12 +135,12 @@ color:orange;
 }
 .empRow{
   margin-left:1.3vw;
-  margin-top:1.2vw;
+  margin-top:3vw;
   color:gray;
-  font-size:0.8vw;
+  font-size:0.93vw;
 }
 .empTextP{
-  padding-right:3.7vw;
+  padding-right:3vw;
 }
 .empTextA{
   position:relative;
@@ -144,15 +148,15 @@ color:orange;
 }
 .empTextOL{
   position:relative;
-  left:2.8vw;
+  left:2.4vw;
 }
 .empTextL{
   position: relative;
-  left:6vw;
+  left:5vw;
 }
 .empTextOT{
   position: relative;
-  left:9.5vw;
+  left:8.5vw;
 }
 
 .transition{
@@ -169,18 +173,18 @@ color:orange;
 .holidayTextR{
 
   margin-top:-0.5vw;
-  font-size:0.8vw;
+  font-size:0.9vw;
   color:blue;
 }
 .holidayTitleR{
   color:orange;
-  font-size:3vw;
+  font-size:3.3vw;
 
 }
 .holidayDayR{
   color:black;
   margin-top:-3vw;
-  font-size:0.8vw;
+  font-size:0.95vw;
 }
 .holidayIconL{
   color:lightgray;

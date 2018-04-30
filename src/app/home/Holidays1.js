@@ -20,7 +20,7 @@ import { angleLeft,angleRight } from 'react-icons-kit/fa';
 
          <Card body inverse className={cardStyle4}>
          <Link to="HolidayPage" className={linkDepartment}>
-         <CardHeader text={"HOLIDAYS"}/>
+         <CardHeader text={"Holidays"}/>
          </Link>
            <div id="carouselExampleIndicators" class="carousel slide" data-interval="false" >
 

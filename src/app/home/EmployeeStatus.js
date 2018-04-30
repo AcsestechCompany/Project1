@@ -14,7 +14,7 @@ export class EmployeeStatus extends React.Component{
       <Col xs="6" style={{marginRight:'-1vw'}}>
       <Link to="EmploymentStatus" className={linkDepartment}>
        <Card body inverse className={cardStyle2} >
-        <CardHeader text={"EMPLOYEE STATUS"}/>
+        <CardHeader text={"Employee Status"}/>
         <CardText  className={empicons}>
         <i aria-hidden="true" class="calendar huge icon" id={empCalendar}></i>{'   '}
         <span className={calendarText}>04-APR-18</span>

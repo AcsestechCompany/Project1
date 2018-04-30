@@ -13,7 +13,7 @@ export class Departments extends React.Component{
       <Col style={{marginRight:'-1vw'}}>
       <Link to="/DepartmentsPage" className={linkDepartment}>
           <Card body inverse className={cardStyle3} >
-          <CardHeader text={"DEPARTMENTS"}/>
+          <CardHeader text={"Departments"}/>
           <div className={piechartStyle}>
             <PieChart
                   slices={[
@@ -39,9 +39,9 @@ export class Departments extends React.Component{
               /></div>
           <div className={pieChartTextStyle}>
               <div className={rectangleStyle}><Rectangle width={7.5} height={7.5}
-               fill={{color:'#5B9BD5'}} /><span className={timeSheetStyle}>Marketing</span></div>
+               fill={{color:'#5B9BD5'}} /><span className={timeSheetStyle}>HR</span></div>
                <div className={rectangleStyle}><Rectangle width={7.5} height={7.5}
-                fill={{color:'#FFC000'}} /><span className={timeSheetStyle}>Technology</span></div>
+                fill={{color:'#FFC000'}} /><span className={timeSheetStyle}>IT</span></div>
                <div className={rectangleStyle}><Rectangle width={7.5} height={7.5}
                fill={{color:'#ED7D31'}} /><span className={timeSheetStyle}>Finance</span></div>
                <div className={rectangleStyle}><Rectangle width={7.5} height={7.5}

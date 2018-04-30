@@ -18,7 +18,7 @@ export class FourthRow extends React.Component{
       <Row className={rowStyle}>
        <Col>
            <Card  className={repoteesCardStyle}>
-           <CardHeader text={"MY REPOTEES"}  />
+           <CardHeader text={"My Repotees"}  />
            <div id="carouselExampleIndicators1" class="carousel slide" data-interval="false" >
 
              <div class="carousel-inner" >

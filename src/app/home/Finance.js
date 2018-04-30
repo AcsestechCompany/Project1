@@ -13,12 +13,13 @@ import { ic_create,ic_delete  } from 'react-icons-kit/md';
 export class Finance extends React.Component{
   render() {
     return(
-      <div style={{marginTop:'3vw'}}>
-<p className={pageHeading}>Finance<span className={floatRight}><Icon icon={search}/></span></p>
-<hr className={hrStyle}/>
 
-<table class="table table-bordered table-striped table-responsive-md" id={contentStyle}>
-<thead>
+      <div style={{marginTop:'3vw'}}>
+  <p className={pageHeading}>Finance<span className={floatRight}><Icon icon={search}/></span></p>
+  <hr className={hrStyle}/>
+
+  <table class="table table-bordered table-striped table-responsive-md" id={contentStyle}>
+  <thead>
       <tr style={{color:'orange'}}>
           <th>Employee ID</th>
           <th>Employee Name</th>
@@ -30,16 +31,6 @@ export class Finance extends React.Component{
       </tr>
   </thead>
   <tbody>
-     <tr>
-         <td>E123</td>
-         <td>Enosh David</td>
-         <td >Product Manager</td>
-         <td>1,00,000</td>
-         <td>01/01/2018</td>
-          <td className={inProgress}>Active</td>
-         <td><Icon icon={ic_create} size={20}/>
-             <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={19} /> </td>
-     </tr>
      <tr>
          <td>E555</td>
          <td>Arul Prem</td>
@@ -58,7 +49,7 @@ export class Finance extends React.Component{
          <td>05/02/2018</td>
           <td className={inProgress}>Active</td>
          <td><Icon icon={ic_create} size={20}/>
-              <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={19} /> </td>
+              <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={19} /></td>
      </tr>
      <tr>
          <td>E543</td>

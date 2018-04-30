@@ -30,7 +30,7 @@ render() {
     <div>
       <Navbar color="faded" light expand="md" style={{backgroundColor:'#2C3E50'}}>
         <NavbarBrand  style={{color:'red',marginTop:'-2.5vw',
-          fontSize:'1.8vw',marginLeft:'2vw',fontWeight:'bold',fontFamily:'sanserif'}}>
+          fontSize:'2.5vw',marginLeft:'2vw',fontWeight:'bold',fontFamily:'sanserif'}}>
           <NavLink to="/Home" className={hyperLinkLogo}>
           <span style={{color:'red'}}>H</span>
           <span>rms</span></NavLink>
