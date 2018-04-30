@@ -1,4 +1,141 @@
+@media only screen and (max-width: 768px) {
+  .firstrowstyle{
+    position:relative;
+    top:2vw !important;
+margin-bottom:4vw !important;
+  }
+  .repoteesStyle{
+    margin-left:4vw !important;
+    margin-right:2vw;
+    margin-top:1.3vw;
+  }
 
+  .repoteesCardStyle{
+    height:17vw !important;
+    padding-top:2vw !important;
+    padding-left:3vw !important;
+
+  }
+  #secondrowstyle{
+    margin-bottom:2.5vw !important;
+  }
+  #thirdrowstyle{
+    margin-bottom:3vw !important;
+  }
+  .piechartStyle{
+    width:8vw !important;
+    margin-top:-1.5vw !important;
+    margin-left:-1vw !important;
+  }
+  .pieChartTextStyle{
+    margin-top:-9vw !important;
+    margin-left:8.5vw !important;
+    font-size:1.1vw !important;
+    color:grey;
+  }
+  .rectangleStyle{
+    padding:-0.1vw;
+  }
+  .timeSheetStyle{
+  padding-left:0.7vw;
+  padding-bottom:1vw;
+  }
+  .upperNav{
+  position:relative;
+  bottom:4vw;
+  left:-4.5vw;
+  right:5vw;
+  }
+  .upperNavIcon{
+    position:relative;
+    bottom:-2vw !important;
+    left:-0.6vw !important;
+    right:4.8vw;
+  }
+  .settingsIcon{
+    position:relative;
+    bottom:0.1vw !important;
+    right:7vw;
+  }
+  .notificationIcon{
+    position:relative;
+    bottom:1.8vw !important;
+  right:9vw;
+  }
+.displayHome{
+  width:100% !important;
+  margin-top:-2.5vw !important;
+  padding:3vw 7vw 3vw 7vw !important;
+}
+.dropDownStyle{
+  position:relative;
+  top:3.89vw !important;
+  width:0.1vw !important;
+  left:-5vw !important;
+}
+.dropDownLeaves{
+  position:relative;
+  top:3.89vw !important;
+  width:0.001vw !important;
+  left:-6vw !important;
+}
+.dropDownClaims{
+  position:relative;
+  top:3.89vw !important;
+  width:0.1vw !important;
+  left:-6vw  !important;
+}
+.dropDownPayroll{
+  position:relative;
+  top:3.89vw !important;
+  width:0.1vw !important;
+  left:-6vw !important;
+}
+
+#navStyle{
+  font-size:1vw;
+  margin-bottom:0.5vw !important;
+  width:100% !important;
+  position:relative;
+  left:-6vw !important;
+}
+
+.navitemStyle{
+padding-right:11.25vw !important;
+position:relative;
+bottom:-9.2vw !important;
+}
+.navitemStyleHome{
+padding-right:9.15vw !important;
+position:relative;
+bottom:-11vw !important;
+}
+.cardStyle{
+  height:6.5vw !important;
+ background-color:#FFFFFF;
+ border:none;
+ box-shadow:-0.01px 3px 1px 0.1px grey;
+}
+.cardTextStyle{
+  position:relative;
+padding-bottom:0.15vw !important;
+  color:black;
+  font-size:1.1vw !important;
+  text-align: center;
+}
+.cardHeaderStyle{
+  color:#000000;
+position:relative;
+left:0.2vw;
+top:-1vw !important;
+
+  font-size:1.2vw !important;
+  font-weight:450;
+  font-family:sans-serif;
+}
+
+
+}
 .floatRight{
 float:right;
 color:gray;

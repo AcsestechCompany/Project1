@@ -1,3 +1,38 @@
+@media only screen and (max-width: 768px){
+  .cardStyle7{
+    margin-bottom:1.5vw !important;
+    position:relative;
+    top:-0.6vw !important;
+
+  }
+  .cardStyle6{
+    margin-bottom:1.5vw !important;
+    position:relative;
+    top:-0.6vw !important;
+  }
+  .cardTitle1{
+    font-size:1.2vw !important;
+    font-family:sans-serif !important;
+  }
+  .cardText1{
+    position:relative;
+    top:-0.5vw !important;
+    font-size:0.9vw !important;
+  }
+  .cardTitle{
+    font-family:sans-serif !important;
+    font-size:1.2vw !important;
+  }
+  .cardText{
+    position:relative;
+    top:-0.5vw !important;
+    font-size:0.9vw !important;
+  }
+  .timeText1{
+    font-size:0.9vw !important;
+  }
+}
+
 .cardTitle{
 position:relative;
 top:0.5vw;

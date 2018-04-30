@@ -1,10 +1,93 @@
+@media only screen and (max-width: 768px){
+  .cardStyle1{
+  height:20vw !important;
 
-.cardStyle1{
-  height:16vw;
-   background-color:#FFFFFF;
-   border:none;
-   box-shadow:-0.01px 3px 8px 0.1px 	gray;
+  }
+  .linkmore{
+    font-size:1vw !important;
+  }
+  .empRow{
+    margin-left:1.3vw;
+    margin-top:5.5vw !important;
+    color:gray;
+    font-size:0.93vw;
+  }
+  .empTextP{
+    padding-right:3vw;
+  }
+  .empTextA{
+    position:relative;
+    left:1.7vw !important;
+  }
+  .empTextOL{
+    position:relative;
+    left:7.2vw !important;
+  }
+  .empTextL{
+    position: relative;
+    left:12vw !important;
+  }
+  .empTextOT{
+    position: relative;
+    left:17vw !important;
+  }
+  .calendarText{
+  position:relative;
+  right:0.8vw !important;
+  bottom:0.5vw !important;
+  float:right !important;
+  font-size:0.9vw !important;
+  }
+  #empCalendar{
+    position:relative;
+    top:-1.23vw !important;
+  left:5vw !important;
+  font-size:1.35vw !important;
+  }
+
+  .holidaysCard{
+    position:relative;
+    top:-1.3vw !important;
+  }
+  .cardStyle1{
+    height:18vw !important;
+     background-color:#FFFFFF;
+     border:none;
+     box-shadow:-0.01px 3px 8px 0.1px 	gray;
+  }
+  .cardStyle2{
+    height:14vw !important;
+  }
+  .cardStyle{
+    height:6vw !important;
+    width:130% !important;
+    margin-right:-5vw !important;
+    margin-top:-1vw !important;
+  }
+  .cardStyle3{
+    height:14vw !important;
+  }
+  .cardStyle4{
+    height:14vw !important;
+  }
+  .holidayTextR{
+
+    margin-top:-0.5vw;
+    font-size:1.2vw !important;
+    color:blue;
+  }
+  .holidayTitleR{
+    color:orange;
+    font-size:3.7vw !important;
+
+  }
+  .holidayDayR{
+    color:black;
+    margin-top:-3vw;
+    font-size:1.3vw !important;
+  }
 }
+
 .pagination{
 position:relative;
 left:17vw;
@@ -58,7 +141,6 @@ width:100vw;
 }
 .cardStyle4{
   height:12vw;
-
 position:relative;
 left:0.5vw;
 width:97%;
@@ -84,18 +166,13 @@ right:0.5vw;
 position:relative;
 right:0.7vw;
 bottom:0.3vw;
-
-
 float:right;
 font-size:0.7vw;
-
-
 }
 #empCalendar{
   position: relative;
   top:0.23vw;
   right:1.5vw;
-
 }
 .empicons{
   color:black;

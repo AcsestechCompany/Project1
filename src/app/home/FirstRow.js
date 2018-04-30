@@ -1,6 +1,6 @@
 import React from "react";
 import {Row,Col,Card,CardText} from "reactstrap";
-import {cardTextStyle,linkStyle,cardStyle} from "../Layout.css";
+import {cardTextStyle,linkStyle,cardStyle,firstrowstyle} from "../Layout.css";
 import {Link} from "react-router-dom";
 
 import {imgStyle} from "../employee/LayoutSettings.css";
@@ -11,7 +11,7 @@ import { users } from 'react-icons-kit/icomoon/users';
 export class FirstRow extends React.Component{
   render() {
     return(
-      <Row>
+      <Row className={firstrowstyle}>
        <Col style={{marginRight:'-1vw'}}><Link to="/ViewEmployee" className={linkStyle}>
         <Card body inverse className={cardStyle} style={{ backgroundColor: '#A992E2'}}>
         <CardText className={cardTextStyle}>TOTAL EMPLOYEES<p><b>14</b></p></CardText>
