@@ -100,42 +100,42 @@ import {textAreaStyle,inputstyle,formStyle,floatRight,
         <hr className={hrStyle}/>
 <Form className={formStyle}>
           <div class="form-row">
-            <div class="col-md-5 mb-3">
+            <div class="col-md-4 mb-3">
               <label className={labelStyle1}>Registration Number</label>
               <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
 
             </div>
-            <div class="col-md-5 mb-3">
+            <div class="col-md-4 mb-3">
               <label className={labelStyle1}>PAN</label>
               <input type="text" class="form-control" id={inputstyle} placeholder="" />
             </div>
             </div>
             <div class="form-row">
-              <div class="col-md-5 mb-3">
+              <div class="col-md-4 mb-3">
                 <label className={labelStyle1}>TAN</label>
                 <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
               </div>
-              <div class="col-md-5 mb-3">
+              <div class="col-md-4 mb-3">
                 <label className={labelStyle1}>TAN Circle Number</label>
                 <input type="text" class="form-control" id={inputstyle} placeholder="" />
               </div>
               </div>
               <div class="form-row">
-                <div class="col-md-5 mb-3">
+                <div class="col-md-4 mb-3">
                   <label className={labelStyle1}>TDS Location</label>
                   <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
                 </div>
-                <div class="col-md-5 mb-3">
+                <div class="col-md-4 mb-3">
                   <label className={labelStyle1}>Form 16 Signatory</label>
                   <input type="text" class="form-control" id={inputstyle} placeholder="" />
                 </div>
                 </div>
-                        <p><Link to="/AttendanceSettings"><button type="button" class="btn btn-outline-warning waves-effect" id={savebtn} >
+                        <p><Link to="/AttendanceSettings"><button type="button" class="btn btn-outline-warning" id={savebtn} >
                         Save</button></Link>
-                        <span className={floatRight}>
-
-                        <Link to="/AttendanceSettings" className={hyperLinkEmployee}>Next
-                        <Icon icon={arrowRight2} size={14} className={arrowIcon} /></Link>
+                        <span className={floatRight} style={{position:'relative',top:'0.85vw'}}>
+                        <Link to="/AttendanceSettings" className={hyperLinkEmployee}>
+                        <button type="button" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIcon} /></button>
+                        </Link>
                         </span>
 
                         </p>

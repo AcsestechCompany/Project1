@@ -8,9 +8,9 @@ import { arrowLeft2 } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import {displayContainer,pageHeading,hrStyle,buttonStyle,savebtn,arrowIcon,orange} from "../Layout.css";
 import {labelStyle,inputstyle1,formStyle,inputstyle,
-dropDownInputStyle,buttonstyle,checkboxDiv,divStyle,radioStyle1,boxText,imageText,radioStyle,hyperLink,floatRight,
+dropDownInputStyle,buttonstyle,checkboxDiv,divStyle,radioStyle1,boxText,imageText,radioStyle,hyperLink,floatRight,radiodiv,
 } from "./LayoutSettings.css";
-import {labelStyle1,hyperLinkEmployee,inputStyle,inputstyletextarea} from "../employee/LayoutEmployee.css";
+import {labelStyle1,hyperLinkEmployee,inputStyle,inputstyletextarea,overtimePay} from "../employee/LayoutEmployee.css";
 import {Header1} from "../Header1";
 import {Footer} from "../Footer";
 export class AddComponent extends React.Component{
@@ -65,24 +65,28 @@ export class AddComponent extends React.Component{
       </div>
           <FormGroup>
     <div class="row">
-      <p class="col-form-label  col-sm-2 pt-0" style={{fontSize:'0.8vw'}}>Status</p>
-      <div class="col-sm-4" style={{marginLeft:'-8vw',marginTop:'-0.4vw'}}>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked
-          style={{marginTop:'0.7vw'}}/>
-          <label class="form-check-label" for="gridRadios1" style={{fontSize:'0.8vw',marginTop:'0.45vw',marginLeft:'1vw'}}>
-            Active
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" style={{marginTop:'0.7vw'}}/>
-          <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginTop:'0.5vw',marginLeft:'1vw'}}>
-          inActive
-          </label>
-        </div>
-        </div>
+    <div class="col-sm-7">
+    <Row className={overtimePay}>
+    <p style={{fontWeight:'lighter',fontSize:'0.9vw'}}>Status</p>
 
-        <div class="col-sm-4" style={{marginLeft:'-10vw',marginTop:'-0.15vw'}}>
+ </Row>
+ <div className={radiodiv}>
+ <div class="form-check">
+   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked
+   style={{marginTop:'0.7vw'}}/>
+   <label class="form-check-label" for="gridRadios1" style={{fontSize:'0.8vw',marginTop:'0.45vw',marginLeft:'1vw'}}>
+     Active
+   </label>
+ </div>
+ <div class="form-check">
+   <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" style={{marginTop:'0.7vw'}}/>
+   <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginTop:'0.5vw',marginLeft:'1vw'}}>
+   InActive
+   </label>
+ </div>
+ </div>
+</div>
+        <div class="col-sm-4" style={{marginLeft:'-11vw',marginTop:'-0.15vw'}}>
         <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"  style={{marginTop:'0.7vw'}}/>
   <label class="form-check-label" for="defaultCheck1" id={inputstyle} style={{marginTop:'0.4vw',marginLeft:'1vw'}}>
@@ -112,19 +116,24 @@ export class AddComponent extends React.Component{
           <Link to="/CompanyDetails" className={hyperLinkEmployee}>Organization Details</Link></p>
           <p><Link to="/AttendanceSettings" className={hyperLinkEmployee}>Attendance</Link></p>
           <p><Link to="/AddLeave" className={hyperLinkEmployee}>Leave Types</Link></p>
-          <p><Link to="/AddComponent" className={orange}>Salary Cmponents</Link></p>
+          <p><Link to="/AddComponent" className={orange}>Salary Components</Link></p>
           </div>
 
              </Col>
              </Row>
        <Button className="btn btn-outline-warning" id={savebtn}>
        <Link to="/ViewSalaryComponents" className={hyperLink}>Save</Link></Button>
-<span className={floatRight}>
-       <Link to="/AddLeave" className={hyperLinkEmployee} style={{marginRight:'1vw'}}>
-        <Icon icon={arrowLeft2} size={14} className={arrowIcon} />
-       Prev
-      </Link>
-      </span>
+
+             <span className={floatRight}>
+
+
+             <Link to="/AddLeave" className={hyperLinkEmployee} style={{position:'relative',top:'0.85vw'}}>
+             <button type="button" class="btn btn-light">
+             <Icon icon={arrowLeft2} className={arrowIcon} size={14} />Prev </button>
+               </Link>
+
+
+                </span>
       </div>
       <Footer/>
       </div>

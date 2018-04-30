@@ -7,7 +7,7 @@ import Icon from 'react-icons-kit';
 import { arrowRight2,arrowLeft2 } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import {displayContainer,pageHeading,hrStyle,buttonStyle,savebtn,arrowIcon,orange} from "../Layout.css";
-import {overtimePay,labelStyle1,hyperLinkEmployee,inputStyle,inputstyletextarea} from "../employee/LayoutEmployee.css";
+import {overtimePay,labelStyle1,hyperLinkEmployee,inputStyle,inputstyletextarea,skipstyle} from "../employee/LayoutEmployee.css";
 import {labelStyle,inputstyle1,formStyle,inputstyle,
 floatRight,radiodiv} from "./LayoutSettings.css";
 import {Header1} from "../Header1";
@@ -99,19 +99,23 @@ export class AddLeave extends React.Component{
        <Link to="/LeaveTypes">
        <button className="btn btn-outline-warning" id={savebtn}>
        Save</button></Link>
-       <Link to="/AddComponent" className={hyperLinkEmployee} style={{marginLeft:'1vw'}}>
+       <Link to="/AddComponent"  id={skipstyle}>
       Skip
       </Link>
 
-       <span className={floatRight} style={{position:'relative',top:'2vw'}}>
-       <Link to="/AttendanceSettings" className={hyperLinkEmployee} style={{marginRight:'1vw'}}>
-        <Icon icon={arrowLeft2} size={14} className={arrowIcon} />
-       Prev
-      </Link>
+      <span className={floatRight} style={{position:'relative',top:'0.85vw'}}>
 
-       <Link to="/AddComponent" className={hyperLinkEmployee}>Next
-       <Icon icon={arrowRight2} size={14} className={arrowIcon} /></Link>
-       </span>
+
+      <Link to="/AttendanceSettings" className={hyperLinkEmployee}>
+      <button type="button" class="btn btn-light">
+      <Icon icon={arrowLeft2} className={arrowIcon} size={14} />Prev </button>
+        </Link>
+
+
+      <Link to="/AddComponent" className={hyperLinkEmployee} >
+      <button type="button" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIcon} /></button>
+      </Link>
+         </span>
        </p>
 
 

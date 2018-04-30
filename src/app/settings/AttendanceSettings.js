@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 import Icon from 'react-icons-kit';
 import {arrowRight2,arrowLeft2 } from 'react-icons-kit/icomoon';
 import {labelStyle1,hyperLinkEmployee,overtimePay,skipstyle,inputStyle,inputstyletextarea} from "../employee/LayoutEmployee.css";
-import {displayContainer,pageHeading,hrStyle,buttonStyle,arrowIcon,orange} from "../Layout.css";
+import {displayContainer,pageHeading,hrStyle,buttonStyle,arrowIcon,orange,floatRight2} from "../Layout.css";
 import {inputstyle,formStyle,textAreaStyle,hyperLink,floatRight,
   inputStyle1,radiodiv,timeStyle} from "./LayoutSettings.css";
 import {Header1} from "../Header1";
@@ -141,17 +141,20 @@ export class AttendanceSettings extends React.Component {
               <button className="btn btn-outline-primary " id={buttonStyle}>
               Save</button></Link>
 
-              <Link to="/AddLeave" className={hyperLinkEmployee} id={skipstyle}>Skip</Link>
+              <Link to="/AddLeave"  id={skipstyle}>Skip</Link>
+              <span className={floatRight} style={{position:'relative',top:'0.85vw'}}>
 
-              <span className={floatRight}>
 
-              <Link to="/CompanyDetails" className={hyperLinkEmployee} style={{marginRight:'1vw'}}>
+              <Link to="/CompanyDetails" className={hyperLinkEmployee}>
+              <button type="button" class="btn btn-light">
+              <Icon icon={arrowLeft2} className={arrowIcon} size={14} />Prev </button>
+                </Link>
 
-                      <Icon icon={arrowLeft2} size={14} className={arrowIcon} />  Prev
-      </Link>
 
-              <Link to="/AddLeave" className={hyperLinkEmployee}>Next
-              <Icon icon={arrowRight2} size={14} className={arrowIcon} /></Link></span>
+              <Link to="/AddLeave" className={hyperLinkEmployee} >
+              <button type="button" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIcon} /></button>
+              </Link>
+                 </span>
 
              </div>
              <Footer/>
