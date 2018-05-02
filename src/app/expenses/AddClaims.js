@@ -7,9 +7,9 @@ import Icon from 'react-icons-kit';
 import { plus,glass2,search } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import {displayContainer,pageHeading,hrStyle,buttonStyle,savebtn1} from "../Layout.css";
-import {dateStyle,labelStyle1} from "../employee/LayoutEmployee.css";
+import {dateStyle,labelStyle1,inputstyle} from "../employee/LayoutEmployee.css";
 import {labelStyle,inputstyle1,formStyle,inputStyle,textAreaStyle,hyperLink} from "../settings/LayoutSettings.css";
-import {inputstyle,addBtn,cancelBtn} from "../projects/Projects.css";
+import {addBtn,cancelBtn} from "../projects/Projects.css";
 import {Header1} from "../Header1";
 import {Footer} from "../Footer";
 
@@ -22,26 +22,33 @@ export class AddClaims extends React.Component{
 <p className={pageHeading}>Add Claims</p>
 <hr className={hrStyle}/>
      <Form className={formStyle}>
-       <FormGroup>
-         <Label className={labelStyle1}>Expense Name</Label>
-         <Input className={inputStyle} type="text" name=""  placeholder="" />
-       </FormGroup>
+       <div class="form-row">
+       <div class="col-md-10 mb-3">
+         <label className={labelStyle1}>Expense Name</label>
+         <input id={inputstyle} type="text" class="form-control" name=""  placeholder="" />
+         </div>
+
+         </div>
+
             <div class="form-row">
-            <div class="col-md-3 mb-3">
+            <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Amount</label>
             <input type="text" class="form-control" id={inputstyle}/>
             </div>
-            <div class="col-md-3 mb-3">
+
+            <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Date</label>
               <MuiThemeProvider>
         <DatePicker hintText="date of joining" underlineStyle={{display: 'none'}} className={dateStyle} />
             </MuiThemeProvider>
             </div>
             </div>
-            <FormGroup>
-                 <Label className={labelStyle1}>Description</Label>
-                 <Input className={textAreaStyle} type="textarea" name="text" id="" />
-               </FormGroup>
+            <div class="form-row">
+            <div class="col-md-10 mb-3">
+                 <label className={labelStyle1}>Description</label>
+                 <input id={textAreaStyle} type="textarea" class="form-control" name="text" />
+              </div>
+              </div>
 
            <Link to="/ExpenseList"><button className="btn btn-outline-warning" >
            Submit</button></Link>

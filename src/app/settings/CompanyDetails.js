@@ -7,9 +7,8 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Icon from 'react-icons-kit';
 import { arrowRight2 } from 'react-icons-kit/icomoon';
 import {displayContainer,hrStyle,pageHeading,buttonStyle,savebtn,arrowIcon,orange} from "../Layout.css";
-import {dateStyle,labelStyle1,hyperLinkEmployee,inputStyle,inputstyletextarea} from "../employee/LayoutEmployee.css";
-import {textAreaStyle,inputstyle,formStyle,floatRight,
-  inputStyle1} from "./LayoutSettings.css";
+import {dateStyle,labelStyle1,hyperLinkEmployee,inputstyletextarea,slidertext,inputstyle} from "../employee/LayoutEmployee.css";
+import {textAreaStyle,formStyle,floatRight,  inputStyle1} from "./LayoutSettings.css";
   import {Header1} from  "../Header1";
   import {Footer} from "../Footer";
 
@@ -25,14 +24,17 @@ import {textAreaStyle,inputstyle,formStyle,floatRight,
 <Col>
       <Form className={formStyle}>
 
-        <FormGroup>
-          <Label className={labelStyle1}>Organization Name</Label>
-          <Input className={inputStyle} type="text" name="" id="" placeholder="" />
-        </FormGroup>
-        <FormGroup>
-          <Label className={labelStyle1}>Website URL</Label>
-          <Input className={inputStyle} type="text" name="" id="" placeholder="" />
-        </FormGroup>
+        <div class="form-row">
+        <div class="col-md-5 mb-3">
+          <label className={labelStyle1}>Organization Name</label>
+          <input id={inputstyle} type="text" class="form-control" name=""  placeholder="" />
+        </div>
+        <div class="col-md-5 mb-3">
+
+          <label className={labelStyle1}>Website URL</label>
+          <input id={inputstyle} type="text" name="" class="form-control"  placeholder="" />
+        </div>
+        </div>
         <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Financial Year Start Month</label>
@@ -48,10 +50,12 @@ import {textAreaStyle,inputstyle,formStyle,floatRight,
       </select>
       </div>
       </div>
-        <FormGroup>
-          <Label className={labelStyle1}>Address</Label>
-          <Input className={inputStyle} type="text" name="" id="" placeholder="" />
-        </FormGroup>
+        <div class="form-row">
+        <div class="col-md-10 mb-3">
+          <label className={labelStyle1}>Address</label>
+          <input id={inputstyletextarea} type="textarea" class="form-control" name=""  placeholder="" />
+        </div>
+        </div>
         <div class="form-row">
         <div class="col-md-5 mb-3">
          <label className={labelStyle1}>State</label>
@@ -85,7 +89,7 @@ import {textAreaStyle,inputstyle,formStyle,floatRight,
            </Form>
            </Col>
            <Col xs="2">
-           <div className={floatRight} style={{fontSize:'0.9vw'}}>
+           <div className={floatRight} style={{fontSize:'0.9vw'}} id={slidertext}>
            <p style={{marginTop:'3vw'}}>
            <Link to="/CompanyDetails" className={orange}>Organization Details</Link></p>
            <p><Link to="/AttendanceSettings" className={hyperLinkEmployee}>Attendance</Link></p>

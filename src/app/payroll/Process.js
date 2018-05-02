@@ -20,7 +20,7 @@ export class Process extends React.Component{
 <hr className={hrStyle}/>
      <Form className={formStyle}>
        <div class="form-row">
-       <div class="col-md-3 mb-3">
+       <div class="col-md-5 mb-3">
        <label className={labelStyle1}>Payment Type</label>
        <select id="" class="form-control" id={inputstyle}>
        <option>Monthly</option>
@@ -29,7 +29,7 @@ export class Process extends React.Component{
        <option>Quarterly</option>
        </select>
        </div>
-<div class="col-md-3 mb-3">
+<div class="col-md-5 mb-3">
 <label className={labelStyle1}>Select Period</label>
 <select id="" class="form-control" id={inputstyle}>
 <option></option>
@@ -37,7 +37,7 @@ export class Process extends React.Component{
 </div>
   </div>
   <div class="form-row">
-  <div class="col-sm-6">
+  <div class="col-sm-5">
   <label className={labelStyle1}>Select Employees</label>
   <select id="" class="form-control" id={inputstyle}>
   <option>Based on Designation</option>

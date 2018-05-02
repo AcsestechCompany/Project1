@@ -5,10 +5,10 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Link} from "react-router-dom";
 import Icon from 'react-icons-kit';
 import {arrowRight2,arrowLeft2 } from 'react-icons-kit/icomoon';
-import {labelStyle1,hyperLinkEmployee,overtimePay,skipstyle,inputStyle,inputstyletextarea} from "../employee/LayoutEmployee.css";
+import {labelStyle1,hyperLinkEmployee,overtimePay,skipstyle,inputstyle,inputstyletextarea,slidertext} from "../employee/LayoutEmployee.css";
 import {displayContainer,pageHeading,hrStyle,buttonStyle,arrowIcon,orange,floatRight2} from "../Layout.css";
-import {inputstyle,formStyle,textAreaStyle,hyperLink,floatRight,
-  inputStyle1,radiodiv,timeStyle} from "./LayoutSettings.css";
+import {formStyle,textAreaStyle,hyperLink,floatRight,
+  radiodiv,timeStyle} from "./LayoutSettings.css";
 import {Header1} from "../Header1";
 import {Footer} from "../Footer";
 export class AttendanceSettings extends React.Component {
@@ -42,10 +42,13 @@ export class AttendanceSettings extends React.Component {
       <Col xs="10">
             <Form className={formStyle}>
 
-              <FormGroup>
-                <Label className={labelStyle1}>Shift Name</Label>
-                <Input className={inputStyle} type="text" name="" id="" placeholder="" />
-              </FormGroup>
+            <div class="form-row">
+            <div class="col-md-10 mb-5">
+                <label className={labelStyle1}>Shift Name</label>
+                <input id={inputstyle} type="text" name="" class="form-control"  placeholder="" />
+                </div>
+                </div>
+
               <div class="form-row">
               <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Work Start Time</label>
@@ -98,7 +101,7 @@ export class AttendanceSettings extends React.Component {
                 </div>
                 <div class="col-md-5 mb-3">
                  <label className={labelStyle1}>Over Time</label>
-                 <select id="" class="form-control" id={inputstyle}>
+                 <select  class="form-control" id={inputstyle}>
                  <option >Enable</option>
                   <option >Disable</option>
                 </select>
@@ -126,7 +129,7 @@ export class AttendanceSettings extends React.Component {
                  </Form>
                  </Col>
                  <Col xs="2">
-                 <div className={floatRight} style={{fontSize:'0.9vw'}}>
+                 <div className={floatRight} style={{fontSize:'0.9vw'}} id={slidertext}>
                  <p style={{marginTop:'3vw'}}>
                  <Link to="/CompanyDetails" className={hyperLinkEmployee}>Organization Details</Link></p>
                  <p><Link to="/AttendanceSettings" className={orange}>Attendance</Link></p>
