@@ -1,4 +1,28 @@
 @media only screen and (max-width: 768px) {
+  .displayContainer{
+        padding:2vw 7vw 0vw 8vw !important;
+        min-height:500px !important;
+        overflow:hidden;
+  }
+  .pageHeading{
+    font-size:1.4vw !important;
+  }
+  .copyrighticon{
+position:relative;
+top:0.7vw !important;
+right:0.3vw !important;
+  }
+  .footerText{
+    font-size: 1vw !important;
+    font-family:serif !important;
+    font-weight:normal !important;
+  }
+.footerSpan{
+  font-size:1vw !important;
+  font-family:serif !important;
+  font-weight:normal !important;
+}
+
   .firstrowstyle{
     position:relative;
     top:2vw !important;
@@ -9,12 +33,10 @@ margin-bottom:4vw !important;
     margin-right:2vw;
     margin-top:1.3vw;
   }
-
   .repoteesCardStyle{
     height:17vw !important;
     padding-top:2vw !important;
     padding-left:3vw !important;
-
   }
   #secondrowstyle{
     margin-bottom:2.5vw !important;
@@ -43,24 +65,24 @@ margin-bottom:4vw !important;
   .upperNav{
   position:relative;
   bottom:4vw;
-  left:-4.5vw;
-  right:5vw;
+
+  right:20vw !important;
   }
   .upperNavIcon{
     position:relative;
     bottom:-2vw !important;
-    left:-0.6vw !important;
-    right:4.8vw;
+    left:-11vw !important;
+
   }
   .settingsIcon{
     position:relative;
     bottom:0.1vw !important;
-    right:7vw;
+    right:18vw !important;
   }
   .notificationIcon{
     position:relative;
     bottom:1.8vw !important;
-  right:9vw;
+  right:20vw !important;
   }
 .displayHome{
   width:100% !important;
@@ -71,42 +93,61 @@ margin-bottom:4vw !important;
   position:relative;
   top:3.89vw !important;
   width:0.1vw !important;
-  left:-5vw !important;
+  left:-3.8vw !important;
+  font-size:1.4vw !important;
 }
 .dropDownLeaves{
   position:relative;
   top:3.89vw !important;
   width:0.001vw !important;
-  left:-6vw !important;
+  left:-5vw !important;
+  font-size:1.4vw !important;
 }
 .dropDownClaims{
   position:relative;
   top:3.89vw !important;
   width:0.1vw !important;
-  left:-6vw  !important;
+  left:-5vw  !important;
+  font-size:1.4vw !important;
 }
 .dropDownPayroll{
   position:relative;
   top:3.89vw !important;
   width:0.1vw !important;
-  left:-6vw !important;
-}
+  left:-5vw !important;
+  font-size:1.4vw !important;
 
+}
+.dropDownStyleProfile{
+  position:relative;
+  left:-20vw !important;
+  width:1vw !important;
+  font-size:1.4vw !important;
+
+}
+.dropdownContent{
+
+  position:relative;
+  left:-8vw !important;
+  width:37vw !important;
+  min-height:30vw !important;
+  overflow:hidden;
+  border-radius:10% !important;
+}
 #navStyle{
-  font-size:1vw;
+  font-size:1.5vw !important;
   margin-bottom:0.5vw !important;
   width:100% !important;
   position:relative;
-  left:-6vw !important;
+  left:-10vw !important;
 }
-
 .navitemStyle{
-padding-right:11.25vw !important;
+padding-right:12vw !important;
 position:relative;
 bottom:-9.2vw !important;
 }
 .navitemStyleHome{
-padding-right:9.15vw !important;
+padding-right:11.3vw !important;
 position:relative;
 bottom:-11vw !important;
 }
@@ -128,23 +169,19 @@ padding-bottom:0.15vw !important;
 position:relative;
 left:0.2vw;
 top:-1vw !important;
-
   font-size:1.2vw !important;
   font-weight:450;
   font-family:sans-serif;
 }
 
-
 }
+
 .floatRight{
 float:right;
 color:gray;
 }
-
 .floatRight1{
 float:right;
-position:relative;
-
 }
 #link{
   color:white;
@@ -170,7 +207,6 @@ left:0.5vw;
   color:black;
   font-size:0.9vw;
 }
-
 .orange:hover{
   color:orange;
 }
@@ -191,12 +227,10 @@ margin-top:1vw;
 margin-bottom:2vw;
 }
 .floatRight2{
-
 color:gray;
 position:relative;
 top:2vw;
 left:41.5vw;
-
 }
 #savebtn1{
 position:relative;
@@ -208,7 +242,6 @@ right:8vw;
   top:2vw;
   left:-7vw;
   color:orange;
-
 }
 .searchfilter{
 float:right;
@@ -255,7 +288,6 @@ left:6.2vw;
   position:relative;
   left:3.3vw;
 }
-
 .navitemStyle{
 padding-right:8.25vw;
 position:relative;
@@ -334,7 +366,6 @@ margin-top:-1vw;
   color:white !important;
   text-decoration:none !important;
 }
-
 #hyperLink{
   text-decoration:none !important;
   color:white !important;
@@ -345,12 +376,10 @@ margin-top:-1vw;
   position:relative;
   top:0.7vw;
   padding-bottom:0.7vw;
-
 }
 .dropItem:hover{
   color:white !important;
   background-color:#2C3E50 !important;
-
 }
 .dropdownContent {
     background-color: #EEEEEE;

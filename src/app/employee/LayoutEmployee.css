@@ -1,6 +1,31 @@
+@media only screen and (max-width: 768px){
+  .empDesign{
+  font-size:1.2vw !important;
+
+  }
+  .empPhone{
+    font-size:1.2vw !important;
+  }
+  .empId{
+    font-size: 1.2vw !important;
+  }
+  #paginationarrow{
+    font-size:1.8vw !important;
+    position:relative;
+    top:0.3vw !important;
+  }
+}
+
 .hyperLinkEmployee{
 color:black !important;
 font-weight:200;
+}
+.pagination{
+  float:right !important;
+  right:0.5vw !important;
+  position:relative;
+  top:2vw !important;
+
 }
 
 .dateStyle{

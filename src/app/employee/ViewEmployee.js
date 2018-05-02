@@ -1,5 +1,5 @@
 import React from "react";
-import {empDesign,empPhone,empId,pagination,paginationtext,paginationtrue,paginationfalse,searchstyle} from "./LayoutEmployee.css";
+import {empDesign,empPhone,empId,pagination,paginationtext,paginationtrue,paginationfalse,searchstyle,paginationarrow} from "./LayoutEmployee.css";
 import Icon from 'react-icons-kit';
 import { search } from 'react-icons-kit/icomoon/search';
 import { filter } from 'react-icons-kit/fa/filter';
@@ -97,7 +97,7 @@ Add New Employee</button></Link>
 <span onClick={this.first.bind(this)}>{this.state.first?<span id={paginationtrue}>1</span>:<span id={paginationfalse}>1</span>}  </span>
 <span onClick={this.second.bind(this)}>{this.state.second?<span id={paginationtrue}>2</span>:<span id={paginationfalse}>2</span>} </span>
 <span onClick={this.third.bind(this)}>{this.state.third?<span id={paginationtrue}>3</span>:<span id={paginationfalse}>3</span>}  </span>
-></p>
+<span id={paginationarrow}>></span></p>
   </div>
   <Footer/>
   </div>

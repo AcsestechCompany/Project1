@@ -72,7 +72,7 @@ render() {
           <DropdownToggle nav className={notificationIcon}><Icon icon={bell} size={18} style={{color:'white'}}/></DropdownToggle>
               <DropdownMenu className={dropdownContent} >
               <DropdownItem id={dropNotify}>
-                <p> <Icon icon={arrowLeft2}/><span className={floatRight}><Icon icon={spinner11} size={12}/></span></p>
+                <p> <Icon icon={arrowLeft2}/><span className={floatRight}><Icon icon={spinner11} size={12} style={{color:'black'}}/></span></p>
               <Card className={cardStyle}>
                 <div class="row">
                    <div class="col-md-6"><img className={cardimgleft} src={require('./profile.jpg')} id={imgStyle}/></div>

@@ -10,9 +10,7 @@ import { ic_copyright } from 'react-icons-kit/md/ic_copyright';
 export class Footer extends React.Component {
   constructor(props) {
     super(props);
-
 }
-
   render() {
     return (
       <div >

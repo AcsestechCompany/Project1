@@ -1,4 +1,22 @@
+@media only screen and (max-width: 768px){
+  #cardStyle{
+    width:8.3rem !important;
+    height:23.5vw !important;
+    margin-right:1vw;
+  }
+  #imgStyle{
+    margin-left:1.1vw !important;
+    margin-right:0.16vw;
+    margin-top:0.5vw;
+    width:12.5vw !important;
+  }
 
+
+#cardTitle{
+
+  font-size:1.2vw !important;
+}
+}
 #cardStyle{
   width:11rem;
   height:16.5vw;

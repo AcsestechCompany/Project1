@@ -15,3 +15,17 @@ margin-right:0.16vw;
 margin-top:1vw;
 width:3.5vw;
 }
+@media only screen and (max-width: 768px){
+  .cardStyle{
+    
+    min-height:8.2vw !important;
+    overflow:hidden;
+  }
+  .cardText{
+    position:relative;
+    bottom:1vw !important;
+  font-size:1.2vw !important;
+  font-family:serif !important;
+
+  }
+}
