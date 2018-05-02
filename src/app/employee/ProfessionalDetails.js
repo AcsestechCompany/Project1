@@ -10,7 +10,7 @@ import {Link} from "react-router-dom";
 import {displayContainer,floatRight,arrowIcon,pageHeading,hrStyle,buttonStyle,floatRight2,savebtn1,orange,skip1} from "../Layout.css";
 import {inputstyle,formStyle,inputStyle,hyperLinkEmployee,
   inputStyle1,labelStyle1,enableBtn,disableBtn,skipstyle,
-  overtimeDiv,slideremp,dateStyle,overtimePay,enableBtnactive,disableBtnactive} from "./LayoutEmployee.css";
+  overtimeDiv,slideremp,dateStyle,overtimePay,enableBtnactive,disableBtnactive,radiocheck,slidertext} from "./LayoutEmployee.css";
   import {timeStyle} from "../settings/LayoutSettings.css";
   import {Header1} from "../Header1";
   import {Footer} from "../Footer";
@@ -19,7 +19,6 @@ export class ProfessionalDetails extends React.Component{
     super(props);
   this.enabletest = this.enabletest.bind(this);
   this.disabletest =this.disabletest.bind(this);
-
     this.state={
       enable:false,
       disable:false
@@ -42,19 +41,19 @@ export class ProfessionalDetails extends React.Component{
       return <div><div class="form-check">
         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked
         style={{marginTop:'0.7vw'}}/>
-        <label class="form-check-label" for="gridRadios1" style={{fontSize:'0.8vw',marginTop:'0.4vw',marginLeft:'1vw'}}>
+        <label class="form-check-label" for="gridRadios1" style={{fontSize:'0.8vw',marginTop:'0.4vw',marginLeft:'1vw'}} id={radiocheck}>
           On Holidays
         </label>
       </div>
       <div class="form-check">
         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" style={{marginTop:'0.7vw'}}/>
-        <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginTop:'0.45vw',marginLeft:'1vw'}}>
+        <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginTop:'0.45vw',marginLeft:'1vw'}} id={radiocheck}>
         On Week Off
         </label>
       </div>
       <div class="form-check">
         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" style={{marginTop:'0.7vw'}}/>
-        <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginTop:'0.4vw',marginLeft:'1vw'}}>
+        <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginTop:'0.4vw',marginLeft:'1vw'}} id={radiocheck}>
          Daily
         </label>
       </div></div>;
@@ -88,10 +87,13 @@ export class ProfessionalDetails extends React.Component{
           <input type="text" class="form-control" id={inputstyle} placeholder="" />
         </div>
         </div>
-        <FormGroup>
-          <Label className={labelStyle1}>Email ID</Label>
-          <Input className={inputStyle} type="text" name="" id="" placeholder="" />
-        </FormGroup>
+        <div class="form-row">
+        <div class="col-md-10 mb-3">
+        <label className={labelStyle1}>Email ID</label>
+        <input type="text" class="form-control" id={inputstyle} placeholder=""/>
+        </div>
+        </div>
+
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Employee ID</label>
@@ -122,10 +124,12 @@ export class ProfessionalDetails extends React.Component{
         </select>
         </div>
           </div>
-         <FormGroup>
-            <Label className={labelStyle1}>Reporting Mananger</Label>
-            <Input className={inputStyle} type="text" name="" id="" placeholder="" />
-          </FormGroup>
+          <div class="form-row">
+          <div class="col-md-10 mb-3">
+          <label className={labelStyle1}>Reporting Manager</label>
+          <input type="text" class="form-control" id={inputstyle} placeholder=""/>
+          </div>
+          </div>
           <div class="form-row">
             <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Date of Joining</label>
@@ -158,7 +162,7 @@ export class ProfessionalDetails extends React.Component{
     <span onClick={this.disabletest.bind(this)}>
    {this.state.disable?
     <span><button type="button" className={disableBtnactive}>Disable</button></span>:
-    <span><button type="btn btn-light" className={disableBtn} >Disable</button></span>
+    <span><button type="btn btn-light" className={disableBtn}>Disable</button></span>
    }
 
     </span>
@@ -191,7 +195,7 @@ export class ProfessionalDetails extends React.Component{
 
           </Col>
           <Col>
-          <div className={floatRight} style={{fontSize:'0.9vw'}}>
+          <div className={floatRight} style={{fontSize:'0.9vw'}} id={slidertext}>
           <p style={{marginTop:'3vw'}}>
           <Link to="/PersonalDetails" className={hyperLinkEmployee}>Personal Details</Link></p>
           <p><Link to="/ProfessionalDetails" className={orange}>Professional Details</Link></p>

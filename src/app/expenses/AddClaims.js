@@ -24,7 +24,7 @@ export class AddClaims extends React.Component{
      <Form className={formStyle}>
        <FormGroup>
          <Label className={labelStyle1}>Expense Name</Label>
-         <Input className={inputStyle} type="text" name="" id="" placeholder="" />
+         <Input className={inputStyle} type="text" name=""  placeholder="" />
        </FormGroup>
             <div class="form-row">
             <div class="col-md-3 mb-3">

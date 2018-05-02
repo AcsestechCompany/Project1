@@ -6,9 +6,9 @@ import Icon from 'react-icons-kit';
 import { arrowRight2,arrowLeft2,plus } from 'react-icons-kit/icomoon/';
 import {Link} from "react-router-dom";
 import {displayContainer,arrowIconR,arrowIconL,pageHeading,hrStyle,buttonStyle,orange,skip1,bankdiv,floatRight2,savebtn1} from "../Layout.css";
-import {hyperLinkEmployee,dateStyle,labelStyle1} from "./LayoutEmployee.css";
+import {hyperLinkEmployee,dateStyle,labelStyle1,inputstyle,slidertext} from "./LayoutEmployee.css";
 import {timeStyle} from "../settings/LayoutSettings.css";
-import {labelStyle,inputstyle,formStyle,inputStyle,floatRight,enableBtn,disableBtn} from "./LayoutSettings.css";
+import {labelStyle,formStyle,inputStyle,floatRight,enableBtn,disableBtn} from "./LayoutSettings.css";
 import {Header1} from "../Header1";
 import {Footer} from "../Footer";
 
@@ -30,7 +30,7 @@ export class JobHistory extends React.Component{
 <p className={pageHeading}>Job History</p>
 <hr className={hrStyle}/>
 <Form className={formStyle}>
-<div className={floatRight} style={{fontSize:'0.9vw'}}>
+<div className={floatRight} style={{fontSize:'0.9vw'}} id={slidertext}>
 <p style={{marginTop:'1.5vw'}}>
 <Link to="/PersonalDetails" className={hyperLinkEmployee}>Personal Details</Link></p>
 <p><Link to="/ProfessionalDetails" className={hyperLinkEmployee}>Professional Details</Link></p>

@@ -25,8 +25,7 @@ export class LeaveList extends React.Component{
 </form>
 
 </span>
-
-<table class="table table-bordered table-striped table-responsive-md" id={exampletable}>
+<table class="table table-bordered table-striped table-responsive-md" id={exampletable} style={{overflow:'auto'}}>
 <thead>
     <tr className={orange}>
           <th>Employee ID</th>
@@ -37,19 +36,26 @@ export class LeaveList extends React.Component{
           <th>End Date</th>
           <th>Reason</th>
           <th>Status</th>
+
+
           <th>Actions</th>
+
+
       </tr>
   </thead>
   <tbody>
      <tr>
          <td>E345</td>
+         <td>Albert Walker</td>
          <td></td>
-         <td></td>
-          <td></td>
-         <td ></td>
-         <td></td>
-         <td></td>
-          <td></td>
+         <td>Casual</td>
+         <td>12/08/18</td>
+         <td>13/08/18</td>
+         <td>Function</td>
+         <td>Pending</td>
+
+
+
           <td>
           <span class="btn btn-link" data-toggle="modal" id={modalbutton} data-target="#exampleModalCenter">
             <Icon icon={ic_create} size={20}/>
@@ -109,16 +115,31 @@ export class LeaveList extends React.Component{
                       </div>
                     </div>
                 </div>
-                  <button type="button" class="btn btn-outline-warning" data-dismiss="modal" style={{marginLeft:'30vw',marginBottom:'3vw',width:'46%'}}>Save</button>
+                  <button type="button" class="btn btn-outline-warning" data-dismiss="modal" style={{marginLeft:'30vw',marginBottom:'3vw'}}>Save</button>
 
               </div>
             </div>
           </div>
 
-              <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={20} /> </td>
+              <Icon icon={ic_delete} style={{marginLeft:'1vw',position:'relative',top:'0.5vw'}} size={20} /> </td>
+
+
      </tr>
+     <tr>
+     <td>E345</td>
+     <td>Albert Walker</td>
+     <td></td>
+     <td>Casual</td>
+     <td>12/08/18</td>
+     <td>13/08/18</td>
+     <td>Function</td>
+     <td>Pending</td>
+     <td></td>
+     </tr>
+
      </tbody>
      </table>
+
       </div>
       <Footer/>
       </div>

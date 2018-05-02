@@ -5,10 +5,10 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Icon from 'react-icons-kit';
 import { arrowRight2,arrowLeft2, plus  } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
-import {hyperLinkEmployee,labelStyle1} from "./LayoutEmployee.css";
+import {hyperLinkEmployee,labelStyle1,inputstyle,slidertext} from "./LayoutEmployee.css";
 import {displayContainer,arrowIconR,arrowIconL,skip1,savebtn1,floatRight2,hrStyle,pageHeading,buttonStyle,orange,bankdiv} from "../Layout.css";
 import {inputstylefile,formStyle,inputStyle,floatRight,enableBtn,disableBtn,
-  inputstyle,}
+  }
   from "./LayoutSettings.css";
   import {Header1} from "../Header1";
   import {Footer} from "../Footer";
@@ -23,7 +23,7 @@ export class EmpDocs extends React.Component{
 <hr className={hrStyle}/>
 <Form className={formStyle}>
 
-<div className={floatRight} style={{fontSize:'0.9vw'}}>
+<div className={floatRight} style={{fontSize:'0.9vw'}} id={slidertext}>
 <p style={{marginTop:'1.5vw'}}>
 <Link to="/PersonalDetails" className={hyperLinkEmployee}>Personal Details</Link></p>
 <p><Link to="/ProfessionalDetails" className={hyperLinkEmployee}>Professional Details</Link></p>

@@ -1,3 +1,22 @@
+@media only screen and (max-width: 768px){
+
+  .inputStyle{
+   height:4vw !important;
+   width:50%;
+   font-size: 0.7vw;
+   box-shadow:none !important;
+   border-color:#D7D7D7 !important;
+  }
+  .textAreaStyle{
+    width:70%;
+    height:4vw !important;
+    box-shadow:none !important;
+     border-color:#D7D7D7 !important;
+     font-size:0.7vw;
+  }
+}
+
+
 
 .cardTextStyle{
   margin-top:-0.7vw;

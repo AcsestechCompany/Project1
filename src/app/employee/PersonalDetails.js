@@ -6,8 +6,8 @@ import Icon from 'react-icons-kit';
 import { plus,arrowRight2 } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import {displayContainer,floatRight,arrowIcon,hrStyle,buttonStyle,pageHeading,orange} from "../Layout.css";
-import {labelStyle,inputstyle,formStyle,inputStyle,skipstyle,inputstyletextarea,
-labelStyle1,hyperLinkEmployee,slideremp,sliderline,sliderlineorange} from "./LayoutEmployee.css";
+import {inputstyle,formStyle,skipstyle,inputstyletextarea,
+labelStyle1,hyperLinkEmployee,slideremp,sliderline,sliderlineorange,slidertext} from "./LayoutEmployee.css";
   import {Header1} from "../Header1";
   import {Footer} from "../Footer";
 
@@ -83,7 +83,7 @@ export class PersonalDetails extends React.Component{
                 </div>
           </Form>
           </Col>
-          <Col>  <div className={floatRight} style={{fontSize:'0.9vw',position:'relative',bottom:'-2.5vw'}}>
+          <Col xs="2">  <div  style={{fontSize:'0.9vw',position:'relative',bottom:'-2.5vw'}} id={slidertext}>
             <p >
 
             <Link to="/PersonalDetails" className={orange} >

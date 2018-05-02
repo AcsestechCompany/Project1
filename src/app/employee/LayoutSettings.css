@@ -4,6 +4,13 @@
     height:23.5vw !important;
     margin-right:1vw;
   }
+  .inputStyle{
+  height:4vw !important;
+  width:50%;
+  font-size: 0.7vw;
+  box-shadow:none !important;
+   border-color:#D7D7D7 !important;
+  }
   #imgStyle{
     margin-left:1.1vw !important;
     margin-right:0.16vw;

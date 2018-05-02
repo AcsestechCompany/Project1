@@ -1,9 +1,12 @@
 @media only screen and (max-width: 768px) {
   .displayContainer{
         padding:2vw 7vw 0vw 8vw !important;
-        min-height:500px !important;
-        overflow:hidden;
+        width:100% !important;
+        overflow-x:auto !important;
+        min-height:600px !important;
+        overflow:auto !important;
   }
+
   .pageHeading{
     font-size:1.4vw !important;
   }
@@ -251,18 +254,19 @@ position:relative;
 top:-1.5vw;
 left:6.2vw;
 }
+
 #exampletable{
   position:relative;
   top:3vw;
   text-align: center;
+  min-width:0.5vw ;
+  overflow-x: hidden;
 }
+
 #exampletable tbody > tr:nth-child(2n+1) > td, #exampletable > tbody > tr:nth-child(2n+1) > th {
    background-color:#F4F6F6 ;
 }
-#exampletable td{
-  width:2vw;
-  overflow:auto;
-}
+
 #indicator{
   color:blue !important;
 }

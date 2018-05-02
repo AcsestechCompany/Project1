@@ -7,8 +7,8 @@ import {arrowLeft2, arrowRight2,pencil,search} from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import { ic_create,ic_delete } from 'react-icons-kit/md';
 import {displayContainer,arrowIconL,arrowIconR,tableinput,contentStyle1,right,hrStyle,pageHeading,savebtn1,skip1,floatRight2,orange,bankdiv} from "../Layout.css";
-import {hyperLinkEmployee,btnManual,btnAuto,labelStyle1,inputStyle} from "./LayoutEmployee.css";
-import {inputstyle,formStyle,floatRight,enableBtn,disableBtn,
+import {hyperLinkEmployee,btnManual,btnAuto,labelStyle1,inputStyle,slidertext,inputstyle} from "./LayoutEmployee.css";
+import {formStyle,floatRight,enableBtn,disableBtn,
   inputStyle1,buttonstyle} from "./LayoutSettings.css";
 import {Manual} from "./Manual";
 import {Auto} from "./Auto";
@@ -61,7 +61,7 @@ var autocomponents = this.autodisplay();
 <p className={pageHeading}>Bank Details</p>
 <hr className={hrStyle}/>
   <Form className={formStyle}>
-<div className={floatRight} style={{fontSize:'0.9vw',marginTop:'1.5vw'}}>
+<div className={floatRight} style={{fontSize:'0.9vw',marginTop:'1.5vw'}} id={slidertext}>
 <p>
 <Link to="/PersonalDetails" className={hyperLinkEmployee}>Personal Details</Link></p>
 <p><Link to="/ProfessionalDetails" className={hyperLinkEmployee}>Professional Details</Link></p>
@@ -108,20 +108,20 @@ var autocomponents = this.autodisplay();
 <div class="form-row">
   <div class="col-md-3 mb-3">
     <label className={labelStyle1}>Annual CTC</label>
-    <input type="text" class="form-control"  id={tableinput} placeholder=""/>
+    <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
   </div>
   <div class="col-md-3 mb-3">
     <label className={labelStyle1}>Monthly CTC</label>
-    <input type="text" class="form-control" id={tableinput} placeholder="" />
+    <input type="text" class="form-control" id={inputstyle} placeholder="" />
+  </div>
   </div>
   <form class="form-inline">
-<div class="form-group" style={{position:'relative',right:'2vw'}}>
+<div class="form-group">
 <label for="inputPassword6" className={labelStyle1}>Salary Break up</label>
 <button class="btn btn-outline-warning" onClick={this.nextmanual.bind(this)} id={btnManual}>Manual</button>
 <button class="btn btn-outline-warning" onClick={this.nextauto.bind(this)} id={btnAuto}>Auto</button>
 </div>
 </form>
-</div>
 {manualcomponents}
 {autocomponents}
 <div className={bankdiv}>

@@ -6,8 +6,8 @@ import Icon from 'react-icons-kit';
 import {arrowRight2,arrowLeft2,plus } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import {displayContainer,arrowIconR,arrowIconL,savebtn1,pageHeading,hrStyle,buttonStyle,orange,floatRight2,skip1,bankdiv} from "../Layout.css";
-import {hyperLinkEmployee,slideremp,labelStyle1,inputStyle} from "./LayoutEmployee.css";
-import {inputstyle,formStyle,floatRight,enableBtn,disableBtn,
+import {hyperLinkEmployee,slideremp,labelStyle1,inputstyle,slidertext} from "./LayoutEmployee.css";
+import {formStyle,floatRight,enableBtn,disableBtn,
   inputStyle1,divStyle,overtimeDiv,boxText,imageText,imageInput,iconStyle} from "./LayoutSettings.css";
 import {Header1} from "../Header1";
 import {Footer} from "../Footer";
@@ -33,15 +33,18 @@ export class LoginInfo extends React.Component{
           <input type="text" class="form-control" id={inputstyle} placeholder="" />
         </div>
         </div>
-        <FormGroup>
-          <Label className={labelStyle1}>Auto Generated Password</Label>
-          <Input className={inputStyle} type="text" name="" placeholder="" />
-        </FormGroup>
+        <div class="form-row">
+        <div class="col-md-10 mb-3">
+          <label className={labelStyle1}>Auto Generated Password</label>
+          <input id={inputstyle} type="text" class="form-control" name="" placeholder="" />
+          </div>
+          </div>
+
       </Form>
 
       </Col>
       <Col>
-      <div className={floatRight} style={{fontSize:'0.9vw',marginTop:'2.5vw'}}>
+      <div className={floatRight} style={{fontSize:'0.9vw',marginTop:'2.5vw'}} id={slidertext}>
       <p>
       <Link to="/PersonalDetails" className={hyperLinkEmployee}>Personal Details</Link></p>
       <p><Link to="/ProfessionalDetails" className={hyperLinkEmployee}>Professional Details</Link></p>
