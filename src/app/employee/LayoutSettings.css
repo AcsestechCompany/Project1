@@ -10,11 +10,19 @@
     margin-top:0.5vw;
     width:12.5vw !important;
   }
-
-
 #cardTitle{
 
   font-size:1.2vw !important;
+}
+#cardStyletab{
+  width:10.5rem !important;
+}
+#cardTitletab{
+  font-size:1.6vw !important
+}
+#imgStyletab{
+  margin-left:1.2vw !important;
+  width:16.3vw !important;
 }
 }
 #cardStyle{

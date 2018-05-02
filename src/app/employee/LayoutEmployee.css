@@ -14,7 +14,19 @@
     position:relative;
     top:0.3vw !important;
   }
+  #listforlaptop{
+    display:none;
+  }
+  #listfortab{
+display:flex !important;
+  }
+
+
 }
+#listfortab{
+display:none;
+}
+
 
 .hyperLinkEmployee{
 color:black !important;
