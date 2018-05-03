@@ -5,7 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Link} from "react-router-dom";
 import Icon from 'react-icons-kit';
 import {arrowRight2,arrowLeft2 } from 'react-icons-kit/icomoon';
-import {labelStyle1,hyperLinkEmployee,overtimePay,skipstyle,inputstyle,inputstyletextarea,slidertext} from "../employee/LayoutEmployee.css";
+import {labelStyle1,hyperLinkEmployee,overtimePay,skipstyle,inputstyle,inputstyletextarea,slidertext,radiocheck} from "../employee/LayoutEmployee.css";
 import {displayContainer,pageHeading,hrStyle,buttonStyle,arrowIcon,orange,floatRight2} from "../Layout.css";
 import {formStyle,textAreaStyle,hyperLink,floatRight,
   radiodiv,timeStyle} from "./LayoutSettings.css";
@@ -43,11 +43,12 @@ export class AttendanceSettings extends React.Component {
             <Form className={formStyle}>
 
             <div class="form-row">
-            <div class="col-md-10 mb-5">
+            <div class="col-md-10 mb-3">
                 <label className={labelStyle1}>Shift Name</label>
                 <input id={inputstyle} type="text" name="" class="form-control"  placeholder="" />
                 </div>
                 </div>
+                
 
               <div class="form-row">
               <div class="col-md-5 mb-3">
@@ -60,8 +61,7 @@ export class AttendanceSettings extends React.Component {
            onChange={this.handleChangeTimePickerStart}
            underlineStyle={{display: 'none'}}
            className={timeStyle}
-
-           style={{border:'1px solid #D0D3D4',height:'2vw'}}
+           style={{border:'1px solid #D0D3D4'}}
          />
          </MuiThemeProvider>
              </div>
@@ -75,7 +75,7 @@ export class AttendanceSettings extends React.Component {
           onChange={this.handleChangeTimePickerEnd}
           underlineStyle={{display: 'none'}}
           className={timeStyle}
-          style={{border:'1px solid #D0D3D4',height:'2vw'}}
+          style={{border:'1px solid #D0D3D4'}}
         />
         </MuiThemeProvider>
             </div>
@@ -95,37 +95,38 @@ export class AttendanceSettings extends React.Component {
               onChange={this.handleChangeTimePickerLateMark}
               underlineStyle={{display: 'none'}}
               className={timeStyle}
-              style={{border:'1px solid #D0D3D4',height:'2vw'}}
+              style={{border:'1px solid #D0D3D4'}}
             />
             </MuiThemeProvider>
                 </div>
                 <div class="col-md-5 mb-3">
                  <label className={labelStyle1}>Over Time</label>
                  <select  class="form-control" id={inputstyle}>
-                 <option >Enable</option>
-                  <option >Disable</option>
+                 <option>Enable</option>
+                  <option>Disable</option>
                 </select>
                </div>
                </div>
                <Row className={overtimePay}>
                <p style={{fontWeight:'lighter',fontSize:'0.9vw'}}>Status</p>
 
-            </Row>
-            <div className={radiodiv}>
+
+            <div style={{marginLeft:'3vw'}}>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked
-              style={{marginTop:'0.7vw'}}/>
-              <label class="form-check-label" for="gridRadios1" style={{fontSize:'0.8vw',marginTop:'0.45vw',marginLeft:'1vw'}}>
+              />
+              <label class="form-check-label" for="gridRadios1" style={{fontSize:'0.8vw',marginLeft:'1vw'}} id={radiocheck}>
                 Active
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" style={{marginTop:'0.7vw'}}/>
-              <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginTop:'0.5vw',marginLeft:'1vw'}}>
+              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2"/>
+              <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginLeft:'1vw'}} id={radiocheck}>
               InActive
               </label>
             </div>
             </div>
+            </Row>
                  </Form>
                  </Col>
                  <Col xs="2">

@@ -17,9 +17,9 @@
   .timeStyle{
 
   position:relative;
-  bottom:0.8vw;
+  top:2.9vw !important;
   padding-left:1vw;
-  height:4vw !important;
+margin-bottom:1.8vw !important;
   }
 }
 
@@ -34,8 +34,9 @@
 .timeStyle{
 
 position:relative;
-bottom:0.8vw;
+top:0.8vw;
 padding-left:1vw;
+height:2vw !important;
 }
 .dateStyle{
   border:1px solid #D0D3D4;

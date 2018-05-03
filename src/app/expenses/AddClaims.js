@@ -7,8 +7,8 @@ import Icon from 'react-icons-kit';
 import { plus,glass2,search } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import {displayContainer,pageHeading,hrStyle,buttonStyle,savebtn1} from "../Layout.css";
-import {dateStyle,labelStyle1,inputstyle} from "../employee/LayoutEmployee.css";
-import {labelStyle,inputstyle1,formStyle,inputStyle,textAreaStyle,hyperLink} from "../settings/LayoutSettings.css";
+import {dateStyle,labelStyle1,inputstyle,inputstyletextarea} from "../employee/LayoutEmployee.css";
+import {labelStyle,inputstyle1,formStyle,inputStyle,hyperLink} from "../settings/LayoutSettings.css";
 import {addBtn,cancelBtn} from "../projects/Projects.css";
 import {Header1} from "../Header1";
 import {Footer} from "../Footer";
@@ -44,13 +44,13 @@ export class AddClaims extends React.Component{
             </div>
             </div>
             <div class="form-row">
-            <div class="col-md-10 mb-3">
+            <div class="col-md-12 mb-3">
                  <label className={labelStyle1}>Description</label>
-                 <input id={textAreaStyle} type="textarea" class="form-control" name="text" />
+                 <input id={inputstyletextarea} type="textarea" class="form-control" name="text" />
               </div>
               </div>
 
-           <Link to="/ExpenseList"><button className="btn btn-outline-warning" >
+           <Link to="/ClaimList"><button className="btn btn-outline-warning" >
            Submit</button></Link>
           </Form>
       </div>

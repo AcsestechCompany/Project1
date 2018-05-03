@@ -7,10 +7,10 @@ import Icon from 'react-icons-kit';
 import { arrowLeft2 } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import {displayContainer,pageHeading,hrStyle,buttonStyle,savebtn,arrowIcon,orange} from "../Layout.css";
-import {labelStyle,inputstyle1,formStyle,inputstyle,
+import {labelStyle,inputstyle1,formStyle,
 dropDownInputStyle,buttonstyle,checkboxDiv,divStyle,radioStyle1,boxText,imageText,radioStyle,hyperLink,floatRight,radiodiv,
 } from "./LayoutSettings.css";
-import {labelStyle1,hyperLinkEmployee,inputStyle,inputstyletextarea,overtimePay} from "../employee/LayoutEmployee.css";
+import {labelStyle1,hyperLinkEmployee,inputstyle,inputstyletextarea,overtimePay,slidertext,radiocheck} from "../employee/LayoutEmployee.css";
 import {Header1} from "../Header1";
 import {Footer} from "../Footer";
 export class AddComponent extends React.Component{
@@ -25,10 +25,13 @@ export class AddComponent extends React.Component{
 <Col>
      <Form className={formStyle}>
 
-       <FormGroup>
-         <Label className={labelStyle1}>Component Name</Label>
-         <Input className={inputStyle} type="text" name="" id="" placeholder="" />
-       </FormGroup>
+       <div class="form-row">
+       <div class="col-md-10 mb-3">
+         <label className={labelStyle1}>Component Name</label>
+         <input id={inputstyle} type="text" name="" class="form-control" placeholder="" />
+         </div>
+         </div>
+
        <div class="form-row">
        <div class="col-md-5 mb-3">
        <label className={labelStyle1}>Calculation On</label>
@@ -70,38 +73,38 @@ export class AddComponent extends React.Component{
     <p style={{fontWeight:'lighter',fontSize:'0.9vw'}}>Status</p>
 
  </Row>
- <div className={radiodiv}>
+ <div className={radiodiv} style={{marginBottom:'-2vw'}}>
  <div class="form-check">
    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked
    style={{marginTop:'0.7vw'}}/>
-   <label class="form-check-label" for="gridRadios1" style={{fontSize:'0.8vw',marginTop:'0.45vw',marginLeft:'1vw'}}>
+   <label class="form-check-label" for="gridRadios1" style={{fontSize:'0.8vw',marginTop:'0.45vw',marginLeft:'1vw'}} id={radiocheck}>
      Active
    </label>
  </div>
  <div class="form-check">
    <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" style={{marginTop:'0.7vw'}}/>
-   <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginTop:'0.5vw',marginLeft:'1vw'}}>
+   <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginTop:'0.5vw',marginLeft:'1vw'}} id={radiocheck}>
    InActive
    </label>
  </div>
  </div>
 </div>
-        <div class="col-sm-4" style={{marginLeft:'-11vw',marginTop:'-0.15vw'}}>
+        <div class="col-sm-4" style={{marginLeft:'-15vw',marginTop:'-0.15vw'}}>
         <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"  style={{marginTop:'0.7vw'}}/>
-  <label class="form-check-label" for="defaultCheck1" id={inputstyle} style={{marginTop:'0.4vw',marginLeft:'1vw'}}>
+  <label class="form-check-label" for="defaultCheck1" id={inputstyle} style={{marginTop:'0.4vw',marginLeft:'1vw'}} id={radiocheck}>
     Show in Payslip
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" style={{marginTop:'0.7vw'}}/>
-  <label class="form-check-label" for="defaultCheck2" id={inputstyle} style={{marginTop:'0.4vw',marginLeft:'1vw'}}>
+  <label class="form-check-label" for="defaultCheck2" id={inputstyle} style={{marginTop:'0.4vw',marginLeft:'1vw'}} id={radiocheck}>
   Show in CTC
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" style={{marginTop:'0.7vw'}}/ >
-  <label class="form-check-label" for="defaultCheck2" id={inputstyle} style={{marginTop:'0.4vw',marginLeft:'1vw'}}>
+  <label class="form-check-label" for="defaultCheck2" id={inputstyle} style={{marginTop:'0.4vw',marginLeft:'1vw'}} id={radiocheck}>
   Loss of Pay due to Employee Attendance will affect this component
   </label>
 </div>
@@ -111,7 +114,7 @@ export class AddComponent extends React.Component{
           </Form>
           </Col>
           <Col xs="2">
-          <div className={floatRight} style={{fontSize:'0.9vw'}}>
+          <div className={floatRight} style={{fontSize:'0.9vw'}} id={slidertext}>
           <p style={{marginTop:'3vw'}}>
           <Link to="/CompanyDetails" className={hyperLinkEmployee}>Organization Details</Link></p>
           <p><Link to="/AttendanceSettings" className={hyperLinkEmployee}>Attendance</Link></p>

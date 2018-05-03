@@ -7,8 +7,8 @@ import Icon from 'react-icons-kit';
 import { arrowRight2,arrowLeft2 } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import {displayContainer,pageHeading,hrStyle,buttonStyle,savebtn,arrowIcon,orange} from "../Layout.css";
-import {overtimePay,labelStyle1,hyperLinkEmployee,inputStyle,inputstyletextarea,skipstyle} from "../employee/LayoutEmployee.css";
-import {labelStyle,inputstyle1,formStyle,inputstyle,
+import {overtimePay,labelStyle1,hyperLinkEmployee,inputStyle,inputstyletextarea,skipstyle,inputstyle,slidertext,radiocheck} from "../employee/LayoutEmployee.css";
+import {labelStyle,formStyle,
 floatRight,radiodiv} from "./LayoutSettings.css";
 import {Header1} from "../Header1";
 import {Footer} from "../Footer";
@@ -27,11 +27,14 @@ export class AddLeave extends React.Component{
 <Col xs="10">
      <Form className={formStyle}>
 
-       <FormGroup>
+       <div class="form-row">
+       <div class="col-md-10 mb-3">
 
-         <Label className={labelStyle1}>Leave Name</Label>
-         <Input className={inputStyle} type="text" name="" id="" placeholder="" />
-       </FormGroup>
+         <label className={labelStyle1}>Leave Name</label>
+         <input id={inputstyle} type="text" name="" class="form-control" placeholder="" />
+         </div>
+         </div>
+
        <div class="form-row">
          <div class="col-md-5 mb-3">
            <label className={labelStyle1}>Total Count</label>
@@ -71,14 +74,14 @@ export class AddLeave extends React.Component{
    <div className={radiodiv}>
    <div class="form-check">
      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked
-     style={{marginTop:'0.7vw'}}/>
-     <label class="form-check-label" for="gridRadios1" style={{fontSize:'0.8vw',marginTop:'0.45vw',marginLeft:'1vw'}}>
+    />
+     <label class="form-check-label" for="gridRadios1" style={{fontSize:'0.8vw',marginLeft:'1vw'}} id={radiocheck}>
        Active
      </label>
    </div>
    <div class="form-check">
-     <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" style={{marginTop:'0.7vw'}}/>
-     <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginTop:'0.5vw',marginLeft:'1vw'}}>
+     <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" />
+     <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginLeft:'1vw'}} id={radiocheck}>
      InActive
      </label>
    </div>
@@ -86,7 +89,7 @@ export class AddLeave extends React.Component{
           </Form>
           </Col>
           <Col>
-          <div className={floatRight} style={{fontSize:'0.9vw'}}>
+          <div className={floatRight} style={{fontSize:'0.9vw'}} id={slidertext}>
           <p style={{marginTop:'3vw'}}>
           <Link to="/CompanyDetails" className={hyperLinkEmployee}>Organization Details</Link></p>
           <p><Link to="/AttendanceSettings" className={hyperLinkEmployee}>Attendance</Link></p>

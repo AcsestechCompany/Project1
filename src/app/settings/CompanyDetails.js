@@ -51,7 +51,7 @@ import {textAreaStyle,formStyle,floatRight,  inputStyle1} from "./LayoutSettings
       </div>
       </div>
         <div class="form-row">
-        <div class="col-md-10 mb-3">
+        <div class="col-md-12 mb-3">
           <label className={labelStyle1}>Address</label>
           <input id={inputstyletextarea} type="textarea" class="form-control" name=""  placeholder="" />
         </div>
