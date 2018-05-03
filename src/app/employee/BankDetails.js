@@ -7,9 +7,8 @@ import {arrowLeft2, arrowRight2,pencil,search} from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import { ic_create,ic_delete } from 'react-icons-kit/md';
 import {displayContainer,arrowIconL,arrowIconR,tableinput,contentStyle1,right,hrStyle,pageHeading,savebtn1,skip1,floatRight2,orange,bankdiv} from "../Layout.css";
-import {hyperLinkEmployee,btnManual,btnAuto,labelStyle1,inputStyle,slidertext,inputstyle} from "./LayoutEmployee.css";
-import {formStyle,floatRight,enableBtn,disableBtn,
-  inputStyle1,buttonstyle} from "./LayoutSettings.css";
+import {hyperLinkEmployee,btnManual,btnAuto,labelStyle,slidertext,inputstyle} from "./LayoutEmployee.css";
+import {formStyle,floatRight,enableBtn,disableBtn} from "./LayoutSettings.css";
 import {Manual} from "./Manual";
 import {Auto} from "./Auto";
 import {Header1} from "../Header1";

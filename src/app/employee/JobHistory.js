@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 import {displayContainer,arrowIconR,arrowIconL,pageHeading,hrStyle,buttonStyle,orange,skip1,bankdiv,floatRight2,savebtn1} from "../Layout.css";
 import {hyperLinkEmployee,dateStyle,labelStyle1,inputstyle,slidertext} from "./LayoutEmployee.css";
 import {timeStyle} from "../settings/LayoutSettings.css";
-import {labelStyle,formStyle,inputStyle,floatRight,enableBtn,disableBtn} from "./LayoutSettings.css";
+import {formStyle,floatRight,enableBtn,disableBtn} from "./LayoutSettings.css";
 import {Header1} from "../Header1";
 import {Footer} from "../Footer";
 
@@ -66,13 +66,19 @@ export class JobHistory extends React.Component{
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Start Date</label>
           <MuiThemeProvider>
-    <DatePicker hintText="date of joining" underlineStyle={{display: 'none'}} className={dateStyle} style={{border:'1px solid #D0D3D4',height:'2vw'}}/>
+    <DatePicker hintText="date of joining"
+    underlineStyle={{display: 'none'}}
+    textFieldStyle={{position:'relative',bottom:'0.75vw',color:'lightgray'}}
+    className={dateStyle} style={{border:'1px solid #D0D3D4',height:'2vw'}}/>
         </MuiThemeProvider>
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>End Date</label>
           <MuiThemeProvider>
-    <DatePicker hintText="date of joining" underlineStyle={{display: 'none'}} className={dateStyle} style={{border:'1px solid #D0D3D4',height:'2vw'}}/>
+    <DatePicker hintText="date of joining"
+    underlineStyle={{display: 'none'}}
+    textFieldStyle={{position:'relative',bottom:'0.75vw',color:'lightgray'}}
+    className={dateStyle} style={{border:'1px solid #D0D3D4',height:'2vw'}}/>
         </MuiThemeProvider>
         </div>
           </div>

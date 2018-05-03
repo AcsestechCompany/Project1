@@ -137,7 +137,8 @@ export class ProfessionalDetails extends React.Component{
         <DatePicker hintText="date of joining"
        className={dateStyle}
        underlineStyle={{display:'none'}}
-       style={{border:'1px solid #D0D3D4',height:'2vw',position:'relative'}} />
+       textFieldStyle={{position:'relative',bottom:'0.6vw',color:'lightgray'}}
+       style={{border:'1px solid #D0D3D4'}} />
             </MuiThemeProvider>
             </div>
             <div class="col-md-5 mb-3">

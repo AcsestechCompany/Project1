@@ -8,11 +8,22 @@ import Icon from 'react-icons-kit';
 import { arrowRight2 } from 'react-icons-kit/icomoon';
 import {displayContainer,hrStyle,pageHeading,buttonStyle,savebtn,arrowIcon,orange} from "../Layout.css";
 import {dateStyle,labelStyle1,hyperLinkEmployee,inputstyletextarea,slidertext,inputstyle} from "../employee/LayoutEmployee.css";
-import {textAreaStyle,formStyle,floatRight,  inputStyle1} from "./LayoutSettings.css";
+import {formStyle,floatRight} from "./LayoutSettings.css";
   import {Header1} from  "../Header1";
   import {Footer} from "../Footer";
 
  export class CompanyDetails extends React.Component{
+   constructor(props){
+     super(props);
+     this.state = {
+       controlledDate:null
+     };
+   }
+   handleChange = (event,date) => {
+     this.setState({
+       controlledDate: date,
+     });
+   };
    render() {
      return(
        <div>
@@ -39,7 +50,10 @@ import {textAreaStyle,formStyle,floatRight,  inputStyle1} from "./LayoutSettings
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Financial Year Start Month</label>
           <MuiThemeProvider>
-    <DatePicker hintText="date of joining" underlineStyle={{display: 'none'}} className={dateStyle} />
+    <DatePicker value={this.state.controlledDate}
+     onChange={this.handleChange}
+     underlineStyle={{display: 'none'}} className={dateStyle} style={{border:'1px solid #D0D3D4'}}
+     textFieldStyle={{position:'relative',bottom:'0.6vw',color:'grey'}}/>
         </MuiThemeProvider>
         </div>
       <div class="col-md-5 mb-3">

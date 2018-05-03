@@ -6,8 +6,8 @@ import {Link} from "react-router-dom";
 import Icon from 'react-icons-kit';
 import {arrowRight2,arrowLeft2 } from 'react-icons-kit/icomoon';
 import {labelStyle1,hyperLinkEmployee,overtimePay,skipstyle,inputstyle,inputstyletextarea,slidertext,radiocheck} from "../employee/LayoutEmployee.css";
-import {displayContainer,pageHeading,hrStyle,buttonStyle,arrowIcon,orange,floatRight2} from "../Layout.css";
-import {formStyle,textAreaStyle,hyperLink,floatRight,
+import {displayContainer,pageHeading,hrStyle,arrowIcon,orange,floatRight2} from "../Layout.css";
+import {formStyle,hyperLink,floatRight,
   radiodiv,timeStyle} from "./LayoutSettings.css";
 import {Header1} from "../Header1";
 import {Footer} from "../Footer";
@@ -48,7 +48,7 @@ export class AttendanceSettings extends React.Component {
                 <input id={inputstyle} type="text" name="" class="form-control"  placeholder="" />
                 </div>
                 </div>
-                
+
 
               <div class="form-row">
               <div class="col-md-5 mb-3">
@@ -56,7 +56,7 @@ export class AttendanceSettings extends React.Component {
               <MuiThemeProvider>
               <TimePicker
            format="ampm"
-           hintText="12hr Format"
+
            value={this.state.valueStart}
            onChange={this.handleChangeTimePickerStart}
            underlineStyle={{display: 'none'}}
@@ -70,7 +70,7 @@ export class AttendanceSettings extends React.Component {
              <MuiThemeProvider>
              <TimePicker
           format="ampm"
-          hintText="12hr Format"
+
           value={this.state.valueEnd}
           onChange={this.handleChangeTimePickerEnd}
           underlineStyle={{display: 'none'}}
@@ -90,7 +90,6 @@ export class AttendanceSettings extends React.Component {
                  <MuiThemeProvider>
                  <TimePicker
               format="ampm"
-              hintText="12hr Format"
               value={this.state.valueEnd}
               onChange={this.handleChangeTimePickerLateMark}
               underlineStyle={{display: 'none'}}

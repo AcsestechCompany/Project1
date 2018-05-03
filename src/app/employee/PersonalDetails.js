@@ -5,7 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Icon from 'react-icons-kit';
 import { plus,arrowRight2 } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
-import {displayContainer,floatRight,arrowIcon,hrStyle,buttonStyle,pageHeading,orange} from "../Layout.css";
+import {displayContainer,floatRight,arrowIcon,hrStyle,pageHeading,orange} from "../Layout.css";
 import {inputstyle,formStyle,skipstyle,inputstyletextarea,
 labelStyle1,hyperLinkEmployee,slideremp,sliderline,sliderlineorange,slidertext} from "./LayoutEmployee.css";
   import {Header1} from "../Header1";

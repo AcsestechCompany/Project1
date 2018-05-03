@@ -8,7 +8,6 @@
   }
   .dateStyle{
   border:1px solid #D0D3D4;
-  border-radius:7% !important;
   height:4.2vw !important;
 width:98% !important;
   padding-left:1vw;
@@ -115,11 +114,10 @@ font-weight:200;
   top:2vw !important;
 }
 .dateStyle{
-border:1px solid #D0D3D4;
-border-radius:4%;
-height:2vw;
-padding-bottom:2.5vw;
-padding-left:1vw;
+  position:relative;
+  height:2vw;
+  padding-left:1vw;
+
 }
 #skipstyle{
   position:relative;
@@ -279,21 +277,7 @@ background-color:red;
   font-size:0.9vw;
   height:2vw;
 }
-.inputStyle{
-height:2vw;
-width:82%;
-font-size: 0.7vw;
-box-shadow:none !important;
- border-color:#D7D7D7 !important;
-}
-#inputstyle1{
-  width:50%;
-  height:2vw;
-  font-size: 0.7vw;
-  margin-bottom:1vw;
-  box-shadow:none !important;
-   border-color:#D7D7D7 !important;
-}
+
 input[type=search]:focus {
 	width: 130px;
 	background-color: #fff;
