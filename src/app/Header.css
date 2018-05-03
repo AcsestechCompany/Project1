@@ -1,25 +1,20 @@
 @media only screen and (max-width: 768px){
   #navspace{
     padding-right:6vw !important;
-
   }
   #navstyle{
     position:relative;
     top:3vw !important;
     left:-10vw !important;
-
   }
   #headerstyle{
     padding-bottom:-1.5vw !important;
   }
 #dropmenu{
   margin-top:-0.17vw !important;
-
 }
 #dropmenuright{
   background-color:#2C3E50 !important;
-
-
 }
 #navright{
   position:relative;
@@ -37,11 +32,10 @@
   }
 }
 @media only screen and (max-width: 540px){
-
   #navright{
     position:relative;
     top:2vw !important;
-left:7vw !important;
+    left:7vw !important;
 
   }
 }

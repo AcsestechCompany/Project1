@@ -4,7 +4,7 @@ import {FirstRow} from "./FirstRow";
 import {SecondRow} from "./SecondRow";
 import {ThirdRow} from "./ThirdRow";
 import {FourthRow} from "./FourthRow";
-import {Header}  from "../Header";
+import {Header1}  from "../Header1";
 import {Footer} from "../Footer";
 
 export class Home extends React.Component {
@@ -13,7 +13,7 @@ export class Home extends React.Component {
 
      return(
        <div>
-       <Header/>
+       <Header1/>
        <div className={displayHome}>
         <FirstRow/>
       <SecondRow/>
