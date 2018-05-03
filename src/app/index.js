@@ -71,6 +71,7 @@ export class App extends React.Component {
 <Route path="/VerifyAccount" component={VerifyAccount}/>
 <Route path="/Login" component={Login}/>
               <Route path="/Home" component={Home}/>
+
               <Route path="/EmploymentStatus" component={EmploymentStatus}/>
               <Route path="/Leaves" component={LeaveList}/>
               <Route path="/EditLeave" component={EditLeave}/>

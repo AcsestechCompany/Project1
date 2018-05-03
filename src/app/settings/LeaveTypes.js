@@ -8,7 +8,7 @@ import Icon from 'react-icons-kit';
 import { bin2,pencil,plus,search} from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import {displayContainer} from "../Layout.css";
-import {pageHeading,hrStyle,labelStyle,inputstyle,hyperLink,formStyle,inputStyle,textAreaStyle,tableDiv,
+import {pageHeading,hrStyle,inputstyle,hyperLink,formStyle,inputStyle,textAreaStyle,tableDiv,
   inputStyle1,labelStyle1,addNewDepartmentStyle,dropDownInputStyle,buttonstyle,divStyle,radioStyle1,
   boxText,imageText,radioStyle,labelStyleRadio,imageInput,iconStyle,verticalLine,contentStyle,floatRight} from "./LayoutSettings.css";
 
