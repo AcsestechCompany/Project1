@@ -1,12 +1,13 @@
 import React from "react";
 import { Button, Form, FormGroup, Label, Input, FormText,Row } from 'reactstrap';
 import Icon from 'react-icons-kit';
+import { filter } from 'react-icons-kit/fa/filter';
 import { bin,search  } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import { ic_delete,ic_create  } from 'react-icons-kit/md';
 import {displayContainer,pageHeading,hrStyle,activeStyle,orange,floatRight1,exampletable,buttonStyle} from "../Layout.css";
 import {inputstyle,modalbutton,labelStyle1,labelStyle2} from "../admin/LayoutAdmin.css";
-import {labelStylepopup,savebtn1} from "../Layout.css";
+import {labelStylepopup,savebtn1,btnstyle} from "../Layout.css";
 import {Header1} from "../Header1";
 import {Footer} from "../Footer";
 
@@ -20,9 +21,21 @@ export class LeaveList extends React.Component{
 </p>
 <hr className={hrStyle}/>
 <span  className={floatRight1}>
-<form>
+<form class="form-row">
 	<input type="search"  placeholder="Search" />
+  <div class="dropdown" style={{position:'relative',left:'-1vw'}} >
+    <button class="btn  btn-outline-light" type="button" id={btnstyle} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <Icon icon={filter} />
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item">New Joinees</a>
+      <a class="dropdown-item">Department Manager</a>
+      <a class="dropdown-item">Present Employees</a>
+      <a class="dropdown-item">On Leave</a>
+    </div>
+  </div>
 </form>
+
 
 </span>
 <table class="table table-bordered table-striped table-responsive-md" id={exampletable} style={{overflow:'auto'}}>

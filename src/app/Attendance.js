@@ -5,11 +5,11 @@ import { Button, Form, FormGroup, Label, Input, FormText,Row } from 'reactstrap'
 import {DatePicker,TextField} from 'material-ui/DatePicker';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Icon from 'react-icons-kit';
+import { filter } from 'react-icons-kit/fa/filter';
 import { plus,pencil,bin,search } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
-import {displayContainer,pageHeading,hrStyle,activeStyle,orange,floatRight1,exampletable,labelStylepopup} from "./Layout.css";
+import {displayContainer,pageHeading,hrStyle,activeStyle,orange,floatRight1,exampletable,labelStylepopup,btnstyle} from "./Layout.css";
 import {inputstyle,modalbutton,labelStyle1,labelStyle2} from "./admin/LayoutAdmin.css";
-
 import { ic_create ,ic_delete } from 'react-icons-kit/md';
 import {Header1} from "./Header1";
 import {Footer} from "./Footer";
@@ -24,8 +24,19 @@ export class Attendance extends React.Component{
 </p>
 <hr className={hrStyle}/>
 <span  className={floatRight1}>
-<form >
+<form class="form-row">
 	<input type="search"  placeholder="Search" />
+  <div class="dropdown" style={{position:'relative',left:'-1vw'}} >
+    <button class="btn  btn-outline-light" type="button" id={btnstyle} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <Icon icon={filter} />
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item">New Joinees</a>
+      <a class="dropdown-item">Department Manager</a>
+      <a class="dropdown-item">Present Employees</a>
+      <a class="dropdown-item">On Leave</a>
+    </div>
+  </div>
 </form>
 
 </span>

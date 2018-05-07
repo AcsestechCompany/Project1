@@ -7,7 +7,7 @@ import Icon from 'react-icons-kit';
  import { longRight } from 'react-icons-kit/entypo/longRight';
 import { arrowRight2, arrowLeft2,plus } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
-import {displayContainer,floatRight,arrowIcon,pageHeading,hrStyle,buttonStyle,floatRight2,savebtn1,orange,skip1} from "../Layout.css";
+import {displayContainer,floatRight,arrowIconR,arrowIconL,pageHeading,hrStyle,buttonStyle,floatRight2,savebtn1,orange,skip1} from "../Layout.css";
 import {inputstyle,formStyle,inputStyle,hyperLinkEmployee,
   inputStyle1,labelStyle1,enableBtn,disableBtn,skipstyle,
   overtimeDiv,slideremp,dateStyle,overtimePay,enableBtnactive,disableBtnactive,radiocheck,slidertext} from "./LayoutEmployee.css";
@@ -183,12 +183,12 @@ export class ProfessionalDetails extends React.Component{
 
              <Link to="/PersonalDetails" className={hyperLinkEmployee}>
              <button type="button" class="btn btn-light">
-             <Icon icon={arrowLeft2} className={arrowIcon} size={14} />Prev </button>
+             <Icon icon={arrowLeft2} className={arrowIconL} size={14} />Prev </button>
                </Link>
 
 
              <Link to="/BankDetails" className={hyperLinkEmployee} >
-             <button type="button" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIcon} /></button>
+             <button type="button" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIconR} /></button>
              </Link>
                 </span>
  </div>

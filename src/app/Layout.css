@@ -1,4 +1,31 @@
+@media only screen and (min-width:320px) {
+  .hyperLinkLogo{
+    font-size:2vw !important;
+    color:blue !important;
+  }
+}
+
+
+
+
+@media only screen and (max-width: 1024px) {
+  .navitemStyle{
+    margin-right:-0.8vw !important;
+    position:relative;
+    top:3vw !important;
+  }
+  .navitemStyleHome{
+    position:relative;
+    top:4.8vw !important;
+  }
+  #navStyle{
+    position:relative;
+    left:1.8vw !important;
+  }
+
+}
 @media only screen and (max-width: 768px) {
+
   .displayContainer{
         padding:2vw 7vw 0vw 8vw !important;
         width:100% !important;
@@ -6,14 +33,13 @@
         min-height:600px !important;
         overflow:auto !important;
   }
-
   .pageHeading{
     font-size:1.4vw !important;
   }
   .copyrighticon{
-position:relative;
-top:0.7vw !important;
-right:0.3vw !important;
+  position:relative;
+  top:0.7vw !important;
+  right:0.3vw !important;
   }
   .footerText{
     font-size: 1vw !important;
@@ -25,11 +51,10 @@ right:0.3vw !important;
   font-family:serif !important;
   font-weight:normal !important;
 }
-
   .firstrowstyle{
     position:relative;
     top:2vw !important;
-margin-bottom:4vw !important;
+    margin-bottom:4vw !important;
   }
   .repoteesStyle{
     margin-left:4vw !important;
@@ -65,27 +90,31 @@ margin-bottom:4vw !important;
   padding-left:0.7vw;
   padding-bottom:1vw;
   }
+  #navright{
+    position:relative;
+
+    left:18vw !important;
+  }
   .upperNav{
   position:relative;
   bottom:4vw;
-
   right:20vw !important;
   }
   .upperNavIcon{
     position:relative;
-    bottom:-2vw !important;
-    left:-11vw !important;
+    top:7.5vw !important;
+    left:17vw !important;
 
   }
   .settingsIcon{
     position:relative;
-    bottom:0.1vw !important;
-    right:18vw !important;
+    top:5.5vw !important;
+    right:-9vw !important;
   }
   .notificationIcon{
     position:relative;
-    bottom:1.8vw !important;
-  right:20vw !important;
+  top:3.8vw !important;
+    right:-6vw !important;
   }
 .displayHome{
   width:100% !important;
@@ -126,10 +155,8 @@ margin-bottom:4vw !important;
   left:-20vw !important;
   width:1vw !important;
   font-size:1.4vw !important;
-
 }
 .dropdownContent{
-
   position:relative;
   left:-8vw !important;
   width:37vw !important;
@@ -137,22 +164,32 @@ margin-bottom:4vw !important;
   overflow:hidden;
   border-radius:10% !important;
 }
-#navStyle{
-  font-size:1.5vw !important;
-  margin-bottom:0.5vw !important;
-  width:100% !important;
-  position:relative;
-  left:-10vw !important;
-}
-.navitemStyle{
-padding-right:12vw !important;
-position:relative;
-bottom:-9.2vw !important;
-}
 .navitemStyleHome{
-padding-right:11.3vw !important;
+  font-size:1.4vw !important;
+  margin-right:-6vw !important;
 position:relative;
-bottom:-11vw !important;
+top:6vw !important;
+
+}
+
+.navitemStyle{
+position:relative;
+top:3.8vw !important;
+  margin-right:-6.5vw !important;
+  font-size:1.4vw !important;
+  left:3vw !important;
+  right:3vw !important;
+
+}
+#navspace{
+position:relative;
+left:3vw !important;
+right:3vw !important;
+}
+#navStyle{
+  font-size:1vw !important;
+  position:relative;
+  left:-7vw !important;
 }
 .cardStyle{
   height:6.5vw !important;
@@ -162,21 +199,54 @@ bottom:-11vw !important;
 }
 .cardTextStyle{
   position:relative;
-padding-bottom:0.15vw !important;
+  padding-bottom:0.15vw !important;
   color:black;
   font-size:1.1vw !important;
   text-align: center;
 }
 .cardHeaderStyle{
   color:#000000;
-position:relative;
-left:0.2vw;
-top:-1vw !important;
+  position:relative;
+  left:0.2vw;
+  top:-1vw !important;
   font-size:1.2vw !important;
   font-weight:450;
   font-family:sans-serif;
 }
+.downIcon{
+  position:relative;
+  top:0.55vw !important;
+}
 
+
+
+}
+
+#navleft{
+  position:relative;
+
+}
+
+#navright{
+  position:relative;
+
+  left:50vw;
+
+}
+
+
+
+
+
+
+
+
+#btnstyle{
+border:none ;
+color:black;
+}
+#btnstyle:hover{
+  background-color:white !important;
 }
 
 .floatRight{

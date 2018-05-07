@@ -6,8 +6,8 @@ import Icon from 'react-icons-kit';
 import { arrowRight2,arrowLeft2, plus  } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import {hyperLinkEmployee,labelStyle1,inputstyle,slidertext} from "./LayoutEmployee.css";
-import {displayContainer,arrowIconR,arrowIconL,skip1,savebtn1,floatRight2,hrStyle,pageHeading,orange,bankdiv} from "../Layout.css";
-import {inputstylefile,formStyle,floatRight,enableBtn,disableBtn} from "./LayoutSettings.css";
+import {displayContainer,arrowIconR,arrowIconL,skip1,savebtn1,floatRight2,hrStyle,pageHeading,orange,bankdiv,floatRight} from "../Layout.css";
+import {inputstylefile,formStyle,enableBtn,disableBtn} from "./LayoutSettings.css";
   import {Header1} from "../Header1";
   import {Footer} from "../Footer";
 
@@ -58,9 +58,9 @@ export class EmpDocs extends React.Component{
              <span className={floatRight2}>
 
 
-             <Link to="/JobHistory" className={hyperLinkEmployee} style={{marginRight:'1vw'}}>
+             <Link to="/JobHistory" className={hyperLinkEmployee} >
              <button type="button" class="btn btn-light">
-             <Icon icon={arrowLeft2} className={arrowIconL} size={14} />Prev </button>
+             <Icon icon={arrowLeft2} className={arrowIconL} size={14}/>Prev</button>
                </Link>
 
 

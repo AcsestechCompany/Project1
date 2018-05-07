@@ -1,145 +1,124 @@
-import React from "react";
-import {Link} from "react-router-dom";
-import Icon from "react-icons-kit";
+import React from 'react';
+import Icon from 'react-icons-kit';
+import {NavLink,Link} from "react-router-dom";
 import { userCircle,angleDown, bell } from 'react-icons-kit/fa';
+import { arrowLeft2,spinner11 } from 'react-icons-kit/icomoon';
+import {menu} from "react-icons-kit/entypo";
 import { ic_settings } from 'react-icons-kit/md/ic_settings';
+import {Collapse,Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,UncontrolledDropdown,DropdownToggle,DropdownMenu,DropdownItem} from 'reactstrap';
+import {dropDownStyle,hyperLink,hyperLinkLogo,dropdown,upperNav,dropItem,upperNavIcon,settingsIcon,dropNotify,
+  dropDownLeaves,dropDownClaims,dropDownPayroll,
+  notificationIcon,dropdownContent,floatRight,cardimgleft,navitemStyle,navitemStyleHome,navspace,
+  navStyle,downIcon,linkStyle1,dropDownStyleProfile} from "./Layout.css";
+import {cardStyle,cardText,cardTitle,imgStyle} from "./NotificationLayout.css";
+import {openslide} from "./Header.css";
 import {Card,CardTitle,CardText} from "reactstrap";
-import {cardTitle,cardText,cardStyle,imgStyle} from "./NotificationLayout.css";
+export class Header extends React.Component {
+ constructor(props) {
+    super(props);
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      isOpen: false
+    };
+  }
+ toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+render() {
+  return (
 
-import {headerstyle,navstyle,dropitem,dropmenu,navitem,navspace,navright,iconcolor,navrightspace,logo,dropmenuright} from "./Header.css";
-import {downIcon,cardimgleft} from "./Layout.css";
+    <div>
 
-export class Header extends React.Component{
-  render(){
-    return(
-      <nav class="navbar navbar-expand-sm navbar-light bg-light" id={headerstyle} >
-    <a class="navbar-brand" href="Home" id={logo}>H
+      <Navbar color="faded" light expand="md" style={{backgroundColor:'#2C3E50'}}>
+      <span class={openslide} >
+        <Icon icon={menu} size={40} style={{color:'white'}}/>
+        </span>
+        <NavbarBrand  style={{color:'red',marginTop:'-2.5vw',
+          fontSize:'2.5vw',marginLeft:'2vw',fontWeight:'bold',fontFamily:'sanserif'}}>
+          <NavLink to="/Home" className={hyperLinkLogo}>
+          <span style={{color:'red'}}>H</span>
+          <span>rms</span></NavLink>
+          </NavbarBrand>
+          <NavbarToggler onClick={this.toggle} style={{color:'#2C3E50'}} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className="ml-auto" navbar id={navStyle}>
+            <NavItem className={navitemStyleHome}><NavLink to="/Home"  className={linkStyle1}>HOME</NavLink></NavItem>
+          <UncontrolledDropdown nav className={navitemStyle} id={navspace}>
+            <DropdownToggle nav  style={{color:'white'}}>EMPLOYEES<Icon icon={angleDown} className={downIcon} /></DropdownToggle>
+              <DropdownMenu className={dropDownStyle}>
+                <DropdownItem id={dropItem}><Link to="/AddEmployee" id={hyperLink}>Add Employee</Link></DropdownItem>
+                <DropdownItem id={dropItem}><Link to="/ViewEmployee" id={hyperLink}>Employees List</Link></DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+          <UncontrolledDropdown nav  className={navitemStyle} id={navspace}>
+                <DropdownToggle nav style={{color:'white'}}>LEAVES & TIME<Icon icon={angleDown} className={downIcon} /></DropdownToggle>
+              <DropdownMenu className={dropDownLeaves}>
+                <DropdownItem id={dropItem}><Link to="/Leaves" id={hyperLink}>Leave List</Link></DropdownItem>
+            <DropdownItem id={dropItem}><Link to="/Attendance" id={hyperLink}>Attendance List</Link></DropdownItem>
+                </DropdownMenu>
+            </UncontrolledDropdown>
+          <UncontrolledDropdown nav  className={navitemStyle} id={navspace}>
+              <DropdownToggle nav  style={{color:'white'}}  >CLAIMS<Icon icon={angleDown} className={downIcon} /></DropdownToggle>
+              <DropdownMenu className={dropDownClaims} >
+                <DropdownItem id={dropItem}><Link to="/AddClaims" id={hyperLink}>Add Claims</Link></DropdownItem>
+                <DropdownItem id={dropItem}><Link to="/ClaimList" id={hyperLink}>Claims List</Link></DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+            <UncontrolledDropdown nav  className={navitemStyle}>
+              <DropdownToggle nav style={{color:'white'}}>PAYROLL<Icon icon={angleDown} className={downIcon}/></DropdownToggle>
+            <DropdownMenu className={dropDownPayroll}>
+              <DropdownItem id={dropItem}><Link to="/Payments" id={hyperLink}>Payments</Link></DropdownItem>
+              <DropdownItem id={dropItem}><Link to="/Process" id={hyperLink}>Process</Link></DropdownItem>
+              <DropdownItem id={dropItem}><Link to="/Statement" id={hyperLink}>Statement</Link></DropdownItem>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+          <UncontrolledDropdown nav >
+          <DropdownToggle nav className={notificationIcon}><Icon icon={bell} size={18} style={{color:'white'}}/></DropdownToggle>
+              <DropdownMenu className={dropdownContent} >
+              <DropdownItem id={dropNotify}>
+                <p> <Icon icon={arrowLeft2}/><span className={floatRight}><Icon icon={spinner11} size={12} style={{color:'black'}}/></span></p>
+              <Card className={cardStyle}>
+                <div class="row">
+                   <div class="col-md-6"><img className={cardimgleft} src={require('./profile.jpg')} id={imgStyle}/></div>
+                   <div class="col-md-6" style={{marginTop:'1vw'}}>
+                   <CardTitle className={cardTitle}>Jane Smith</CardTitle>
+                  <CardText className={cardText}>Requested for Leave</CardText>
+                  <CardText className={cardText}>New</CardText> </div>
+                  </div></Card>
+              <Card className={cardStyle}>
+              <div class="row">
+              <div class="col-md-6"><img className={cardimgleft} src={require('./profile.jpg')} id={imgStyle}/></div>
+              <div class="col-md-6" style={{marginTop:'1vw'}}>
+              <CardTitle className={cardTitle}>Jane Smith</CardTitle>
+              <CardText className={cardText}>Requested for Leave</CardText>
+              <CardText className={cardText}>New</CardText></div>
+              </div></Card>
+              <Card className={cardStyle}>
+              <div class="row">
+              <div class="col-md-6"><img className={cardimgleft} src={require('./profile.jpg')} id={imgStyle}/></div>
+              <div class="col-md-6" style={{marginTop:'1vw'}}>
+              <CardTitle className={cardTitle}>Jane Smit</CardTitle>
+              <CardText className={cardText}>Requested for Leave</CardText>
+              <CardText className={cardText}>New</CardText></div>
+              </div></Card>
+             </DropdownItem>
+                </DropdownMenu>
+            </UncontrolledDropdown>
+            <NavItem className={settingsIcon}><NavLink to="/CompanyDetails"><Icon icon={ic_settings} size={21} style={{color:'white'}}/></NavLink></NavItem>
 
-    <span style={{color:'white'}}>rms</span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsiblecontent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon" ></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="collapsiblecontent">
-
-      <ul class="navbar-nav mr-auto" id={navstyle}>
-        <li class="nav-item" id={navspace}>
-
-      <Link to="/Home" className={navitem}>
-            Home
-          </Link>
-
-          <span class="sr-only">(current)</span>
-        </li>
-
-        <li class="nav-item dropdown" id={navspace}>
-          <a  href="#" id="navbarDropdown" className={navitem} role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-            Employees<Icon icon={angleDown} className={downIcon} />
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown" id={dropmenu}>
-
-            <Link to="/AddEmployee"  class="dropdown-item" id={dropitem}>Add Employee</Link>
-            <Link to="/ViewEmployee" class="dropdown-item" id={dropitem}>
-            Employee List
-            </Link>
-          </div>
-        </li>
-        <li class="nav-item dropdown" id={navspace}>
-          <a  href="#" id="navbarDropdown" className={navitem} role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-            Leaves & Time<Icon icon={angleDown} className={downIcon} />
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown" id={dropmenu}>
-          <Link to="/Leaves" class="dropdown-item" id={dropitem}>  Leave List </Link>
-          <Link to="/Attendances" class="dropdown-item" id={dropitem}>Attendance List </Link>
-
-
-          </div>
-        </li>
-        <li class="nav-item dropdown" id={navspace}>
-          <a  href="#" id="navbarDropdown" className={navitem} role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-            Claims<Icon icon={angleDown} className={downIcon} />
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown" id={dropmenu}>
-            <Link to="/AddClaims"  class="dropdown-item" id={dropitem}>Add Claim</Link>
-            <Link to="/ClaimList" id={dropitem} class="dropdown-item">Claim List</Link>
-
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a  href="#" id="navbarDropdown"  className={navitem}  role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-            Payroll<Icon icon={angleDown} className={downIcon} />
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown" id={dropmenu}>
-          <Link to="/Payments" id={dropitem} class="dropdown-item">Payments</Link>
-            <Link to="/Process" id={dropitem} class="dropdown-item">Process</Link>
-
-            <Link to="/Statement" id={dropitem} class="dropdown-item">Statement</Link>
-          </div>
-        </li>
-
-      </ul>
-      <ul class="navbar-nav mr-auto" id={navright}>
-      <li class="nav-item dropdown" id={navrightspace}>
-      <a id="navbarDropdown" role="button" data-toggle="dropdown">
-      <Icon icon={bell} size={18} className={iconcolor}/>
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      <div class="dropdown-item">
-      <Card className={cardStyle}>
-        <div class="row">
-           <div class="col-md-6"><img className={cardimgleft} src={require('./profile.jpg')} id={imgStyle}/></div>
-           <div class="col-md-6" style={{marginTop:'1vw'}}>
-           <CardTitle className={cardTitle}>Jane Smith</CardTitle>
-          <CardText className={cardText}>Requested for Leave</CardText>
-          <CardText className={cardText}>New</CardText> </div>
-          </div></Card>
-      <Card className={cardStyle}>
-      <div class="row">
-      <div class="col-md-6"><img className={cardimgleft} src={require('./profile.jpg')} id={imgStyle}/></div>
-      <div class="col-md-6" style={{marginTop:'1vw'}}>
-      <CardTitle className={cardTitle}>Jane Smith</CardTitle>
-      <CardText className={cardText}>Requested for Leave</CardText>
-      <CardText className={cardText}>New</CardText></div>
-      </div></Card>
-      <Card className={cardStyle}>
-      <div class="row">
-      <div class="col-md-6"><img className={cardimgleft} src={require('./profile.jpg')} id={imgStyle}/></div>
-      <div class="col-md-6" style={{marginTop:'1vw'}}>
-      <CardTitle className={cardTitle}>Jane Smit</CardTitle>
-      <CardText className={cardText}>Requested for Leave</CardText>
-      <CardText className={cardText}>New</CardText></div>
-      </div></Card>
+            <UncontrolledDropdown nav className={upperNav}>
+              <DropdownToggle nav style={{color:'white'}}><Icon icon={userCircle} size={18} style={{color:'white'}} className={upperNavIcon}/></DropdownToggle>
+              <DropdownMenu className={dropDownStyleProfile}>
+                <DropdownItem  className={dropItem}><NavLink to="/Profile" id={hyperLink}>Profile</NavLink></DropdownItem>
+                <DropdownItem  className={dropItem}><NavLink to="/Logout" id={hyperLink}>Logout</NavLink></DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+            </Nav>
+          </Collapse>
+        </Navbar>
       </div>
-      </div>
-
-      </li>
-
-      <li class="nav-item" id={navrightspace}>
-      <Link to="/CompanyDetails"><Icon icon={ic_settings} size={21} className={iconcolor}/></Link>
-      </li>
-
-
-      <li class="nav-item dropdown">
-      <a href="#" id="navbarDropdown" className={navitem} role="button" data-toggle="dropdown"  aria-haspopup="false" aria-expanded="false">
-      <Icon icon={userCircle} size={18} className={iconcolor}/>
-      </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown" id={dropmenuright}>
-
-      <Link to="/Profile" id={dropitem} class="dropdown-item">Profile</Link>
-      <Link to="/Logout" id={dropitem} class="dropdown-item">Logout</Link>
-
-      </div>
-      </li>
-
-
-
-
-
-      </ul>
-
-</div>
-  </nav>
     );
   }
 }

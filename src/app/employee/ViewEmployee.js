@@ -1,10 +1,11 @@
 import React from "react";
 import {empDesign,empPhone,empId,pagination,paginationtext,paginationtrue,paginationfalse,searchstyle,paginationarrow} from "./LayoutEmployee.css";
 import Icon from 'react-icons-kit';
+import { angleDown } from 'react-icons-kit/fa';
 import { search } from 'react-icons-kit/icomoon/search';
 import { filter } from 'react-icons-kit/fa/filter';
 import { smallRight } from 'react-icons-kit/entypo/';
-import {pageHeading,hrStyle,arrow,orange,floatRight1,buttonStyle,displayContainer} from "../Layout.css";
+import {pageHeading,hrStyle,arrow,orange,floatRight1,buttonStyle,displayContainer,btnstyle,downIcon} from "../Layout.css";
 import {dropitem} from "../home/Home.css";
 import {Link} from "react-router-dom";
 import {CardTemplate} from "./CardTemplate";
@@ -82,9 +83,24 @@ Employee List
 <Link to="/AddEmployee"><button className="btn btn-outline-warning" id={buttonStyle}>
 Add New Employee</button></Link>
 <span  className={floatRight1}>
-<form >
+<form class="form-row">
+
 	<input type="search"  placeholder="Search" />
+  <div class="dropdown" style={{position:'relative',left:'-1vw'}} >
+    <button class="btn  btn-outline-light" type="button" id={btnstyle} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <Icon icon={filter} />
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item">New Joinees</a>
+      <a class="dropdown-item">Department Manager</a>
+      <a class="dropdown-item">Present Employees</a>
+      <a class="dropdown-item">On Leave</a>
+    </div>
+  </div>
 </form>
+
+
+
 
 </span>
 </p>
