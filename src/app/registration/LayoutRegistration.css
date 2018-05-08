@@ -78,7 +78,7 @@ right:5.6vw;
  width:30%;
 }
 #otptext{
-background-color:red !important;
+
 background-color:#2C3E50 !important;
 border:none;
 border-bottom:1px solid #B6E3EF;
@@ -86,8 +86,6 @@ width:40px;
 position:relative;
 top:0.8vw;
 margin-right:1vw;
-
-
 height:20px;
 color:white;
 text-align: center;

@@ -6,7 +6,16 @@ import { thinLeft } from 'react-icons-kit/entypo/thinLeft';
 import {Link} from "react-router-dom";
 import {LogoHeader} from "./LogoHeader";
 import {FooterText} from "./FooterText";
+import {fadeIn,fadeOut,slideInDown} from "react-animations";
+const styles={
+fadeIn: {
+    animation: 'x 3s',
+    animationName: 'fadeIn'
 
+  },
+
+
+}
 
 
 export class ViewFeatures extends React.Component{
@@ -18,20 +27,20 @@ export class ViewFeatures extends React.Component{
        <LogoHeader/>
 
       <Row className={rowStyle1}>
-      <Col >
+      <Col style={styles.fadeIn}>
       <Link to="/ViewFeature1">
       <img class="animated slideInUp" src={require('../timeandattendance.jpg')} id={imgStyle} />
       </Link>
       </Col>
-      <Col>
+      <Col style={styles.fadeIn}>
       <Link to="/ViewFeature2">
       <img class="animated slideInUp" src={require('../lady.jpg')} id={imgStyle1} /></Link></Col>
-      <Col >
+      <Col style={styles.fadeIn}>
       <Link to="/ViewFeature3">
       <img class="animated slideInUp" src={require('../leave.jpg')} id={imgStyle} /></Link></Col>
-      <Col >
+      <Col style={styles.fadeIn}>
       <Link to="/ViewFeature4">
-      <img class="animated slideInUp" src={require('../payroll.jpg')} id={imgStyle} /></Link></Col>
+      <img class="animated slideInUp" src={require('../payroll.jpg')} id={imgStyle} style={styles.slideInDown} /></Link></Col>
 
       </Row>
 

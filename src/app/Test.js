@@ -6,20 +6,23 @@ import {holidayTextR,holidayTitleR,holidayDayR} from "./home/Home.css";
 import {carousel,labelStyle1,inputstyle,downIcon} from "./Layout.css";
 import {imgStyle} from "./employee/LayoutSettings.css";
 import { filter } from 'react-icons-kit/fa/filter';
-
+import { bounce } from "react-animations";
+import Radium,{StyleRoot} from "radium";
 
 import {displayContainer,orange,item,indicator,exampletable,tableinput,btnstyle} from "./Layout.css";
+
 export class Test extends React.Component{
 
 
   render() {
 
     return(
+<StyleRoot>
+      <div >
 
-      <div className={displayContainer}>
-
-
+<p style={styles.fadeIn}>Welcome</p>
       </div>
+      </StyleRoot>
     );
   }
 }

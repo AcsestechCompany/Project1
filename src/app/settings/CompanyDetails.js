@@ -67,13 +67,13 @@ import {formStyle,floatRight} from "./LayoutSettings.css";
         <div class="form-row">
         <div class="col-md-12 mb-3">
           <label className={labelStyle1}>Address</label>
-          <input id={inputstyletextarea} type="textarea" class="form-control" name=""  placeholder="" />
+          <input id={inputstyletextarea} type="textarea" rows="3" class="form-control" name=""  placeholder="" />
         </div>
         </div>
         <div class="form-row">
         <div class="col-md-5 mb-3">
          <label className={labelStyle1}>State</label>
-         <select id="" class="form-control" id={inputstyle}>
+         <select class="form-control" id={inputstyle}>
          <option>Telangana</option>
          <option>AP</option>
          </select>

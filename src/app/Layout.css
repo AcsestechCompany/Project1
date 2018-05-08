@@ -172,6 +172,8 @@ top:6vw !important;
 
 }
 
+
+
 .navitemStyle{
 position:relative;
 top:3.8vw !important;
@@ -192,16 +194,17 @@ right:3vw !important;
   left:-7vw !important;
 }
 .cardStyle{
-  height:6.5vw !important;
+  height:8vw !important;
  background-color:#FFFFFF;
  border:none;
  box-shadow:-0.01px 3px 1px 0.1px grey;
+
 }
 .cardTextStyle{
   position:relative;
   padding-bottom:0.15vw !important;
   color:black;
-  font-size:1.1vw !important;
+  font-size:1.5vw !important;
   text-align: center;
 }
 .cardHeaderStyle{
@@ -362,16 +365,52 @@ left:6.2vw;
   position:relative;
   left:3.3vw;
 }
+#navStyle1{
+  font-size:1vw;
+padding-top:1vw;
+  margin-bottom:0.5vw;
+  width:100%;
+  position:relative;
+  left:15vw;
+}
 .navitemStyle{
 padding-right:8.25vw;
 position:relative;
 bottom:-2.2vw;
+}
+.navitemStyle1{
+padding-right:7vw;
+position:relative;
+bottom:-2vw;
 }
 .navitemStyleHome{
 padding-right:8.15vw;
 position:relative;
 bottom:-3.5vw;
 }
+.navitemStyleHome1{
+
+padding-right:8.15vw;
+position:relative;
+top:2.2vw;
+
+}
+.settingsIcon1{
+  position:relative;
+  bottom:3.5vw;
+  right:10.7vw;
+}
+.notificationIcon1{
+  position:relative;
+  bottom:3.4vw;
+right:11vw;
+}
+.upperNavIcon1{
+  position:relative;
+top:0.5vw;
+right:5vw;
+}
+
 .upperNav{
 position:relative;
 bottom:4vw;

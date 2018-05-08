@@ -4,14 +4,126 @@
 #sidemenu{
 
 }
+.dropDownStylesidenav{
+  background-color:#2C3E50;
+  font-size:1.9vw;
+  border:none;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius:-20%;
+  position:relative;
+  top:1vw;
+  left:-70px;
+  width:200px;
+  min-height:5.5vw;
+  overflow:hidden;
+  text-align:center;
+}
+.dropDownProfilesidenav{
+  background-color:#2C3E50;
+  font-size:0.9vw;
+  border:none;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius:-20%;
+  position:relative;
+  top:2.485vw;
+margin-right:3.5vw;
+  width:30px;
+  min-height:5vw;
+  overflow:hidden;
+  text-align:center;
+}
+.dropDownClaimssidenav{
+  background-color:#2C3E50;
+  font-size:1.9vw;
+  border:none;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius:-20%;
+  position:relative;
+  top:2.769vw;
+  left:-70px;
+  width:200px;
+  min-height:5.5vw;
+  overflow:hidden;
+text-align:center;
+}
+.dropDownPayrollsidenav{
+  background-color:#2C3E50;
+  font-size:1.9vw;
+  border:none;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius:-20%;
+  position:relative;
+  top:-2.769vw;
+padding-bottom:2vw;
+  left:-70px;
+  width:200px;
+  min-height:5.5vw;
+  overflow:hidden;
+  text-align:center;
+}
+.dropDownLeavessidenav{
+  background-color:#2C3E50;
+  font-size:1.9vw;
+  border:none;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius:-20%;
+  position:relative;
+  top:2.769vw;
+  left:-70px;
+  width:200px;
+  min-height:5.5vw;
+  overflow:hidden;
+  text-align:center;
+}
+.logoright{
+  position:relative;
+  right:30vw;
+  top:-1vw;
+font-size:4vw;
+  font-family:serif;
+}
+.notificationIconright{
+  position:relative;
+  top:-1vw;
+  right:8vw;
+}
+.upperNavIconright{
+  position:relative;
+  top:2.8vw;
+  right:3vw;
+}
+.settingsIconright{
+  position:relative;
+top:-1vw;
+left:-7vw;
+
+}
 @media(max-width:768px){
-  #mainmenu{
+  .mainmenu{
     display:none !important;
   }
   .navbar{
     height:30px !important;
   }
+  .openslide{
+    position:relative;
+    left:-20vw;
+  }
+  .rightnav{
+    position:relative;
+    right:-70vw;
+  }
 
+}
+@media(max-width:320px){
+  .openslide{
+    position:relative;
+    left:-8vw;
+  }
+  #btnclose{
+  position:relative;
+  left:15vw;
+  }
 }
 @media(min-width:1024px){
   .openslide{
@@ -54,14 +166,14 @@
   top:0;
   left:0;
   background-color:#2C3E50;
-  opacity:0.9;
-  padding-top:80px;
   overflow-x:hidden;
   transition:transform 5s ease;
+  padding-top:40px;
+  padding-left:-20px;
 
 }
-.sidenav a{
-  padding:10px 10px 10px 30px;
+.sidenav li{
+  padding:10px 10px 43px 10px;
   text-decoration:none;
   font-size:15px;
   color:#fff;
@@ -73,8 +185,8 @@
 }
 .sidenav #btnclose{
   position:absolute;
-  top:0;
-  margin-left:27vw;
+  top:3vw;
+  margin-left:37vw;
   font-size:36px;
   color:#fff;
 }

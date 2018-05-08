@@ -4,8 +4,9 @@ import {FirstRow} from "./FirstRow";
 import {SecondRow} from "./SecondRow";
 import {ThirdRow} from "./ThirdRow";
 import {FourthRow} from "./FourthRow";
-import {Header1}  from "../Header1";
+import {Header}  from "../Header";
 import {Footer} from "../Footer";
+
 
 export class Home extends React.Component {
 
@@ -13,9 +14,9 @@ export class Home extends React.Component {
 
      return(
        <div>
-       <Header1/>
+       <Header/>
        <div className={displayHome}>
-        <FirstRow/>
+     <FirstRow />
       <SecondRow/>
       <ThirdRow/>
       <FourthRow/>

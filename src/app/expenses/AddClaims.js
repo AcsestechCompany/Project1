@@ -39,14 +39,18 @@ export class AddClaims extends React.Component{
             <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Date</label>
               <MuiThemeProvider>
-        <DatePicker hintText="date of joining" underlineStyle={{display: 'none'}} className={dateStyle} />
+        <DatePicker hintText="date of joining"
+        underlineStyle={{display: 'none'}}
+        textFieldStyle={{position:'relative',bottom:'0.75vw',color:'lightgray'}}
+        className={dateStyle} style={{border:'1px solid #D0D3D4',height:'2vw'}}/>
             </MuiThemeProvider>
+
             </div>
             </div>
             <div class="form-row">
             <div class="col-md-12 mb-3">
                  <label className={labelStyle1}>Description</label>
-                 <input id={inputstyletextarea} type="textarea" class="form-control" name="text" />
+                 <input id={inputstyletextarea} type="textarea" class="form-control" rows="3" name="text" />
               </div>
               </div>
 

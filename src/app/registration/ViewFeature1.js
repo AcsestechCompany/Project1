@@ -6,6 +6,28 @@ import Icon from 'react-icons-kit';
 import { thinLeft } from 'react-icons-kit/entypo/thinLeft';
 import {Link} from "react-router-dom";
 import {FooterText} from "./FooterText";
+import { fadeInLeft,fadeInRight,fadeInUp } from 'react-animations';
+import Radium, {StyleRoot} from 'radium';
+
+const styles = {
+
+
+fadeInLeft: {
+
+    animationName: 'fadeInLeft',
+    animationDuration: '2s'
+
+  },
+  fadeInRight: {
+    animationName: 'fadeInRight',
+    animationDuration: '2s'
+
+  },
+  fadeInUp: {
+    animationName: 'fadeInUp',
+    animationDuration: '2s'
+  }
+}
 
 export class ViewFeature1 extends React.Component{
   render(){
@@ -16,13 +38,13 @@ export class ViewFeature1 extends React.Component{
       <LogoHeader/>
       <Row className={rowStyle}>
         <Col xs="4">
-        <img class="animated slideInUp" src={require('../timeandattendance.jpg')} id={imgStyle} />
+        <img  src={require('../timeandattendance.jpg')} id={imgStyle} style={styles.fadeInUp} />
         </Col>
       <Col>
-      <p id={featureHeading} class="animated slideInRight">
+      <p id={featureHeading}  style={styles.fadeInRight}>
       Time and Attendance
       </p>
-      <p id={featuretext} class="animated fadeInLeft">
+      <p id={featuretext}  style={styles.fadeInLeft}>
       Streamline your end-to-end processes and productivity
       <ul className={list}>
   <li> Automate your rules and calculations to reduce compliance risks</li>
