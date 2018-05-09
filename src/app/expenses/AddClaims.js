@@ -10,14 +10,14 @@ import {displayContainer,pageHeading,hrStyle,buttonStyle,savebtn1} from "../Layo
 import {dateStyle,labelStyle1,inputstyle,inputstyletextarea} from "../employee/LayoutEmployee.css";
 import {labelStyle,inputstyle1,formStyle,inputStyle,hyperLink} from "../settings/LayoutSettings.css";
 import {addBtn,cancelBtn} from "../projects/Projects.css";
-import {Header1} from "../Header1";
+import {Header} from "../Header";
 import {Footer} from "../Footer";
 
 export class AddClaims extends React.Component{
   render() {
     return(
       <div>
-      <Header1/>
+      <Header/>
       <div className={displayContainer}>
 <p className={pageHeading}>Add Claims</p>
 <hr className={hrStyle}/>

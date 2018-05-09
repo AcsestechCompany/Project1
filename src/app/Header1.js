@@ -11,6 +11,7 @@ import {dropDownStyle,hyperLink,hyperLinkLogo,dropdown,upperNav,dropItem,upperNa
   navStyle,downIcon,linkStyle1,dropDownStyleProfile} from "./Layout.css";
 import {cardStyle,cardText,cardTitle,imgStyle} from "./NotificationLayout.css";
 import {Card,CardTitle,CardText} from "reactstrap";
+
 export class Header1 extends React.Component {
  constructor(props) {
     super(props);

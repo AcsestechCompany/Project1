@@ -9,14 +9,14 @@ import {displayContainer,arrowIconR,arrowIconL,savebtn1,pageHeading,hrStyle,butt
 import {hyperLinkEmployee,slideremp,labelStyle1,inputstyle,slidertext} from "./LayoutEmployee.css";
 import {formStyle,floatRight,enableBtn,disableBtn,
   inputStyle1,divStyle,overtimeDiv,boxText,imageText,imageInput,iconStyle} from "./LayoutSettings.css";
-import {Header1} from "../Header1";
+import {Header} from "../Header";
 import {Footer} from "../Footer";
 
 export class LoginInfo extends React.Component{
   render() {
     return(
       <div>
-      <Header1/>
+      <Header/>
        <div className={displayContainer}>
 <p className={pageHeading}>Login Information</p>
 <hr className={hrStyle}/>

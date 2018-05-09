@@ -8,14 +8,14 @@ import { ic_delete,ic_create  } from 'react-icons-kit/md';
 import {displayContainer,pageHeading,hrStyle,activeStyle,orange,floatRight1,exampletable,buttonStyle} from "../Layout.css";
 import {inputstyle,modalbutton,labelStyle1,labelStyle2} from "../admin/LayoutAdmin.css";
 import {labelStylepopup,savebtn1,btnstyle} from "../Layout.css";
-import {Header1} from "../Header1";
+import {Header} from "../Header";
 import {Footer} from "../Footer";
 
 export class LeaveList extends React.Component{
   render() {
     return(
       <div>
-      <Header1/>
+      <Header/>
       <div className={displayContainer}>
 <p className={pageHeading}>Leave List
 </p>

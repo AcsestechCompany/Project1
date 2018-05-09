@@ -9,7 +9,7 @@ import { arrowRight2 } from 'react-icons-kit/icomoon';
 import {displayContainer,hrStyle,pageHeading,buttonStyle,savebtn,arrowIcon,orange} from "../Layout.css";
 import {dateStyle,labelStyle1,hyperLinkEmployee,inputstyletextarea,slidertext,inputstyle} from "../employee/LayoutEmployee.css";
 import {formStyle,floatRight} from "./LayoutSettings.css";
-  import {Header1} from  "../Header1";
+  import {Header} from  "../Header";
   import {Footer} from "../Footer";
 
  export class CompanyDetails extends React.Component{
@@ -27,7 +27,7 @@ import {formStyle,floatRight} from "./LayoutSettings.css";
    render() {
      return(
        <div>
-       <Header1/>
+       <Header/>
        <div className={displayContainer}>
 <p className={pageHeading}>Organization Details</p>
 <hr className={hrStyle}/>

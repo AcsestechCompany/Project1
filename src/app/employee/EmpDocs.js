@@ -8,14 +8,14 @@ import {Link} from "react-router-dom";
 import {hyperLinkEmployee,labelStyle1,inputstyle,slidertext} from "./LayoutEmployee.css";
 import {displayContainer,arrowIconR,arrowIconL,skip1,savebtn1,floatRight2,hrStyle,pageHeading,orange,bankdiv,floatRight} from "../Layout.css";
 import {inputstylefile,formStyle,enableBtn,disableBtn} from "./LayoutSettings.css";
-  import {Header1} from "../Header1";
+  import {Header} from "../Header";
   import {Footer} from "../Footer";
 
 export class EmpDocs extends React.Component{
   render() {
     return(
 <div>
-<Header1/>
+<Header/>
        <div className={displayContainer}>
 <p className={pageHeading}>Employee Documents</p>
 <hr className={hrStyle}/>

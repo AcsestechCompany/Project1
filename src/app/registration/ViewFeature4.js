@@ -49,7 +49,7 @@ export class ViewFeature4 extends React.Component{
       <ul className={list}>
   <li> Automate your rules and calculations to reduce compliance risks</li>
   <li> Eliminate manual entries and redundant processes</li>
-  <li> Avoid costly, time-consuming integrations</li>
+  <li> Avoid costly,time-consuming integrations</li>
 </ul>
       </p>
       </Col>

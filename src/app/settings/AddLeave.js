@@ -10,7 +10,7 @@ import {displayContainer,pageHeading,hrStyle,buttonStyle,savebtn,arrowIcon,orang
 import {overtimePay,labelStyle1,hyperLinkEmployee,inputStyle,inputstyletextarea,skipstyle,inputstyle,slidertext,radiocheck} from "../employee/LayoutEmployee.css";
 import {labelStyle,formStyle,
 floatRight,radiodiv} from "./LayoutSettings.css";
-import {Header1} from "../Header1";
+import {Header} from "../Header";
 import {Footer} from "../Footer";
 
 export class AddLeave extends React.Component{
@@ -18,7 +18,7 @@ export class AddLeave extends React.Component{
 
     return(
       <div>
-      <Header1/>
+      <Header/>
       <div className={displayContainer}>
 
 <p className={pageHeading}>Leaves</p>

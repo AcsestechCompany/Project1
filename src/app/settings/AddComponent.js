@@ -11,13 +11,13 @@ import {labelStyle,inputstyle1,formStyle,
 dropDownInputStyle,buttonstyle,checkboxDiv,divStyle,radioStyle1,boxText,imageText,radioStyle,hyperLink,floatRight,radiodiv,
 } from "./LayoutSettings.css";
 import {labelStyle1,hyperLinkEmployee,inputstyle,inputstyletextarea,overtimePay,slidertext,radiocheck} from "../employee/LayoutEmployee.css";
-import {Header1} from "../Header1";
+import {Header} from "../Header";
 import {Footer} from "../Footer";
 export class AddComponent extends React.Component{
   render() {
     return(
       <div>
-      <Header1/>
+      <Header/>
       <div className={displayContainer}>
 <p className={pageHeading}>Salary Components</p>
 <hr className={hrStyle}/>

@@ -12,7 +12,7 @@ import {CardTemplate} from "./CardTemplate";
 import {EmployeeList} from "./EmployeeList";
 import {EmployeeList1} from "./EmployeeList1";
 import {EmployeeList2} from "./EmployeeList2";
-import {Header1} from "../Header1";
+import {Header} from "../Header";
 import {Footer} from "../Footer";
 
 export class ViewEmployee extends React.Component{
@@ -72,7 +72,7 @@ export class ViewEmployee extends React.Component{
     var page = 1;
     return(
       <div>
-      <Header1/>
+      <Header/>
       <div className={displayContainer}>
 <p className={pageHeading}>
 Employee List

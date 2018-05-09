@@ -8,14 +8,14 @@ import {Link} from "react-router-dom";
 import {displayContainer,floatRight,arrowIcon,hrStyle,pageHeading,orange} from "../Layout.css";
 import {inputstyle,formStyle,skipstyle,inputstyletextarea,
 labelStyle1,hyperLinkEmployee,slideremp,sliderline,sliderlineorange,slidertext} from "./LayoutEmployee.css";
-  import {Header1} from "../Header1";
+  import {Header} from "../Header";
   import {Footer} from "../Footer";
 
 export class PersonalDetails extends React.Component{
   render() {
     return(
       <div>
-      <Header1/>
+      <Header/>
 
        <div className={displayContainer}>
 <p className={pageHeading}>Personal Details</p>

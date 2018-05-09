@@ -3,14 +3,14 @@ import {empDesign,empPhone,empId} from "./LayoutEmployee.css";
 import {pageHeading,hrStyle,displayContainer,floatRight1} from "../Layout.css";
 import {Link} from "react-router-dom";
 import {CardTemplate} from "./CardTemplate";
-import {Header1} from "../Header1";
+import {Header} from "../Header";
 import {Footer} from "../Footer";
 
 export class Leavers extends React.Component{
   render() {
     return(
       <div>
-      <Header1/>
+      <Header/>
       <div className={displayContainer}>
 <p className={pageHeading}>Leavers
 

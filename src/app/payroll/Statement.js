@@ -3,7 +3,6 @@ import {render} from "react-dom";
 import { Button, Form, FormGroup, Label, Input, FormText,Row } from 'reactstrap';
 import DatePicker from 'material-ui/DatePicker';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
 import TextField from 'material-ui/TextField';
 import Icon from 'react-icons-kit';
 import { ic_mail } from 'react-icons-kit/md/ic_mail';
@@ -15,18 +14,17 @@ import {inProgress,closed} from "../projects/Projects.css";
 import {displayContainer,pageHeading,hrStyle,labelStyle,inputstyle,hyperLink,formStyle,inputStyle,textAreaStyle,tableDiv,
   inputStyle1,labelStyle1,addNewDepartmentStyle,floatRight1,verticalLine,dropDownInputStyle,buttonstyle,divStyle,radioStyle1,
   boxText,imageText,radioStyle,labelStyleRadio,imageInput,contentStyle,iconStyle,activeStyle,orange,exampletable} from "../Layout.css";
-import { bin2 } from 'react-icons-kit/icomoon/bin2';
-import { glass2 } from 'react-icons-kit/icomoon/glass2';
+import { bin2,glass2  } from 'react-icons-kit/icomoon/';
 import { ic_delete } from 'react-icons-kit/md/ic_delete';
 import { eye } from 'react-icons-kit/icomoon/eye';
-import {Header1} from "../Header1";
+import {Header} from "../Header";
 import {Footer} from "../Footer";
 
 export class Statement extends React.Component{
   render() {
     return(
       <div>
-      <Header1/>
+      <Header/>
       <div className={displayContainer}>
 <p className={pageHeading}>Statement
 </p>

@@ -7,14 +7,14 @@ import Icon from 'react-icons-kit';
 import { plus } from 'react-icons-kit/icomoon/plus';
 import {displayContainer,pageHeading,hrStyle,buttonStyle} from "../Layout.css";
 import {labelStyle1,formStyle,inputstyle} from "../employee/LayoutEmployee.css";
-import {Header1} from "../Header1";
+import {Header} from "../Header";
 import {Footer} from "../Footer";
 
 export class Process extends React.Component{
   render() {
     return(
       <div>
-      <Header1/>
+      <Header/>
       <div className={displayContainer}>
 <p className={pageHeading}>Process</p>
 <hr className={hrStyle}/>

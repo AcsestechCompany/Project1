@@ -9,7 +9,7 @@ import {displayContainer,arrowIconR,arrowIconL,pageHeading,hrStyle,buttonStyle,o
 import {hyperLinkEmployee,dateStyle,labelStyle1,inputstyle,slidertext} from "./LayoutEmployee.css";
 import {timeStyle} from "../settings/LayoutSettings.css";
 import {formStyle,floatRight,enableBtn,disableBtn} from "./LayoutSettings.css";
-import {Header1} from "../Header1";
+import {Header} from "../Header";
 import {Footer} from "../Footer";
 
 export class JobHistory extends React.Component{
@@ -25,7 +25,7 @@ export class JobHistory extends React.Component{
   render() {
     return(
   <div>
-  <Header1/>
+  <Header/>
       <div className={displayContainer}>
 <p className={pageHeading}>Job History</p>
 <hr className={hrStyle}/>

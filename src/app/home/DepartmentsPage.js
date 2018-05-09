@@ -6,7 +6,7 @@ import {InformationTechnology} from "./InformationTechnology";
 import {Finance} from "./Finance";
 import {All} from "./All";
 import {dropitem} from "./Home.css";
-import {Header1} from "../Header1";
+import {Header} from "../Header";
 import {Footer} from "../Footer";
 
 export class DepartmentsPage extends React.Component{
@@ -94,7 +94,7 @@ all:false
     var all=this.allfunc();
     return(
       <div>
-      <Header1/>
+      <Header/>
       <div className={displayContainer}>
       DepartmentsPage
       <div class="dropdown">

@@ -7,7 +7,7 @@ import {OnLeave} from "./OnLeave";
 import {Late} from "./Late";
 import {Overtime} from "./Overtime";
 import {All} from "./All";
-import {Header1} from "../Header1";
+import {Header} from "../Header";
 import {Footer} from "../Footer";
 
 export class EmploymentStatus extends React.Component{
@@ -135,7 +135,7 @@ export class EmploymentStatus extends React.Component{
     var all = this.allfunc();
     return(
       <div>
-      <Header1/>
+      <Header/>
   <div className={displayContainer}>Employee status
   <div class="dropdown">
     <button class="btn  dropdown-toggle" type="button" id={buttonStyle} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

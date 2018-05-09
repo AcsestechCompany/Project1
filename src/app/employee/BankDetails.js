@@ -11,7 +11,7 @@ import {hyperLinkEmployee,btnManual,btnAuto,labelStyle1,slidertext,inputstyle} f
 import {formStyle,floatRight,enableBtn,disableBtn} from "./LayoutSettings.css";
 import {Manual} from "./Manual";
 import {Auto} from "./Auto";
-import {Header1} from "../Header1";
+import {Header} from "../Header";
 import {Footer} from "../Footer";
 
 export class BankDetails extends React.Component{
@@ -55,7 +55,7 @@ var manualcomponents = this.manualdisplay();
 var autocomponents = this.autodisplay();
     return(
       <div>
-      <Header1/>
+      <Header/>
        <div className={displayContainer}>
 <p className={pageHeading}>Bank Details</p>
 <hr className={hrStyle}/>

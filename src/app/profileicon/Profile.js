@@ -4,13 +4,13 @@ import {
   formStyle,inputStyle,labelStyle,buttonstyle} from "../settings/LayoutSettings.css";
 import {Form,FormGroup, Label, Input,Button} from "reactstrap";
 import {labelStyle1,inputstyle} from "../employee/LayoutEmployee.css";
-import {Header1} from "../Header1";
+import {Header} from "../Header";
 import {Footer} from "../Footer";
 export class Profile extends React.Component{
   render() {
     return(
       <div>
-      <Header1/>
+      <Header/>
   <div className={displayContainer}>
   <p className={pageHeading}>Profile Settings</p>
   <hr className={hrStyle}/>

@@ -12,7 +12,7 @@ import {inputstyle,formStyle,inputStyle,hyperLinkEmployee,
   inputStyle1,labelStyle1,enableBtn,disableBtn,skipstyle,
   overtimeDiv,slideremp,dateStyle,overtimePay,enableBtnactive,disableBtnactive,radiocheck,slidertext} from "./LayoutEmployee.css";
   import {timeStyle} from "../settings/LayoutSettings.css";
-  import {Header1} from "../Header1";
+  import {Header} from "../Header";
   import {Footer} from "../Footer";
 export class ProfessionalDetails extends React.Component{
   constructor(props){
@@ -69,7 +69,7 @@ export class ProfessionalDetails extends React.Component{
     var disable =this.disablefunc();
     return(
       <div>
-      <Header1/>
+      <Header/>
        <div className={displayContainer}>
 <p className={pageHeading}>Professional Details</p>
 <hr className={hrStyle}/>

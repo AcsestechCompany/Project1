@@ -9,7 +9,7 @@ import {labelStyle1,hyperLinkEmployee,overtimePay,skipstyle,inputstyle,inputstyl
 import {displayContainer,pageHeading,hrStyle,arrowIcon,orange,floatRight2} from "../Layout.css";
 import {formStyle,hyperLink,floatRight,
   radiodiv,timeStyle} from "./LayoutSettings.css";
-import {Header1} from "../Header1";
+import {Header} from "../Header";
 import {Footer} from "../Footer";
 export class AttendanceSettings extends React.Component {
   constructor(props) {
@@ -34,7 +34,7 @@ export class AttendanceSettings extends React.Component {
 
     return(
       <div>
-      <Header1/>
+      <Header/>
              <div className={displayContainer}>
       <p className={pageHeading}>Attendance</p>
       <hr className={hrStyle}/>
@@ -141,7 +141,7 @@ export class AttendanceSettings extends React.Component {
                  </Row>
 
               <Link to="/ViewShiftAttendance">
-              <button className="btn btn-outline-primary " id={buttonStyle}>
+              <button className="btn btn-outline-primary ">
               Save</button></Link>
 
               <Link to="/AddLeave"  id={skipstyle}>Skip</Link>

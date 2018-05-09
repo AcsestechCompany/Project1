@@ -16,6 +16,7 @@ import {Card,CardTitle,CardText} from "reactstrap";
 import { fadeInRight } from "react-animations";
 import Radium,{StyleRoot} from "radium";
 import {SideNav} from "./SideNav";
+import {dropDownStyle1,dropDownLeaves1,dropDownClaims1,dropDownPayroll1,dropDownStyleProfile1} from "./Header.css";
 const styles={
   fadeInRight: {
     animation: 'x 0.5s',
@@ -141,28 +142,28 @@ render() {
             </UncontrolledDropdown>
           <UncontrolledDropdown navbar className={navitemStyle1} id={navspace}>
             <DropdownToggle nav  style={{color:'white'}}>EMPLOYEES<Icon icon={angleDown} className={downIcon} /></DropdownToggle>
-              <DropdownMenu className={dropDownStyle}>
+              <DropdownMenu className={dropDownStyle1}>
                 <DropdownItem id={dropItem}><Link to="/AddEmployee" id={hyperLink}>Add Employee</Link></DropdownItem>
                 <DropdownItem id={dropItem}><Link to="/ViewEmployee" id={hyperLink}>Employees List</Link></DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           <UncontrolledDropdown navbar  className={navitemStyle1} id={navspace}>
                 <DropdownToggle nav style={{color:'white'}}>LEAVES & TIME<Icon icon={angleDown} className={downIcon} /></DropdownToggle>
-              <DropdownMenu className={dropDownLeaves}>
+              <DropdownMenu className={dropDownLeaves1}>
                 <DropdownItem id={dropItem}><Link to="/Leaves" id={hyperLink}>Leave List</Link></DropdownItem>
             <DropdownItem id={dropItem}><Link to="/Attendance" id={hyperLink}>Attendance List</Link></DropdownItem>
                 </DropdownMenu>
             </UncontrolledDropdown>
           <UncontrolledDropdown navbar  className={navitemStyle1} id={navspace}>
-              <DropdownToggle nav  style={{color:'white'}}  >CLAIMS<Icon icon={angleDown} className={downIcon} /></DropdownToggle>
-              <DropdownMenu className={dropDownClaims} >
+              <DropdownToggle nav  style={{color:'white'}} >CLAIMS<Icon icon={angleDown} className={downIcon} /></DropdownToggle>
+              <DropdownMenu className={dropDownClaims1} >
                 <DropdownItem id={dropItem}><Link to="/AddClaims" id={hyperLink}>Add Claims</Link></DropdownItem>
                 <DropdownItem id={dropItem}><Link to="/ClaimList" id={hyperLink}>Claims List</Link></DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
             <UncontrolledDropdown navbar  className={navitemStyle1}>
               <DropdownToggle nav style={{color:'white'}}>PAYROLL<Icon icon={angleDown} className={downIcon}/></DropdownToggle>
-            <DropdownMenu className={dropDownPayroll}>
+            <DropdownMenu className={dropDownPayroll1}>
               <DropdownItem id={dropItem}><Link to="/Payments" id={hyperLink}>Payments</Link></DropdownItem>
               <DropdownItem id={dropItem}><Link to="/Process" id={hyperLink}>Process</Link></DropdownItem>
               <DropdownItem id={dropItem}><Link to="/Statement" id={hyperLink}>Statement</Link></DropdownItem>
@@ -210,7 +211,7 @@ render() {
 
             <UncontrolledDropdown navbar className={upperNav}>
               <DropdownToggle nav style={{color:'white'}}><Icon icon={userCircle} size={18} style={{color:'white'}} className={upperNavIcon1}/></DropdownToggle>
-              <DropdownMenu className={dropDownStyleProfile}>
+              <DropdownMenu className={dropDownStyleProfile1}>
                 <DropdownItem  className={dropItem}><NavLink to="/Profile" id={hyperLink}>Profile</NavLink></DropdownItem>
                 <DropdownItem  className={dropItem}><NavLink to="/Logout" id={hyperLink}>Logout</NavLink></DropdownItem>
               </DropdownMenu>

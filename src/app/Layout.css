@@ -489,6 +489,8 @@ margin-top:-1vw;
   position:relative;
   top:0.7vw;
   padding-bottom:0.7vw;
+
+
 }
 .dropItem:hover{
   color:white !important;
@@ -499,6 +501,7 @@ margin-top:-1vw;
     width: 350px;
     padding-top:0.5vw;
     margin-left:-130px;
+    
     border:none;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }

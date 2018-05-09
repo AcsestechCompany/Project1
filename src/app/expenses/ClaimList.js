@@ -8,13 +8,13 @@ import {Link} from "react-router-dom";
 import {activeStyle} from "../projects/Projects.css";
 import {orange,contentStyle,displayContainer,pageHeading,hrStyle,buttonStyle,floatRight1,exampletable,savebtn1,bankdiv} from "../Layout.css";
 import {hyperLink} from "../settings/LayoutSettings.css";
-import {Header1} from "../Header1";
+import {Header} from "../Header";
 import {Footer} from "../Footer";
 export class ClaimList extends React.Component{
   render() {
     return(
       <div>
-      <Header1/>
+      <Header/>
       <div className={displayContainer}>
 <p className={pageHeading}>Claims
 </p>

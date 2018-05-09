@@ -10,14 +10,14 @@ import {inProgress,closed} from "../projects/Projects.css";
 import { ic_create,ic_delete } from 'react-icons-kit/md';
 import {pageHeading,hrStyle,contentStyle,floatRight,hyperLink,orange,displayContainer,exampletable,buttonStyle} from "../Layout.css";
 import {labelStyle2,inputstyle,modalbutton,savebtn,labelStyle1} from "./LayoutAdmin.css";
-import {Header1} from "../Header1";
+import {Header} from "../Header";
 import {Footer} from "../Footer";
 
 export class AdminUsers extends React.Component{
   render() {
     return(
       <div>
-      <Header1/>
+      <Header/>
 
       <div className={displayContainer}>
 <p><span className={pageHeading}>Admin Users</span></p>

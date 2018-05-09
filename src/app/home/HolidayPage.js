@@ -1,5 +1,5 @@
 import React from "react";
-import {Header1} from "../Header1";
+import {Header} from "../Header";
 import {Footer} from "../Footer";
 import Icon from 'react-icons-kit';
 import { ic_create,ic_delete  } from 'react-icons-kit/md';
@@ -9,7 +9,7 @@ export class HolidayPage extends React.Component{
   render(){
     return(
       <div>
-      <Header1/>
+      <Header/>
       <div className={displayContainer}>
       <p className={pageHeading}>List of Holidays</p>
       <hr className={hrStyle}/>
