@@ -110,7 +110,7 @@ export class AttendanceSettings extends React.Component {
                <p style={{fontWeight:'lighter',fontSize:'0.9vw'}}>Status</p>
 
 
-            <div style={{marginLeft:'3vw'}}>
+            <div style={{marginLeft:'4vw'}}>
             <div class="form-check">
               <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked
               />
@@ -139,9 +139,9 @@ export class AttendanceSettings extends React.Component {
 
                     </Col>
                  </Row>
-
-              <Link to="/ViewShiftAttendance">
-              <button className="btn btn-outline-primary ">
+<p style={{marginTop:'3vw'}}>
+              <Link to="/AddLeave">
+              <button className="btn btn-outline-warning">
               Save</button></Link>
 
               <Link to="/AddLeave"  id={skipstyle}>Skip</Link>
@@ -158,6 +158,7 @@ export class AttendanceSettings extends React.Component {
               <button type="button" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIcon} /></button>
               </Link>
                  </span>
+                 </p>
 
              </div>
              <Footer/>

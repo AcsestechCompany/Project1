@@ -7,14 +7,14 @@ import { plus,compass2  } from 'react-icons-kit/icomoon';
 import { ic_explore } from 'react-icons-kit/md/ic_explore';
 import { plusSquare } from 'react-icons-kit/fa/plusSquare';
 import {Link} from "react-router-dom";
-import {Header1} from "./Header1";
+import {Header} from "./Header";
 import {Footer} from "./Footer";
 
 export class DemoPage extends React.Component{
   render() {
     return(
  <div>
- <Header1/>
+ <Header/>
 
      <div className={exploreDiv}>
      <Row>

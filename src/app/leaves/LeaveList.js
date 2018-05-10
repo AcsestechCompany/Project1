@@ -128,7 +128,7 @@ export class LeaveList extends React.Component{
                       </div>
                     </div>
                 </div>
-                  <button type="button" class="btn btn-outline-warning" data-dismiss="modal" style={{marginLeft:'30vw',marginBottom:'3vw'}}>Save</button>
+                  <button type="button" class="btn btn-outline-warning" data-dismiss="modal" style={{marginLeft:'30vw',marginBottom:'3vw',width:'46%'}}>Save</button>
 
               </div>
             </div>

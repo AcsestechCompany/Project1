@@ -89,22 +89,22 @@ export class AddComponent extends React.Component{
  </div>
  </div>
 </div>
-        <div class="col-sm-4" style={{marginLeft:'-15vw',marginTop:'-0.15vw'}}>
+        <div class="col-sm-4" style={{marginLeft:'-11vw',marginTop:'-0.15vw'}}>
         <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck1"  style={{marginTop:'0.7vw'}}/>
-  <label class="form-check-label" for="defaultCheck1" id={inputstyle} style={{marginTop:'0.4vw',marginLeft:'1vw'}} id={radiocheck}>
+  <label class="form-check-label" for="defaultCheck1" id={inputstyle} style={{marginTop:'0.4vw',marginLeft:'1vw',fontSize:'0.8vw',fontFamily:'arial',color:'#2C3E50'}} id={radiocheck}>
     Show in Payslip
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" style={{marginTop:'0.7vw'}}/>
-  <label class="form-check-label" for="defaultCheck2" id={inputstyle} style={{marginTop:'0.4vw',marginLeft:'1vw'}} id={radiocheck}>
+  <label class="form-check-label" for="defaultCheck2" id={inputstyle} style={{marginTop:'0.4vw',marginLeft:'1vw',fontSize:'0.8vw',fontFamily:'arial',color:'#2C3E50'}} id={radiocheck}>
   Show in CTC
   </label>
 </div>
 <div class="form-check">
   <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" style={{marginTop:'0.7vw'}}/ >
-  <label class="form-check-label" for="defaultCheck2" id={inputstyle} style={{marginTop:'0.4vw',marginLeft:'1vw'}} id={radiocheck}>
+  <label class="form-check-label" for="defaultCheck2" id={inputstyle} style={{marginTop:'0.4vw',marginLeft:'1vw',fontSize:'0.8vw',fontFamily:'arial',color:'#2C3E50'}} id={radiocheck}>
   Loss of Pay due to Employee Attendance will affect this component
   </label>
 </div>

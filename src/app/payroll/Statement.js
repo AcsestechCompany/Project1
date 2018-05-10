@@ -5,18 +5,14 @@ import DatePicker from 'material-ui/DatePicker';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import TextField from 'material-ui/TextField';
 import Icon from 'react-icons-kit';
-import { ic_mail } from 'react-icons-kit/md/ic_mail';
-import { plus } from 'react-icons-kit/icomoon/plus';
-import { bin } from 'react-icons-kit/icomoon/bin';
+import {filter} from "react-icons-kit/fa/filter";
+import { ic_mail,ic_delete } from 'react-icons-kit/md/';
+import { plus,bin,search,bin2,glass2, eye } from 'react-icons-kit/icomoon/';
 import {Link} from "react-router-dom";
-import { search } from 'react-icons-kit/icomoon/search';
 import {inProgress,closed} from "../projects/Projects.css";
 import {displayContainer,pageHeading,hrStyle,labelStyle,inputstyle,hyperLink,formStyle,inputStyle,textAreaStyle,tableDiv,
   inputStyle1,labelStyle1,addNewDepartmentStyle,floatRight1,verticalLine,dropDownInputStyle,buttonstyle,divStyle,radioStyle1,
-  boxText,imageText,radioStyle,labelStyleRadio,imageInput,contentStyle,iconStyle,activeStyle,orange,exampletable} from "../Layout.css";
-import { bin2,glass2  } from 'react-icons-kit/icomoon/';
-import { ic_delete } from 'react-icons-kit/md/ic_delete';
-import { eye } from 'react-icons-kit/icomoon/eye';
+  boxText,imageText,radioStyle,labelStyleRadio,imageInput,contentStyle,iconStyle,activeStyle,orange,exampletable,btnstyle} from "../Layout.css";
 import {Header} from "../Header";
 import {Footer} from "../Footer";
 
@@ -30,10 +26,21 @@ export class Statement extends React.Component{
 </p>
 <hr className={hrStyle}/>
 <span  className={floatRight1}>
-<form >
-	<input type="search"  placeholder="Search" />
-</form>
+<form class="form-row">
 
+	<input type="search"  placeholder="Search" />
+  <div class="dropdown" style={{position:'relative',left:'-1vw'}} >
+    <button class="btn  btn-outline-light" type="button" id={btnstyle} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <Icon icon={filter} />
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item">Employee ID</a>
+      <a class="dropdown-item">Job Title</a>
+      <a class="dropdown-item">CTC</a>
+      <a class="dropdown-item">PAN Number</a>
+    </div>
+  </div>
+</form>
 </span>
 
 <table class="table table-bordered table-striped table-responsive-md" id={exampletable}>

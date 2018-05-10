@@ -13,15 +13,19 @@ import {dropDownStyle,hyperLink,hyperLinkLogo,dropdown,upperNav,dropItem,upperNa
 import {cardStyle,cardText,cardTitle,imgStyle} from "./NotificationLayout.css";
 import {openslide,iconcolor,mainmenu,rightnav,logoright,settingsIconright,notificationIconright,upperNavIconright,sidenav,btnclose} from "./Header.css";
 import {Card,CardTitle,CardText} from "reactstrap";
-import { fadeInRight } from "react-animations";
+import { fadeInRight,fadeInLeft } from "react-animations";
 import Radium,{StyleRoot} from "radium";
 import {SideNav} from "./SideNav";
-import {dropDownStyle1,dropDownLeaves1,dropDownClaims1,dropDownPayroll1,dropDownStyleProfile1} from "./Header.css";
+import {dropDownStyle1,dropDownLeaves1,dropDownClaims1,dropDownPayroll1,dropDownStyleProfile1,dropDownStyleProfileright} from "./Header.css";
+
 const styles={
   fadeInRight: {
     animation: 'x 0.5s',
     animationName: 'fadeInRight'
-
+  },
+  fadeInLeft: {
+    animation: 'x 0.5s',
+    animationName: 'fadeInLeft'
   }
 
 }
@@ -111,9 +115,9 @@ render() {
           </UncontrolledDropdown>
           <UncontrolledDropdown navbar className={upperNav}>
             <DropdownToggle nav style={{color:'white'}}><Icon icon={userCircle} size={18} style={{color:'white'}} className={upperNavIconright}/></DropdownToggle>
-            <DropdownMenu className={dropDownStyleProfile}>
+            <DropdownMenu className={dropDownStyleProfileright}>
               <DropdownItem  className={dropItem}><NavLink to="/Profile" id={hyperLink}>Profile</NavLink></DropdownItem>
-              <DropdownItem  className={dropItem}><NavLink to="/Logout" id={hyperLink}>Logout</NavLink></DropdownItem>
+              <DropdownItem  className={dropItem}><NavLink to="/Login" id={hyperLink}>Logout</NavLink></DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
           <UncontrolledDropdown navbar className={settingsIconright}>
@@ -178,7 +182,7 @@ render() {
               <Card className={cardStyle}>
                 <div class="row">
                    <div class="col-md-6"><img className={cardimgleft} src={require('./profile.jpg')} id={imgStyle}/></div>
-                   <div class="col-md-6" style={{marginTop:'1vw'}}>
+                   <div class="col-md-6" style={{marginTop:'0.5vw'}}>
                    <CardTitle className={cardTitle}>Jane Smith</CardTitle>
                   <CardText className={cardText}>Requested for Leave</CardText>
                   <CardText className={cardText}>New</CardText> </div>
@@ -186,7 +190,7 @@ render() {
               <Card className={cardStyle}>
               <div class="row">
               <div class="col-md-6"><img className={cardimgleft} src={require('./profile.jpg')} id={imgStyle}/></div>
-              <div class="col-md-6" style={{marginTop:'1vw'}}>
+              <div class="col-md-6" style={{marginTop:'0.5vw'}}>
               <CardTitle className={cardTitle}>Jane Smith</CardTitle>
               <CardText className={cardText}>Requested for Leave</CardText>
               <CardText className={cardText}>New</CardText></div>
@@ -194,7 +198,7 @@ render() {
               <Card className={cardStyle}>
               <div class="row">
               <div class="col-md-6"><img className={cardimgleft} src={require('./profile.jpg')} id={imgStyle}/></div>
-              <div class="col-md-6" style={{marginTop:'1vw'}}>
+              <div class="col-md-6" style={{marginTop:'0.5vw'}}>
               <CardTitle className={cardTitle}>Jane Smit</CardTitle>
               <CardText className={cardText}>Requested for Leave</CardText>
               <CardText className={cardText}>New</CardText></div>
@@ -213,7 +217,7 @@ render() {
               <DropdownToggle nav style={{color:'white'}}><Icon icon={userCircle} size={18} style={{color:'white'}} className={upperNavIcon1}/></DropdownToggle>
               <DropdownMenu className={dropDownStyleProfile1}>
                 <DropdownItem  className={dropItem}><NavLink to="/Profile" id={hyperLink}>Profile</NavLink></DropdownItem>
-                <DropdownItem  className={dropItem}><NavLink to="/Logout" id={hyperLink}>Logout</NavLink></DropdownItem>
+                <DropdownItem  className={dropItem}><NavLink to="/Login" id={hyperLink}>Logout</NavLink></DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
 

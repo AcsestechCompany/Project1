@@ -4,12 +4,13 @@ import { Button, Form, FormGroup, Label, Input, FormText,Row } from 'reactstrap'
 import {DatePicker,TextField}  from 'material-ui/';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Icon from 'react-icons-kit';
+import {filter} from "react-icons-kit/fa/filter";
 import {Link} from "react-router-dom";
 import { search } from 'react-icons-kit/icomoon/search';
 import {inProgress,closed} from "../projects/Projects.css";
 import {displayContainer,pageHeading,hrStyle,labelStyle,inputstyle,hyperLink,formStyle,inputStyle,textAreaStyle,tableDiv,
   inputStyle1,labelStyle1,addNewDepartmentStyle,floatRight1,buttonstyle,divStyle,radioStyle1,
-  boxText,imageText,radioStyle,labelStyleRadio,imageInput,contentStyle,iconStyle,activeStyle,orange,exampletable} from "../Layout.css";
+  boxText,imageText,radioStyle,labelStyleRadio,imageInput,contentStyle,iconStyle,activeStyle,orange,exampletable,btnstyle} from "../Layout.css";
 import { ic_create,ic_delete  } from 'react-icons-kit/md';
 import {Header} from "../Header";
 import {Footer} from "../Footer";
@@ -25,10 +26,21 @@ export class Payments extends React.Component{
 </p>
 <hr className={hrStyle}/>
 <span  className={floatRight1}>
-<form >
-	<input type="search"  placeholder="Search" />
-</form>
+<form class="form-row">
 
+	<input type="search"  placeholder="Search" />
+  <div class="dropdown" style={{position:'relative',left:'-1vw'}} >
+    <button class="btn  btn-outline-light" type="button" id={btnstyle} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <Icon icon={filter} />
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item">Employee ID</a>
+      <a class="dropdown-item">Job Title</a>
+      <a class="dropdown-item">CTC</a>
+      <a class="dropdown-item">Status</a>
+    </div>
+  </div>
+</form>
 </span>
 
 <table class="table table-bordered  table-responsive-md" id={exampletable}>

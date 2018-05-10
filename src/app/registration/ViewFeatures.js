@@ -34,7 +34,7 @@ export class ViewFeatures extends React.Component{
       </Col>
       <Col style={styles.fadeIn}>
       <Link to="/ViewFeature2">
-      <img class="animated slideInUp" src={require('../lady.jpg')} id={imgStyle1} /></Link></Col>
+      <img class="animated slideInUp" src={require('../lady.jpg')} id={imgStyle} /></Link></Col>
       <Col style={styles.fadeIn}>
       <Link to="/ViewFeature3">
       <img class="animated slideInUp" src={require('../leave.jpg')} id={imgStyle} /></Link></Col>

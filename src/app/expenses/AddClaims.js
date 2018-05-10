@@ -42,7 +42,7 @@ export class AddClaims extends React.Component{
         <DatePicker hintText="date of joining"
         underlineStyle={{display: 'none'}}
         textFieldStyle={{position:'relative',bottom:'0.75vw',color:'lightgray'}}
-        className={dateStyle} style={{border:'1px solid #D0D3D4',height:'2vw'}}/>
+        className={dateStyle} style={{border:'1px solid #D0D3D4',height:'2vw',width:'96%'}} />
             </MuiThemeProvider>
 
             </div>

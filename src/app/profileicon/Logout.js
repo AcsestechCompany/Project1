@@ -16,8 +16,8 @@ export class Logout extends React.Component {
     return(
       <div>
       <Header/>
-      <Container style={{height:'43.5vw'}}>
-       <p style={{margin:'15vw 10vw -12vw 27vw'}}>Do you want to Log out??</p>
+      <Container style={{height:'32.7vw'}}>
+       <p style={{margin:'12vw 20vw -12vw 27vw'}}>Do you want to Log out??</p>
    <button onClick={this.yes} type="button" class="btn btn-success" style={{margin:'15vw 0vw 0vw 27vw'}}>Yes</button>
    <button onClick={this.no} type="button" class="btn btn-danger" style={{margin:'15vw 0vw 0vw 5vw'}}>No</button>
     </Container>

@@ -70,8 +70,8 @@ export class AddLeave extends React.Component{
       <Row className={overtimePay}>
       <p style={{fontWeight:'lighter',fontSize:'0.9vw'}}>Status</p>
 
-   </Row>
-   <div className={radiodiv}>
+
+   <div  style={{marginLeft:'3vw'}}>
    <div class="form-check">
      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked
     />
@@ -86,6 +86,7 @@ export class AddLeave extends React.Component{
      </label>
    </div>
    </div>
+      </Row>
           </Form>
           </Col>
           <Col>
@@ -98,7 +99,7 @@ export class AddLeave extends React.Component{
           </div>
           </Col>
           </Row>
-<p>
+<p style={{marginTop:'3vw'}}>
        <Link to="/LeaveTypes">
        <button className="btn btn-outline-warning" id={savebtn}>
        Save</button></Link>

@@ -173,6 +173,7 @@ left:-7vw;
   .openslide{
     position:relative;
     left:-15vw;
+
   }
   .rightnav{
     position:relative;
@@ -182,9 +183,23 @@ left:-7vw;
     position:relative;
   right:2vw;
   }
-
+.dropDownStyleProfileright{
+  background-color:#2C3E50;
+  font-size:1.4vw;
+  border:none;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius:-20%;
+  margin-top:20px;
+  position:relative;
+  margin-left:-90px;
+  width:20px;
+  min-height:5vw;
+  overflow:hidden;
+  text-align:center;
+}
 
 }
+
 @media(max-width:320px){
   .openslide{
     position:relative;
