@@ -304,8 +304,8 @@ margin-right:12.5vw;
 right:3vw;
 }
 #imgStyle{
-  width:19.8vw;
-  height:18vw;
+  width:19.8vw !important;
+  height:18vw !important;
 }
 #imgStyle1{
   width:19vw;

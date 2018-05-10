@@ -159,8 +159,9 @@ font-size:4vw;
 }
 .settingsIconright{
   position:relative;
-top:-1vw;
+top:-1.6vw;
 left:-7vw;
+
 
 }
 @media(max-width:768px){
