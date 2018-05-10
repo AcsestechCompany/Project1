@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import {HashRouter as Router, Route,Link} from "react-router-dom";
+import {EmployeeHome} from "./EmployeeModule/EmployeeHome";
 import {Home} from "./home/Home";
 import {EmploymentStatus} from "./home/EmploymentStatus";
 import {EventsList} from "./home/EventsList";
@@ -71,7 +72,7 @@ export class App extends React.Component {
 <Route path="/VerifyAccount" component={VerifyAccount}/>
 <Route path="/Login" component={Login}/>
               <Route path="/Home" component={Home}/>
-
+              <Route path="/EmployeeHome" component={EmployeeHome}/>
               <Route path="/EmploymentStatus" component={EmploymentStatus}/>
               <Route path="/Leaves" component={LeaveList}/>
               <Route path="/EditLeave" component={EditLeave}/>

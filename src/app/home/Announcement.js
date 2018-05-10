@@ -4,14 +4,14 @@ import {AnnouncementCard2} from "./AnnouncementCard2";
 
 import {CardHeaderAnnounce} from "./CardHeaderAnnounce";
 import {Col,Card,CardText} from "reactstrap";
-import {buttonStyle} from "./CardStyling.css";
+
 import {cardStyle1,pagination} from "./Home.css";
 export class Announcement extends React.Component{
   render() {
     return(
-      <Col style={{marginRight:'-1vw'}}>
+      <Col style={{marginRight:'-1vw'}} >
 
-       <Card body inverse className={cardStyle1}>
+       <Card body  className={cardStyle1}>
 
           <CardHeaderAnnounce  />
 

@@ -1,3 +1,51 @@
+
+import React from "react";
+export class Test extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state ={
+      elapsed:0,
+      start:0,
+      interval:1000,
+      go:false
+    }
+  }
+
+
+
+
+  tick(){
+      console.log('tick');
+      this.setState({elapsed: Date.now() - this.state.start});
+  }
+  startCount(e){
+      console.log(e);
+      console.log('GO!!!');
+      this.setState({start: Date.now(), go: true})
+      setInterval(this.tick.bind(this), this.props.interval);
+  }
+
+
+  render() {
+    var clickMe = <button onClick={this.startCount.bind(this)} >GO</button>;
+    var display = <div>time elapsed {Math.round(this.state.elapsed / 1000)} seconds Date is  {this.state.start}</div>;
+    return(
+   <div >
+
+
+
+
+               <div>
+                   {this.state.go ? display : clickMe}
+               </div>
+
+
+      </div>
+
+);
+  }
+}
+
 <Icon icon={longRight} size={12} style={{color:'black'}} />
 border: solid 1px #ccc;
 -webkit-border-radius: 10em;

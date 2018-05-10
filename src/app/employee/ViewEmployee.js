@@ -32,12 +32,10 @@ export class ViewEmployee extends React.Component{
     first:false,
       second:true,
       third:false
-
     });
   }
   first(){
     this.setState({
-
       first:true,
       second:false,
       third:false

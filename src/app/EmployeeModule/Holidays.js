@@ -1,28 +1,26 @@
 import React from "react";
-import {holidaysCard,holidayTextR,holidayTitleR,holidayDayR,cardStyle4,linkDepartment} from "./Home.css";
+import {holidaysCard,holidayTextR,holidayTitleR,holidayDayR,cardStyle,linkDepartment} from "../home/Home.css";
 import {item} from "../Layout.css";
-import {CardHeader} from "./CardHeader";
+import {CardHeader} from "../home/CardHeader";
 import {Card,CardText,Col} from "reactstrap";
 import { thinRight,thinLeft } from 'react-icons-kit/entypo';
-import {holidaysLeft,holidaysRight} from "./Home.css";
+import {holidaysLeft,holidaysRight} from "../home/Home.css";
 import Icon from 'react-icons-kit';
 import {Link} from "react-router-dom";
 import { angleLeft,angleRight } from 'react-icons-kit/fa';
  import { ic_keyboard_arrow_left } from 'react-icons-kit/md/ic_keyboard_arrow_left';
+ import {cardstyle1} from "./Employee.css";
 
- export class Holidays1 extends React.Component{
+ export class Holidays extends React.Component{
 
-
- handleChange = (event, index, value) => this.setState({value});
    render() {
      return(
-         <Col style={{marginRight:'-1vw'}}>
-         <Card body inverse className={cardStyle4}>
+
+         <Card body inverse className={cardstyle1}>
          <Link to="HolidayPage" className={linkDepartment}>
          <CardHeader text={"Holidays"}/>
          </Link>
            <div id="carouselExampleIndicators" class="carousel slide" data-interval="false" >
-
              <div class="carousel-inner" >
                <div class="carousel-item active" style={{textAlign:'center',color:'pink'}} id={item} >
                <Card className={holidaysCard}>
@@ -57,7 +55,7 @@ import { angleLeft,angleRight } from 'react-icons-kit/fa';
            </div>
            </Card>
 
-           </Col>
+
      );
    }
  }
