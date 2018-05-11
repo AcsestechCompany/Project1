@@ -46,7 +46,7 @@ export class FirstRow extends React.Component{
   }
   getTimeSpan(elapsed) { // 754567(ms) -> "12:34.567"
     var h = String(Math.floor(elapsed/(1000*60*60))+100).substring(1);
-    var m = String(Math.floor(elapsed/1000/60)+100).substring(1);
+    var m = String(Math.floor(elapsed/(1000*60))+100).substring(1);
     var s = String(Math.floor((elapsed%(1000*60))/1000)+100).substring(1);
     var ms = String(elapsed % 1000 + 1000).substring(1);
     return h+":"+m+":"+s;
@@ -68,13 +68,14 @@ export class FirstRow extends React.Component{
        <Col style={{marginRight:'-1vw'}}>
         <Card body inverse className={cardStyle} style={{ backgroundColor: '#A992E2',cursor:'pointer'}} onClick={this.onClick.bind(this)}>
         <CardText className={cardTextStyle} >
-         {this.state.isStart ?  <p style={{fontSize:'3vw',float:'left',position:'relative',bottom:'1vw'}}>{this.getTimeSpan(this.state.elapsed)}</p> : <span style={{color:'lime'}}>CHECK IN</span>}
+         {this.state.isStart ?  <p style={{fontSize:'1.7vw',float:'left',position:'relative',left:'3vw'}}>{this.getTimeSpan(this.state.elapsed)}</p> :
+          <span style={{color:'lime',fontSize:'1.5vw'}}>CHECK IN</span>}
 
 
         </CardText>
         <CardText>
         {this.state.isStart ?
-          <span style={{color:'black',fontSize:'0.7vw',position:'relative',bottom:'3vw',left:'9vw'}}>CHECK OUT</span> :
+          <span style={{color:'red',fontSize:'0.7vw',position:'relative',bottom:'1.3vw',left:'4.3vw'}}>CHECK OUT</span> :
            null}
            </CardText>
         </Card>
