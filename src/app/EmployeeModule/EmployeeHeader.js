@@ -15,7 +15,7 @@ import {openslide,iconcolor,mainmenu,rightnav,logoright,settingsIconright,notifi
 import {Card,CardTitle,CardText} from "reactstrap";
 import { fadeInRight,fadeInLeft } from "react-animations";
 import Radium,{StyleRoot} from "radium";
-import {SideNav} from "../SideNav";
+import {SideNav} from "./SideNav";
 import {dropDownStyle1,dropDownLeaves1,dropDownClaims1,dropDownPayroll1,dropDownStyleProfile1,dropDownStyleProfileright} from "../Header.css";
 
 const styles={
@@ -67,11 +67,8 @@ render() {
   var open = this.openfunc();
 
   return (
-
     <div>
-
       <Navbar color="faded" light  style={{backgroundColor:'#2C3E50'}}>
-
       <span class={openslide} >
         <Icon icon={menu} size={40} style={{color:'white'}}  onClick={this.openstate.bind(this)}/>
         <Nav className={rightnav}>
@@ -81,7 +78,6 @@ render() {
           <span style={{color:'white'}}>rms</span></NavLink>
           </NavbarBrand>
         <UncontrolledDropdown navbar>
-
         <DropdownToggle nav className={notificationIconright}><Icon icon={bell} size={18} style={{color:'white'}}/></DropdownToggle>
             <DropdownMenu className={dropdownContent}>
             <DropdownItem id={dropNotify}>
@@ -125,7 +121,6 @@ render() {
           <Link to="/CompanyDetails" className={iconcolor}><Icon icon={ic_settings} size={21} style={{color:'white'}}/></Link>
           </DropdownToggle>
           </UncontrolledDropdown>
-
           </Nav>
         </span>
         <NavbarBrand  style={{color:'red',position:'relative',right:'85.9vw',top:'1.45vw',
@@ -134,14 +129,10 @@ render() {
           <span style={{color:'red'}}>H</span>
           <span>rms</span></NavLink>
           </NavbarBrand>
-
-
-
             <Nav className={mainmenu}   id={navStyle1}>
-
             <UncontrolledDropdown navbar className={navitemStyleHome1} id={navspace}>
             <DropdownToggle nav style={{color:'white'}}>
-            <Link to="/Home" className={iconcolor}>HOME</Link>
+            <Link to="/EmployeeHome" className={iconcolor}>HOME</Link>
             </DropdownToggle>
             </UncontrolledDropdown>
           <UncontrolledDropdown navbar className={navitemStyle1} id={navspace}>
@@ -154,8 +145,8 @@ render() {
           <UncontrolledDropdown navbar  className={navitemStyle1} id={navspace}>
                 <DropdownToggle nav style={{color:'white'}}>LEAVES & TIME<Icon icon={angleDown} className={downIcon} /></DropdownToggle>
               <DropdownMenu className={dropDownLeaves1}>
-                <DropdownItem id={dropItem}><Link to="/Leaves" id={hyperLink}>Leave List</Link></DropdownItem>
-            <DropdownItem id={dropItem}><Link to="/Attendance" id={hyperLink}>Attendance List</Link></DropdownItem>
+                <DropdownItem id={dropItem}><Link to="/EmployeeLeaves" id={hyperLink}>Leave List</Link></DropdownItem>
+            <DropdownItem id={dropItem}><Link to="/EmployeeAttendance" id={hyperLink}>Attendance List</Link></DropdownItem>
                 </DropdownMenu>
             </UncontrolledDropdown>
           <UncontrolledDropdown navbar  className={navitemStyle1} id={navspace}>
@@ -174,7 +165,6 @@ render() {
             </DropdownMenu>
           </UncontrolledDropdown>
           <UncontrolledDropdown navbar >
-
           <DropdownToggle nav className={notificationIcon1}><Icon icon={bell} size={18} style={{color:'white'}}/></DropdownToggle>
               <DropdownMenu className={dropdownContent}>
               <DropdownItem id={dropNotify}>
@@ -208,11 +198,9 @@ render() {
             </UncontrolledDropdown>
             <UncontrolledDropdown navbar className={settingsIcon1} id={navspace} >
             <DropdownToggle nav style={{color:'white'}}>
-            <Link to="/CompanyDetails" className={iconcolor}><Icon icon={ic_settings} size={21} style={{color:'white'}}/></Link>
+            <Link to="/EmployeeSettings" className={iconcolor}><Icon icon={ic_settings} size={21} style={{color:'white'}}/></Link>
             </DropdownToggle>
             </UncontrolledDropdown>
-
-
             <UncontrolledDropdown navbar className={upperNav}>
               <DropdownToggle nav style={{color:'white'}}><Icon icon={userCircle} size={18} style={{color:'white'}} className={upperNavIcon1}/></DropdownToggle>
               <DropdownMenu className={dropDownStyleProfile1}>
@@ -220,12 +208,7 @@ render() {
                 <DropdownItem  className={dropItem}><NavLink to="/Login" id={hyperLink}>Logout</NavLink></DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
-
-
             </Nav>
-
-
-
         </Navbar>
         <span>{open}</span>
       </div>

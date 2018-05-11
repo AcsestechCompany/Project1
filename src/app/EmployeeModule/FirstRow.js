@@ -45,10 +45,11 @@ export class FirstRow extends React.Component{
     }
   }
   getTimeSpan(elapsed) { // 754567(ms) -> "12:34.567"
+    var h = String(Math.floor(elapsed/(1000*60*60))+100).substring(1);
     var m = String(Math.floor(elapsed/1000/60)+100).substring(1);
     var s = String(Math.floor((elapsed%(1000*60))/1000)+100).substring(1);
     var ms = String(elapsed % 1000 + 1000).substring(1);
-    return m+":"+s;
+    return h+":"+m+":"+s;
   }
   reset() {
     clearInterval(this.state.timer);
@@ -67,24 +68,38 @@ export class FirstRow extends React.Component{
        <Col style={{marginRight:'-1vw'}}>
         <Card body inverse className={cardStyle} style={{ backgroundColor: '#A992E2',cursor:'pointer'}} onClick={this.onClick.bind(this)}>
         <CardText className={cardTextStyle} >
-         {this.state.isStart ? "CHECK OUT" : "CHECK IN"} {this.getTimeSpan(this.state.elapsed)}
+         {this.state.isStart ?  <p style={{fontSize:'3vw',float:'left',position:'relative',bottom:'1vw'}}>{this.getTimeSpan(this.state.elapsed)}</p> : <span style={{color:'lime'}}>CHECK IN</span>}
+
+
         </CardText>
+        <CardText>
+        {this.state.isStart ?
+          <span style={{color:'black',fontSize:'0.7vw',position:'relative',bottom:'3vw',left:'9vw'}}>CHECK OUT</span> :
+           null}
+           </CardText>
         </Card>
         </Col>
-       <Col style={{marginRight:'-1vw'}}><Link to="/NewJoiners" className={linkStyle}>
+       <Col style={{marginRight:'-1vw'}}>
+       <Link to="/EmployeeAttendance">
            <Card body inverse className={cardStyle} style={{ backgroundColor: '#EC6F59' }}>
            <CardText className={cardTextStyle}>Attendance</CardText>
-         </Card></Link>
+
+         </Card>
+         </Link>
          </Col>
-       <Col style={{marginRight:'-1vw'}}><Link to="/Leavers" className={linkStyle}>
+       <Col style={{marginRight:'-1vw'}}>
+       <Link to="/EmployeeLeaves">
            <Card body inverse className={cardStyle} style={{ backgroundColor: '#54BAE0'}}>
            <CardText className={cardTextStyle}>Leaves <p><b>1</b></p></CardText>
-         </Card></Link>
+         </Card>
+         </Link>
          </Col>
-       <Col style={{marginRight:'-1vw'}}><Link to="/AdminUsers" className={linkStyle}>
+       <Col style={{marginRight:'-1vw'}}>
+       <Link to="/EmployeeProjects">
          <Card body inverse className={cardStyle} style={{ backgroundColor: '#F7C65F'}}>
-         <CardText className={cardTextStyle}></CardText>
-       </Card></Link>
+         <CardText className={cardTextStyle}>Projects</CardText>
+       </Card>
+       </Link>
        </Col>
 
      </Row>

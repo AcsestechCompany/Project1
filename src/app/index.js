@@ -2,6 +2,10 @@ import React from "react";
 import { render } from "react-dom";
 import {HashRouter as Router, Route,Link} from "react-router-dom";
 import {EmployeeHome} from "./EmployeeModule/EmployeeHome";
+import {EmployeeAttendance} from "./EmployeeModule/EmployeeAttendance";
+import {EmployeeLeaves} from "./EmployeeModule/EmployeeLeaves";
+import {EmployeeProjects} from "./EmployeeModule/EmployeeProjects";
+import {EmployeeSettings} from "./EmployeeModule/EmployeeSettings";
 import {Home} from "./home/Home";
 import {EmploymentStatus} from "./home/EmploymentStatus";
 import {EventsList} from "./home/EventsList";
@@ -73,6 +77,10 @@ export class App extends React.Component {
 <Route path="/Login" component={Login}/>
               <Route path="/Home" component={Home}/>
               <Route path="/EmployeeHome" component={EmployeeHome}/>
+              <Route path="/EmployeeAttendance" component={EmployeeAttendance}/>
+              <Route path="/EmployeeLeaves" component={EmployeeLeaves}/>
+              <Route path="/EmployeeProjects" component={EmployeeProjects}/>
+              <Route path="/EmployeeSettings" component={EmployeeSettings}/>
               <Route path="/EmploymentStatus" component={EmploymentStatus}/>
               <Route path="/Leaves" component={LeaveList}/>
               <Route path="/EditLeave" component={EditLeave}/>

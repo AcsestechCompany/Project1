@@ -4,6 +4,7 @@ import {Row,Col,Card,CardText} from "reactstrap";
 import {RowStyle,cardstyle1,imgstyle} from "./Employee.css";
 import {imgStyle} from "../employee/LayoutSettings.css";
 import {CardHeader} from "../home/CardHeader";
+import {Link} from "react-router-dom";
 
 export class ThirdRow1 extends React.Component{
   render(){

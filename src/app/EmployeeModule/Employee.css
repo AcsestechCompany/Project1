@@ -17,3 +17,9 @@ padding-left:10vw;
 #imgstyle{
   background-color:'red' !important;
 }
+.displaycontainer{
+  background-color:white;
+  min-height:447px;
+  overflow:hidden;
+  padding:6vw 15vw 0vw 17vw;
+}
