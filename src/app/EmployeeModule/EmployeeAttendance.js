@@ -14,6 +14,7 @@ import {displayContainer,pageHeading,hrStyle,labelStyle,inputstyle,hyperLink,for
   inputStyle1,labelStyle1,addNewDepartmentStyle,floatRight1,buttonstyle,divStyle,radioStyle1,
   boxText,imageText,radioStyle,labelStyleRadio,imageInput,contentStyle,iconStyle,activeStyle,orange,exampletable,btnstyle} from "../Layout.css";
 import { ic_create,ic_delete  } from 'react-icons-kit/md';
+import {dateStyle} from "../employee/LayoutEmployee.css";
 
 
 export class EmployeeAttendance extends React.Component{
@@ -25,44 +26,59 @@ export class EmployeeAttendance extends React.Component{
 
 <p className={pageHeading}>Attendance
 
-</p>
-<hr className={hrStyle}/>
-<span  className={floatRight1}>
-<form class="form-row">
 
-	<input type="search"  placeholder="Search" />
-  <div class="dropdown" style={{position:'relative',left:'-1vw'}} >
-    <button class="btn  btn-outline-light" type="button" id={btnstyle} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <Icon icon={filter} />
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item">Present</a>
-      <a class="dropdown-item">Absent</a>
-      <a class="dropdown-item">Late Mark After Time</a>
-      <a class="dropdown-item">Overtime</a>
-    </div>
-  </div>
-</form>
-</span>
+</p>
+<div class="col-md-2 mb-3">
+
+   <MuiThemeProvider>
+<DatePicker
+className={dateStyle}
+underlineStyle={{display:'none'}}
+openToYearSelection={true}
+textFieldStyle={{position:'relative',bottom:'0.6vw',color:'lightgray'}}
+style={{border:'1px solid #D0D3D4'}} />
+
+ </MuiThemeProvider>
+ </div>
+<hr className={hrStyle}/>
+
 
 <table class="table table-bordered  table-responsive-md" id={exampletable}>
 <thead>
       <tr className={orange}>
-          <th>Present</th>
-          <th>Absent</th>
+          <th>SNo</th>
+          <th>Date</th>
           <th>Late Mark After Time</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Time Duration</th>
           <th>Overtime</th>
 
       </tr>
   </thead>
   <tbody>
      <tr>
-         <td>21</td>
-         <td>1</td>
-         <td>1</td>
-         <td>1</td>
+        <td>1</td>
+        <td>01/05/2018</td>
+        <td></td>
+        <td>9:30 am</td>
+        <td>6:30 pm</td>
+        <td>9 Hours </td>
+        <td>Present</td>
+
 
      </tr>
+     <tr>
+        <td>2</td>
+        <td>02/05/2018</td>
+        <td>30 minutes</td>
+        <td>10:00</td>
+        <td>6:30</td>
+        <td>8 hours 30 minutes </td>
+        <td>Present</td>
+
+     </tr>
+
 
 
      </tbody>

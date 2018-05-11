@@ -45,9 +45,9 @@ export class FirstRow extends React.Component{
     }
   }
   getTimeSpan(elapsed) { // 754567(ms) -> "12:34.567"
-    var h = String(Math.floor(elapsed/(1000*60*60))+100).substring(1);
-    var m = String(Math.floor(elapsed/(1000*60))+100).substring(1);
-    var s = String(Math.floor((elapsed%(1000*60))/1000)+100).substring(1);
+    var h = String(Math.floor(elapsed/(1000*60*60)%24)+100).substring(1);
+    var m = String(Math.floor((elapsed/1000/60)%60)+100).substring(1);
+    var s = String(Math.floor((elapsed/1000)%60+100)).substring(1);
     var ms = String(elapsed % 1000 + 1000).substring(1);
     return h+":"+m+":"+s;
   }
