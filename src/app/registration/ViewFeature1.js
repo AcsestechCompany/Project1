@@ -11,12 +11,10 @@ import Radium, {StyleRoot} from 'radium';
 
 const styles = {
 
-
 fadeInLeft: {
 
     animationName: 'fadeInLeft',
     animationDuration: '2s'
-
   },
   fadeInRight: {
     animationName: 'fadeInRight',

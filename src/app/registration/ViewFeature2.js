@@ -8,15 +8,10 @@ import {Link} from "react-router-dom";
 import {FooterText} from "./FooterText";
 import { fadeInLeft,fadeInRight,fadeInUp } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
-
 const styles = {
-
-
 fadeInLeft: {
-
     animationName: 'fadeInLeft',
     animationDuration: '2s'
-
   },
   fadeInRight: {
     animationName: 'fadeInRight',

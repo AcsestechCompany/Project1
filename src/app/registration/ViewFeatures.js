@@ -13,10 +13,7 @@ fadeIn: {
     animationName: 'fadeIn'
 
   },
-
-
 }
-
 
 export class ViewFeatures extends React.Component{
   render(){

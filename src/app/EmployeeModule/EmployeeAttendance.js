@@ -72,9 +72,19 @@ style={{border:'1px solid #D0D3D4'}} />
         <td>2</td>
         <td>02/05/2018</td>
         <td>30 minutes</td>
-        <td>10:00</td>
-        <td>6:30</td>
+        <td>10:00 am</td>
+        <td>6:30 pm</td>
         <td>8 hours 30 minutes </td>
+        <td>Present</td>
+
+     </tr>
+     <tr>
+        <td>3</td>
+        <td>03/05/2018</td>
+        <td>15 minutes</td>
+        <td>9:45 am</td>
+        <td>6:30 pm</td>
+        <td>8 hours 45 minutes </td>
         <td>Present</td>
 
      </tr>
