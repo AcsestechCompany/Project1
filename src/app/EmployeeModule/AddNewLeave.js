@@ -40,7 +40,7 @@ export class AddNewLeave extends React.Component{
                         className={dateStyle}
                         underlineStyle={{display:'none'}}
                         textFieldStyle={{position:'relative',bottom:'0.6vw',color:'lightgray'}}
-                        style={{border:'1px solid #D0D3D4',width:'97%'}} />
+                        style={{border:'1px solid #D0D3D4',width:'97%',backgroundColor:'white'}} />
                         </MuiThemeProvider>
                      </div>
                      <div class="col-md-5 mb-3">
@@ -50,7 +50,7 @@ export class AddNewLeave extends React.Component{
                        className={dateStyle}
                        underlineStyle={{display:'none'}}
                        textFieldStyle={{position:'relative',bottom:'0.6vw',color:'lightgray'}}
-                       style={{border:'1px solid #D0D3D4',width:'97%'}} />
+                       style={{border:'1px solid #D0D3D4',width:'97%',backgroundColor:'white'}} />
                        </MuiThemeProvider>
                     </div>
           </div>

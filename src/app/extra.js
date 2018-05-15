@@ -1,3 +1,24 @@
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+
+    <div class="collapse  navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+         <a href="#"  data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu" id={dropdownmenu}>
+
+         <li >Links dropdown</li>
+        </ul>
+      </li>
+      <li ><a href="#">Link</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
 
 import React from "react";
 export class Test extends React.Component{

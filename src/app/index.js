@@ -6,6 +6,8 @@ import {EmployeeAttendance} from "./EmployeeModule/EmployeeAttendance";
 import {EmployeeLeaves} from "./EmployeeModule/EmployeeLeaves";
 import {EmployeeProjects} from "./EmployeeModule/EmployeeProjects";
 import {EmployeeSettings} from "./EmployeeModule/EmployeeSettings";
+import {EmployeeClaims} from "./EmployeeModule/EmployeeClaims";
+import {EmployeePayroll} from "./EmployeeModule/EmployeePayroll";
 import {Home} from "./home/Home";
 import {EmploymentStatus} from "./home/EmploymentStatus";
 import {EventsList} from "./home/EventsList";
@@ -82,6 +84,8 @@ export class App extends React.Component {
               <Route path="/EmployeeProjects" component={EmployeeProjects}/>
               <Route path="/EmployeeSettings" component={EmployeeSettings}/>
               <Route path="/EmploymentStatus" component={EmploymentStatus}/>
+              <Route path="/EmployeeClaims" component={EmployeeClaims}/>
+              <Route path="/EmployeePayroll" component={EmployeePayroll}/>
               <Route path="/Leaves" component={LeaveList}/>
               <Route path="/EditLeave" component={EditLeave}/>
               <Route path="/LeaveTypes" component={LeaveTypes}/>

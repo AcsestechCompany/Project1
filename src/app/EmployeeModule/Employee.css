@@ -1,3 +1,16 @@
+.linestyle{
+  background-color:lightgray;
+  height:0.08vw;
+  position:relative;
+  top:-0.7vw;
+}
+#divider{
+  border-right:1px solid orange;
+  line-height:10px;
+  margin-left:1vw;
+}
+
+
 #RowStyle{
   margin-top:1vw;
   margin-bottom:1vw;
@@ -18,10 +31,11 @@ padding-left:10vw;
   background-color:'red' !important;
 }
 .displaycontainer{
-  background-color:white;
+  background-color:#F9F9F9;
   min-height:700px;
   overflow:hidden;
-  padding:6vw 15vw 0vw 17vw;
+  margin-top:-1.5vw;
+  padding:6vw 10vw 0vw 10vw;
 }
 .leavesdiv{
   margin-top:5vw;

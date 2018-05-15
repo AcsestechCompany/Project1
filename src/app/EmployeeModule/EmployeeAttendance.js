@@ -2,7 +2,7 @@ import React from "react";
 import {EmployeeHeader} from "./EmployeeHeader";
 import {Footer} from "../Footer";
 import {displaycontainer} from "./Employee.css";
-
+import {Row} from "reactstrap";
 import {DatePicker,TextField}  from 'material-ui/';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Icon from 'react-icons-kit';
@@ -18,6 +18,9 @@ import {dateStyle} from "../employee/LayoutEmployee.css";
 
 
 export class EmployeeAttendance extends React.Component{
+  state = {
+    value:''
+  }
   render(){
     return(
       <div>
@@ -26,21 +29,30 @@ export class EmployeeAttendance extends React.Component{
 
 <p className={pageHeading}>Attendance
 
-
 </p>
-<div class="col-md-2 mb-3">
 
-   <MuiThemeProvider>
-<DatePicker
-className={dateStyle}
-underlineStyle={{display:'none'}}
-openToYearSelection={true}
-textFieldStyle={{position:'relative',bottom:'0.6vw',color:'lightgray'}}
-style={{border:'1px solid #D0D3D4'}} />
 
- </MuiThemeProvider>
- </div>
+
 <hr className={hrStyle}/>
+<Row style={{marginLeft:'0.2vw'}}>
+<select type="text" onChange={event => this.setState({value: event.target.value})} style={{width:'10%'}}>
+
+ <option>JAN-2018</option>
+ <option>FEB-2018</option>
+ <option>MAR-2018</option>
+ <option>APR-2018</option>
+ <option>MAY-2018</option>
+ <option>JUN-2018</option>
+ <option>JUL-2018</option>
+ <option>AUG-2018</option>
+ <option>SEP-2018</option>
+ <option>OCT-2018</option>
+ <option>NOV-2018</option>
+ <option>DEC-2018</option>
+</select>
+<p style={{marginLeft:'1vw'}}>{this.state.value}</p>
+</Row>
+
 
 
 <table class="table table-bordered  table-responsive-md" id={exampletable}>

@@ -24,25 +24,25 @@ export class Auto extends React.Component{
         </thead>
         <tbody>
            <tr>
-               <td id={tableinput} ><input type="text" placeholder="Basic Pay" class="form-control" /></td>
-               <td id={tableinput}><input type="text" placeholder="5,000" class="form-control" /></td>
-               <td id={tableinput}><input type="text" placeholder="60,000" class="form-control" /></td>
-               <td id={tableinput}><select class="form-control" >
+               <td  ><input type="text" placeholder="Basic Pay" class="form-control" id={tableinput} /></td>
+               <td ><input type="text" placeholder="5,000" class="form-control" id={tableinput}/></td>
+               <td ><input type="text" placeholder="60,000" class="form-control" id={tableinput} /></td>
+               <td ><select class="form-control" id={tableinput} >
                <option>INR-INDIA</option>
                </select></td>
-               <td id={tableinput}><select class="form-control" >
+               <td ><select class="form-control" id={tableinput}>
                <option>EARNINGS</option>
                </select></td>
                <td>    <Icon icon={minusSquareO} />    </td>
            </tr>
            <tr>
-               <td id={tableinput} ><input type="text" placeholder="PF" class="form-control" /></td>
-               <td id={tableinput}><input type="text" placeholder="1,000" class="form-control" /></td>
-               <td id={tableinput}><input type="text" placeholder="12,000" class="form-control" /></td>
-               <td id={tableinput}><select class="form-control" >
+               <td  ><input type="text" placeholder="PF" class="form-control" id={tableinput}/></td>
+               <td><input type="text" placeholder="1,000" class="form-control" id={tableinput}/></td>
+               <td ><input type="text" placeholder="12,000" class="form-control" id={tableinput}/></td>
+               <td ><select class="form-control" id={tableinput}>
                <option>INR-INDIA</option>
                </select></td>
-               <td id={tableinput}><select class="form-control" >
+               <td ><select class="form-control" id={tableinput}>
                <option>DEDUCTIONS</option>
                </select></td>
                <td>  <Icon icon={plusSquareO} />  </td>
@@ -50,8 +50,8 @@ export class Auto extends React.Component{
            </tr>
            <tr style={{position:'relative',top:'3vw'}}>
            <td>Total CTC</td>
-           <td id={tableinput}><input type="text" placeholder="4,000" class="form-control" /></td>
-           <td id={tableinput}><input type="text" placeholder="48,000" class="form-control" /></td>
+           <td ><input type="text" placeholder="4,000" class="form-control" id={tableinput}/></td>
+           <td ><input type="text" placeholder="48,000" class="form-control" id={tableinput}/></td>
            <td></td>
       <td></td>
            <td className={right}><button class="btn  btn-outline-warning">Save</button></td>

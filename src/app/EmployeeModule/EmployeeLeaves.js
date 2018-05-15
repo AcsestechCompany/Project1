@@ -1,8 +1,10 @@
 import React from "react";
 import {EmployeeHeader} from "./EmployeeHeader";
 import {Footer} from "../Footer";
-import {displaycontainer,leavesdiv} from "./Employee.css";
+import {displaycontainer,leavesdiv,linestyle} from "./Employee.css";
 import Icon from 'react-icons-kit';
+
+import {plus} from 'react-icons-kit/entypo/';
 import { filter } from 'react-icons-kit/fa/filter';
 import { bin,search  } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
@@ -70,15 +72,29 @@ export class EmployeeLeaves extends React.Component{
       <div>
       <EmployeeHeader/>
 <div className={displaycontainer}>
-<p className={pageHeading}>Leave List
-</p>
-<hr className={hrStyle}/>
+<p>
+{this.state.requested ?
+  <span  onClick={this.requestedState.bind(this)} id={savebtn} style={{borderBottom:'2px solid #4AD496'}}>Leave List</span> :
+  <span  onClick={this.requestedState.bind(this)} id={savebtn} style={{color:'grey'}}>Leave List</span>
+  }
+  {this.state.balance ?
+    <span  onClick={this.balanceState.bind(this)} id={savebtn} style={{borderBottom:'2px solid #4AD496'}}>Balance</span> :
+    <span  onClick={this.balanceState.bind(this)} id={savebtn} style={{color:'grey'}}>Balance</span>
+    }
+    {this.state.addnew ?
+      <span  onClick={this.addnewState.bind(this)} id={savebtn} style={{borderBottom:'2px solid #4AD496'}}>Request</span> :
+      <span  onClick={this.addnewState.bind(this)} id={savebtn} style={{color:'grey'}}>Request</span>
+      }
 
-     <div >
-     <button class="btn btn-outline-warning" onClick={this.balanceState.bind(this)} id={savebtn}>Balance</button>
-     <button class="btn btn-outline-warning" onClick={this.addnewState.bind(this)} id={savebtn}>Add New</button>
-     <button class="btn btn-outline-warning" onClick={this.requestedState.bind(this)} id={savebtn}>Requested</button>
-     </div>
+
+
+
+
+<span><button type="button" class="btn" id={btnstyle}>
+<Icon icon={plus} style={{position:'relative',top:'0.2vw',paddingRight:'0.3vw'}}/>
+APPLY LEAVE</button></span>
+</p>
+<hr className={linestyle}/>
      {balance}
      {addnew}
      {requested}

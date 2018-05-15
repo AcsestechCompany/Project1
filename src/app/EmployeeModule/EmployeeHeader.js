@@ -150,19 +150,21 @@ render() {
                 </DropdownMenu>
             </UncontrolledDropdown>
           <UncontrolledDropdown navbar  className={navitemStyle1} id={navspace}>
-              <DropdownToggle nav  style={{color:'white'}} >CLAIMS<Icon icon={angleDown} className={downIcon} /></DropdownToggle>
-              <DropdownMenu className={dropDownClaims1} >
-                <DropdownItem id={dropItem}><Link to="/AddClaims" id={hyperLink}>Add Claims</Link></DropdownItem>
-                <DropdownItem id={dropItem}><Link to="/ClaimList" id={hyperLink}>Claims List</Link></DropdownItem>
-              </DropdownMenu>
+              <DropdownToggle nav  style={{color:'white'}}>
+              <Link to="/EmployeeClaims" className={iconcolor}>
+              CLAIMS
+              </Link>
+              </DropdownToggle>
+
             </UncontrolledDropdown>
             <UncontrolledDropdown navbar  className={navitemStyle1}>
-              <DropdownToggle nav style={{color:'white'}}>PAYROLL<Icon icon={angleDown} className={downIcon}/></DropdownToggle>
-            <DropdownMenu className={dropDownPayroll1}>
-              <DropdownItem id={dropItem}><Link to="/Payments" id={hyperLink}>Payments</Link></DropdownItem>
-              <DropdownItem id={dropItem}><Link to="/Process" id={hyperLink}>Process</Link></DropdownItem>
-              <DropdownItem id={dropItem}><Link to="/Statement" id={hyperLink}>Statement</Link></DropdownItem>
-            </DropdownMenu>
+              <DropdownToggle nav style={{color:'white'}}>
+              <Link to="/EmployeePayroll" className={iconcolor}>
+              PAYROLL
+              </Link>
+
+              </DropdownToggle>
+
           </UncontrolledDropdown>
           <UncontrolledDropdown navbar >
           <DropdownToggle nav className={notificationIcon1}><Icon icon={bell} size={18} style={{color:'white'}}/></DropdownToggle>
