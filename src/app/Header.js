@@ -15,7 +15,7 @@ import {openslide,iconcolor,mainmenu,rightnav,logoright,settingsIconright,notifi
 import {Card,CardTitle,CardText} from "reactstrap";
 import { fadeInRight,fadeInLeft } from "react-animations";
 import Radium,{StyleRoot} from "radium";
-import {SideNav} from "./SideNav";
+import {SideNav1} from "./SideNav1";
 import {dropDownStyle1,dropDownLeaves1,dropDownClaims1,dropDownPayroll1,dropDownStyleProfile1,dropDownStyleProfileright} from "./Header.css";
 
 const styles={
@@ -27,7 +27,6 @@ const styles={
     animation: 'x 0.5s',
     animationName: 'fadeInLeft'
   }
-
 }
 export class Header extends React.Component {
   constructor(props){
@@ -36,13 +35,12 @@ export class Header extends React.Component {
         open:false,
         close:true
       }
-
   }
   openfunc(){
     if(this.state.open){
       return <div className={sidenav} style={styles.fadeInRight}>
       <a id={btnclose} class="btn-close" onClick={this.closestate.bind(this)}>&times;</a>
-      <SideNav />
+      <SideNav1 />
       </div>;
     }
 
@@ -67,11 +65,8 @@ render() {
   var open = this.openfunc();
 
   return (
-
     <div>
-
       <Navbar color="faded" light  style={{backgroundColor:'#2C3E50'}}>
-
       <span class={openslide} >
         <Icon icon={menu} size={40} style={{color:'white'}}  onClick={this.openstate.bind(this)}/>
         <Nav className={rightnav}>

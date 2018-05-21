@@ -14,7 +14,6 @@ export class EmployeePayroll extends React.Component{
       </div>
       <Footer/>
       </div>
-
     );
   }
 }
