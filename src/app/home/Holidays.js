@@ -1,8 +1,7 @@
 import React from "react";
 import {Col,Card,CardText,Row} from "reactstrap";
 import {CardHeader} from "./CardHeader";
-import {cardStyle4,transition,
-  holidayTextR,holidayTitleR,holidayDayR,holidayIconR,holidayTextL,holidayTitleL,holidayDayL,holidayIconL} from "./Home.css";
+import styles from "./Home.css";
 import Icon from 'react-icons-kit';
 import { thinRight,thinLeft } from 'react-icons-kit/entypo';
 
@@ -13,21 +12,21 @@ export class Holidays extends React.Component{
     return(
       <Row>
       <div className={transition}>
-      <CardText className={holidayTitleR}>30</CardText>
-      <CardText className={holidayDayR}>Friday,March</CardText>
-      <CardText className={holidayTextR}>Good Friday</CardText>
-  <CardText className={holidayIconR}><Icon icon={thinRight} size={35} onClick={this.next.bind(this)}/> </CardText>
+      <CardText className={styles.holidayTitleR}>30</CardText>
+      <CardText className={styles.holidayDayR}>Friday,March</CardText>
+      <CardText className={styles.holidayTextR}>Good Friday</CardText>
+  <CardText className={styles.holidayIconR}><Icon icon={thinRight} size={35} onClick={this.next.bind(this)}/> </CardText>
   </div>
   </Row>
 );
 }
 else if(this.state.holidays){
   return(
-    <div className={transition}>
-  <p className={holidayIconL}><Icon icon={thinLeft} size={35} onClick={this.next.bind(this)}/> </p>
-    <CardText className={holidayTitleL}>14</CardText>
-    <CardText className={holidayDayL}>Saturday,April</CardText>
-    <CardText className={holidayTextR}>Ambedkar Jayanthi</CardText>
+    <div className={styles.transition}>
+  <p className={styles.holidayIconL}><Icon icon={thinLeft} size={35} onClick={this.next.bind(this)}/> </p>
+    <CardText className={styles.holidayTitleL}>14</CardText>
+    <CardText className={styles.holidayDayL}>Saturday,April</CardText>
+    <CardText className={styles.holidayTextR}>Ambedkar Jayanthi</CardText>
 
 </div>
   );
@@ -55,7 +54,7 @@ constructor(props) {
 
     return(
       <Col style={{marginRight:'-1vw'}}>
-        <Card body inverse className={cardStyle4} >
+        <Card body inverse className={styles.cardStyle4} >
           <CardHeader text={"HOLIDAYS"}/>
         {holidays}
 

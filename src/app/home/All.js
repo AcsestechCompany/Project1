@@ -11,7 +11,7 @@ export class All extends React.Component{
   render(){
     return(
         <div style={{marginTop:'3vw'}}>
-    <p className={pageHeading}>All employees<span className={floatRight}><Icon icon={search}/></span></p>
+    <p className={pageHeading}>All employees</p>
     <hr className={hrStyle}/>
     <table class="table table-bordered table-striped table-responsive-md" id={contentStyle}>
     <thead>

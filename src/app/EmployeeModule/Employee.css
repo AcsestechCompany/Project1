@@ -1,3 +1,33 @@
+#myteamLeft{
+  position:relative;
+  bottom:2vw;
+  right:3vw;
+color:grey;
+
+}
+#myteamRight{
+
+position:relative;
+  bottom:2vw;
+left:3.4vw;
+color:grey;
+}
+.teamname{
+  color:orange;
+text-align: center;
+margin-right: 2.8vw;
+
+}
+.teamdesign{
+  color:blue;
+position:relative;
+top:-1vw;
+left:-1vw;
+}
+.teamrow{
+  margin-left:2vw;
+}
+
 .linestyle{
   background-color:lightgray;
   height:0.08vw;
@@ -9,11 +39,17 @@
   line-height:10px;
   margin-left:1vw;
 }
-
+.cardheading{
+  text-align: center;
+  position:relative;
+  top:0.7vw;
+  font-size:1.2vw;
+}
 
 #RowStyle{
   margin-top:1vw;
   margin-bottom:1vw;
+
 }
 .cardstyle{
 margin-right:-1vw;
@@ -24,8 +60,9 @@ padding-left:10vw;
 .cardstyle1{
   height:20vw;
    background-color:#FFFFFF;
-   border:none;
-  box-shadow:-0.01px 3px 8px 0.1px 	gray;
+
+
+     box-shadow:-0.01px 3px 8px 0.1px gray !important;
 }
 #imgstyle{
   background-color:'red' !important;

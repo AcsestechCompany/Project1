@@ -2,13 +2,14 @@ import React from "react";
 import {EmployeeStatus} from "./EmployeeStatus";
 import {Departments} from "./Departments";
 import {Holidays1} from "./Holidays1";
-import {rowStyle,secondrowstyle} from "../Layout.css";
+
+import styles from "../Layout.css";
 import {Row} from "reactstrap";
 
 export class SecondRow extends React.Component{
   render(){
     return(
-      <Row className={rowStyle} id={secondrowstyle}>
+      <Row className={styles.rowStyle} id={styles.secondrowstyle}>
          <EmployeeStatus/>
          <Departments/>
        <Holidays1/>

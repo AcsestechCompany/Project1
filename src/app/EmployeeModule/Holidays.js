@@ -20,9 +20,9 @@ import { angleLeft,angleRight } from 'react-icons-kit/fa';
          <Link to="HolidayPage" className={linkDepartment}>
          <CardHeader text={"Holidays"}/>
          </Link>
-           <div id="carouselExampleIndicators" class="carousel slide" data-interval="false" >
+           <div id="carouselExampleIndicators" class="carousel slide" data-interval="false" style={{marginTop:'3vw'}} >
              <div class="carousel-inner" >
-               <div class="carousel-item active" style={{textAlign:'center',color:'pink'}} id={item} >
+               <div class="carousel-item active" style={{textAlign:'center'}} id={item} >
                <Card className={holidaysCard}>
                <CardText className={holidayTitleR}>30</CardText>
                <CardText className={holidayDayR}>Friday,March</CardText>

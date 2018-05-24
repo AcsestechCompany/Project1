@@ -11,11 +11,12 @@ import {dropDownStyle,hyperLink,hyperLinkLogo,dropdown,upperNav,dropItem,upperNa
   notificationIcon1,dropdownContent,floatRight,cardimgleft,navitemStyle1,navitemStyleHome1,navspace,
   navStyle1,downIcon,linkStyle1,dropDownStyleProfile,settingsIcon} from "./Layout.css";
 import {cardStyle,cardText,cardTitle,imgStyle} from "./NotificationLayout.css";
-import {openslide,iconcolor,mainmenu,rightnav,logoright,settingsIconright,notificationIconright,upperNavIconright,sidenav,btnclose} from "./Header.css";
+import {iconcolor,mainmenu,rightnav,logoright,settingsIconright,notificationIconright,upperNavIconright,btnclose} from "./Header.css";
 import {Card,CardTitle,CardText} from "reactstrap";
 import { fadeInRight,fadeInLeft } from "react-animations";
 import Radium,{StyleRoot} from "radium";
 import {SideNav1} from "./SideNav1";
+import styles1 from "./Header.css";
 import {dropDownStyle1,dropDownLeaves1,dropDownClaims1,dropDownPayroll1,dropDownStyleProfile1,dropDownStyleProfileright} from "./Header.css";
 
 const styles={
@@ -38,16 +39,13 @@ export class Header extends React.Component {
   }
   openfunc(){
     if(this.state.open){
-      return <div className={sidenav} style={styles.fadeInRight}>
-      <a id={btnclose} class="btn-close" onClick={this.closestate.bind(this)}>&times;</a>
-      <SideNav1 />
+      return <div className={styles1.sidenav} style={styles.fadeInRight}>
+      <p id={btnclose} class="btn-close" onClick={this.closestate.bind(this)}>&times;</p>
+      <SideNav1/>
       </div>;
     }
-
   }
-
   openstate(){
-
 this.setState({
   open:true,
   close:false
@@ -67,20 +65,19 @@ render() {
   return (
     <div>
       <Navbar color="faded" light  style={{backgroundColor:'#2C3E50'}}>
-      <span class={openslide} >
+      <span class={styles1.openslide}>
         <Icon icon={menu} size={40} style={{color:'white'}}  onClick={this.openstate.bind(this)}/>
         <Nav className={rightnav}>
-        <NavbarBrand className={logoright}>
-          <NavLink to="/Home">
+
+          <NavLink className={logoright} to="/Home">
           <span style={{color:'red'}}>H</span>
           <span style={{color:'white'}}>rms</span></NavLink>
-          </NavbarBrand>
-        <UncontrolledDropdown navbar>
 
+        <UncontrolledDropdown >
         <DropdownToggle nav className={notificationIconright}><Icon icon={bell} size={18} style={{color:'white'}}/></DropdownToggle>
             <DropdownMenu className={dropdownContent}>
             <DropdownItem id={dropNotify}>
-              <p> <Icon icon={arrowLeft2}/><span className={floatRight}><Icon icon={spinner11} size={12} style={{color:'black'}}/></span></p>
+               <Icon icon={arrowLeft2}/><span className={floatRight}><Icon icon={spinner11} size={12} style={{color:'black'}}/></span><br/><br/>
             <Card className={cardStyle}>
               <div class="row">
                  <div class="col-md-6"><img className={cardimgleft} src={require('./profile.jpg')} id={imgStyle}/></div>
@@ -108,59 +105,56 @@ render() {
            </DropdownItem>
               </DropdownMenu>
           </UncontrolledDropdown>
-          <UncontrolledDropdown navbar className={upperNav}>
+          <UncontrolledDropdown className={upperNav}>
             <DropdownToggle nav style={{color:'white'}}><Icon icon={userCircle} size={18} style={{color:'white'}} className={upperNavIconright}/></DropdownToggle>
             <DropdownMenu className={dropDownStyleProfileright}>
               <DropdownItem  className={dropItem}><NavLink to="/Profile" id={hyperLink}>Profile</NavLink></DropdownItem>
               <DropdownItem  className={dropItem}><NavLink to="/Login" id={hyperLink}>Logout</NavLink></DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
-          <UncontrolledDropdown navbar className={settingsIconright}>
+          <UncontrolledDropdown  className={settingsIconright}>
           <DropdownToggle nav style={{color:'white'}}>
           <Link to="/CompanyDetails" className={iconcolor}><Icon icon={ic_settings} size={21} style={{color:'white'}}/></Link>
           </DropdownToggle>
           </UncontrolledDropdown>
-
           </Nav>
         </span>
-        <NavbarBrand  style={{color:'red',position:'relative',right:'85.9vw',top:'1.45vw',
-          fontSize:'2.5vw',fontWeight:'bold',fontFamily:'sanserif'}}>
-          <NavLink to="/Home" className={hyperLinkLogo}>
+
+        <NavbarBrand href="/#/Home" style={{color:'red',position:'relative',right:'85.9vw',top:'1.45vw',
+          fontSize:'2.5vw',fontWeight:'bold',fontFamily:'sanserif'}} className={hyperLinkLogo}>
+
           <span style={{color:'red'}}>H</span>
-          <span>rms</span></NavLink>
-          </NavbarBrand>
-
-
-
+          <span style={{color:'white'}}>rms</span>
+        </NavbarBrand>
             <Nav className={mainmenu}   id={navStyle1}>
-
-            <UncontrolledDropdown navbar className={navitemStyleHome1} id={navspace}>
+            <UncontrolledDropdown  className={navitemStyleHome1} id={navspace}>
             <DropdownToggle nav style={{color:'white'}}>
             <Link to="/Home" className={iconcolor}>HOME</Link>
             </DropdownToggle>
             </UncontrolledDropdown>
-          <UncontrolledDropdown navbar className={navitemStyle1} id={navspace}>
+
+          <UncontrolledDropdown  className={navitemStyle1} id={navspace}>
             <DropdownToggle nav  style={{color:'white'}}>EMPLOYEES<Icon icon={angleDown} className={downIcon} /></DropdownToggle>
               <DropdownMenu className={dropDownStyle1}>
                 <DropdownItem id={dropItem}><Link to="/AddEmployee" id={hyperLink}>Add Employee</Link></DropdownItem>
                 <DropdownItem id={dropItem}><Link to="/ViewEmployee" id={hyperLink}>Employees List</Link></DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
-          <UncontrolledDropdown navbar  className={navitemStyle1} id={navspace}>
+          <UncontrolledDropdown className={navitemStyle1} id={navspace}>
                 <DropdownToggle nav style={{color:'white'}}>LEAVES & TIME<Icon icon={angleDown} className={downIcon} /></DropdownToggle>
               <DropdownMenu className={dropDownLeaves1}>
                 <DropdownItem id={dropItem}><Link to="/Leaves" id={hyperLink}>Leave List</Link></DropdownItem>
             <DropdownItem id={dropItem}><Link to="/Attendance" id={hyperLink}>Attendance List</Link></DropdownItem>
                 </DropdownMenu>
             </UncontrolledDropdown>
-          <UncontrolledDropdown navbar  className={navitemStyle1} id={navspace}>
+          <UncontrolledDropdown  className={navitemStyle1} id={navspace}>
               <DropdownToggle nav  style={{color:'white'}} >CLAIMS<Icon icon={angleDown} className={downIcon} /></DropdownToggle>
               <DropdownMenu className={dropDownClaims1} >
                 <DropdownItem id={dropItem}><Link to="/AddClaims" id={hyperLink}>Add Claims</Link></DropdownItem>
                 <DropdownItem id={dropItem}><Link to="/ClaimList" id={hyperLink}>Claims List</Link></DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
-            <UncontrolledDropdown navbar  className={navitemStyle1}>
+            <UncontrolledDropdown  className={navitemStyle1}>
               <DropdownToggle nav style={{color:'white'}}>PAYROLL<Icon icon={angleDown} className={downIcon}/></DropdownToggle>
             <DropdownMenu className={dropDownPayroll1}>
               <DropdownItem id={dropItem}><Link to="/Payments" id={hyperLink}>Payments</Link></DropdownItem>
@@ -168,12 +162,11 @@ render() {
               <DropdownItem id={dropItem}><Link to="/Statement" id={hyperLink}>Statement</Link></DropdownItem>
             </DropdownMenu>
           </UncontrolledDropdown>
-          <UncontrolledDropdown navbar >
-
+          <UncontrolledDropdown  >
           <DropdownToggle nav className={notificationIcon1}><Icon icon={bell} size={18} style={{color:'white'}}/></DropdownToggle>
               <DropdownMenu className={dropdownContent}>
               <DropdownItem id={dropNotify}>
-                <p> <Icon icon={arrowLeft2}/><span className={floatRight}><Icon icon={spinner11} size={12} style={{color:'black'}}/></span></p>
+            <Icon icon={arrowLeft2}/><Icon icon={spinner11} className={floatRight} size={12} style={{color:'black'}}/><br/><br/>
               <Card className={cardStyle}>
                 <div class="row">
                    <div class="col-md-6"><img className={cardimgleft} src={require('./profile.jpg')} id={imgStyle}/></div>
@@ -201,14 +194,12 @@ render() {
              </DropdownItem>
                 </DropdownMenu>
             </UncontrolledDropdown>
-            <UncontrolledDropdown navbar className={settingsIcon1} id={navspace}>
+            <UncontrolledDropdown  className={settingsIcon1} id={navspace}>
             <DropdownToggle nav style={{color:'white'}}>
             <Link to="/CompanyDetails" className={iconcolor}><Icon icon={ic_settings} size={21} style={{color:'white'}}/></Link>
             </DropdownToggle>
             </UncontrolledDropdown>
-
-
-            <UncontrolledDropdown navbar className={upperNav}>
+            <UncontrolledDropdown  className={upperNav}>
               <DropdownToggle nav style={{color:'white'}}><Icon icon={userCircle} size={18} style={{color:'white'}} className={upperNavIcon1}/></DropdownToggle>
               <DropdownMenu className={dropDownStyleProfile1}>
                 <DropdownItem  className={dropItem}><NavLink to="/Profile" id={hyperLink}>Profile</NavLink></DropdownItem>
@@ -218,9 +209,6 @@ render() {
 
 
             </Nav>
-
-
-
         </Navbar>
         <span>{open}</span>
       </div>

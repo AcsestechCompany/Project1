@@ -6,7 +6,7 @@ import PieChart from 'react-simple-pie-chart';
 import {Rectangle,Circle} from 'react-shapes';
 import {Link} from "react-router-dom";
 import {linkDepartment} from "./Home.css";
-import {piechartStyle,pieChartTextStyle,rectangleStyle,timeSheetStyle} from "../Layout.css";
+import styles from "../Layout.css";
 export class Departments extends React.Component{
   render() {
     return(
@@ -14,7 +14,7 @@ export class Departments extends React.Component{
       <Link to="/DepartmentsPage" className={linkDepartment}>
           <Card body inverse className={cardStyle3} >
           <CardHeader text={"Departments"}/>
-          <div className={piechartStyle}>
+          <div className={styles.piechartStyle}>
             <PieChart
                   slices={[
 
@@ -37,15 +37,15 @@ export class Departments extends React.Component{
                           },
                         ]}
               /></div>
-          <div className={pieChartTextStyle}>
-              <div className={rectangleStyle}><Rectangle width={7.5} height={7.5}
-               fill={{color:'#5B9BD5'}} /><span className={timeSheetStyle}>HR</span></div>
-               <div className={rectangleStyle}><Rectangle width={7.5} height={7.5}
-                fill={{color:'#FFC000'}} /><span className={timeSheetStyle}>IT</span></div>
-               <div className={rectangleStyle}><Rectangle width={7.5} height={7.5}
-               fill={{color:'#ED7D31'}} /><span className={timeSheetStyle}>Finance</span></div>
-               <div className={rectangleStyle}><Rectangle width={7.5} height={7.5}
-               fill={{color:'#A5A5A5'}} /><span className={timeSheetStyle}>Accounts</span></div>
+          <div className={styles.pieChartTextStyle}>
+              <div className={styles.rectangleStyle}><Rectangle width={7.5} height={7.5}
+               fill={{color:'#5B9BD5'}} /><span className={styles.timeSheetStyle}>HR</span></div>
+               <div className={styles.rectangleStyle}><Rectangle width={7.5} height={7.5}
+                fill={{color:'#FFC000'}} /><span className={styles.timeSheetStyle}>IT</span></div>
+               <div className={styles.rectangleStyle}><Rectangle width={7.5} height={7.5}
+               fill={{color:'#ED7D31'}} /><span className={styles.timeSheetStyle}>Finance</span></div>
+               <div className={styles.rectangleStyle}><Rectangle width={7.5} height={7.5}
+               fill={{color:'#A5A5A5'}} /><span className={styles.timeSheetStyle}>Accounts</span></div>
         </div>
         </Card>
         </Link>

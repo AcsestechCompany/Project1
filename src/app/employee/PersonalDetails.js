@@ -26,7 +26,8 @@ export class PersonalDetails extends React.Component{
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Fathers Name</label>
-          <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+          <input type="text" class="form-control"  id={inputstyle} placeholder="" required/>
+
         </div>
         <div class="col-md-5 mb-3" style={{marginRight:'3vw'}}>
           <label className={labelStyle1}>DOB</label>
@@ -44,7 +45,7 @@ export class PersonalDetails extends React.Component{
           </div>
           </div>
           <div class="form-group">
-      <label for="exampleFormControlTextarea1" className={labelStyle1}>Permannet Address</label>
+      <label className={labelStyle1}>Permannet Address</label>
       <textarea class="form-control" id={inputstyletextarea} rows="3"></textarea>
     </div>
         <div class="form-row">
@@ -104,15 +105,14 @@ export class PersonalDetails extends React.Component{
             </div>
           </Col>
           </Row>
-           <Link to="/ProfessionalDetails"><button type="button" class="btn btn-outline-warning" >
+    <Link to="/ProfessionalDetails" >  <button type="submit" class="btn btn-outline-warning" >
              Save</button></Link>
           <Link to="/ProfessionalDetails"  id={skipstyle}>Skip</Link>
           <span className={floatRight}>
           <Link to="/ProfessionalDetails" className={hyperLinkEmployee}>
-          <button type="button" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIcon} /></button>
+          <button type="submit" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIcon} /></button>
           </Link>
           </span>
-
           <div>
           </div>
        </div>

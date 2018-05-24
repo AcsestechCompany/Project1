@@ -17,10 +17,10 @@ export class Login extends React.Component{
       <form>
 
   <div class="form-group">
-    <input type="email" class="form-control" id={forminput}  aria-describedby="emailHelp" placeholder="Email ID"/>
+    <input type="email" class="form-control" id={forminput}  aria-describedby="emailHelp" placeholder="Email ID" required/>
   </div>
   <div class="form-group">
-    <input type="password" class="form-control" id={forminput}  placeholder="Password"/>
+    <input type="password" class="form-control" id={forminput}  placeholder="Password" required/>
   </div>
 
   <Link to="/DemoPage"><button type="submit" class="btn btn-light" id={submit}>

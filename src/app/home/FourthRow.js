@@ -2,8 +2,8 @@ import React from "react";
 import {Row,Col,Card} from "reactstrap";
 import {CardHeader} from "./CardHeader";
 import {Repotees} from "./Repotees";
-import {repoteesRowStyle,repoteesCardStyle,rowStyle,repoteesStyle,item1,item2} from "../Layout.css";
-import {repoteesLeft,repoteesRight} from "./Home.css";
+import styles from "../Layout.css";
+import style1 from "./Home.css";
 import {Circle} from 'react-shapes';
 import Icon from 'react-icons-kit';
 import { thinRight,thinLeft } from 'react-icons-kit/entypo';
@@ -15,15 +15,15 @@ export class FourthRow extends React.Component{
 
   render(){
     return(
-      <Row className={rowStyle}>
+      <Row className={styles.rowStyle}>
        <Col>
-           <Card  className={repoteesCardStyle}>
+           <Card  className={styles.repoteesCardStyle}>
            <CardHeader text={"My Repotees"}  />
            <div id="carouselExampleIndicators1" class="carousel slide" data-interval="false" >
 
              <div class="carousel-inner" >
-               <div class="carousel-item active" style={{textAlign:'center'}} id={item1} >
-               <Row className={repoteesStyle}>
+               <div class="carousel-item active" style={{textAlign:'center'}} id={styles.item1} >
+               <Row className={styles.repoteesStyle}>
 
                      <Repotees/>
                      <Repotees/>
@@ -32,9 +32,9 @@ export class FourthRow extends React.Component{
                      <Repotees text={<Circle r={5} fill={{color:'#EF462E'}}  />}/>
                </Row>
                </div>
-               <div class="carousel-item" style={{textAlign:'center'}} id={item2}>
+               <div class="carousel-item" style={{textAlign:'center'}} id={styles.item2}>
 
-                    <Row  className={repoteesStyle}>
+                    <Row  className={styles.repoteesStyle}>
                           <Repotees text={<Circle r={5} fill={{color:'#29A751'}}  />}/>
                           <Repotees text={<Circle r={5} fill={{color:'#EF462E'}}  />}/>
                           <Repotees text={<Circle r={5} fill={{color:'#FEC835'}}  />}/>
@@ -46,15 +46,15 @@ export class FourthRow extends React.Component{
              </div>
 
            <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev" >
-               <Icon icon={thinLeft} id={repoteesLeft} size={40}/>
+               <Icon icon={thinLeft} id={style1.repoteesLeft} size={40}/>
              <span class="sr-only">Previous</span>
            </a>
            <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next">
-             <Icon icon={thinRight} id={repoteesRight} size={40}/>
+             <Icon icon={thinRight} id={style1.repoteesRight} size={40}/>
              <span class="sr-only">Next</span>
            </a>
          </div>
-            <Row className={repoteesRowStyle}>
+            <Row className={styles.repoteesRowStyle}>
                 <div> <Circle r={5} fill={{color:'#29A751'}}  />
                <span style={{paddingLeft:'0.3vw',paddingRight:'2vw',fontSize:'0.9vw'}}>Present</span></div>
                  <div> <Circle r={5} fill={{color:'#EF462E'}}  />

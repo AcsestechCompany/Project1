@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import {copyrighticon,link} from "../Layout.css";
-import {footerLine,footerText,footerSpan} from "./LayoutRegistration.css";
+import {footerLine,footercontent,footerSpan} from "./LayoutRegistration.css";
 import Icon from 'react-icons-kit';
 import { ic_copyright } from 'react-icons-kit/md/ic_copyright';
 
@@ -9,10 +9,10 @@ export class FooterText extends React.Component{
   render(){
     return(
       <div className={footerLine}>
-    <p className={footerText}><Icon icon={ic_copyright} className={copyrighticon}/>
+    <p className={footercontent}><Icon icon={ic_copyright} className={copyrighticon}/>
 <a href="http://www.acsestech.com" id={link}>
     Acsestech
-    </a> 
+    </a>
 
      {' '}|  Privacy Policy
 <span className={footerSpan}>

@@ -122,7 +122,6 @@ width:50%;
     position:relative;
     left:1.8vw !important;
   }
-
 }
 @media only screen and (max-width: 768px) {
 .exploreDiv{
@@ -143,7 +142,7 @@ width:50%;
   top:0.7vw !important;
   right:0.3vw !important;
   }
-  .footerText{
+  .footerlogo{
     font-size: 1vw !important;
     font-family:serif !important;
     font-weight:normal !important;
@@ -273,9 +272,6 @@ position:relative;
 top:6vw !important;
 
 }
-
-
-
 .navitemStyle{
 position:relative;
 top:3.8vw !important;
@@ -322,9 +318,6 @@ right:3vw !important;
   position:relative;
   top:0.55vw !important;
 }
-
-
-
 }
 
 #navleft{
@@ -556,7 +549,7 @@ margin-top:-1vw;
  border:none;
  box-shadow:-0.01px 3px 1px 0.1px grey;
 }
-.footerText{
+.footerlogo{
   color:white !important;
   font-size:0.7vw;
   font-family:sans-serif;
