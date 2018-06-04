@@ -122,8 +122,16 @@ width:100vw;
 }
 .circleAlignment{
   position:relative;
-  left:3.8vw;
-  top:-0.5vw;
+  left:3.5vw;
+bottom:7.5vw;
+}
+#repoteeimg{
+  width:7vw;
+  height:7vw;
+}
+.repoteediv{
+  position:relative;
+
 }
 .cardStyle2{
   height:12vw;

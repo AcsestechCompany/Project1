@@ -7,6 +7,7 @@ import style1 from "./Home.css";
 import {Circle} from 'react-shapes';
 import Icon from 'react-icons-kit';
 import { thinRight,thinLeft } from 'react-icons-kit/entypo';
+import {Repotee} from "./Repotee";
 
 
 
@@ -25,11 +26,23 @@ export class FourthRow extends React.Component{
                <div class="carousel-item active" style={{textAlign:'center'}} id={styles.item1} >
                <Row className={styles.repoteesStyle}>
 
-                     <Repotees/>
-                     <Repotees/>
-                     <Repotees text={<Circle r={5} fill={{color:'#FEC835'}}  />}/>
-                     <Repotees text={<Circle r={5} fill={{color:'#29A751'}}  />}/>
-                     <Repotees text={<Circle r={5} fill={{color:'#EF462E'}}  />}/>
+                  
+                     <Repotee img={require('../employee/user1.png')}
+                     text={<Circle r={5} fill={{color:'#FEC835'}}  />}
+                     />
+                     <Repotee img={require('./profile22.png')}
+                     text={<Circle r={5} fill={{color:'#EF462E'}}  />}
+                     />
+                     <Repotee img={require('../employee/user1.png')}
+                     text={<Circle r={5} fill={{color:'#29A751'}}  />}
+                     />
+                     <Repotee img={require('./profile2.png')}
+                     text={<Circle r={5} fill={{color:'#FEC835'}}  />}
+                     />
+                     <Repotee img={require('./profile.jpg')}
+                     text={<Circle r={5} fill={{color:'#FEC835'}}  />}
+                     />
+
                </Row>
                </div>
                <div class="carousel-item" style={{textAlign:'center'}} id={styles.item2}>
