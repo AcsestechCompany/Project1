@@ -572,7 +572,7 @@ margin-top:-1vw;
   margin-left:15vw;
 }
 #hyperLink:hover{
-  color:orange !important;
+  color:white !important;
 }
 .hyperLinkLogo{
   color:white !important;
@@ -584,16 +584,16 @@ margin-top:-1vw;
 }
 #dropItem{
   color:white !important;
-  background-color:#2C3E50 !important;
+  background-color:#1768C1 !important;
   position:relative;
   top:0.7vw;
   padding-bottom:0.7vw;
 
 
 }
-.dropItem:hover{
+#dropItem:hover{
   color:white !important;
-  background-color:#2C3E50 !important;
+  background-color:#14519B !important;
 }
 .dropdownContent {
     background-color: #EEEEEE;

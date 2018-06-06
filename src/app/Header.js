@@ -64,7 +64,7 @@ render() {
 
   return (
     <div>
-      <Navbar color="faded" light  style={{backgroundColor:'#2C3E50'}}>
+      <Navbar color="faded" light  style={{backgroundColor:'#1768C0'}}>
       <span class={styles1.openslide}>
         <Icon icon={menu} size={40} style={{color:'white'}}  onClick={this.openstate.bind(this)}/>
         <Nav className={rightnav}>

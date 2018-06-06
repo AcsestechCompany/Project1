@@ -14,7 +14,7 @@ export class Footer extends React.Component {
   render() {
     return (
 
-         <Navbar style={{backgroundColor:'#2C3E50',height:'5vw',marginBottom:'0vw',marginLeft:'0vw'}}>
+         <Navbar style={{backgroundColor:'#1768C0',height:'5vw',marginBottom:'0vw',marginLeft:'0vw'}}>
            <div className={footerlogo}>
            <Icon icon={ic_copyright} className={copyrighticon}/>
             <a href="http://www.acsestech.com" id={link}>
