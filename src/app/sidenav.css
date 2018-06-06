@@ -1,3 +1,20 @@
+@media(max-width:320px){
+#navbar{
+height:400px;
+  color:white !important;
+
+}
+#dropdownmenu{
+  background-color:red !important;
+  box-shadow:none !important;
+  border:none !important;
+  margin-bottom:-15vw;
+}
+#navcontenthome{
+  color:white;
+  font-size:10.5vw;
+}
+}
 #navbar{
   background-color:#1768C1 !important;
   position:relative;

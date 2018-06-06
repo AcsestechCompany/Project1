@@ -571,6 +571,21 @@ margin-top:-1vw;
   font-size:2vw;
   margin:5vw;
 }
+.col1{
+  background-color:green;
+  width:10vw;
+  height:10vw;
+}
+.col2{
+  background-color:red;
+}
+
+.col3{
+  background-color:blue;
+}
+.col4{
+  background-color:pink;
+}
 .tableStyle{
   margin-top:5vw;
   width:66%;
