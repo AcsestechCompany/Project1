@@ -202,8 +202,8 @@ render() {
             <UncontrolledDropdown  className={upperNav}>
               <DropdownToggle nav style={{color:'white'}}><Icon icon={userCircle} size={18} style={{color:'white'}} className={upperNavIcon1}/></DropdownToggle>
               <DropdownMenu className={dropDownStyleProfile1}>
-                <DropdownItem  className={dropItem}><NavLink to="/Profile" id={hyperLink}>Profile</NavLink></DropdownItem>
-                <DropdownItem  className={dropItem}><NavLink to="/Login" id={hyperLink}>Logout</NavLink></DropdownItem>
+                <DropdownItem  id={dropItem}><NavLink to="/Profile" id={hyperLink}>Profile</NavLink></DropdownItem>
+                <DropdownItem  id={dropItem}><NavLink to="/Login" id={hyperLink}>Logout</NavLink></DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
 
