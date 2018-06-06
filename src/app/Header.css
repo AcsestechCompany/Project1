@@ -158,12 +158,12 @@ font-size:4vw;
 }
 .upperNavIconright{
   position:relative;
-  top:2.8vw;
+  top:2.9vw;
   right:3vw;
 }
 .settingsIconright{
   position:relative;
-top:-1.6vw;
+top:-1.3vw;
 left:-7vw;
 
 
@@ -178,11 +178,13 @@ left:-7vw;
   .openslide{
     position:relative;
     left:-15vw;
+top:2.5vw;
 
   }
   .rightnav{
     position:relative;
     right:-70vw;
+    bottom:3.5vw;
   }
   #btnclose{
     position:relative;
@@ -253,7 +255,7 @@ right:3vw;
   z-index:1;
   top:0;
   left:0;
-  background-color:#2C3E50;
+  background-color:#1869C3;
   overflow-x:hidden;
   transition:transform 5s ease;
   padding-top:40px;

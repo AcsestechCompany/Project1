@@ -1,5 +1,5 @@
 #navbar{
-  background-color:#2C3E50 !important;
+  background-color:#1768C1 !important;
   position:relative;
   top:5vw;
   border:none;
@@ -8,7 +8,7 @@
   overflow:auto;
 }
 #dropdownmenu{
-  background-color:#2C3E50;
+  background-color:#1768C1;
   box-shadow:none !important;
   border:none !important;
   margin-bottom:-15vw;
@@ -20,22 +20,22 @@
 }
 #navcontent{
   color:white;
-  border:1px solid grey;
-  background-color:grey !important;
+  border:1px solid #13519A;
+  background-color:#13519A !important;
   position:relative;
   top:-2vw;
 }
 #navcontentfirst{
   color:white;
-  border:1px solid grey;
-    background-color:grey !important;
+  border:1px solid #13519A;
+    background-color:#13519A !important;
     position:relative;
     top:3vw;
 }
 #navcontentlast{
   color:white;
-  border:1px solid grey;
-    background-color:grey !important;
+  border:1px solid #13519A;
+    background-color:#13519A !important;
     position:relative;
     bottom:7vw;
 }

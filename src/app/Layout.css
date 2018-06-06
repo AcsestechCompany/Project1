@@ -566,6 +566,11 @@ margin-top:-1vw;
   margin-top:0.5vw;
   width:4.3vw;
 }
+.test{
+  font-family:"Antic",sans-serif;
+  font-size:2vw;
+  margin:5vw;
+}
 .tableStyle{
   margin-top:5vw;
   width:66%;

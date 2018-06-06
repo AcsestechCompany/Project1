@@ -1,4 +1,6 @@
 import React from "react";
+import styles from "./Layout.css";
+
 
 
 export class Test extends React.Component{
@@ -7,7 +9,9 @@ export class Test extends React.Component{
   render(){
 
     return(
-<div> in the  test component </div>
+<div className={styles.test}> Test
+
+ </div>
 
     );
   }
