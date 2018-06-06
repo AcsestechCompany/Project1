@@ -8,6 +8,9 @@ import Icon from 'react-icons-kit';
 import { ic_create,ic_delete  } from 'react-icons-kit/md';
 import {Header} from "../Header";
 import {Footer} from "../Footer";
+import styles from "../Layout.css";
+import {labelStylepopup,savebtn1,btnstyle} from "../Layout.css";
+import {inputstyle,modalbutton,labelStyle1,labelStyle2} from "../admin/LayoutAdmin.css";
 
 export class EventsList extends React.Component{
   render(){
@@ -45,7 +48,41 @@ export class EventsList extends React.Component{
       </tr>
       </tbody>
       </table>
+     <span class="btn btn-link" data-toggle="modal" id={modalbutton} data-target="#exampleModalCenter" id={styles.modal}>
+    Add Event
+        </span>
+        <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle" className={orange}>Add Event</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label className={labelStylepopup}>Event Name</label>
+                  <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label className={labelStylepopup}>Date</label>
+                  <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+                </div>
+                <div class="col-md-12 mb-3">
+                  <label className={labelStylepopup}>Description</label>
+                  <input type="textarea" class="form-control" id={inputstyle} placeholder="" />
+                </div>
+                </div>
+                </div>
+                  <button type="button" class="btn btn-outline-warning" data-dismiss="modal" style={{marginLeft:'30vw',marginBottom:'3vw',width:'46%'}}>Save</button>
+                </div>
+                </div>
+                </div>
+
       </div>
+
       <Footer/>
       </div>
     );

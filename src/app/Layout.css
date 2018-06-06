@@ -1,4 +1,8 @@
-
+#modal{
+  margin-top:5vw;
+  text-decoration: none !important;
+  color:orange;
+}
 
 #example1{
   text-align:center;
@@ -836,7 +840,7 @@ border:none;
 .pageHeading{
   color:#FF9527;
   font-size:1vw;
-  font-weight:200;
+  
 }
 .hrStyle{
   background-color:#FF9527 !important;
