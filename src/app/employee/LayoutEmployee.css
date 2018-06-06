@@ -3,9 +3,10 @@
     font-size:1.2vw !important;
   }
   #slidertext{
-    font-size:1.3vw !important;
+    font-size:1.6vw !important;
     margin-right:-2vw !important;
-  }
+    font-family:"calibri",sans-serif;
+    }
   .dateStyle{
   border:1px solid #D0D3D4;
   height:4.2vw !important;
@@ -19,14 +20,12 @@ width:98% !important;
   margin-left: 2vw !important;
   font-size:1.3vw !important;
   color:grey !important;
-
   }
   .overtimePay p{
     position:relative;
     left:1.5vw !important;
     right:1vw !important;
     font-size:1.5vw !important;
-
   }
   .enableBtn{
     margin-left:3vw !important;
@@ -42,21 +41,19 @@ width:98% !important;
     width:6vw;
     font-size:1.3vw !important;
     background-color:#B5E61D;
-
   }
   .disableBtn{
     height:2vw !important;
     width:6vw;
     margin-left:0.2vw !important;
     font-size:1.3vw !important;
-
     border:1px solid grey;
   }
   .disableBtnactive{
     height:2.5vw !important;
     width:6vw;
     font-size:1.3vw !important;
-  background-color:red;
+    background-color:red;
   }
   .labelStyle1{
     font-size:1.5vw !important;
@@ -68,7 +65,7 @@ width:98% !important;
     height:4vw !important;
     font-size:1.3vw !important;
     box-shadow:none !important;
-     border-color:#D7D7D7 !important;
+    border-color:#D7D7D7 !important;
   }
   #inputstyletextarea{
     width:82%;
