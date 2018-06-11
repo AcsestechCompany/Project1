@@ -23,7 +23,6 @@ export class SignUp extends React.Component{
   <div class="form-group">
     <input type="text" class="form-control"  name="phone" id={forminput} placeholder="Phone"/>
   </div>
-
   <Link to="/VerifyAccount"><button type="submit" class="btn btn-primary" id={submit}>
   Submit
   </button></Link>

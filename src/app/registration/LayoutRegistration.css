@@ -5,6 +5,24 @@
 height:634.5px;
 
 }
+@media only screen and (max-width:320px){
+  .registration{
+    position:relative;
+    top:30vw !important;
+    left:35vw;
+  }
+  .registrationheader{
+    position:relative;
+    bottom:5vw !important;
+    left:12vw;
+    font-size:36px !important;
+  }
+  #forminput{
+position:relative;
+right:20vw !important;
+   width:70% !important;
+  }
+}
 @media screen and (max-width:768px) {
   .containerRegistration{
     min-height:535px !important;
