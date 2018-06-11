@@ -15,13 +15,13 @@ export class SignUp extends React.Component{
       <p className={registrationheader}>Registration</p>
       <form>
       <div class="form-group">
-        <input type="text" class="form-control" id={forminput} placeholder="Name"/>
+        <input type="text" class="form-control" name="name" id={forminput}  placeholder="Name"/>
       </div>
   <div class="form-group">
-    <input type="email" class="form-control" id={forminput}  aria-describedby="emailHelp" placeholder="Email ID"/>
+    <input type="email" class="form-control" name="email" id={forminput}  aria-describedby="emailHelp" placeholder="Email ID"/>
   </div>
   <div class="form-group">
-    <input type="text" class="form-control" id={forminput}  placeholder="Phone"/>
+    <input type="text" class="form-control"  name="phone" id={forminput} placeholder="Phone"/>
   </div>
 
   <Link to="/VerifyAccount"><button type="submit" class="btn btn-primary" id={submit}>

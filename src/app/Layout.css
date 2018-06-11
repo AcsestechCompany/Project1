@@ -125,6 +125,11 @@ width:50%;
     left:1.8vw !important;
   }
 }
+@media only screen and (max-width: 320px){
+  .pageHeading{
+  
+  }
+}
 @media only screen and (max-width: 768px) {
 .exploreDiv{
   margin-top:277px !important;
@@ -840,7 +845,7 @@ border:none;
 .pageHeading{
   color:#FF9527;
   font-size:1vw;
-  
+
 }
 .hrStyle{
   background-color:#FF9527 !important;
