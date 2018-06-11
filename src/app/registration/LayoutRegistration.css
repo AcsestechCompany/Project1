@@ -5,6 +5,12 @@
 height:634.5px;
 
 }
+#outline{
+
+color:white !important;
+outline:none;
+text-decoration:none !important;
+}
 @media only screen and (max-width:320px){
   .registration{
     position:relative;

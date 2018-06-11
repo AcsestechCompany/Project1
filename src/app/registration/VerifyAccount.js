@@ -1,7 +1,7 @@
 import React from "react";
 import {LogoHeader} from "./LogoHeader";
 import {containerRegistration,content,registrationheader,registration,otpdiv,
-  forminputotp,submit,submitLink,lasttext1,lasttext2,hyperlink1,otptext,ios,otptext1} from "./LayoutRegistration.css";
+  forminputotp,submit,submitLink,lasttext1,lasttext2,hyperlink1,otptext,ios,otptext1,outline} from "./LayoutRegistration.css";
 import {Link} from "react-router-dom";
 import {Row} from "reactstrap";
 import {FooterText} from "./Footertext";
@@ -27,9 +27,9 @@ export class VerifyAccount extends React.Component{
 </form>
 
 
-  <Link to="/CreatePassword"><button type="submit" class="btn btn-light" id={submit}>
-Submit
-  </button></Link>
+<button type="submit" class="btn btn-light" id={submit}>  <Link to="/CreatePassword" id={outline}>
+Submit</Link>
+  </button>
   <p className={lasttext1}>Resend OTP<span ><Link to="/SignUp" className={lasttext2}>Change Number</Link></span></p>
   </div>
 
