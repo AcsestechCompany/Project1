@@ -100,7 +100,7 @@ export class AddLeave extends React.Component{
           </Col>
           </Row>
 <p style={{marginTop:'3vw'}}>
-       <Link to="/LeaveTypes">
+       <Link to="/AddComponent">
        <button className="btn btn-outline-warning" id={savebtn}>
        Save</button></Link>
        <Link to="/AddComponent"  id={skipstyle}>
