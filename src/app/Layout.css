@@ -1,9 +1,44 @@
+@media only screen and (max-width:320px) {
+  .hyperLinkLogo{
+    font-size:2vw !important;
+    color:blue !important;
+  }
+  .cardStyle{
+    height:8vw !important;
+  width:75vw;
+  margin-left:6vw;
+  margin-bottom:2vw;
+   border:none;
+   box-shadow:-0.01px 3px 1px 0.1px grey;
+
+  }
+  .cardTextStyle{
+    position:relative;
+    padding-bottom:0.15vw !important;
+    color:red !important;
+    font-size:2vw !important;
+    text-align: center;
+  }
+  .displayContainer{
+        padding:0.5vw 7vw 0vw 8vw !important;
+
+        width:100% !important;
+        overflow-x:auto !important;
+        min-height:600px !important;
+        overflow:auto !important;
+  }
+  .displayHome{
+    width:100% !important;
+      margin-top:5.5vw !important;
+
+  }
+}
+
 #modal{
   margin-top:5vw;
   text-decoration: none !important;
   color:orange;
 }
-
 #example1{
   text-align:center;
 }
@@ -12,14 +47,12 @@ background-color:#7092BE;
 color:white;
 font-size:0.9vw;
 }
-
 #example1 tbody > tr{
   background-color:white;
   font-size:0.95vw;
-color:grey;
+  color:grey;
   border-top:10px solid #F9F9F9;
    box-shadow:-0.01px 6.5px 10px -3.5px lightgray;
-
 }
 #btnstyle{
   background-color:#25AAE1 !important;
@@ -79,12 +112,6 @@ border-bottom:2px solid #4AD496;
 
 
 
-@media only screen and (min-width:320px) {
-  .hyperLinkLogo{
-    font-size:2vw !important;
-    color:blue !important;
-  }
-}
 
 
 .testdiv{
