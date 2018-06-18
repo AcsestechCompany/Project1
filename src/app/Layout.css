@@ -4,24 +4,16 @@
     color:blue !important;
   }
   .cardStyle{
-    height:8vw !important;
   width:75vw;
   margin-left:6vw;
   margin-bottom:2vw;
    border:none;
    box-shadow:-0.01px 3px 1px 0.1px grey;
-
   }
-  .cardTextStyle{
-    position:relative;
-    padding-bottom:0.15vw !important;
-    color:red !important;
-    font-size:2vw !important;
-    text-align: center;
+  #cardTextStyle{
   }
   .displayContainer{
         padding:0.5vw 7vw 0vw 8vw !important;
-
         width:100% !important;
         overflow-x:auto !important;
         min-height:600px !important;
@@ -30,10 +22,8 @@
   .displayHome{
     width:100% !important;
       margin-top:5.5vw !important;
-
   }
 }
-
 #modal{
   margin-top:5vw;
   text-decoration: none !important;
@@ -327,17 +317,12 @@ right:3vw !important;
 }
 .cardStyle{
   height:8vw !important;
- background-color:#FFFFFF;
- border:none;
- box-shadow:-0.01px 3px 1px 0.1px grey;
-
 }
-.cardTextStyle{
-  position:relative;
+#cardTextStyle{
+
   padding-bottom:0.15vw !important;
-  color:black;
   font-size:1.5vw !important;
-  text-align: center;
+
 }
 .cardHeaderStyle{
   color:#000000;
@@ -578,7 +563,7 @@ margin-top:-1vw;
   color:black;
 }
 .cardStyle{
-  height:5vw;
+
  background-color:#FFFFFF;
  border:none;
  box-shadow:-0.01px 3px 1px 0.1px grey;
@@ -768,11 +753,11 @@ margin-top:3vw;
   top:0.6vw;
   color:orange;
 }
-.cardTextStyle{
+#cardTextStyle{
   position:relative;
   top:0.15vw;
   color:black;
-  font-size:1vw;
+
   text-align: center;
 }
 .cardtextstyle1{
