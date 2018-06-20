@@ -22,64 +22,64 @@ export class PersonalDetails extends React.Component{
 <hr className={hrStyle}/>
 <Row>
 <Col xs="10">
-      <Form className={formStyle}>
+      <Form className={formStyle} method="post" action="/personalDetails">
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Fathers Name</label>
-          <input type="text" class="form-control"  id={inputstyle} placeholder="" required/>
+          <input type="text" class="form-control"  name= "fathersname" id={inputstyle} placeholder="" required/>
 
         </div>
         <div class="col-md-5 mb-3" style={{marginRight:'3vw'}}>
           <label className={labelStyle1}>DOB</label>
-          <input type="text" class="form-control" id={inputstyle} placeholder="" />
+          <input type="text" class="form-control" name="dob" id={inputstyle} placeholder="" />
         </div>
         </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Gender</label>
-            <input type="text" class="form-control" id={inputstyle} placeholder="" />
+            <input type="text" class="form-control" name="gender"id={inputstyle} placeholder="" />
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Phone</label>
-            <input type="text" class="form-control" id={inputstyle} placeholder="" />
+            <input type="text" class="form-control" name="phone"id={inputstyle} placeholder="" />
           </div>
           </div>
           <div class="form-group">
       <label className={labelStyle1}>Permannet Address</label>
-      <textarea class="form-control" id={inputstyletextarea} rows="3"></textarea>
+      <textarea class="form-control" id={inputstyletextarea} name="add"rows="3"></textarea>
     </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Nationality</label>
-            <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+            <input type="text" class="form-control" name="nationality" id={inputstyle} placeholder=""/>
 
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Marital Status</label>
-            <input type="text" class="form-control" id={inputstyle} placeholder="" />
+            <input type="text" class="form-control" name="status" id={inputstyle} placeholder="" />
           </div>
           </div>
            </Form>
         <p className={pageHeading}>Emergency Contact Details</p>
-        <Form className={formStyle}>
+        <Form className={formStyle} method="post" action="/personalDetails">
           <div class="form-row">
             <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Contact Person Name</label>
-              <input type="text" class="form-control" id={inputstyle} placeholder=""/>
+              <input type="text" class="form-control" name="contactname" id={inputstyle} placeholder=""/>
             </div>
             <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Phone</label>
-              <input type="text" class="form-control" id={inputstyle} placeholder="" />
+              <input type="text" class="form-control" name="emergencyphone"id={inputstyle} placeholder="" />
             </div>
             </div>
               <div class="form-row">
                 <div class="col-md-5 mb-3">
                   <label className={labelStyle1}>Relationship</label>
-                  <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+                  <input type="text" class="form-control"  name="relationship"id={inputstyle} placeholder=""/>
                 </div>
                 <div class="col-md-5 mb-3">
                   <label className={labelStyle1}>Email ID</label>
-                  <input type="text" class="form-control" id={inputstyle} placeholder="" />
+                  <input type="text" class="form-control" name="email" id={inputstyle} placeholder="" />
                 </div>
                 </div>
           </Form>

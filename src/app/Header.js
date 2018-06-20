@@ -61,7 +61,6 @@ this.setState({
 
 render() {
   var open = this.openfunc();
-
   return (
     <div>
       <Navbar color="faded" light  style={{backgroundColor:'#1768C0'}}>
