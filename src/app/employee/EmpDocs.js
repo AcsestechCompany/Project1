@@ -10,6 +10,7 @@ import {displayContainer,arrowIconR,arrowIconL,skip1,savebtn1,floatRight2,hrStyl
 import {inputstylefile,formStyle,enableBtn,disableBtn} from "./LayoutSettings.css";
   import {Header} from "../Header";
   import {Footer} from "../Footer";
+  import styles from "./LayoutEmployee.css";
 
 export class EmpDocs extends React.Component{
   render() {
@@ -32,16 +33,14 @@ export class EmpDocs extends React.Component{
 </div>
 
       <Row>
-        <div class="col-md-3 mb-3">
-          <label className={labelStyle1}>Document Name</label>
-          <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
-        </div>
-        <div class="col-md-3 mb-3">
-        <label className={labelStyle1}></label>
-        <input type="file" class="form-control" id={inputstyle} placeholder="" />
 
+        <div class="col-md-3 mb-3">
+        <p className={styles.file}>
+        <input type="file" className={styles.file} />
+      </p>
 
         </div>
+    
 
         </Row>
 

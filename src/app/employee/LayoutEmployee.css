@@ -1,3 +1,47 @@
+input[type="file"]::-webkit-file-upload-button{
+  background-color:white;
+border:none;
+  box-shadow:none;
+  color:blue;
+border:0.5px solid gray;
+visibility:hidden;
+border:1px solid red;
+
+}
+input[type="file"]::after{
+  visibility:'visible';
+  content:'Choose File';
+  border:1px solid grey;
+  border-radius:10%;
+  padding:0.4vw;
+  position:relative;
+  top:0.2vw;
+  right:8vw;
+  color:grey;
+  margin-left:-1vw !important;
+  cursor:pointer;
+}
+input[type="file"]{
+
+color:white;
+outline:none;
+
+}
+input[type="file"]:focus{
+
+  color:grey !important;
+  outline:none;
+
+}
+
+.file{
+position:relative;
+left:1vw;
+
+outline:none;
+
+}
+
 @media only screen and (max-width: 768px){
   #inputstyletextarea{
     font-size:1.2vw !important;
