@@ -11,7 +11,7 @@ import {dropDownStyle,hyperLink,hyperLinkLogo,dropdown,upperNav,dropItem,upperNa
   notificationIcon1,dropdownContent,floatRight,cardimgleft,navitemStyle1,navitemStyleHome1,navspace,
   navStyle1,downIcon,linkStyle1,dropDownStyleProfile,settingsIcon} from "./Layout.css";
 import {cardStyle,cardText,cardTitle,imgStyle} from "./NotificationLayout.css";
-import {iconcolor,mainmenu,rightnav,logoright,settingsIconright,notificationIconright,upperNavIconright,btnclose} from "./Header.css";
+import {iconcolor,mainmenu,rightnav,logoright,settingsIconright,notificationIconright,upperNavIconright,btnclose,logoright1} from "./Header.css";
 import {Card,CardTitle,CardText} from "reactstrap";
 import { fadeInRight,fadeInLeft } from "react-animations";
 import Radium,{StyleRoot} from "radium";
@@ -121,9 +121,10 @@ render() {
 
         <NavbarBrand href="/#/Home" style={{color:'red',position:'relative',right:'85.9vw',top:'1.45vw',
           fontSize:'2.5vw',fontWeight:'bold',fontFamily:'sanserif'}} className={hyperLinkLogo}>
-
+<Link to="/Home" className={logoright1}>
           <span style={{color:'red'}}>H</span>
           <span style={{color:'white'}}>rms</span>
+          </Link>
         </NavbarBrand>
             <Nav className={mainmenu}   id={navStyle1}>
             <UncontrolledDropdown  className={navitemStyleHome1} id={navspace}>

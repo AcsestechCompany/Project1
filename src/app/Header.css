@@ -4,6 +4,13 @@
 #sidemenu{
 
 }
+.logoright1{
+  position:relative;
+left:1vw;
+  top:-0.2vw;
+font-size:2.5vw;
+  font-family:serif;
+}
 .dropDownStyle1{
   background-color:#1768C1;
   font-size:0.9vw;
