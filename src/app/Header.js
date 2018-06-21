@@ -68,9 +68,9 @@ render() {
         <Icon icon={menu} size={40} style={{color:'white'}}  onClick={this.openstate.bind(this)}/>
         <Nav className={rightnav}>
 
-          <NavLink className={logoright} to="/src/public/Home">
+          <Link className={logoright} to="/Home">
           <span style={{color:'red'}}>H</span>
-          <span style={{color:'white'}}>rms</span></NavLink>
+          <span style={{color:'white'}}>rms</span></Link>
 
         <UncontrolledDropdown >
         <DropdownToggle nav className={notificationIconright}><Icon icon={bell} size={18} style={{color:'white'}}/></DropdownToggle>
