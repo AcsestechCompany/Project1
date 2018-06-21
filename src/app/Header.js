@@ -68,7 +68,7 @@ render() {
         <Icon icon={menu} size={40} style={{color:'white'}}  onClick={this.openstate.bind(this)}/>
         <Nav className={rightnav}>
 
-          <NavLink className={logoright} to="/Home">
+          <NavLink className={logoright} to="/src/public/Home">
           <span style={{color:'red'}}>H</span>
           <span style={{color:'white'}}>rms</span></NavLink>
 
