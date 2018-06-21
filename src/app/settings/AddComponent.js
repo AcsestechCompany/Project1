@@ -125,7 +125,7 @@ export class AddComponent extends React.Component{
              </Col>
              </Row>
        <Button className="btn btn-outline-warning" id={savebtn}>
-       <Link to="/ViewSalaryComponents" className={hyperLink}>Save</Link></Button>
+       <Link to="/Home" className={hyperLink}>Save</Link></Button>
 
              <span className={floatRight}>
 
