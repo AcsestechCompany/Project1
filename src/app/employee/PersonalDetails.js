@@ -12,7 +12,33 @@ labelStyle1,hyperLinkEmployee,slideremp,sliderline,sliderlineorange,slidertext} 
   import {Footer} from "../Footer";
 
 export class PersonalDetails extends React.Component{
+  constructor(props){
+ super(props);
+  this.state = {
+    fathersName: '',
+
+    display:false
+
+  }
+}
+displayText(){
+  return(
+    <div>Your Entered Details Are:<br/>
+{this.state.fathersName}<br/>
+
+    </div>
+  );
+}
+setDisplay(){
+  this.setState({
+    display:!this.state.display,
+    empName:'',
+    empID:''
+  })
+}
+
   render() {
+    var displaytxt=this.displayText();
     return(
       <div>
       <Header/>
@@ -26,12 +52,15 @@ export class PersonalDetails extends React.Component{
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Fathers Name</label>
-          <input type="text" class="form-control"  name= "fathersname" id={inputstyle} placeholder="" required/>
+          <input type="text" class="form-control"  name= "fathersname" id={inputstyle} placeholder=""
+           onChange={event => this.setState({fathersName: event.target.value})} required/>
 
         </div>
         <div class="col-md-5 mb-3" style={{marginRight:'3vw'}}>
           <label className={labelStyle1}>DOB</label>
-          <input type="text" class="form-control" name="dob" id={inputstyle} placeholder="" />
+          <input type="text" class="form-control" name="dob" id={inputstyle} placeholder=""
+
+           />
         </div>
         </div>
         <div class="form-row">
@@ -104,9 +133,16 @@ export class PersonalDetails extends React.Component{
             <p><Link to="/EmpDocs" className={hyperLinkEmployee}>Employee Documents</Link></p>
             </div>
           </Col>
+          <Col>
+          {this.state.display ?
+             <span>{displaytxt}</span>
+             :
+             ''}
+          </Col>
+
           </Row>
-    <Link to="/ProfessionalDetails" >  <button type="submit" class="btn btn-outline-warning" >
-             Save</button></Link>
+   <button type="submit" class="btn btn-outline-warning" onClick={this.setDisplay.bind(this)}>
+             Save</button>
           <Link to="/ProfessionalDetails"  id={skipstyle}>Skip</Link>
           <span className={floatRight}>
           <Link to="/ProfessionalDetails" className={hyperLinkEmployee}>
