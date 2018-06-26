@@ -39,8 +39,8 @@ export class SideNav extends React.Component{
           <li class="dropdown" >
            <a href="#"  data-toggle="dropdown" role="button" aria-expanded="false" id={styles1.navcontenthome}>Leaves & Time <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu" id={styles1.dropdownmenu} >
-           <li><Link to="/LeaveList" id={styles1.navcontentfirst}>Leave List</Link></li>
-           <li><Link to="/Attendance" id={styles1.navcontent}>Attendance List</Link></li>
+           <li><Link to="/EmployeeLeaves" id={styles1.navcontentfirst}>Leave List</Link></li>
+           <li><Link to="/EmployeeAttendance" id={styles1.navcontent}>Attendance List</Link></li>
           </ul>
         </li>
        <Link to="/EmployeeClaims" id={styles1.links}>

@@ -20,7 +20,7 @@
         overflow:auto !important;
   }
   .displayHome{
-    width:100% !important;
+      width:100% !important;
       margin-top:5.5vw !important;
   }
 }
@@ -34,7 +34,6 @@
 }
 #example1 thead > tr >th {
   border-right:1px solid orange;
-
 }
 #example1 thead > tr > th:last-child{
   border:none;
@@ -49,23 +48,19 @@ font-size:0.9vw;
   font-size:0.95vw;
   color:grey;
   border-top:10px solid #F9F9F9;
-   box-shadow:-0.01px 6.5px 10px -3.5px lightgray;
+  box-shadow:-0.01px 6.5px 10px -3.5px lightgray;
 }
 #btnstyle{
   background-color:#25AAE1 !important;
   color:white !important;
-position:relative;
-left:37vw;
-
-height:2vw;
-font-size:1vw;
-
+  position:relative;
+  left:37vw;
+ height:2vw;
+ font-size:1vw;
 }
 #btnstyle:hover{
   color:black !important;
 }
-
-
 
 #example1 td{
 
@@ -574,6 +569,7 @@ margin-top:-1vw;
  background-color:#FFFFFF;
  border:none;
  box-shadow:-0.01px 3px 1px 0.1px grey;
+ height:8vw !important;
 }
 .footerlogo{
   color:white !important;

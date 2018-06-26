@@ -2,11 +2,8 @@ import React from "react";
 import {Row,Col,Card,CardText} from "reactstrap";
 import {cardTextStyle,linkStyle,cardStyle,firstrowstyle} from "../Layout.css";
 import {Link} from "react-router-dom";
-
 import {imgStyle} from "../employee/LayoutSettings.css";
 import { users } from 'react-icons-kit/icomoon/users';
-
-
 
 
 export class FirstRow extends React.Component{
