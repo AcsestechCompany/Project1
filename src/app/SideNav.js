@@ -15,7 +15,6 @@ const styles={
 
   }
 }
-
 export class SideNav extends React.Component{
   render(){
     return(

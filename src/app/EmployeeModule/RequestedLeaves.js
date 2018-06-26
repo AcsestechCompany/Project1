@@ -11,14 +11,14 @@ export class RequestedLeaves extends React.Component{
       <table class="table" id={example1}>
       <thead>
       <tr>
-        <th>EMP ID <span id={divider}></span></th>
-        <th>EMP NAME <span id={divider}></span></th>
-        <th>LEAVE TYPE <span id={divider}></span></th>
-        <th>START DATE <span id={divider}></span></th>
-        <th>END <span id={divider}></span></th>
-        <th>DURATION <span id={divider}></span></th>
-        <th>DESCRIPTION <span id={divider}></span></th>
-        <th>STATUS <span id={divider}></span></th>
+        <th>EMP ID </th>
+        <th>EMP NAME </th>
+        <th>LEAVE TYPE </th>
+        <th>START DATE </th>
+        <th>END </th>
+        <th>DURATION </th>
+        <th>DESCRIPTION </th>
+        <th>STATUS </th>
         <th>ACTIONS </th>
       </tr>
       </thead>

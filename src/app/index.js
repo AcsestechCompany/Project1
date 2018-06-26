@@ -8,6 +8,8 @@ import {EmployeeProjects} from "./EmployeeModule/EmployeeProjects";
 import {EmployeeSettings} from "./EmployeeModule/EmployeeSettings";
 import {EmployeeClaims} from "./EmployeeModule/EmployeeClaims";
 import {EmployeePayroll} from "./EmployeeModule/EmployeePayroll";
+import {EventsListEmp} from "./EmployeeModule/EventsListEmp";
+import {AnnouncementListEmp} from "./EmployeeModule/AnnouncementListEmp";
 import {Home} from "./home/Home";
 import {EmploymentStatus} from "./home/EmploymentStatus";
 import {EventsList} from "./home/EventsList";
@@ -86,6 +88,8 @@ export class App extends React.Component {
               <Route path="/EmploymentStatus" component={EmploymentStatus}/>
               <Route path="/EmployeeClaims" component={EmployeeClaims}/>
               <Route path="/EmployeePayroll" component={EmployeePayroll}/>
+              <Route path="/AnnouncementListEmp" component={AnnouncementListEmp}/>
+              <Route path="/EventsListEmp" component={EventsListEmp}/>
               <Route path="/Leaves" component={LeaveList}/>
               <Route path="/EditLeave" component={EditLeave}/>
               <Route path="/LeaveTypes" component={LeaveTypes}/>

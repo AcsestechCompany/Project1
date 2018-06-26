@@ -32,6 +32,13 @@
 #example1{
   text-align:center;
 }
+#example1 thead > tr >th {
+  border-right:1px solid orange;
+
+}
+#example1 thead > tr > th:last-child{
+  border:none;
+}
 #example1 thead > tr{
 background-color:#7092BE;
 color:white;

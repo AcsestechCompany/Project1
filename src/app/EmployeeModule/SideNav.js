@@ -3,11 +3,13 @@ import {Collapse,Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,UncontrolledDropdo
 import {iconcolor,dropDownStylesidenav,dropDownLeavessidenav,dropDownClaimssidenav,dropDownPayrollsidenav} from "../Header.css";
 import {navitemStyleHome1,navitemStyle1,dropDownLeaves,dropDownClaims,dropDownPayroll,
   downIcon,dropDownStyle,dropItem,hyperLink} from "../Layout.css";
+import styles1 from "./Employee.css";
 import {Link} from "react-router-dom";
 import Icon from 'react-icons-kit';
 import {angleDown } from 'react-icons-kit/fa';
 import { fadeInRight } from "react-animations";
 import Radium,{StyleRoot} from "radium";
+
 const styles={
   fadeInRight: {
     animation: 'x 3s',
@@ -15,59 +17,46 @@ const styles={
 
   }
 }
-
 export class SideNav extends React.Component{
   render(){
     return(
-      <div >
-      <Navbar >
-      <ul>
-      <li style={{color:'#2C3E50'}}><UncontrolledDropdown navbar className={navitemStyleHome1}>
-      <DropdownToggle nav style={{color:'white'}}>
-      <Link to="/EmployeeHome" className={iconcolor} style={{padding:'5vw'}}>HOME</Link>
-      </DropdownToggle>
-      </UncontrolledDropdown></li>
-    <li style={{color:'#2C3E50'}}>  <UncontrolledDropdown navbar className={navitemStyle1} >
-        <DropdownToggle nav  style={{color:'white'}}>EMPLOYEES<Icon icon={angleDown} className={downIcon} /></DropdownToggle>
-          <DropdownMenu className={dropDownStylesidenav}>
-            <DropdownItem id={dropItem}><Link to="/AddEmployee" id={hyperLink}>Add Employee</Link></DropdownItem>
-            <DropdownItem id={dropItem}><Link to="/ViewEmployee" id={hyperLink}>Employees List</Link></DropdownItem>
-          </DropdownMenu>
-        </UncontrolledDropdown></li>
-        <li style={{color:'#2C3E50'}}>
-        <UncontrolledDropdown navbar  className={navitemStyle1} >
-              <DropdownToggle nav style={{color:'white'}}>LEAVES & TIME<Icon icon={angleDown} className={downIcon} /></DropdownToggle>
-            <DropdownMenu className={dropDownLeavessidenav}>
-              <DropdownItem id={dropItem}><Link to="/Leaves" id={hyperLink}>Leave List</Link></DropdownItem>
-          <DropdownItem id={dropItem}><Link to="/Attendance" id={hyperLink}>Attendance List</Link></DropdownItem>
-              </DropdownMenu>
-          </UncontrolledDropdown>
+      <nav class="navbar navbar-default" role="navigation"  id={styles1.navbar}>
+
+
+      <ul class="nav navbar-nav">
+
+            <li><Link to="/EmployeeHome" id={styles1.navcontenthome}>Home</Link></li>
+
+            <li class="dropdown">
+
+             <a href="#"  data-toggle="dropdown" role="button" aria-expanded="false" id={styles1.navcontenthome}>Employees <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu" id={styles1.dropdownmenu}  >
+             <li><Link to="/AddEmployee" id={styles1.navcontentfirst} >Add Employee</Link></li>
+             <li><Link to="/ViewEmployee" id={styles1.navcontent}>Employee List</Link></li>
+            </ul>
           </li>
-          <li style={{color:'#2C3E50'}}>
-          <UncontrolledDropdown navbar  className={navitemStyle1} >
-              <DropdownToggle nav  style={{color:'white'}}>CLAIMS<Icon icon={angleDown} className={downIcon} /></DropdownToggle>
-              <DropdownMenu className={dropDownClaimssidenav} >
-                <DropdownItem id={dropItem}><Link to="/AddClaims" id={hyperLink}>Add Claims</Link></DropdownItem>
-                <DropdownItem id={dropItem}><Link to="/ClaimList" id={hyperLink}>Claims List</Link></DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-            </li>
-            <li style={{color:'#2C3E50'}}>
-            <UncontrolledDropdown navbar  className={navitemStyle1}>
-              <DropdownToggle nav style={{color:'white'}}>PAYROLL<Icon icon={angleDown} className={downIcon}/></DropdownToggle>
-            <DropdownMenu className={dropDownPayrollsidenav}>
-              <DropdownItem id={dropItem}><Link to="/Payments" id={hyperLink}>Payments</Link></DropdownItem>
-              <DropdownItem id={dropItem}><Link to="/Process" id={hyperLink}>Process</Link></DropdownItem>
-              <DropdownItem id={dropItem}><Link to="/Statement" id={hyperLink}>Statement</Link></DropdownItem>
-            </DropdownMenu>
-          </UncontrolledDropdown>
-          </li>
-        </ul>
-      </Navbar>
+
+          <li class="dropdown" >
+           <a href="#"  data-toggle="dropdown" role="button" aria-expanded="false" id={styles1.navcontenthome}>Leaves & Time <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu" id={styles1.dropdownmenu} >
+           <li><Link to="/LeaveList" id={styles1.navcontentfirst}>Leave List</Link></li>
+           <li><Link to="/Attendance" id={styles1.navcontent}>Attendance List</Link></li>
+          </ul>
+        </li>
+       <Link to="/EmployeeClaims" id={styles1.links}>
+           <li id={styles1.navcontenthome}>Claims
+         </li>
+         </Link>
+      <Link to="/EmployeePayroll" id={styles1.links}>
+         <li  id={styles1.navcontenthome}>Payroll
+
+       </li>
+       </Link>
+      </ul>
 
 
 
-      </div>
+      </nav>
     );
   }
 }

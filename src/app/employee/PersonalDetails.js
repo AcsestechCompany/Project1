@@ -25,7 +25,6 @@ displayText(){
   return(
     <div>Your Entered Details Are:<br/>
 {this.state.fathersName}<br/>
-
     </div>
   );
 }
@@ -145,9 +144,11 @@ setDisplay(){
              Save</button>
           <Link to="/ProfessionalDetails"  id={skipstyle}>Skip</Link>
           <span className={floatRight}>
-          <Link to="/ProfessionalDetails" className={hyperLinkEmployee}>
-          <button type="submit" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIcon} /></button>
-          </Link>
+
+   <Link to="/ProfessionalDetails" className={hyperLinkEmployee}>
+            <button type="submit" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIcon} /></button>
+            </Link>
+
           </span>
           <div>
           </div>

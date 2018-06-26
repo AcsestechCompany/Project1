@@ -13,13 +13,13 @@ export class Balance extends React.Component{
 
       <thead>
       <tr>
-        <th>SNo <span id={divider}></span></th>
+        <th>SNo </th>
 
-        <th>LEAVE TYPE <span id={divider}></span></th>
-        <th>AVAILABLE <span id={divider}></span></th>
-        <th>PENDING <span id={divider}></span></th>
-        <th>APPROVED<span id={divider}></span></th>
-        <th>REJECTED<span id={divider}></span></th>
+        <th>LEAVE TYPE </th>
+        <th>AVAILABLE </th>
+        <th>PENDING </th>
+        <th>APPROVED</th>
+        <th>REJECTED</th>
         <th>BALANCE</th>
 
       </tr>

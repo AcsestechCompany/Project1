@@ -1,5 +1,5 @@
 import React from "react";
-import {navbar,dropdownmenu,navcontenthome,navcontent,navcontentfirst,navcontentlast} from "./sidenav.css";
+import {navbar,dropdownmenu,navcontenthome,navcontent,navcontentfirst,navcontentlast} from "../sidenav.css";
 import { slideInDown } from "react-animations";
 import Radium,{StyleRoot} from "radium";
 import {Link} from "react-router-dom";
@@ -9,7 +9,7 @@ slideInDown: {
     animationName: 'slideInDown'
   }
 }
-export class SideNav1 extends React.Component{
+export class SideNavEmp extends React.Component{
 
   render(){
 
@@ -17,9 +17,12 @@ export class SideNav1 extends React.Component{
 
 <nav class="navbar navbar-default" role="navigation"  id={navbar}>
   <div class="container-fluid">
+
     <div class="collapse  navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
+
         <li><Link to="/Home" id={navcontenthome}>Home</Link></li>
+
         <li class="dropdown">
          <a href="#"  data-toggle="dropdown" role="button" aria-expanded="false" id={navcontenthome}>Employees <span class="caret"></span></a>
         <ul class="dropdown-menu" role="menu" id={dropdownmenu} style={styles.slideInDown} >
@@ -28,6 +31,7 @@ export class SideNav1 extends React.Component{
          <li><Link to="/ViewEmployee" id={navcontent}>Employee List</Link></li>
         </ul>
       </li>
+
       <li class="dropdown" style={styles.fadeInDown}>
        <a href="#"  data-toggle="dropdown" role="button" aria-expanded="false" id={navcontenthome}>Leaves & Time <span class="caret"></span></a>
       <ul class="dropdown-menu" role="menu" id={dropdownmenu} >
@@ -35,6 +39,7 @@ export class SideNav1 extends React.Component{
        <li><Link to="/Attendance" id={navcontent}>Attendance List</Link></li>
       </ul>
     </li>
+
        <li class="dropdown" style={styles.fadeInDown}>
         <a href="#"  data-toggle="dropdown" role="button" aria-expanded="false" id={navcontenthome}>Claims <span class="caret"></span></a>
        <ul class="dropdown-menu" role="menu" id={dropdownmenu} >
@@ -42,6 +47,7 @@ export class SideNav1 extends React.Component{
         <li><Link to="ClaimList" id={navcontent}>Claims List</Link></li>
        </ul>
      </li>
+
      <li class="dropdown" style={styles.fadeInDown}>
       <a href="#"  data-toggle="dropdown" role="button" aria-expanded="false" id={navcontenthome}>Payroll<span class="caret"></span></a>
      <ul class="dropdown-menu" role="menu" id={dropdownmenu} >
@@ -52,6 +58,7 @@ export class SideNav1 extends React.Component{
    </li>
 </ul>
     </div>
+
   </div>
 </nav>
 

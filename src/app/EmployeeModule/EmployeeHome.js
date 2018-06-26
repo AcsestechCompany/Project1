@@ -3,7 +3,7 @@ import {EmployeeHeader} from "./EmployeeHeader";
 import {Footer} from "../Footer";
 import {displayHome} from "../Layout.css";
 import {FirstRow} from "./FirstRow";
-import {ThirdRow} from "../home/ThirdRow";
+import {SecondRow} from "./SecondRow";
 import {ThirdRow1} from "./ThirdRow1";
 
 export class EmployeeHome extends React.Component{
@@ -13,7 +13,7 @@ export class EmployeeHome extends React.Component{
       <EmployeeHeader/>
       <div className={displayHome}>
       <FirstRow/>
-      <ThirdRow/>
+      <SecondRow/>
       <ThirdRow1/>
       </div>
       <Footer/>

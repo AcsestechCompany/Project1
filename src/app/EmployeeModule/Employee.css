@@ -1,8 +1,70 @@
+@media(max-width:320px){
+  #navcontent{
+    color:white !important;
+    border:1px solid #13519A;
+    background-color:#13519A !important;
+    position:relative;
+    top:-2vw;
+  }
+  #dropdownmenu{
+    background-color:#1768C1;
+    color:pink !important;
+    box-shadow:none !important;
+    border:none !important;
+    position:relative;
+    top:0.5vw;
+  }
+}
+#links{
+  position:relative;
+  left:1.5vw;
+}
 #myteamLeft{
   position:relative;
   bottom:2vw;
   right:3vw;
 color:grey;
+}
+#navbar{
+  background-color:#1768C1 !important;
+  position:relative;
+  left:1vw !important;
+  border:none;
+  min-height:150%;
+  overflow:auto;
+}
+#dropdownmenu{
+  background-color:#1768C1;
+
+  box-shadow:none !important;
+  border:none !important;
+  position:relative;
+  top:0.5vw;
+  height:10vw;
+
+}
+#navcontent{
+  color:white !important;
+  border:1px solid #13519A;
+  background-color:#13519A !important;
+  position:relative;
+  top:-5vw;
+
+}
+#navcontenthome{
+  color:white !important;
+
+}
+#navcontentfirst{
+  color:white;
+  border:1px solid #13519A;
+    background-color:#13519A !important;
+
+}
+#navcontentlast{
+  color:white;
+  border:1px solid #13519A;
+    background-color:#13519A !important;
 
 }
 #myteamRight{

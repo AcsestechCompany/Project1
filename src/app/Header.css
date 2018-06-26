@@ -217,12 +217,14 @@ left:-7vw;
 @media(max-width:320px){
   .openslide{
     position:relative;
-    left:-8vw;
-    top:2vw;
+    left:0.5vw !important;
+    top:3vw !important;
   }
   #btnclose{
-  position:relative;
-  right:3vw;
+position: relative;
+top:6vw !important;
+left:45vw !important;
+
   }
 .sidenav{
   min-height:100%;
@@ -234,9 +236,8 @@ left:-7vw;
   background-color:#1768C1 !important;
   overflow-x:hidden;
   transition:transform 5s ease;
-  width:100%;
+  width:100% !important;
 }
-
 }
 @media(min-width:1024px){
   .openslide{
@@ -281,6 +282,7 @@ left:-7vw;
   transition:transform 5s ease;
   padding-top:40px;
   padding-left:-20px;
+  width:35%;
 
 }
 .sidenav li{

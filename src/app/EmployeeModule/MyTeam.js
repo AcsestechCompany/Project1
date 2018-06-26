@@ -5,9 +5,9 @@ import {teamname,teamdesign} from "./Employee.css";
 export class MyTeam extends React.Component{
   render(){
     return(
-      <div class="card" style={{width:'13.24rem',border:'none',position:'relative',bottom:'0.9vw'}}>
+      <div class="card" style={{width:'13.24rem',border:'none',position:'relative',top:'1.5vw'}}>
       <img class="card-img-top" src={this.props.image} id={imgStyle}
-      style={{borderRadius:'80%'}}
+      style={{borderRadius:'20%'}}
       />
       <div class="card-body">
       <h5 class="card-title" className={teamname}>{this.props.name}</h5>
