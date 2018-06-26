@@ -16,9 +16,7 @@ export class PersonalDetails extends React.Component{
  super(props);
   this.state = {
     fathersName: '',
-
     display:false
-
   }
 }
 displayText(){
@@ -51,40 +49,37 @@ setDisplay(){
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Fathers Name</label>
-          <input type="text" class="form-control"  name= "fathersname" id={inputstyle} placeholder=""
-           onChange={event => this.setState({fathersName: event.target.value})} required/>
+    <Input type="text"  className={inputstyle} placeholder="" />
 
         </div>
         <div class="col-md-5 mb-3" style={{marginRight:'3vw'}}>
           <label className={labelStyle1}>DOB</label>
-          <input type="text" class="form-control" name="dob" id={inputstyle} placeholder=""
-
-           />
+        <Input type="text"  className={inputstyle} placeholder="" />
         </div>
         </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Gender</label>
-            <input type="text" class="form-control" name="gender"id={inputstyle} placeholder="" />
+            <Input type="text"  className={inputstyle} placeholder="" />
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Phone</label>
-            <input type="text" class="form-control" name="phone"id={inputstyle} placeholder="" />
+        <Input type="text"  className={inputstyle} placeholder="" />
           </div>
           </div>
           <div class="form-group">
       <label className={labelStyle1}>Permannet Address</label>
-      <textarea class="form-control" id={inputstyletextarea} name="add"rows="3"></textarea>
+      <Input type="textarea" className={inputstyletextarea} />
     </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Nationality</label>
-            <input type="text" class="form-control" name="nationality" id={inputstyle} placeholder=""/>
+    <Input type="text"  className={inputstyle} placeholder="" />
 
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Marital Status</label>
-            <input type="text" class="form-control" name="status" id={inputstyle} placeholder="" />
+          <Input type="text"  className={inputstyle} placeholder="" />
           </div>
           </div>
            </Form>
@@ -93,21 +88,21 @@ setDisplay(){
           <div class="form-row">
             <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Contact Person Name</label>
-              <input type="text" class="form-control" name="contactname" id={inputstyle} placeholder=""/>
+          <Input type="text"  className={inputstyle} placeholder="" />
             </div>
             <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Phone</label>
-              <input type="text" class="form-control" name="emergencyphone"id={inputstyle} placeholder="" />
+              <Input type="text"  className={inputstyle} placeholder="" />
             </div>
             </div>
               <div class="form-row">
                 <div class="col-md-5 mb-3">
                   <label className={labelStyle1}>Relationship</label>
-                  <input type="text" class="form-control"  name="relationship"id={inputstyle} placeholder=""/>
+                <Input type="text"  className={inputstyle} placeholder="" />
                 </div>
                 <div class="col-md-5 mb-3">
                   <label className={labelStyle1}>Email ID</label>
-                  <input type="text" class="form-control" name="email" id={inputstyle} placeholder="" />
+                <Input type="email"  className={inputstyle} placeholder="" />
                 </div>
                 </div>
           </Form>

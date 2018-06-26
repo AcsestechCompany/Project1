@@ -43,7 +43,7 @@ outline:none;
 }
 
 @media only screen and (max-width: 768px){
-  #inputstyletextarea{
+  .inputstyletextarea{
     font-size:1.2vw !important;
   }
   #slidertext{
@@ -104,7 +104,7 @@ width:98% !important;
     margin-bottom:-1vw;
     font-style:arial;
   }
-  #inputstyle{
+  .inputstyle{
     width:98%;
     height:4vw !important;
     font-size:1.3vw !important;
@@ -112,7 +112,7 @@ width:98% !important;
     border-color:#D7D7D7 !important;
   }
 
-  #inputstyletextarea{
+  .inputstyletextarea{
     width:82%;
     height:5vw !important;
     font-size:0.7vw;
@@ -294,14 +294,14 @@ background-color:red;
   padding-top:1.5vw;
   padding-bottom:1vw;
 }
-#inputstyle{
+.inputstyle{
   width:98%;
   height:2vw;
   font-size:0.7vw;
   box-shadow:none !important;
    border-color:#D7D7D7 !important;
 }
-#inputstyletextarea{
+.inputstyletextarea{
   width:82%;
   height:3vw;
   font-size:0.7vw;

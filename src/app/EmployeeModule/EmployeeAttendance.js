@@ -12,7 +12,7 @@ import { search } from 'react-icons-kit/icomoon/search';
 import {inProgress,closed} from "../projects/Projects.css";
 import {displayContainer,pageHeading,hrStyle,labelStyle,inputstyle,hyperLink,formStyle,inputStyle,textAreaStyle,tableDiv,
   inputStyle1,labelStyle1,addNewDepartmentStyle,floatRight1,buttonstyle,divStyle,radioStyle1,
-  boxText,imageText,radioStyle,labelStyleRadio,imageInput,contentStyle,iconStyle,activeStyle,orange,exampletable,btnstyle} from "../Layout.css";
+  boxText,imageText,radioStyle,labelStyleRadio,imageInput,contentStyle,iconStyle,activeStyle,orange,example1,btnstyle} from "../Layout.css";
 import { ic_create,ic_delete  } from 'react-icons-kit/md';
 import {dateStyle} from "../employee/LayoutEmployee.css";
 
@@ -55,7 +55,7 @@ export class EmployeeAttendance extends React.Component{
 
 
 
-<table class="table table-bordered  table-responsive-md" id={exampletable}>
+<table class="table table-responsive-md" id={example1}>
 <thead>
       <tr className={orange}>
           <th>SNo</th>
