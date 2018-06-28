@@ -14,6 +14,18 @@ import {Header} from "../Header";
 import {Footer} from "../Footer";
 
 export class AddClaims extends React.Component{
+  constructor(){
+    super();
+    this.state = {value: ''};
+    this.onChange = this.onChange.bind(this);
+ }
+
+ onChange(e){
+    const re = /^[0-9\b]+$/;
+    if (e.target.value == '' || re.test(e.target.value)) {
+       this.setState({value: e.target.value})
+    }
+ }
   render() {
     return(
       <div>
@@ -25,15 +37,13 @@ export class AddClaims extends React.Component{
        <div class="form-row">
        <div class="col-md-10 mb-3">
          <label className={labelStyle1}>Expense Name</label>
-         <input id={inputstyle} type="text" class="form-control" name=""  placeholder="" />
+         <Input className={inputstyle} type="text"   onChange={this.onChange}  />
          </div>
-
          </div>
-
             <div class="form-row">
             <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Amount</label>
-            <input type="text" class="form-control" id={inputstyle}/>
+            <Input type="text"  className={inputstyle}/>
             </div>
 
             <div class="col-md-5 mb-3">
@@ -50,7 +60,7 @@ export class AddClaims extends React.Component{
             <div class="form-row">
             <div class="col-md-12 mb-3">
                  <label className={labelStyle1}>Description</label>
-                 <input id={inputstyletextarea} type="textarea" class="form-control" rows="3" name="text" />
+                 <Input className={inputstyletextarea} type="textarea"  rows="3" name="text" />
               </div>
               </div>
 

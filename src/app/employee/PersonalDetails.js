@@ -7,7 +7,7 @@ import { plus,arrowRight2 } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import {displayContainer,floatRight,arrowIcon,hrStyle,pageHeading,orange} from "../Layout.css";
 import {inputstyle,formStyle,skipstyle,inputstyletextarea,
-labelStyle1,hyperLinkEmployee,slideremp,sliderline,sliderlineorange,slidertext} from "./LayoutEmployee.css";
+labelStyle1,hyperLinkEmployee,slideremp,sliderline,sliderlineorange,slidertext,dateStyle} from "./LayoutEmployee.css";
   import {Header} from "../Header";
   import {Footer} from "../Footer";
 
@@ -49,37 +49,42 @@ setDisplay(){
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Fathers Name</label>
-    <Input type="text"  className={inputstyle} placeholder="" />
+    <Input type="text"  className={inputstyle} placeholder="" maxlength={25} />
 
         </div>
-        <div class="col-md-5 mb-3" style={{marginRight:'3vw'}}>
+        <div class="col-md-5 mb-3">
           <label className={labelStyle1}>DOB</label>
-        <Input type="text"  className={inputstyle} placeholder="" />
+          <MuiThemeProvider>
+    <DatePicker hintText="date of Birth"
+    underlineStyle={{display: 'none'}}
+    textFieldStyle={{position:'relative',bottom:'0.75vw',color:'red'}}
+    className={dateStyle} style={{border:'1px solid #D0D3D4',height:'2vw'}}/>
+        </MuiThemeProvider>
         </div>
         </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Gender</label>
-            <Input type="text"  className={inputstyle} placeholder="" />
+            <Input type="text"  className={inputstyle} placeholder="" maxlength={10} />
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Phone</label>
-        <Input type="text"  className={inputstyle} placeholder="" />
+        <Input type="text"  className={inputstyle}  maxlength={10}/>
           </div>
           </div>
           <div class="form-group">
       <label className={labelStyle1}>Permannet Address</label>
-      <Input type="textarea" className={inputstyletextarea} />
+      <Input type="textarea" className={inputstyletextarea} maxlength={50}/>
     </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Nationality</label>
-    <Input type="text"  className={inputstyle} placeholder="" />
+    <Input type="text"  className={inputstyle} placeholder="" maxlength={25}/>
 
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Marital Status</label>
-          <Input type="text"  className={inputstyle} placeholder="" />
+          <Input type="text"  className={inputstyle} placeholder="" maxlength={9} />
           </div>
           </div>
            </Form>
@@ -88,21 +93,21 @@ setDisplay(){
           <div class="form-row">
             <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Contact Person Name</label>
-          <Input type="text"  className={inputstyle} placeholder="" />
+          <Input type="text"  className={inputstyle} placeholder="" maxlength={25}/>
             </div>
             <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Phone</label>
-              <Input type="text"  className={inputstyle} placeholder="" />
+              <Input type="text"  className={inputstyle} placeholder=""  maxlength={10}/>
             </div>
             </div>
               <div class="form-row">
                 <div class="col-md-5 mb-3">
                   <label className={labelStyle1}>Relationship</label>
-                <Input type="text"  className={inputstyle} placeholder="" />
+                <Input type="text"  className={inputstyle} placeholder="" required maxlength={25}/>
                 </div>
                 <div class="col-md-5 mb-3">
                   <label className={labelStyle1}>Email ID</label>
-                <Input type="email"  className={inputstyle} placeholder="" />
+                <Input type="email"  className={inputstyle} placeholder="" required />
                 </div>
                 </div>
           </Form>

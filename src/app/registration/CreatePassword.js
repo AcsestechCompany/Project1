@@ -26,7 +26,6 @@ export class CreatePassword extends React.Component{
   <Link to="/DemoPage"><Button outline className={submit}>Submit</Button>
 </Link>
 </form>
-
       </div>
       </div>
       </div>

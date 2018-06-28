@@ -22,27 +22,33 @@ export class Process extends React.Component{
        <div class="form-row">
        <div class="col-md-5 mb-3">
        <label className={labelStyle1}>Payment Type</label>
-       <select id="" class="form-control" id={inputstyle}>
-       <option>Monthly</option>
-       <option>Weekly</option>
-       <option>Yearly</option>
-       <option>Quarterly</option>
-       </select>
+       <Input type="select" className={inputstyle}>
+                  <option>Monthly</option>
+                  <option>Yearly</option>
+                  <option>Quarterly</option>
+                  <option>HalfYearly</option>
+
+                </Input>
        </div>
 <div class="col-md-5 mb-3">
 <label className={labelStyle1}>Select Period</label>
-<select id="" class="form-control" id={inputstyle}>
-<option></option>
-</select>
+<Input type="select" className={inputstyle}>
+           <option>6 Months</option>
+           <option>1 Year</option>
+
+         </Input>
 </div>
   </div>
   <div class="form-row">
   <div class="col-sm-5">
   <label className={labelStyle1}>Select Employees</label>
-  <select id="" class="form-control" id={inputstyle}>
-  <option>Based on Designation</option>
-  <option>Based on Department</option>
-  </select>
+  <Input type="select" name="select" id="exampleSelect">
+             <option>1</option>
+             <option>2</option>
+             <option>3</option>
+             <option>4</option>
+             <option>5</option>
+           </Input>
   </div>
   </div>
           </Form>
