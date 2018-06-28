@@ -79,24 +79,24 @@ export class ProfessionalDetails extends React.Component{
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>First Name</label>
-          <Input type="text"  className={inputstyle} placeholder="" />
+          <Input type="text"  className={inputstyle} placeholder="" maxlength={25}/>
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Last Name</label>
-          <Input type="text"  className={inputstyle} placeholder="" />
+          <Input type="text"  className={inputstyle} placeholder="" maxlength={25}/>
         </div>
         </div>
         <div class="form-row">
         <div class="col-md-10 mb-3">
         <label className={labelStyle1}>Email ID</label>
-        <Input type="text"  className={inputstyle} placeholder="" />
+        <Input type="email"  className={inputstyle} placeholder="" />
         </div>
         </div>
 
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Employee ID</label>
-              <Input type="text"  className={inputstyle} placeholder="" />
+              <Input type="text"  className={inputstyle} placeholder="" maxlength={10} />
           </div>
           <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Designation</label>
@@ -125,7 +125,7 @@ export class ProfessionalDetails extends React.Component{
           <div class="form-row">
           <div class="col-md-10 mb-3">
           <label className={labelStyle1}>Reporting Manager</label>
-            <Input type="text"  className={inputstyle} placeholder="" />
+            <Input type="text"  className={inputstyle} placeholder="" maxlength={25}/>
           </div>
           </div>
           <div class="form-row">
