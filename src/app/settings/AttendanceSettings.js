@@ -45,7 +45,7 @@ export class AttendanceSettings extends React.Component {
             <div class="form-row">
             <div class="col-md-10 mb-3">
                 <label className={labelStyle1}>Shift Name</label>
-                <input id={inputstyle} type="text" name="" class="form-control"  placeholder="" />
+        <Input type="text" className={inputstyle} placeholder="" />
                 </div>
                 </div>
 
@@ -82,7 +82,7 @@ export class AttendanceSettings extends React.Component {
             </div>
               <FormGroup>
                    <Label className={labelStyle1}>Description</Label>
-                   <Input id={inputstyletextarea} type="textarea" name="text"  />
+                   <Input className={inputstyletextarea} type="textarea" name="text"  />
                  </FormGroup>
                  <div class="form-row">
                  <div class="col-md-5 mb-3">
@@ -100,10 +100,10 @@ export class AttendanceSettings extends React.Component {
                 </div>
                 <div class="col-md-5 mb-3">
                  <label className={labelStyle1}>Over Time</label>
-                 <select  class="form-control" id={inputstyle}>
-                 <option>Enable</option>
-                  <option>Disable</option>
-                </select>
+                 <Input type="select" name="select" className={inputstyle}>
+                      <option>Enable</option>
+                      <option>Disable</option>
+                    </Input>
                </div>
                </div>
                <Row className={overtimePay}>

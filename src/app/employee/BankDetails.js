@@ -74,31 +74,31 @@ var autocomponents = this.autodisplay();
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Account Holder Name</label>
-          <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+          <Input type="text"  className={inputstyle} placeholder="" />
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Bank Name</label>
-          <input type="text" class="form-control" id={inputstyle} placeholder="" />
+    <Input type="text"  className={inputstyle} placeholder="" />
         </div>
         </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Branch Name</label>
-            <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+  <Input type="text"  className={inputstyle} placeholder="" />
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Account Number</label>
-            <input type="text" class="form-control" id={inputstyle} placeholder="" />
+            <Input type="text"  className={inputstyle} placeholder="" />
           </div>
           </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>IFSC Code</label>
-            <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+        <Input type="text"  className={inputstyle} placeholder="" />
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Account Type</label>
-            <input type="text" class="form-control" id={inputstyle} placeholder="" />
+          <Input type="text"  className={inputstyle} placeholder="" />
           </div>
           </div>
 </Form>
@@ -107,11 +107,11 @@ var autocomponents = this.autodisplay();
 <div class="form-row">
   <div class="col-md-3 mb-3">
     <label className={labelStyle1}>Annual CTC</label>
-    <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+    <Input type="text"  className={inputstyle} placeholder="" />
   </div>
   <div class="col-md-3 mb-3">
     <label className={labelStyle1}>Monthly CTC</label>
-    <input type="text" class="form-control" id={inputstyle} placeholder="" />
+  <Input type="text"  className={inputstyle} placeholder="" />
   </div>
   </div>
   <form class="form-inline">

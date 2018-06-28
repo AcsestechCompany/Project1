@@ -28,42 +28,43 @@ export class AddComponent extends React.Component{
        <div class="form-row">
        <div class="col-md-10 mb-3">
          <label className={labelStyle1}>Component Name</label>
-         <input id={inputstyle} type="text" name="" class="form-control" placeholder="" />
+         <Input type="text"  className={inputstyle} placeholder="" />
          </div>
          </div>
-
        <div class="form-row">
        <div class="col-md-5 mb-3">
        <label className={labelStyle1}>Calculation On</label>
-       <select id="" class="form-control" id={inputstyle}>
-       <option>Basic Pay </option>
-       </select>
+       <Input type="select" name="select" className={inputstyle}>
+              <option>Basic Pay</option>
+            </Input>
        </div>
 <div class="col-md-5 mb-3">
 <label className={labelStyle1}>Taxable</label>
-<select id="" class="form-control" id={inputstyle}>
-<option>Yes</option>
-<option>No</option>
-</select>
+<Input type="select" name="select" className={inputstyle}>
+       <option>Yes</option>
+     </Input>s
 </div>
   </div>
        <FormGroup>
             <Label className={labelStyle1}>Description</Label>
-            <Input id={inputstyletextarea} type="textarea" name="text" />
+            <Input className={inputstyletextarea} type="textarea" name="text" />
           </FormGroup>
            <div class="form-row">
            <div class="col-md-5 mb-3">
            <label className={labelStyle1}>Component Type</label>
-           <select id="" class="form-control" id={inputstyle}>
-           <option></option>
-           </select>
+           <Input type="select" name="select" className={inputstyle}>
+                  <option></option>
+                  <option></option>
+
+                </Input>
            </div>
 <div class="col-md-5 mb-3">
 <label className={labelStyle1}>Amount Type</label>
-<select id="" class="form-control" id={inputstyle}>
-<option>Monthly</option>
-<option>Weekly</option>
-</select>
+<Input type="select" name="select" className={inputstyle}>
+       <option>Monthly</option>
+       <option>Weekly</option>
+
+     </Input>
 </div>
       </div>
           <FormGroup>

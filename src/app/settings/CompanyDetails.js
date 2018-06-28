@@ -38,12 +38,12 @@ import {formStyle,floatRight} from "./LayoutSettings.css";
         <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Organization Name</label>
-          <input id={inputstyle} type="text" class="form-control" name=""  placeholder="" />
+          <Input type="text"  className={inputstyle} placeholder="" />
         </div>
         <div class="col-md-5 mb-3">
 
           <label className={labelStyle1}>Website URL</label>
-          <input id={inputstyle} type="text" name="" class="form-control"  placeholder="" />
+      <Input type="text"  className={inputstyle} placeholder="" />
         </div>
         </div>
         <div class="form-row">
@@ -58,46 +58,47 @@ import {formStyle,floatRight} from "./LayoutSettings.css";
         </div>
       <div class="col-md-5 mb-3">
       <label className={labelStyle1}>Business Type</label>
-      <select id="" class="form-control" id={inputstyle}>
-      <option>Full Time</option>
-      <option>Part Time</option>
-      </select>
+      <Input type="select" name="select" className={inputstyle}>
+             <option>1</option>
+             <option>2</option>
+
+           </Input>
       </div>
       </div>
         <div class="form-row">
         <div class="col-md-12 mb-3">
           <label className={labelStyle1}>Address</label>
-          <input id={inputstyletextarea} type="textarea" rows="3" class="form-control" name=""  placeholder="" />
+        <Input type="text"  className={inputstyletextarea} placeholder="" />
         </div>
         </div>
         <div class="form-row">
         <div class="col-md-5 mb-3">
          <label className={labelStyle1}>State</label>
-         <select class="form-control" id={inputstyle}>
-         <option>Telangana</option>
-         <option>AP</option>
-         </select>
+         <Input type="select" name="select" className={inputstyle}>
+          <option>Telangana</option>
+          <option>Hyderabad</option>
+        </Input>
        </div>
      <div class="col-md-5 mb-3">
       <label className={labelStyle1}>Country</label>
-      <select id="" class="form-control" id={inputstyle}>
-      <option>India</option>
-      <option>England</option>
-     </select>
+      <Input type="select" name="select" className={inputstyle}>
+           <option>India</option>
+           <option>England</option>
+         </Input>
     </div>
   </div>
 <FormGroup>
 <Label className={labelStyle1}>Description</Label>
-<Input id={inputstyletextarea} type="textarea" name="text"  />
+<Input type="text"  className={inputstyletextarea} placeholder="" />
  </FormGroup>
   <div class="form-row">
     <div class="col-md-5 mb-3">
       <label className={labelStyle1}>Phone Number</label>
-      <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+    <Input type="text"  className={inputstyle} placeholder="" />
     </div>
     <div class="col-md-5 mb-3">
       <label className={labelStyle1}>Email ID</label>
-      <input type="text" class="form-control" id={inputstyle} placeholder="" />
+<Input type="text"  className={inputstyle} placeholder="" />
     </div>
     </div>
            </Form>
@@ -120,32 +121,32 @@ import {formStyle,floatRight} from "./LayoutSettings.css";
           <div class="form-row">
             <div class="col-md-4 mb-3">
               <label className={labelStyle1}>Registration Number</label>
-              <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+            <Input type="text"  className={inputstyle} placeholder="" />
 
             </div>
             <div class="col-md-4 mb-3">
               <label className={labelStyle1}>PAN</label>
-              <input type="text" class="form-control" id={inputstyle} placeholder="" />
+    <Input type="text"  className={inputstyle} placeholder="" />
             </div>
             </div>
             <div class="form-row">
               <div class="col-md-4 mb-3">
                 <label className={labelStyle1}>TAN</label>
-                <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+                <Input type="text"  className={inputstyle} placeholder="" />
               </div>
               <div class="col-md-4 mb-3">
                 <label className={labelStyle1}>TAN Circle Number</label>
-                <input type="text" class="form-control" id={inputstyle} placeholder="" />
+          <Input type="text"  className={inputstyle} placeholder="" />
               </div>
               </div>
               <div class="form-row">
                 <div class="col-md-4 mb-3">
                   <label className={labelStyle1}>TDS Location</label>
-                  <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+      <Input type="text"  className={inputstyle} placeholder="" />
                 </div>
                 <div class="col-md-4 mb-3">
                   <label className={labelStyle1}>Form 16 Signatory</label>
-                  <input type="text" class="form-control" id={inputstyle} placeholder="" />
+              <Input type="text"  className={inputstyle} placeholder="" />
                 </div>
                 </div>
                         <p><Link to="/AttendanceSettings"><button type="button" class="btn btn-outline-warning" id={savebtn} >

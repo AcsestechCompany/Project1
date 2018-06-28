@@ -45,21 +45,21 @@ export class JobHistory extends React.Component{
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Company Name</label>
-          <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+          <Input type="text"  className={inputstyle} placeholder="" />
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Department</label>
-          <input type="text" class="form-control" id={inputstyle} placeholder="" />
+  <Input type="text"  className={inputstyle} placeholder="" />
         </div>
         </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Designation</label>
-            <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+            <Input type="text"  className={inputstyle} placeholder="" />
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Reporting Mananger</label>
-            <input type="text" class="form-control" id={inputstyle} placeholder="" />
+          <Input type="text"  className={inputstyle} placeholder="" />
           </div>
           </div>
         <div class="form-row">

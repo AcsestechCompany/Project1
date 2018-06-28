@@ -3,6 +3,7 @@ import {LogoHeader} from "./LogoHeader";
 import {containerRegistration,content,registrationheader,registration,forminput,submit,lasttext,hyperlink,submitLink} from "./LayoutRegistration.css";
 import {Link} from "react-router-dom";
 import {FooterText} from "./FooterText";
+import {Input,Button} from "reactstrap";
 
 export class SignUp extends React.Component{
   render(){
@@ -15,17 +16,16 @@ export class SignUp extends React.Component{
       <p className={registrationheader}>Registration</p>
       <form>
       <div class="form-group">
-        <input type="text" class="form-control" name="name" id={forminput}  placeholder="Name"/>
+      <Input type="text"  className={forminput} placeholder="Name" />
       </div>
   <div class="form-group">
-    <input type="email" class="form-control" name="email" id={forminput}  aria-describedby="emailHelp" placeholder="Email ID"/>
+  <Input type="email"  className={forminput} placeholder="Email ID" />
   </div>
   <div class="form-group">
-    <input type="text" class="form-control"  name="phone" id={forminput} placeholder="Phone"/>
+  <Input type="password" className={forminput} placeholder="Password" />
   </div>
-  <Link to="/VerifyAccount"><button type="submit" class="btn btn-primary" id={submit}>
-  Submit
-  </button></Link>
+  <Link to="/VerifyAccount"><Button outline className={submit}>Submit</Button>
+  </Link>
 </form>
 <p className={lasttext}>Existing user? <Link to="/Login" className={hyperlink}>Log In</Link></p>
       </div>

@@ -3,13 +3,12 @@ import { Button, Form, FormGroup, Label, Input, FormText,Row,Col } from 'reactst
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {TextField,SelectField,MenuItem,Slider,DatePicker} from 'material-ui';
 import Icon from 'react-icons-kit';
-
- import { longRight } from 'react-icons-kit/entypo/longRight';
+import { longRight } from 'react-icons-kit/entypo/longRight';
 import { arrowRight2, arrowLeft2,plus } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
 import {displayContainer,floatRight,arrowIconR,arrowIconL,pageHeading,hrStyle,buttonStyle,floatRight2,savebtn1,orange,skip1} from "../Layout.css";
-import {inputstyle,formStyle,inputStyle,hyperLinkEmployee,
-  inputStyle1,labelStyle1,enableBtn,disableBtn,skipstyle,
+import {inputstyle,formStyle,hyperLinkEmployee,
+  labelStyle1,enableBtn,disableBtn,skipstyle,
   overtimeDiv,slideremp,dateStyle,overtimePay,enableBtnactive,disableBtnactive,radiocheck,slidertext} from "./LayoutEmployee.css";
   import {timeStyle} from "../settings/LayoutSettings.css";
   import {Header} from "../Header";
@@ -80,54 +79,53 @@ export class ProfessionalDetails extends React.Component{
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>First Name</label>
-          <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+          <Input type="text"  className={inputstyle} placeholder="" />
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Last Name</label>
-          <input type="text" class="form-control" id={inputstyle} placeholder="" />
+          <Input type="text"  className={inputstyle} placeholder="" />
         </div>
         </div>
         <div class="form-row">
         <div class="col-md-10 mb-3">
         <label className={labelStyle1}>Email ID</label>
-        <input type="text" class="form-control" id={inputstyle} placeholder=""/>
+        <Input type="text"  className={inputstyle} placeholder="" />
         </div>
         </div>
 
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Employee ID</label>
-            <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+              <Input type="text"  className={inputstyle} placeholder="" />
           </div>
           <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Designation</label>
-          <select id="" class="form-control" id={inputstyle}>
+          <Input type="select" className={inputstyle}>
           <option>Manager</option>
-          <option>Admin</option>
-          </select>
+          <option>Team Lead</option>
+        </Input>
           </div>
           </div>
         <div class="form-row">
         <div class="col-md-5 mb-3">
         <label className={labelStyle1}>Department</label>
-        <select id="" class="form-control" id={inputstyle}>
-        <option>Information Technology</option>
+        <Input type="select" className={inputstyle}>
         <option>Marketing</option>
         <option>Finance</option>
-        </select>
+      </Input>
         </div>
         <div class="col-md-5 mb-3">
         <label className={labelStyle1}>Employment Type</label>
-        <select id="" class="form-control" id={inputstyle}>
+        <Input type="select" className={inputstyle}>
         <option>Full Time</option>
         <option>Part Time</option>
-        </select>
+      </Input>
         </div>
           </div>
           <div class="form-row">
           <div class="col-md-10 mb-3">
           <label className={labelStyle1}>Reporting Manager</label>
-          <input type="text" class="form-control" id={inputstyle} placeholder=""/>
+            <Input type="text"  className={inputstyle} placeholder="" />
           </div>
           </div>
           <div class="form-row">
@@ -143,10 +141,10 @@ export class ProfessionalDetails extends React.Component{
             </div>
             <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Location</label>
-            <select id="" class="form-control" id={inputstyle}>
+            <Input type="select" className={inputstyle}>
             <option>Hyderabad</option>
-            <option>Banglore</option>
-            </select>
+            <option>Bangalore</option>
+          </Input>
             </div>
             </div>
            </Form>
