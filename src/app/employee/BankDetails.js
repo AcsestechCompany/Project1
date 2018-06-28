@@ -74,31 +74,31 @@ var autocomponents = this.autodisplay();
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Account Holder Name</label>
-          <Input type="text"  className={inputstyle} placeholder="" />
+          <Input type="text"  className={inputstyle} placeholder="" maxlength={25} />
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Bank Name</label>
-    <Input type="text"  className={inputstyle} placeholder="" />
+    <Input type="text"  className={inputstyle} placeholder="" maxlength={25} />
         </div>
         </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Branch Name</label>
-  <Input type="text"  className={inputstyle} placeholder="" />
+  <Input type="text"  className={inputstyle} placeholder="" maxlength={25} />
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Account Number</label>
-            <Input type="text"  className={inputstyle} placeholder="" />
+            <Input type="text"  className={inputstyle} placeholder="" maxlength={12} />
           </div>
           </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>IFSC Code</label>
-        <Input type="text"  className={inputstyle} placeholder="" />
+        <Input type="text"  className={inputstyle} placeholder="" maxlength={11} />
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Account Type</label>
-          <Input type="text"  className={inputstyle} placeholder="" />
+          <Input type="text"  className={inputstyle} placeholder="" maxlength={25}/>
           </div>
           </div>
 </Form>
@@ -107,11 +107,11 @@ var autocomponents = this.autodisplay();
 <div class="form-row">
   <div class="col-md-3 mb-3">
     <label className={labelStyle1}>Annual CTC</label>
-    <Input type="text"  className={inputstyle} placeholder="" />
+    <Input type="text"  className={inputstyle} placeholder="" maxlength={2}/>
   </div>
   <div class="col-md-3 mb-3">
     <label className={labelStyle1}>Monthly CTC</label>
-  <Input type="text"  className={inputstyle} placeholder="" />
+  <Input type="text"  className={inputstyle} placeholder="" maxlength={25}/>
   </div>
   </div>
   <form class="form-inline">
