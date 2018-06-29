@@ -430,9 +430,9 @@ position:relative;
 top:2vw;
 left:41.5vw;
 }
-#savebtn1{
+.savebtn1{
 position:relative;
-top:2vw;
+top:3vw;
 right:8vw;
 }
 #skip1{

@@ -101,7 +101,7 @@ var autocomponents = this.autodisplay();
           <Input type="text"  className={inputstyle} placeholder="" maxlength={25} required/>
           </div>
           </div>
-</Form>
+
 <p className={pageHeading} style={{marginTop:'2vw'}}>Salary Component</p>
 
 <div class="form-row">
@@ -114,19 +114,19 @@ var autocomponents = this.autodisplay();
   <Input type="text"  className={inputstyle} placeholder="" maxlength={25} required/>
   </div>
   </div>
-  <form class="form-inline">
+  <div class="form-inline">
 <div class="form-group">
 <label for="inputPassword6" className={labelStyle1}>Salary Break up</label>
 <button class="btn btn-outline-warning" onClick={this.nextmanual.bind(this)} id={btnManual}>Manual</button>
 <button class="btn btn-outline-warning" onClick={this.nextauto.bind(this)} id={btnAuto}>Auto</button>
 </div>
-
+</div>
 {manualcomponents}
 {autocomponents}
 <div className={bankdiv}>
-<Link to="/LoginInfo">
-<Input type="submit" value="SAVE" style={{width:'20%'}}/>
-</Link>
+
+  <Input type="submit" value="SAVE"  className={savebtn1} style={{width:'20%'}}/>
+
 <Link to="/LoginInfo" id={skip1}>Skip </Link>
 
              <span className={floatRight2}>
@@ -143,7 +143,7 @@ var autocomponents = this.autodisplay();
              </Link>
                 </span>
                 </div>
-                </form>
+            </Form>
 
        </div>
        <Footer/>
