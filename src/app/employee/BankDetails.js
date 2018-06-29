@@ -74,31 +74,31 @@ var autocomponents = this.autodisplay();
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Account Holder Name</label>
-          <Input type="text"  className={inputstyle} placeholder="" maxlength={25} />
+          <Input type="text"  className={inputstyle} placeholder="" maxlength={25} required />
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Bank Name</label>
-    <Input type="text"  className={inputstyle} placeholder="" maxlength={25} />
+    <Input type="text"  className={inputstyle} placeholder="" maxlength={25} required/>
         </div>
         </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Branch Name</label>
-  <Input type="text"  className={inputstyle} placeholder="" maxlength={25} />
+  <Input type="text"  className={inputstyle} placeholder="" maxlength={25} required />
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Account Number</label>
-            <Input type="text"  className={inputstyle} placeholder="" maxlength={12} />
+            <Input type="text"  className={inputstyle} placeholder="" maxlength={12} required/>
           </div>
           </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>IFSC Code</label>
-        <Input type="text"  className={inputstyle} placeholder="" maxlength={11} />
+        <Input type="text"  className={inputstyle} placeholder="" maxlength={11} required />
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Account Type</label>
-          <Input type="text"  className={inputstyle} placeholder="" maxlength={25}/>
+          <Input type="text"  className={inputstyle} placeholder="" maxlength={25} required/>
           </div>
           </div>
 </Form>
@@ -107,11 +107,11 @@ var autocomponents = this.autodisplay();
 <div class="form-row">
   <div class="col-md-3 mb-3">
     <label className={labelStyle1}>Annual CTC</label>
-    <Input type="text"  className={inputstyle} placeholder="" maxlength={2}/>
+    <Input type="text"  className={inputstyle} placeholder="" maxlength={2} required/>
   </div>
   <div class="col-md-3 mb-3">
     <label className={labelStyle1}>Monthly CTC</label>
-  <Input type="text"  className={inputstyle} placeholder="" maxlength={25}/>
+  <Input type="text"  className={inputstyle} placeholder="" maxlength={25} required/>
   </div>
   </div>
   <form class="form-inline">
@@ -120,12 +120,12 @@ var autocomponents = this.autodisplay();
 <button class="btn btn-outline-warning" onClick={this.nextmanual.bind(this)} id={btnManual}>Manual</button>
 <button class="btn btn-outline-warning" onClick={this.nextauto.bind(this)} id={btnAuto}>Auto</button>
 </div>
-</form>
+
 {manualcomponents}
 {autocomponents}
 <div className={bankdiv}>
 <Link to="/LoginInfo">
-<button type="button" class="btn btn-outline-warning"  id={savebtn1}>Save</button>
+<Input type="submit" value="SAVE" style={{width:'20%'}}/>
 </Link>
 <Link to="/LoginInfo" id={skip1}>Skip </Link>
 
@@ -143,6 +143,7 @@ var autocomponents = this.autodisplay();
              </Link>
                 </span>
                 </div>
+                </form>
 
        </div>
        <Footer/>

@@ -79,24 +79,24 @@ export class ProfessionalDetails extends React.Component{
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>First Name</label>
-          <Input type="text"  className={inputstyle} placeholder="" maxlength={25}/>
+          <Input type="text"  className={inputstyle} placeholder="" maxlength={25} required/>
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Last Name</label>
-          <Input type="text"  className={inputstyle} placeholder="" maxlength={25}/>
+          <Input type="text"  className={inputstyle} placeholder="" maxlength={25} required/>
         </div>
         </div>
         <div class="form-row">
         <div class="col-md-10 mb-3">
         <label className={labelStyle1}>Email ID</label>
-        <Input type="email"  className={inputstyle} placeholder="" />
+        <Input type="email"  className={inputstyle} placeholder="" required />
         </div>
         </div>
 
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Employee ID</label>
-              <Input type="text"  className={inputstyle} placeholder="" maxlength={10} />
+              <Input type="text"  className={inputstyle} placeholder="" maxlength={10} required />
           </div>
           <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Designation</label>
@@ -125,7 +125,7 @@ export class ProfessionalDetails extends React.Component{
           <div class="form-row">
           <div class="col-md-10 mb-3">
           <label className={labelStyle1}>Reporting Manager</label>
-            <Input type="text"  className={inputstyle} placeholder="" maxlength={25}/>
+            <Input type="text"  className={inputstyle} placeholder="" maxlength={25} required/>
           </div>
           </div>
           <div class="form-row">
@@ -136,7 +136,7 @@ export class ProfessionalDetails extends React.Component{
        className={dateStyle}
        underlineStyle={{display:'none'}}
        textFieldStyle={{position:'relative',bottom:'0.6vw',color:'lightgray'}}
-       style={{border:'1px solid #D0D3D4'}} />
+       style={{border:'1px solid #D0D3D4'}}  required/>
             </MuiThemeProvider>
             </div>
             <div class="col-md-5 mb-3">
@@ -147,7 +147,7 @@ export class ProfessionalDetails extends React.Component{
           </Input>
             </div>
             </div>
-           </Form>
+
 
     <Row className={overtimePay}>
     <p style={{fontWeight:'lighter',fontSize:'0.9vw'}}>Overtime Pay</p>
@@ -171,9 +171,8 @@ export class ProfessionalDetails extends React.Component{
  <div className={overtimeDiv}>
 {enable}
 {disable}
-<Link to="/BankDetails">
-<button type="button" class="btn btn-outline-warning"  id={savebtn1}>Save</button>
-</Link>
+<Input type="submit" value="SAVE" style={{width:'20%'}}/>
+
 <Link to="/BankDetails" id={skip1}>Skip </Link>
 
              <span className={floatRight2}>
@@ -190,6 +189,7 @@ export class ProfessionalDetails extends React.Component{
              </Link>
                 </span>
  </div>
+ </Form>
 
 
           </Col>

@@ -1,3 +1,31 @@
+.errormsg{
+  color:red;
+  font-size:0.8vw;
+}
+.genderlabel{
+  font-size:1vw;
+  font-style:arial;
+  position:relative;
+  left:0.5vw;
+  top:2vw;
+  font-weight: lighter;
+}
+#genderstyle{
+  position:relative;
+  left:5vw;
+  top:1.5vw;
+}
+input[type="submit"] {
+  font-weight: bold;
+  padding: 4px 8px;
+  border:1px solid #FFA300;
+  background: white;
+  color:#FFA300;
+}
+input[type="submit"]:hover{
+  background:#FFA300;
+  color:black;
+}
 input[type="file"]::-webkit-file-upload-button{
   background-color:white;
 border:none;
@@ -113,8 +141,11 @@ width:98% !important;
     border-color:#D7D7D7 !important;
   }
   .inputstyle:focus{
-    border:1px solid green;
-    background-color:green;
+    border:1px solid red;
+    background-color:red;
+  }
+  .inputstyle::after{
+    border:1px solid red;
   }
 
   .inputstyletextarea{
