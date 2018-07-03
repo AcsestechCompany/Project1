@@ -32,11 +32,11 @@ export class LoginInfo extends React.Component{
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Name</label>
-      <Input type="text"  className={inputstyle} placeholder="" />
+      <Input type="text"  className={inputstyle}  pattern="[A-Za-z]{1,25}$" placeholder="" required />
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Email ID</label>
-        <Input type="text"  className={inputstyle} placeholder="" />
+        <Input type="email"  className={inputstyle} placeholder="" required />
         </div>
         </div>
         <div class="form-row">
@@ -46,7 +46,8 @@ export class LoginInfo extends React.Component{
           </div>
           </div>
 
-      </Form>
+      <Input type="submit" value="SAVE"  className={savebtn1} style={{width:'20%'}}/>
+          </Form>
 
       </Col>
       <Col>
@@ -64,9 +65,9 @@ export class LoginInfo extends React.Component{
          </Row>
       <div className={bankdiv}>
 
-      <Link to="/JobHistory">
-      <button type="button" class="btn btn-outline-warning"  id={savebtn1}>Invite</button>
-      </Link>
+
+
+
       <Link to="/JobHistory" id={skip1}>Skip </Link>
 
                    <span className={floatRight2}>
@@ -83,6 +84,7 @@ export class LoginInfo extends React.Component{
                    </Link>
                       </span>
 </div>
+
        </div>
        <Footer/>
        </div>

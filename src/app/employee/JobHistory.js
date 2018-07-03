@@ -42,21 +42,21 @@ export class JobHistory extends React.Component{
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Company Name</label>
-          <Input type="text"  className={inputstyle} placeholder="" required/>
+          <Input type="text"  className={inputstyle} placeholder=""  pattern="[A-Za-z]{1,25}$" required/>
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Department</label>
-  <Input type="text"  className={inputstyle} placeholder="" required/>
+  <Input type="text"  className={inputstyle} placeholder="" pattern="[A-Za-z]{1,25}$" required/>
         </div>
         </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Designation</label>
-            <Input type="text"  className={inputstyle} placeholder="" required/>
+            <Input type="text"  className={inputstyle} placeholder=""  pattern="[A-Za-z]{1,25}$" required/>
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Reporting Mananger</label>
-          <Input type="text"  className={inputstyle} placeholder="" required/>
+          <Input type="text"  className={inputstyle} placeholder=""  pattern="[A-Za-z]{1,25}$" required/>
           </div>
           </div>
         <div class="form-row">
@@ -79,12 +79,11 @@ export class JobHistory extends React.Component{
         </MuiThemeProvider>
         </div>
           </div>
+            <Input type="submit" value="ADD"  className={savebtn1} style={{width:'20%'}}/>
 </Form>
 <div className={bankdiv}>
 
-<Link to="/EmpDocs">
-<button type="button" class="btn btn-outline-warning"  id={savebtn1}>ADD</button>
-</Link>
+
 <Link to="/EmpDocs" id={skip1}>Skip </Link>
 
              <span className={floatRight2}>
