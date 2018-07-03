@@ -74,7 +74,6 @@ export class PersonalDetails extends React.Component{
           <div class="col-md-5 mb-3" style={{marginLeft:'1vw'}} >
             <label className={labelStyle1}>Phone</label>
               <Input  type="tel" pattern="^\d{10}$"  className={inputstyle} placeholder="Eg.8794098765" required />
-
           </div>
 
           </div>

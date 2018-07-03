@@ -338,7 +338,6 @@ background-color:red;
 }
 .inputstyle:focus{
   border:1px solid lime !important;
-
 }
 .inputstyletextarea:focus{
   border:1px solid lime !important;

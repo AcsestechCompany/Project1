@@ -39,27 +39,24 @@ export class JobHistory extends React.Component{
 <p><Link to="/JobHistory" className={orange}>Job History</Link></p>
 <p><Link to="/EmpDocs" className={hyperLinkEmployee}>Employee Documents</Link></p>
 </div>
-
-
-
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Company Name</label>
-          <Input type="text"  className={inputstyle} placeholder="" />
+          <Input type="text"  className={inputstyle} placeholder="" required/>
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Department</label>
-  <Input type="text"  className={inputstyle} placeholder="" />
+  <Input type="text"  className={inputstyle} placeholder="" required/>
         </div>
         </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Designation</label>
-            <Input type="text"  className={inputstyle} placeholder="" />
+            <Input type="text"  className={inputstyle} placeholder="" required/>
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Reporting Mananger</label>
-          <Input type="text"  className={inputstyle} placeholder="" />
+          <Input type="text"  className={inputstyle} placeholder="" required/>
           </div>
           </div>
         <div class="form-row">
@@ -69,7 +66,7 @@ export class JobHistory extends React.Component{
     <DatePicker hintText="date of joining"
     underlineStyle={{display: 'none'}}
     textFieldStyle={{position:'relative',bottom:'0.75vw',color:'lightgray'}}
-    className={dateStyle} style={{border:'1px solid #D0D3D4',height:'2vw'}}/>
+    className={dateStyle} style={{border:'1px solid #D0D3D4',height:'2vw'}} required/>
         </MuiThemeProvider>
         </div>
         <div class="col-md-5 mb-3">
@@ -78,7 +75,7 @@ export class JobHistory extends React.Component{
     <DatePicker hintText="date of joining"
     underlineStyle={{display: 'none'}}
     textFieldStyle={{position:'relative',bottom:'0.75vw',color:'lightgray'}}
-    className={dateStyle} style={{border:'1px solid #D0D3D4',height:'2vw'}}/>
+    className={dateStyle} style={{border:'1px solid #D0D3D4',height:'2vw'}} required/>
         </MuiThemeProvider>
         </div>
           </div>
@@ -91,14 +88,10 @@ export class JobHistory extends React.Component{
 <Link to="/EmpDocs" id={skip1}>Skip </Link>
 
              <span className={floatRight2}>
-
-
              <Link to="/LoginInfo" className={hyperLinkEmployee} style={{marginRight:'1vw'}}>
              <button type="button" class="btn btn-light">
              <Icon icon={arrowLeft2} className={arrowIconL} size={14} />Prev </button>
                </Link>
-
-
              <Link to="/EmpDocs" className={hyperLinkEmployee}>
              <button type="button" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIconR} /></button>
              </Link>

@@ -437,7 +437,7 @@ right:8vw;
 }
 #skip1{
   position:relative;
-  top:2vw;
+  top:3vw;
   left:-7vw;
   color:orange;
 }
@@ -449,7 +449,6 @@ position:relative;
 top:-1.5vw;
 left:6.2vw;
 }
-
 #exampletable{
   position:relative;
   top:3vw;
@@ -457,11 +456,9 @@ left:6.2vw;
   min-width:0.5vw ;
   overflow-x: hidden;
 }
-
 #exampletable tbody > tr:nth-child(2n+1) > td, #exampletable > tbody > tr:nth-child(2n+1) > th {
    background-color:#F4F6F6 ;
 }
-
 #indicator{
   color:blue !important;
 }

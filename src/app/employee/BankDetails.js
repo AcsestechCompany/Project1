@@ -19,9 +19,12 @@ export class BankDetails extends React.Component{
     super(props);
     this.nextmanual=this.nextmanual.bind(this);
     this.nextauto=this.nextauto.bind(this);
+    this.handleChange=this.handleChange.bind(this);
+
     this.state = {
       manualcomponents:false,
-      autocomponents:false
+      autocomponents:false,
+      AnnualCTC:''
     };
   }
   nextmanual(){
@@ -50,6 +53,11 @@ export class BankDetails extends React.Component{
         );
       }
     }
+    handleChange(e){
+      this.setState({
+        AnnualCTC: e.target.value
+      });
+    }
   render() {
 var manualcomponents = this.manualdisplay();
 var autocomponents = this.autodisplay();
@@ -74,31 +82,31 @@ var autocomponents = this.autodisplay();
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Account Holder Name</label>
-          <Input type="text"  className={inputstyle} placeholder="" maxlength={25} required />
+          <Input type="text"  className={inputstyle}  pattern="[A-Za-z]{1,25}$"  required />
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Bank Name</label>
-    <Input type="text"  className={inputstyle} placeholder="" maxlength={25} required/>
+    <Input type="text"  className={inputstyle} pattern="[A-Za-z]{1,25}$" required/>
         </div>
         </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Branch Name</label>
-  <Input type="text"  className={inputstyle} placeholder="" maxlength={25} required />
+  <Input type="text"  className={inputstyle} pattern="[A-Za-z]{1,25}$" required />
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Account Number</label>
-            <Input type="text"  className={inputstyle} placeholder="" maxlength={12} required/>
+            <Input type="text" pattern="^\d{12}$" className={inputstyle} placeholder="12 digit A/c no"  required/>
           </div>
           </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>IFSC Code</label>
-        <Input type="text"  className={inputstyle} placeholder="" maxlength={11} required />
+        <Input type="text"  className={inputstyle} pattern="^\d{11}$" placeholder="IFSC Code" maxlength={11} required />
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Account Type</label>
-          <Input type="text"  className={inputstyle} placeholder="" maxlength={25} required/>
+          <Input type="text"  className={inputstyle} placeholder="Type of Account" maxlength={25} required/>
           </div>
           </div>
 
@@ -107,11 +115,17 @@ var autocomponents = this.autodisplay();
 <div class="form-row">
   <div class="col-md-3 mb-3">
     <label className={labelStyle1}>Annual CTC</label>
-    <Input type="text"  className={inputstyle} placeholder="" maxlength={2} required/>
+    <Input type="text"  className={inputstyle} pattern="^\d{1,10}$" 
+    value={this.state.AnnualCTC}
+  onChange={this.handleChange}
+
+     required/>
   </div>
   <div class="col-md-3 mb-3">
     <label className={labelStyle1}>Monthly CTC</label>
-  <Input type="text"  className={inputstyle} placeholder="" maxlength={25} required/>
+  <Input type="text"  className={inputstyle}  maxlength={25}
+  value={this.state.AnnualCTC/12}
+  required/>
   </div>
   </div>
   <div class="form-inline">
