@@ -46,7 +46,7 @@ export class LoginInfo extends React.Component{
           </div>
           </div>
 
-      <Input type="submit" value="SAVE"  className={savebtn1} style={{width:'20%'}}/>
+      <Input type="submit" value="SAVE"  className={savebtn1} style={{width:'20%',marginLeft:'8vw'}}/>
           </Form>
 
       </Col>

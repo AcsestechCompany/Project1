@@ -171,7 +171,7 @@ export class ProfessionalDetails extends React.Component{
  <div className={overtimeDiv}>
 {enable}
 {disable}
-<Input type="submit" value="SAVE" style={{width:'20%'}}/>
+<Input type="submit" value="SAVE" style={{width:'20%',marginLeft:'-8vw',marginTop:'2vw'}}/>
 
 <Link to="/BankDetails" id={skip1}>Skip </Link>
 

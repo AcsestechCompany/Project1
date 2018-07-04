@@ -79,7 +79,7 @@ export class JobHistory extends React.Component{
         </MuiThemeProvider>
         </div>
           </div>
-            <Input type="submit" value="ADD"  className={savebtn1} style={{width:'20%'}}/>
+            <Input type="submit" value="ADD"  className={savebtn1} style={{width:'20%',marginLeft:'8vw'}}/>
 </Form>
 <div className={bankdiv}>
 

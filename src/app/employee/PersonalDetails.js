@@ -117,7 +117,7 @@ export class PersonalDetails extends React.Component{
                 <Input type="email"  className={inputstyle} placeholder="" required />
                 </div>
                 </div>
-                <button type="submit" onClick={this.handleClick}>save</button>
+              <Input type="submit" value="SAVE" style={{width:'20%'}}/>
           </Form>
           </Col>
           <Col xs="2">  <div  style={{fontSize:'0.9vw',position:'relative',bottom:'-2.5vw'}} id={slidertext}>

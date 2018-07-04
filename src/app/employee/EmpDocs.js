@@ -40,7 +40,6 @@ export class EmpDocs extends React.Component{
       </p>
 
         </div>
-    
 
         </Row>
 
@@ -50,7 +49,7 @@ export class EmpDocs extends React.Component{
 <div className={bankdiv} style={{marginTop:'10vw'}}>
 
 <Link to="/ViewEmployee">
-<button type="button" class="btn btn-outline-warning"  id={savebtn1}>Submit</button>
+<button type="button" class="btn btn-outline-warning"  id={savebtn1} style={{marginLeft:'-8vw'}}>Submit</button>
 </Link>
 <Link to="/ViewEmployee" id={skip1}>Skip </Link>
 

@@ -30,8 +30,10 @@ export class AnnouncementList extends React.Component{
       <td>Thursday Concession Day Ticket</td>
       <td>Allows admission on Thursday 12 July to students (with a valid student card), children 14 to 17 and customers 60 and over...</td>
       <td>09/04/2018</td>
-      <td><Icon icon={ic_create} size={20}/>
-          <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={18} /> </td>
+      <td>
+          <Icon icon={ic_create} size={20}/>
+          <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={18} />
+      </td>
       </tr>
       <tr>
       <td>Thursday Concession Day Ticket</td>
