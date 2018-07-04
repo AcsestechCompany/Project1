@@ -79,8 +79,9 @@ outline:none;
     margin-right:-2vw !important;
     font-family:"calibri",sans-serif;
     }
+
   .dateStyle{
-  border:1px solid #D0D3D4;
+   border-color:#D7D7D7 !important;
   height:4.2vw !important;
 width:98% !important;
   padding-left:1vw;
@@ -139,13 +140,10 @@ width:98% !important;
     box-shadow:none !important;
     border-color:#D7D7D7 !important;
   }
-  .inputstyle:focus{
-    border:1px solid red;
-    background-color:red;
-  }
-  .inputstyle::after{
-    border:1px solid red;
-  }
+
+
+
+
 
   .inputstyletextarea{
     width:82%;
@@ -178,6 +176,7 @@ display:flex !important;
 #listfortab{
 display:none;
 }
+
 .hyperLinkEmployee{
 color:black !important;
 font-weight:200;
@@ -191,12 +190,15 @@ font-weight:200;
 .dateStyle{
   position:relative;
   height:2.4vw;
+  width:98%;
+   border:1px solid #D7D7D7;
   padding-left:1vw;
-    border-radius:4.5%;
+    border-radius:3.5%;
 }
 .dateStyle:focus{
-  border:1px solid lime !important;
+  border:1px solid lime;
 }
+
 #skipstyle{
   position:relative;
   left:1vw;
@@ -335,21 +337,58 @@ background-color:red;
   width:98%;
   height:2.4vw;
   font-size:0.9vw;
+     outline: none;
   box-shadow:none !important;
-   border-color:#D7D7D7 !important;
+   border-color:#D7D7D7;
 }
-.inputstyle:focus{
-  border:1px solid lime !important;
+.inputstylename{
+  width:98%;
+  height:2.4vw;
+  font-size:0.9vw;
+     outline: none;
+  box-shadow:none !important;
+   border-color:#D7D7D7 ;
 }
-.inputstyletextarea:focus{
-  border:1px solid lime !important;
+.inputstylename:valid {
+   border: 1px solid lime;
 }
+
+.inputstylename:invalid {
+   border: 1px solid #F94D28;
+}
+.inputstyle:valid {
+   border: 1px solid lime;
+}
+.inputstyle:invalid {
+   border: 1px solid red;
+}
+
+.inputstyle1:invalid {
+   border: 1px solid red;
+}
+.inputstyle1:valid {
+   border: 1px solid lime;
+}
+.inputstyle2:invalid {
+   border: 1px solid red;
+}
+.inputstyle2:valid {
+   border: 1px solid lime;
+}
+.inputstyletextarea:invalid {
+   border: 1px solid red;
+}
+.inputstyletextarea:valid {
+   border: 1px solid lime;
+}
+
+
 .inputstyletextarea{
   width:82%;
   height:3vw;
   font-size:0.7vw;
   box-shadow:none !important;
-  border-color:#D7D7D7 !important;
+  border-color:#D7D7D7;
 }
 
 #buttonstyle{

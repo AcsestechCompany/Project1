@@ -16,8 +16,6 @@ export class EmployeeList extends React.Component{
     return(
       <div>
       <div class="row" style={{marginLeft:'0.4vw',marginTop:'1vw'}} id={listfortab}>
-
-
       <CardTemplateTab text={"Albert Walker"}>
        <p className={empDesign}>Test Engineer</p>
        <p className={empId}>E153</p>

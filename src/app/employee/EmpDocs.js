@@ -21,7 +21,6 @@ export class EmpDocs extends React.Component{
 <p className={pageHeading}>Employee Documents</p>
 <hr className={hrStyle}/>
 <Form className={formStyle}>
-
 <div className={floatRight} style={{fontSize:'0.9vw'}} id={slidertext}>
 <p style={{marginTop:'1.5vw'}}>
 <Link to="/PersonalDetails" className={hyperLinkEmployee}>Personal Details</Link></p>
@@ -31,19 +30,13 @@ export class EmpDocs extends React.Component{
 <p><Link to="/JobHistory" className={hyperLinkEmployee}>Job History</Link></p>
 <p><Link to="/EmpDocs" className={orange}>Employee Documents</Link></p>
 </div>
-
       <Row>
-
         <div class="col-md-3 mb-3">
         <p className={styles.file}>
         <input type="file" className={styles.file} />
       </p>
-
         </div>
-
         </Row>
-
-
 </Form>
 
 <div className={bankdiv} style={{marginTop:'10vw'}}>
