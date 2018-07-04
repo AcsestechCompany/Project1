@@ -45,7 +45,7 @@ export class AnnouncementList extends React.Component{
 </tbody>
 </table>
 <span class="btn btn-link" data-toggle="modal" id={modalbutton} data-target="#exampleModalCenter" id={styles.modal}>
-Add Announcemnt
+Add Announcement
    </span>
    <div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">

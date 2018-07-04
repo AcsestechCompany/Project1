@@ -5,13 +5,16 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Icon from 'react-icons-kit';
 import { plus,arrowRight2 } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
-import {displayContainer,floatRight,arrowIcon,hrStyle,pageHeading,orange} from "../Layout.css";
+import {displayContainer,floatRight,arrowIcon,hrStyle,pageHeading,orange,radiostyle,radioinput,radiorow} from "../Layout.css";
 import {inputstyle,formStyle,skipstyle,inputstyletextarea,
 labelStyle1,hyperLinkEmployee,slideremp,sliderline,sliderlineorange,slidertext,dateStyle,errormsg,radiocheck,genderstyle,genderlabel} from "./LayoutEmployee.css";
   import {Header} from "../Header";
   import {Footer} from "../Footer";
 
 export class PersonalDetails extends React.Component{
+  handleClick(){
+
+  }
   render() {
 
     return(
@@ -23,7 +26,6 @@ export class PersonalDetails extends React.Component{
 <hr className={hrStyle}/>
 <Row>
 <Col xs="10">
-
       <Form className={formStyle}>
       <div class="form-row">
         <div class="col-md-5 mb-3">
@@ -52,23 +54,23 @@ export class PersonalDetails extends React.Component{
 
 <p className={genderlabel}>Gender:</p>
                   <div class="col-md-4 mb-5" id={genderstyle}>
-                  <Row>
+                  <Row className={radiorow}>
+                  <FormGroup check>
+                       <Label check className={radioinput}>
+                         <Input type="radio" name="radio1" className={radiostyle}/>
+                         Male
+                       </Label>
+                     </FormGroup>
 
-        <div class="form-check">
-         <input class="form-check-input" type="radio"   checked
-         style={{marginTop:'0.7vw'}}/>
-         <label class="form-check-label" for="gridRadios1" style={{fontSize:'0.8vw',marginTop:'0.4vw',marginLeft:'1vw',color:'grey'}} id={radiocheck}>
-          Male
-         </label>
-       </div>
+                     <FormGroup check>
+                       <Label check className={radioinput}>
+                         <Input type="radio" name="radio1" className={radiostyle} />
+                         Female
+                       </Label>
+                     </FormGroup>
+                     </Row>
 
-       <div class="form-check" style={{marginLeft:'2vw'}}>
-         <input class="form-check-input" type="radio"   style={{marginTop:'0.7vw'}}/>
-         <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginTop:'0.45vw',marginLeft:'1vw',color:'grey',marginRight:'3vw'}} >
-         Female
-         </label>
-       </div>
-       </Row>
+
 </div>
 
           <div class="col-md-5 mb-3" style={{marginLeft:'1vw'}} >
@@ -115,20 +117,16 @@ export class PersonalDetails extends React.Component{
                 <Input type="email"  className={inputstyle} placeholder="" required />
                 </div>
                 </div>
-                  <Input type="submit" value="SAVE" style={{width:'20%'}}/>
+                <button type="submit" onClick={this.handleClick}>save</button>
           </Form>
-
-
           </Col>
           <Col xs="2">  <div  style={{fontSize:'0.9vw',position:'relative',bottom:'-2.5vw'}} id={slidertext}>
             <p>
-
             <Link to="/PersonalDetails" className={orange} >
       Personal Details
             </Link></p>
             <p>
             <Link to="/ProfessionalDetails" className={hyperLinkEmployee}>
-
             Professional Details
             </Link>
             </p>

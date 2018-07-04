@@ -1,3 +1,20 @@
+.radiostyle{
+position:relative;
+right:0.3vw;
+top:0.2vw;
+
+}
+.radioinput{
+  color:black;
+  font-size: 0.9vw;
+  font-weight:normal;
+ font-style:arial;
+}
+.radiorow{
+  position:relative;
+  top:0.3vw;
+  right:2vw;
+}
 @media only screen and (max-width:320px) {
   .hyperLinkLogo{
     font-size:2vw !important;
