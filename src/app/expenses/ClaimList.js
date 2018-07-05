@@ -17,12 +17,10 @@ export class ClaimList extends React.Component{
       <div>
       <Header/>
       <div className={displayContainer}>
-<p className={pageHeading}>Claims
-</p>
+<p className={pageHeading}>Claims</p>
 <hr className={hrStyle}/>
 <span  className={floatRight1}>
 <form class="form-row">
-
 	<input type="search"  placeholder="Search" />
   <div class="dropdown" style={{position:'relative',left:'-1vw'}} >
     <button class="btn  btn-outline-light" type="button" id={btnstyle} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -37,7 +35,6 @@ export class ClaimList extends React.Component{
   </div>
 </form>
 </span>
-
 <table class="table table-bordered table-striped table-responsive-md" id={exampletable}>
 <thead>
     <tr className={orange}>
@@ -68,7 +65,6 @@ export class ClaimList extends React.Component{
          <td></td>
          <td></td>
          <td className={activeStyle}></td>
-
          <td>  <Link to="/AddClaims" className={hyperLink}><Icon icon={ic_create} size={20}/></Link>
 <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={20} /></td>
      </tr>
@@ -76,8 +72,7 @@ export class ClaimList extends React.Component{
      </tbody>
      </table>
      <div className={bankdiv} style={{marginTop:'7vw',marginLeft:'-7.7vw'}}>
-       <Link to="/AddClaims"><button className="btn btn-outline-warning" >
-
+       <Link to="/AddClaims"><button className="btn btn-outline-warning">
        Add New Claim</button></Link>
        </div>
       </div>

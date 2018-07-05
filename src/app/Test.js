@@ -1,39 +1,41 @@
 import React from "react";
+import styles from "./Layout.css";
+import {Header} from "./Header";
+import {Footer} from "./Footer";
+
 const people = [
   { id: 1,
-    first: 'Sarah',
-    last: 'Johnson',
-    age:25
+    empid:'E321',
+    empname: 'Sarah',
+    claimtitle: 'Product Manager',
+    description:'some text',
+    amount:500,
+    date:'09/05/2018',
+    action: 'Edit/Delete'
   },
   { id: 2,
-    first: 'Caldwell',
-    last: 'Thompson',
-    age: 32
+    empid:'E768',
+    empname: 'Kate',
+    claimtitle: 'Software Engineer',
+    description:'some text',
+    amount:500,
+    date:'09/05/2018',
+    action: 'Edit/Delete'
   },
   { id: 3,
-    first: 'Hart',
-    last: 'Maynard',
-    age:45
-  },
-  { id: 4,
-    first: 'David',
-    last: 'jayson',
-    age:45
-  },
-  { id: 5,
-    first: 'Kate',
-    last: 'jenifer',
-    age:45
-  },
-  { id: 6,
-    first: 'Jeff',
-    last: 'winslet',
-    age:45
+    empid:'E456',
+    empname: 'Jim',
+    claimtitle: 'Operation Manager',
+    description:'some text',
+    amount:500,
+    date:'09/05/2018',
+    action: 'Edit/Delete'
   }
+
 ]
 function searchingFor(term){
   return function(x){
-    return x.last.toLowerCase().includes(term.toLowerCase()) || x.first.toLowerCase().includes(term.toLowerCase()) ;
+    return x.empid.toLowerCase().includes(term.toLowerCase()) || x.jobtitle.toLowerCase().includes(term.toLowerCase()) ;
   }
 }
 
@@ -46,7 +48,6 @@ export class Test extends React.Component{
         term:''
       }
       this.searchHandler = this.searchHandler.bind(this)
-
   }
   searchHandler(event){
     this.setState({
@@ -55,38 +56,46 @@ export class Test extends React.Component{
   }
   render(){
     return(
-      <div>
+      <div >
+      <Header/>
+      <div className={styles.displayContainer}>
+<p className={styles.pageHeading}>Payments</p>
+<hr className={styles.hrStyle}/>
       <form>
-      <input type="text"
+      <span className={styles.floatRight1}>
+      <input type="search"
 onChange={this.searchHandler}
        />
+       </span>
       </form>
-      <table class="table table-bordered">
-      <tr>
-      <th>First Name </th>
-      <th> Last Name </th>
-      <th> Age </th>
-
+      <table class="table table-bordered  table-responsive-md" id={styles.exampletable}>
+      <tr className={styles.orange}>
+      <th>Employee ID </th>
+      <th> Employee Name </th>
+      <th> Claim Title</th>
+      <th> Description </th>
+      <th>Amount</th>
+      <th> Date</th>
+      <th> Actions </th>
       </tr>
 {
 this.state.people.filter(searchingFor(this.state.term)).map(function(person){
     return (
-
-
       <tr  key={person.id}>
-      <td>{person.first}</td>
-      <td>{person.last}</td>
-      <td> {person.age} </td>
+      <td>{person.empid}</td>
+      <td>{person.empname}</td>
+      <td> {person.claimtitle} </td>
+        <td> {person.description} </td>
+          <td> {person.amount} </td>
+            <td> {person.date} </td>
+              <td> {person.action} </td>
       </tr>
-
-
     )
   })
 }
 </table>
-
-
-
+       </div>
+       <Footer/>
        </div>
     );
   }

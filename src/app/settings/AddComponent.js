@@ -24,7 +24,6 @@ export class AddComponent extends React.Component{
 <Row>
 <Col>
      <Form className={formStyle}>
-
        <div class="form-row">
        <div class="col-md-10 mb-3">
          <label className={labelStyle1}>Component Name</label>
@@ -35,14 +34,14 @@ export class AddComponent extends React.Component{
        <div class="col-md-5 mb-3">
        <label className={labelStyle1}>Calculation On</label>
        <Input type="select" name="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" required>
-       <option></option>
+              <option></option>
               <option>Basic Pay</option>
             </Input>
        </div>
 <div class="col-md-5 mb-3">
 <label className={labelStyle1}>Taxable</label>
 <Input type="select" name="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" required>
-<option></option>
+       <option></option>
        <option>Yes</option>
        <option>No</option>
      </Input>
@@ -56,7 +55,7 @@ export class AddComponent extends React.Component{
            <div class="col-md-5 mb-3">
            <label className={labelStyle1}>Component Type</label>
            <Input type="select" name="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" required>
-           <option></option>
+                  <option></option>
                   <option>Select</option>
                   <option></option>
 
@@ -65,10 +64,9 @@ export class AddComponent extends React.Component{
 <div class="col-md-5 mb-3">
 <label className={labelStyle1}>Amount Type</label>
 <Input type="select" name="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" required>
-<option></option>
+       <option></option>
        <option>Monthly</option>
        <option>Weekly</option>
-
      </Input>
 </div>
       </div>
@@ -77,7 +75,6 @@ export class AddComponent extends React.Component{
     <div class="col-sm-7">
     <Row className={overtimePay}>
     <p style={{fontWeight:'lighter',fontSize:'0.9vw'}}>Status</p>
-
  </Row>
  <div className={radiodiv} style={{marginBottom:'-2vw'}}>
  <div class="form-check">
@@ -127,21 +124,15 @@ export class AddComponent extends React.Component{
           <p><Link to="/AddLeave" className={hyperLinkEmployee}>Leave Types</Link></p>
           <p><Link to="/AddComponent" className={orange}>Salary Components</Link></p>
           </div>
-
              </Col>
              </Row>
        <Button className="btn btn-outline-warning" id={savebtn}>
        <Link to="/Home" className={hyperLink}>Save</Link></Button>
-
              <span className={floatRight}>
-
-
              <Link to="/AddLeave" className={hyperLinkEmployee} style={{position:'relative',top:'0.85vw'}}>
              <button type="button" class="btn btn-light">
              <Icon icon={arrowLeft2} className={arrowIcon} size={14} />Prev </button>
                </Link>
-
-
                 </span>
       </div>
       <Footer/>
