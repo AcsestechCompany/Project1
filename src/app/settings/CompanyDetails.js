@@ -63,13 +63,13 @@ import {formStyle,floatRight} from "./LayoutSettings.css";
         <div class="form-row">
         <div class="col-md-12 mb-3">
           <label className={labelStyle1}>Address</label>
-        <Input type="text"  className={inputstyletextarea} placeholder="" pattern="[a-z]{5,25}" required />
+        <Input type="text"  className={inputstyletextarea} placeholder="" pattern="[a-zA-Z0-9]{5,25}" required />
         </div>
         </div>
         <div class="form-row">
         <div class="col-md-5 mb-3">
          <label className={labelStyle1}>State</label>
-         <Input type="select" name="select" className={inputstyle} pattern="[a-z]{5,25}" required>
+         <Input type="select" name="select" className={inputstyle} pattern="[a-zA-z]{5,25}" required>
          <option></option>
           <option>Telangana</option>
           <option>Hyderabad</option>
@@ -77,7 +77,7 @@ import {formStyle,floatRight} from "./LayoutSettings.css";
        </div>
      <div class="col-md-5 mb-3">
       <label className={labelStyle1}>Country</label>
-      <Input type="select" name="select" className={inputstyle} pattern="[a-z]{5,25}" required>
+      <Input type="select" name="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" required>
            <option></option>
            <option>India</option>
            <option>England</option>
@@ -86,12 +86,12 @@ import {formStyle,floatRight} from "./LayoutSettings.css";
   </div>
 <FormGroup>
 <Label className={labelStyle1}>Description</Label>
-<Input type="text"  className={inputstyletextarea} placeholder="" pattern="[a-z]{5,25}" required/>
+<Input type="text"  className={inputstyletextarea} placeholder="" pattern="[a-zA-Z]{5,25}" required/>
  </FormGroup>
   <div class="form-row">
     <div class="col-md-5 mb-3">
       <label className={labelStyle1}>Phone Number</label>
-    <Input type="text"  className={inputstyle} placeholder="" required/>
+<Input type="tel" pattern="^\d{10}$" className={inputstyle} placeholder="Eg.8978987898"   required/>
     </div>
     <div class="col-md-5 mb-3">
       <label className={labelStyle1}>Email ID</label>
@@ -136,16 +136,7 @@ import {formStyle,floatRight} from "./LayoutSettings.css";
           <Input type="text"  className={inputstyle} placeholder="" pattern="[a-zA-Z0-9]{5,25}" required />
               </div>
               </div>
-              <div class="form-row">
-                <div class="col-md-4 mb-3">
-                  <label className={labelStyle1}>TDS Location</label>
-      <Input type="text"  className={inputstyle} placeholder="" pattern="[a-zA-Z]{5,25}" required />
-                </div>
-                <div class="col-md-4 mb-3">
-                  <label className={labelStyle1}>Form 16 Signatory</label>
-              <Input type="text"  className={inputstyle} placeholder="" pattern="[a-z]{5,25}" required />
-                </div>
-                </div>
+
                         <p><Link to="/AttendanceSettings"><button type="button" class="btn btn-outline-warning" id={savebtn} >
                         Save</button></Link>
                         <span className={floatRight} style={{position:'relative',top:'0.85vw'}}>

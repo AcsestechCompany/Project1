@@ -31,30 +31,30 @@ export class AddLeave extends React.Component{
        <div class="col-md-10 mb-3">
 
          <label className={labelStyle1}>Leave Name</label>
-           <Input type="text"  className={inputstyle} placeholder="" pattern="[a-z]{5,25}" required/>
+           <Input type="text"  className={inputstyle} placeholder="" pattern="[a-zA-Z]{5,25}" required/>
          </div>
          </div>
 
        <div class="form-row">
          <div class="col-md-5 mb-3">
            <label className={labelStyle1}>Total Count</label>
-            <Input type="text"  className={inputstyle} placeholder="" pattern="[a-z]{5,25}" required />
+            <Input type="text"  className={inputstyle} placeholder="" pattern="[0-9]{1,25}" required />
 
          </div>
          <div class="col-md-5 mb-3">
            <label className={labelStyle1}>Maximum Leaves Per Month</label>
-          <Input type="text"  className={inputstyle} placeholder="" pattern="[a-z]{5,25}" required />
+          <Input type="text"  className={inputstyle} placeholder="" pattern="[0-9]{2,25}" required />
 
          </div>
          </div>
        <FormGroup>
             <Label className={labelStyle1}>Description</Label>
-            <Input className={inputstyletextarea} type="textarea" name="text" pattern="[a-z]{5,25}" required/>
+            <Input className={inputstyletextarea} type="textarea" name="text" pattern="[a-zA-Z0-9]{5,25}" required/>
           </FormGroup>
            <div class="form-row">
            <div class="col-md-5 mb-3">
            <label className={labelStyle1}>In Probation</label>
-           <Input type="select" name="select" className={inputstyle} pattern="[a-z]{5,25}" required>
+           <Input type="select" name="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" required>
            <option></option>
        <option>Yes</option>
        <option>No</option>
@@ -63,7 +63,7 @@ export class AddLeave extends React.Component{
            </div>
 <div class="col-md-5 mb-3">
 <label className={labelStyle1}>Half Day</label>
-<Input type="select" name="select" className={inputstyle} pattern="[a-z]{5,25}" required>
+<Input type="select" name="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" required>
        <option></option>
        <option>Approved</option>
        <option>Rejected</option>

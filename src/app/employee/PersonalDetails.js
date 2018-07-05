@@ -33,7 +33,7 @@ pattern="[a-zA-Z]{5,25}"
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>DOB</label>
-        <Input type="date" className={radiostyle} required/>
+        <Input type="date" className={inputstyle} required/>
         </div>
         </div>
         <div class="form-row">
@@ -83,7 +83,7 @@ pattern="[a-zA-Z]{5,25}"
             </div>
             <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Phone</label>
-              <Input type="text" pattern="^\d{10}$" className={inputstyle} placeholder="Eg.8978987898"   required/>
+              <Input type="tel" pattern="^\d{10}$" className={inputstyle} placeholder="Eg.8978987898"   required/>
             </div>
             </div>
               <div class="form-row">

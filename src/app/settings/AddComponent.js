@@ -28,20 +28,20 @@ export class AddComponent extends React.Component{
        <div class="form-row">
        <div class="col-md-10 mb-3">
          <label className={labelStyle1}>Component Name</label>
-         <Input type="text"  className={inputstyle} placeholder="" pattern="[a-z]{5,25}" required />
+         <Input type="text"  className={inputstyle} placeholder="" pattern="[a-zA-Z]{5,25}" required />
          </div>
          </div>
        <div class="form-row">
        <div class="col-md-5 mb-3">
        <label className={labelStyle1}>Calculation On</label>
-       <Input type="select" name="select" className={inputstyle} pattern="[a-z]{5,25}" required>
+       <Input type="select" name="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" required>
        <option></option>
               <option>Basic Pay</option>
             </Input>
        </div>
 <div class="col-md-5 mb-3">
 <label className={labelStyle1}>Taxable</label>
-<Input type="select" name="select" className={inputstyle} pattern="[a-z]{5,25}" required>
+<Input type="select" name="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" required>
 <option></option>
        <option>Yes</option>
        <option>No</option>
@@ -50,21 +50,21 @@ export class AddComponent extends React.Component{
   </div>
        <FormGroup>
             <Label className={labelStyle1}>Description</Label>
-            <Input className={inputstyletextarea} type="textarea" name="text" pattern="[a-z]{5,25}" required />
+            <Input className={inputstyletextarea} type="textarea" name="text" pattern="[a-zA-Z]{5,25}" required />
           </FormGroup>
            <div class="form-row">
            <div class="col-md-5 mb-3">
            <label className={labelStyle1}>Component Type</label>
-           <Input type="select" name="select" className={inputstyle} pattern="[a-z]{5,25}" required>
+           <Input type="select" name="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" required>
            <option></option>
-                  <option></option>
+                  <option>Select</option>
                   <option></option>
 
                 </Input>
            </div>
 <div class="col-md-5 mb-3">
 <label className={labelStyle1}>Amount Type</label>
-<Input type="select" name="select" className={inputstyle} pattern="[a-z]{5,25}" required>
+<Input type="select" name="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" required>
 <option></option>
        <option>Monthly</option>
        <option>Weekly</option>
