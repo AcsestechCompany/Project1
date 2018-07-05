@@ -19,7 +19,7 @@ export class BankDetails extends React.Component{
     super(props);
     this.nextmanual=this.nextmanual.bind(this);
     this.nextauto=this.nextauto.bind(this);
-    this.handleChange=this.handleChange.bind(this);
+    
 
     this.state = {
       manualcomponents:false,
@@ -53,11 +53,7 @@ export class BankDetails extends React.Component{
         );
       }
     }
-    handleChange(e){
-      this.setState({
-        AnnualCTC: e.target.value
-      });
-    }
+
   render() {
 var manualcomponents = this.manualdisplay();
 var autocomponents = this.autodisplay();
@@ -115,16 +111,15 @@ var autocomponents = this.autodisplay();
 <div class="form-row">
   <div class="col-md-3 mb-3">
     <label className={labelStyle1}>Annual CTC</label>
-    <Input type="text"  className={inputstyle} pattern="^\d{1,10}$" 
-    value={this.state.AnnualCTC}
-  onChange={this.handleChange}
+    <Input type="text"  className={inputstyle} pattern="^\d{1,10}$"
+
 
      required/>
   </div>
   <div class="col-md-3 mb-3">
     <label className={labelStyle1}>Monthly CTC</label>
   <Input type="text"  className={inputstyle}  maxlength={25}
-  value={this.state.AnnualCTC/12}
+
   required/>
   </div>
   </div>

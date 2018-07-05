@@ -59,26 +59,18 @@ export class JobHistory extends React.Component{
           <Input type="text"  className={inputstyle} placeholder=""  pattern="[A-Za-z]{1,25}$" required/>
           </div>
           </div>
+
         <div class="form-row">
-        <div class="col-md-5 mb-3">
-          <label className={labelStyle1}>Start Date</label>
-          <MuiThemeProvider>
-    <DatePicker hintText="date of joining"
-    underlineStyle={{display: 'none'}}
-    textFieldStyle={{position:'relative',bottom:'0.75vw',color:'lightgray'}}
-    className={dateStyle} style={{border:'1px solid #D0D3D4',height:'2vw'}} required/>
-        </MuiThemeProvider>
-        </div>
-        <div class="col-md-5 mb-3">
-          <label className={labelStyle1}>End Date</label>
-          <MuiThemeProvider>
-    <DatePicker hintText="date of joining"
-    underlineStyle={{display: 'none'}}
-    textFieldStyle={{position:'relative',bottom:'0.75vw',color:'lightgray'}}
-    className={dateStyle} style={{border:'1px solid #D0D3D4',height:'2vw'}} required/>
-        </MuiThemeProvider>
-        </div>
+          <div class="col-md-5 mb-3">
+            <label className={labelStyle1}>Designation</label>
+            <Input type="date"  className={inputstyle} placeholder=""  required/>
           </div>
+          <div class="col-md-5 mb-3">
+            <label className={labelStyle1}>Reporting Mananger</label>
+          <Input type="date"  className={inputstyle} placeholder=""   required/>
+          </div>
+          </div>
+
             <Input type="submit" value="ADD"  className={savebtn1} style={{width:'20%',marginLeft:'8vw'}}/>
 </Form>
 <div className={bankdiv}>

@@ -12,6 +12,7 @@ import {EventsListEmp} from "./EmployeeModule/EventsListEmp";
 import {AnnouncementListEmp} from "./EmployeeModule/AnnouncementListEmp";
 import {Home} from "./home/Home";
 import {Testing} from "./Testing";
+
 import {EmploymentStatus} from "./home/EmploymentStatus";
 import {EventsList} from "./home/EventsList";
 import {AnnouncementList} from "./home/AnnouncementList";
@@ -82,6 +83,7 @@ export class App extends React.Component {
 <Route path="/Login" component={Login}/>
               <Route path="/Home" component={Home}/>
               <Route path="/Testing" component={Testing}/>
+
               <Route path="/EmployeeHome" component={EmployeeHome}/>
               <Route path="/EmployeeAttendance" component={EmployeeAttendance}/>
               <Route path="/EmployeeLeaves" component={EmployeeLeaves}/>

@@ -71,7 +71,7 @@ pattern="[a-z]{5,25}"
           </div>
           <div class="form-group">
       <label className={labelStyle1}>Permanent Address</label>
-      <Input type="textarea" className={inputstyletextarea} pattern="[a-z]{15,25}" required/>
+      <Input type="textarea" className={inputstyletextarea} pattern="[a-z]{3,25}" required/>
     </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
@@ -80,7 +80,7 @@ pattern="[a-z]{5,25}"
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Marital Status</label>
-          <Input type="text"  className={inputstyle} placeholder="" maxlength={9} required/>
+          <Input type="text"  className={inputstyle} placeholder="" pattern="[a-z]{5,25}" required/>
           </div>
           </div>
 
@@ -112,7 +112,7 @@ pattern="[a-z]{5,25}"
           <Col xs="2">  <div  style={{fontSize:'0.9vw',position:'relative',bottom:'-2.5vw'}} id={slidertext}>
             <p>
             <Link to="/PersonalDetails" className={orange} >
-      Personal Details
+                  Personal Details
             </Link></p>
             <p>
             <Link to="/ProfessionalDetails" className={hyperLinkEmployee}>
@@ -120,18 +120,13 @@ pattern="[a-z]{5,25}"
             </Link>
             </p>
             <p><Link to="/BankDetails" className={hyperLinkEmployee}>
-
             Bank Details</Link></p>
             <p><Link to="/LoginInfo" className={hyperLinkEmployee}>Login Information</Link></p>
             <p><Link to="/JobHistory" className={hyperLinkEmployee}>Job History</Link></p>
             <p><Link to="/EmpDocs" className={hyperLinkEmployee}>Employee Documents</Link></p>
             </div>
           </Col>
-
-
           </Row>
-
-
           <Link to="/ProfessionalDetails"  id={skipstyle}>Skip</Link>
           <span className={floatRight}>
    <Link to="/ProfessionalDetails" className={hyperLinkEmployee}>

@@ -349,12 +349,11 @@ background-color:red;
   box-shadow:none !important;
    border-color:#D7D7D7 ;
 }
-.inputstylename:valid {
-   border: 1px solid lime;
+DatePicker:valid{
+  border: 1px solid lime;
 }
-
-.inputstylename:invalid {
-   border: 1px solid #F94D28;
+DatePicker:invalid{
+     border: 1px solid red;
 }
 .inputstyle:valid {
    border: 1px solid lime;

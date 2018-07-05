@@ -1,18 +1,10 @@
 import React from "react";
-import {render} from "react-dom";
 import { Button, Form, FormGroup, Label, Input, FormText,Row } from 'reactstrap';
-import DatePicker from 'material-ui/DatePicker';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import TextField from 'material-ui/TextField';
 import Icon from 'react-icons-kit';
 import {filter} from "react-icons-kit/fa/filter";
 import { ic_mail,ic_delete } from 'react-icons-kit/md/';
 import { plus,bin,search,bin2,glass2, eye } from 'react-icons-kit/icomoon/';
-import {Link} from "react-router-dom";
-import {inProgress,closed} from "../projects/Projects.css";
-import {displayContainer,pageHeading,hrStyle,labelStyle,inputstyle,hyperLink,formStyle,inputStyle,textAreaStyle,tableDiv,
-  inputStyle1,labelStyle1,addNewDepartmentStyle,floatRight1,verticalLine,dropDownInputStyle,buttonstyle,divStyle,radioStyle1,
-  boxText,imageText,radioStyle,labelStyleRadio,imageInput,contentStyle,iconStyle,activeStyle,orange,exampletable,btnstyle} from "../Layout.css";
+import styles from "../Layout.css";
 import {Header} from "../Header";
 import {Footer} from "../Footer";
 
@@ -21,16 +13,16 @@ export class Statement extends React.Component{
     return(
       <div>
       <Header/>
-      <div className={displayContainer}>
-<p className={pageHeading}>Statement
+      <div className={styles.displayContainer}>
+<p className={styles.pageHeading}>Statement
 </p>
-<hr className={hrStyle}/>
-<span  className={floatRight1}>
+<hr className={styles.hrStyle}/>
+<span  className={styles.floatRight1}>
 <form class="form-row">
 
 	<input type="search"  placeholder="Search" />
   <div class="dropdown" style={{position:'relative',left:'-1vw'}} >
-    <button class="btn  btn-outline-light" type="button" id={btnstyle} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button class="btn  btn-outline-light" type="button" id={styles.btnstyle} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <Icon icon={filter} />
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -43,9 +35,9 @@ export class Statement extends React.Component{
 </form>
 </span>
 
-<table class="table table-bordered table-striped table-responsive-md" id={exampletable}>
+<table class="table table-bordered table-striped table-responsive-md" id={styles.exampletable}>
 <thead>
-      <tr className={orange}>
+      <tr className={styles.orange}>
           <th>Employee ID</th>
           <th>Employee Name</th>
           <th>Job Title</th>

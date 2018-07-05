@@ -79,11 +79,11 @@ export class ProfessionalDetails extends React.Component{
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>First Name</label>
-          <Input type="text"  className={inputstyle} placeholder="" maxlength={25} required/>
+          <Input type="text"  className={inputstyle} placeholder="" pattern="[a-z]{5,25}" required/>
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Last Name</label>
-          <Input type="text"  className={inputstyle} placeholder="" maxlength={25} required/>
+          <Input type="text"  className={inputstyle} placeholder="" pattern="[a-z]{5,25}"  required/>
         </div>
         </div>
         <div class="form-row">
@@ -96,11 +96,12 @@ export class ProfessionalDetails extends React.Component{
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Employee ID</label>
-              <Input type="text"  className={inputstyle} placeholder="" maxlength={10} required />
+              <Input type="text"  className={inputstyle} placeholder="" pattern="[a-zA-Z0-9]{5,25}" required />
           </div>
           <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Designation</label>
-          <Input type="select" className={inputstyle}>
+          <Input type="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" required>
+          <option></option>
           <option>Manager</option>
           <option>Team Lead</option>
         </Input>
@@ -109,14 +110,16 @@ export class ProfessionalDetails extends React.Component{
         <div class="form-row">
         <div class="col-md-5 mb-3">
         <label className={labelStyle1}>Department</label>
-        <Input type="select" className={inputstyle}>
+        <Input type="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" required>
+        <option></option>
         <option>Marketing</option>
         <option>Finance</option>
       </Input>
         </div>
         <div class="col-md-5 mb-3">
         <label className={labelStyle1}>Employment Type</label>
-        <Input type="select" className={inputstyle}>
+        <Input type="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" required>
+        <option></option>
         <option>Full Time</option>
         <option>Part Time</option>
       </Input>
@@ -125,23 +128,18 @@ export class ProfessionalDetails extends React.Component{
           <div class="form-row">
           <div class="col-md-10 mb-3">
           <label className={labelStyle1}>Reporting Manager</label>
-            <Input type="text"  className={inputstyle} placeholder="" maxlength={25} required/>
+            <Input type="text"  className={inputstyle} placeholder="" pattern="[a-zA-Z]{5,25}" required/>
           </div>
           </div>
           <div class="form-row">
-            <div class="col-md-5 mb-3">
-              <label className={labelStyle1}>Date of Joining</label>
-              <MuiThemeProvider>
-        <DatePicker hintText="date of joining"
-       className={dateStyle}
-       underlineStyle={{display:'none'}}
-       textFieldStyle={{position:'relative',bottom:'0.6vw',color:'lightgray'}}
-       style={{border:'1px solid #D0D3D4'}}  required/>
-            </MuiThemeProvider>
-            </div>
+          <div class="col-md-5 mb-3">
+          <label className={labelStyle1}>Reporting Manager</label>
+            <Input type="date"  className={inputstyle} placeholder=""  required/>
+          </div>
             <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Location</label>
-            <Input type="select" className={inputstyle}>
+            <Input type="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" required>
+            <option></option>
             <option>Hyderabad</option>
             <option>Bangalore</option>
           </Input>
