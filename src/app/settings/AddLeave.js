@@ -31,30 +31,31 @@ export class AddLeave extends React.Component{
        <div class="col-md-10 mb-3">
 
          <label className={labelStyle1}>Leave Name</label>
-           <Input type="text"  className={inputstyle} placeholder="" />
+           <Input type="text"  className={inputstyle} placeholder="" pattern="[a-z]{5,25}" required/>
          </div>
          </div>
 
        <div class="form-row">
          <div class="col-md-5 mb-3">
            <label className={labelStyle1}>Total Count</label>
-            <Input type="text"  className={inputstyle} placeholder="" />
+            <Input type="text"  className={inputstyle} placeholder="" pattern="[a-z]{5,25}" required />
 
          </div>
          <div class="col-md-5 mb-3">
            <label className={labelStyle1}>Maximum Leaves Per Month</label>
-          <Input type="text"  className={inputstyle} placeholder="" />
+          <Input type="text"  className={inputstyle} placeholder="" pattern="[a-z]{5,25}" required />
 
          </div>
          </div>
        <FormGroup>
             <Label className={labelStyle1}>Description</Label>
-            <Input className={inputstyletextarea} type="textarea" name="text"/>
+            <Input className={inputstyletextarea} type="textarea" name="text" pattern="[a-z]{5,25}" required/>
           </FormGroup>
            <div class="form-row">
            <div class="col-md-5 mb-3">
            <label className={labelStyle1}>In Probation</label>
-           <Input type="select" name="select" className={inputstyle}>
+           <Input type="select" name="select" className={inputstyle} pattern="[a-z]{5,25}" required>
+           <option></option>
        <option>Yes</option>
        <option>No</option>
 
@@ -62,7 +63,8 @@ export class AddLeave extends React.Component{
            </div>
 <div class="col-md-5 mb-3">
 <label className={labelStyle1}>Half Day</label>
-<Input type="select" name="select" className={inputstyle}>
+<Input type="select" name="select" className={inputstyle} pattern="[a-z]{5,25}" required>
+       <option></option>
        <option>Approved</option>
        <option>Rejected</option>
 
@@ -71,12 +73,9 @@ export class AddLeave extends React.Component{
       </div>
       <Row className={overtimePay}>
       <p style={{fontWeight:'lighter',fontSize:'0.9vw'}}>Status</p>
-
-
    <div  style={{marginLeft:'3vw'}}>
    <div class="form-check">
-     <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked
-    />
+     <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked/>
      <label class="form-check-label" for="gridRadios1" style={{fontSize:'0.8vw',marginLeft:'1vw'}} id={radiocheck}>
        Active
      </label>
@@ -117,19 +116,11 @@ export class AddLeave extends React.Component{
       <Icon icon={arrowLeft2} className={arrowIcon} size={14} />Prev </button>
         </Link>
 
-
       <Link to="/AddComponent" className={hyperLinkEmployee} >
       <button type="button" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIcon} /></button>
       </Link>
          </span>
        </p>
-
-
-
-
-
-
-
       </div>
       <Footer/>
       </div>

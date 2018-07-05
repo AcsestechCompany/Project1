@@ -38,27 +38,22 @@ import {formStyle,floatRight} from "./LayoutSettings.css";
         <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Organization Name</label>
-          <Input type="text"  className={inputstyle} placeholder="" />
+          <Input type="text"  className={inputstyle} placeholder="" pattern="[a-z]{5,25}" required />
         </div>
         <div class="col-md-5 mb-3">
-
           <label className={labelStyle1}>Website URL</label>
-      <Input type="text"  className={inputstyle} placeholder="" />
+         <Input type="text"  className={inputstyle} placeholder="" pattern="^(http?://)?([a-zA-Z0-9]([a-zA-ZäöüÄÖÜ0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,6}$" required />
         </div>
         </div>
         <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Financial Year Start Month</label>
-          <MuiThemeProvider>
-    <DatePicker value={this.state.controlledDate}
-     onChange={this.handleChange}
-     underlineStyle={{display: 'none'}} className={dateStyle} style={{border:'1px solid #D0D3D4'}}
-     textFieldStyle={{position:'relative',bottom:'0.6vw',color:'grey'}}/>
-        </MuiThemeProvider>
+      <Input type="date"  className={inputstyle} placeholder="" required />
         </div>
       <div class="col-md-5 mb-3">
       <label className={labelStyle1}>Business Type</label>
-      <Input type="select" name="select" className={inputstyle}>
+      <Input type="select" name="select" className={inputstyle} required>
+             <option></option>
              <option>1</option>
              <option>2</option>
 
@@ -68,20 +63,22 @@ import {formStyle,floatRight} from "./LayoutSettings.css";
         <div class="form-row">
         <div class="col-md-12 mb-3">
           <label className={labelStyle1}>Address</label>
-        <Input type="text"  className={inputstyletextarea} placeholder="" />
+        <Input type="text"  className={inputstyletextarea} placeholder="" pattern="[a-z]{5,25}" required />
         </div>
         </div>
         <div class="form-row">
         <div class="col-md-5 mb-3">
          <label className={labelStyle1}>State</label>
-         <Input type="select" name="select" className={inputstyle}>
+         <Input type="select" name="select" className={inputstyle} pattern="[a-z]{5,25}" required>
+         <option></option>
           <option>Telangana</option>
           <option>Hyderabad</option>
         </Input>
        </div>
      <div class="col-md-5 mb-3">
       <label className={labelStyle1}>Country</label>
-      <Input type="select" name="select" className={inputstyle}>
+      <Input type="select" name="select" className={inputstyle} pattern="[a-z]{5,25}" required>
+           <option></option>
            <option>India</option>
            <option>England</option>
          </Input>
@@ -89,16 +86,16 @@ import {formStyle,floatRight} from "./LayoutSettings.css";
   </div>
 <FormGroup>
 <Label className={labelStyle1}>Description</Label>
-<Input type="text"  className={inputstyletextarea} placeholder="" />
+<Input type="text"  className={inputstyletextarea} placeholder="" pattern="[a-z]{5,25}" required/>
  </FormGroup>
   <div class="form-row">
     <div class="col-md-5 mb-3">
       <label className={labelStyle1}>Phone Number</label>
-    <Input type="text"  className={inputstyle} placeholder="" />
+    <Input type="text"  className={inputstyle} placeholder="" required/>
     </div>
     <div class="col-md-5 mb-3">
       <label className={labelStyle1}>Email ID</label>
-<Input type="text"  className={inputstyle} placeholder="" />
+<Input type="email"  className={inputstyle} placeholder="" required/>
     </div>
     </div>
            </Form>
@@ -121,32 +118,32 @@ import {formStyle,floatRight} from "./LayoutSettings.css";
           <div class="form-row">
             <div class="col-md-4 mb-3">
               <label className={labelStyle1}>Registration Number</label>
-            <Input type="text"  className={inputstyle} placeholder="" />
+            <Input type="text"  className={inputstyle} placeholder="" pattern="[a-zA-Z0-9]{5,25}" required/>
 
             </div>
             <div class="col-md-4 mb-3">
               <label className={labelStyle1}>PAN</label>
-    <Input type="text"  className={inputstyle} placeholder="" />
+    <Input type="text"  className={inputstyle} placeholder="" pattern="[a-zA-Z0-9]{5,25}" required />
             </div>
             </div>
             <div class="form-row">
               <div class="col-md-4 mb-3">
                 <label className={labelStyle1}>TAN</label>
-                <Input type="text"  className={inputstyle} placeholder="" />
+                <Input type="text"  className={inputstyle} placeholder="" pattern="[a-zA-Z0-9]{5,25}" required />
               </div>
               <div class="col-md-4 mb-3">
                 <label className={labelStyle1}>TAN Circle Number</label>
-          <Input type="text"  className={inputstyle} placeholder="" />
+          <Input type="text"  className={inputstyle} placeholder="" pattern="[a-zA-Z0-9]{5,25}" required />
               </div>
               </div>
               <div class="form-row">
                 <div class="col-md-4 mb-3">
                   <label className={labelStyle1}>TDS Location</label>
-      <Input type="text"  className={inputstyle} placeholder="" />
+      <Input type="text"  className={inputstyle} placeholder="" pattern="[a-zA-Z]{5,25}" required />
                 </div>
                 <div class="col-md-4 mb-3">
                   <label className={labelStyle1}>Form 16 Signatory</label>
-              <Input type="text"  className={inputstyle} placeholder="" />
+              <Input type="text"  className={inputstyle} placeholder="" pattern="[a-z]{5,25}" required />
                 </div>
                 </div>
                         <p><Link to="/AttendanceSettings"><button type="button" class="btn btn-outline-warning" id={savebtn} >

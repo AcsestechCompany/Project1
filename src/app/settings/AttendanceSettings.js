@@ -45,62 +45,32 @@ export class AttendanceSettings extends React.Component {
             <div class="form-row">
             <div class="col-md-10 mb-3">
                 <label className={labelStyle1}>Shift Name</label>
-        <Input type="text" className={inputstyle} placeholder="" />
+        <Input type="text" className={inputstyle} placeholder="" pattern="[a-z]{5,25}" required />
                 </div>
                 </div>
-
-
               <div class="form-row">
               <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Work Start Time</label>
-              <MuiThemeProvider>
-              <TimePicker
-           format="ampm"
-
-           value={this.state.valueStart}
-           onChange={this.handleChangeTimePickerStart}
-           underlineStyle={{display: 'none'}}
-           className={timeStyle}
-           style={{border:'1px solid #D0D3D4'}}
-         />
-         </MuiThemeProvider>
+         <Input className={inputstyle} type="date" name="text"  required  />
              </div>
              <div class="col-md-5 mb-3">
              <label className={labelStyle1}>Work End Time</label>
-             <MuiThemeProvider>
-             <TimePicker
-          format="ampm"
-
-          value={this.state.valueEnd}
-          onChange={this.handleChangeTimePickerEnd}
-          underlineStyle={{display: 'none'}}
-          className={timeStyle}
-          style={{border:'1px solid #D0D3D4'}}
-        />
-        </MuiThemeProvider>
+           <Input className={inputstyle} type="date" name="text"  required  />
             </div>
             </div>
               <FormGroup>
                    <Label className={labelStyle1}>Description</Label>
-                   <Input className={inputstyletextarea} type="textarea" name="text"  />
+                   <Input className={inputstyletextarea} type="textarea" name="text" pattern="[a-z]{5,25}" required  />
                  </FormGroup>
                  <div class="form-row">
                  <div class="col-md-5 mb-3">
                  <label className={labelStyle1}>Late Mark After Time</label>
-                 <MuiThemeProvider>
-                 <TimePicker
-              format="ampm"
-              value={this.state.valueEnd}
-              onChange={this.handleChangeTimePickerLateMark}
-              underlineStyle={{display: 'none'}}
-              className={timeStyle}
-              style={{border:'1px solid #D0D3D4'}}
-            />
-            </MuiThemeProvider>
+             <Input className={inputstyle} type="date" name="text"  required  />
                 </div>
                 <div class="col-md-5 mb-3">
                  <label className={labelStyle1}>Over Time</label>
-                 <Input type="select" name="select" className={inputstyle}>
+                 <Input type="select" name="select" className={inputstyle} pattern="[a-z]{5,25}" required>
+                 <option></option>
                       <option>Enable</option>
                       <option>Disable</option>
                     </Input>

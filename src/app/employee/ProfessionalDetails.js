@@ -79,11 +79,11 @@ export class ProfessionalDetails extends React.Component{
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>First Name</label>
-          <Input type="text"  className={inputstyle} placeholder="" pattern="[a-z]{5,25}" required/>
+          <Input type="text"  className={inputstyle} placeholder="" pattern="[a-zA-Z]{5,25}" required/>
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Last Name</label>
-          <Input type="text"  className={inputstyle} placeholder="" pattern="[a-z]{5,25}"  required/>
+          <Input type="text"  className={inputstyle} placeholder="" pattern="[a-zA-Z]{5,25}"  required/>
         </div>
         </div>
         <div class="form-row">
@@ -133,7 +133,7 @@ export class ProfessionalDetails extends React.Component{
           </div>
           <div class="form-row">
           <div class="col-md-5 mb-3">
-          <label className={labelStyle1}>Reporting Manager</label>
+          <label className={labelStyle1}>Date Of Joining</label>
             <Input type="date"  className={inputstyle} placeholder=""  required/>
           </div>
             <div class="col-md-5 mb-3">
@@ -180,16 +180,12 @@ export class ProfessionalDetails extends React.Component{
              <button type="button" class="btn btn-light">
              <Icon icon={arrowLeft2} className={arrowIconL} size={14} />Prev </button>
                </Link>
-
-
              <Link to="/BankDetails" className={hyperLinkEmployee} >
              <button type="button" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIconR} /></button>
              </Link>
                 </span>
  </div>
  </Form>
-
-
           </Col>
           <Col>
           <div className={floatRight} style={{fontSize:'0.9vw'}} id={slidertext}>
