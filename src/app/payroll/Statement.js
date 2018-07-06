@@ -1,89 +1,114 @@
 import React from "react";
-import { Button, Form, FormGroup, Label, Input, FormText,Row } from 'reactstrap';
-import Icon from 'react-icons-kit';
-import {filter} from "react-icons-kit/fa/filter";
-import { ic_mail,ic_delete } from 'react-icons-kit/md/';
-import { plus,bin,search,bin2,glass2, eye } from 'react-icons-kit/icomoon/';
 import styles from "../Layout.css";
 import {Header} from "../Header";
 import {Footer} from "../Footer";
+import {Link} from "react-router-dom";
+import {Icon} from "react-icons-kit";
+import {  eye } from 'react-icons-kit/icomoon/';
+import { ic_mail,ic_delete } from 'react-icons-kit/md/';
 
+const people = [
+  { id: 1,
+    empid:'E321',
+    empname: 'Winslet',
+   jobtitle:'Product',
+   panno:'',
+   ctc:'',
+   earnings:'',
+   deductions:'',
+   netsalary:'',
+   ban:''
+
+  },
+  { id: 2,
+    empid:'E421',
+    empname: 'Winslet',
+   jobtitle:'Product',
+   panno:'',
+   ctc:'',
+   earnings:'',
+   deductions:'',
+   netsalary:'',
+   ban:''
+
+  },
+  { id: 3,
+    empid:'E621',
+    empname: 'Winslet',
+   jobtitle:'Product',
+   panno:'',
+   ctc:'',
+   earnings:'',
+   deductions:'',
+   netsalary:'',
+   ban:''
+  },
+]
+function searchingFor(term){
+  return function(x){
+    return x.empid.toLowerCase().includes(term.toLowerCase());
+  }
+}
 export class Statement extends React.Component{
-  render() {
+  constructor(props){
+    super(props)
+      this.state = {
+        people: people,
+        term:''
+      }
+      this.searchHandler = this.searchHandler.bind(this)
+  }
+  searchHandler(event){
+    this.setState({
+      term: event.target.value
+    })
+  }
+  render(){
     return(
-      <div>
+      <div >
       <Header/>
       <div className={styles.displayContainer}>
-<p className={styles.pageHeading}>Statement
-</p>
+<p className={styles.pageHeading}>Statement</p>
 <hr className={styles.hrStyle}/>
-<span  className={styles.floatRight1}>
-<form class="form-row">
-
-	<input type="search"  placeholder="Search" />
-  <div class="dropdown" style={{position:'relative',left:'-1vw'}} >
-    <button class="btn  btn-outline-light" type="button" id={styles.btnstyle} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <Icon icon={filter} />
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item">Employee ID</a>
-      <a class="dropdown-item">Job Title</a>
-      <a class="dropdown-item">CTC</a>
-      <a class="dropdown-item">PAN Number</a>
-    </div>
-  </div>
-</form>
-</span>
-
-<table class="table table-bordered table-striped table-responsive-md" id={styles.exampletable}>
-<thead>
+      <form>
+      <span className={styles.floatRight1}>
+      <input type="search"
+onChange={this.searchHandler}
+       />
+       </span>
+      </form>
+      <table class="table table-bordered  table-responsive-md" id={styles.exampletable}>
       <tr className={styles.orange}>
-          <th>Employee ID</th>
-          <th>Employee Name</th>
-          <th>Job Title</th>
-          <th>PAN Number</th>
-          <th>CTC</th>
-          <th>Earnings</th>
-          <th>Deductions</th>
-          <th>Net salary</th>
-          <th>Bank Account Number</th>
-          <th>Actions</th>
+      <th>Employee ID </th>
+      <th> Employee Name </th>
+      <th> Claim Title</th>
+      <th> Description </th>
+      <th>Amount</th>
+      <th> Date</th>
+      <th> Actions </th>
       </tr>
-  </thead>
-  <tbody>
-     <tr>
-         <td>E123</td>
-         <td>Enosh David</td>
-         <td >Product Manager</td>
-         <td>AWKPD86348</td>
-         <td>1,00,000</td>
-         <td>67585</td>
-         <td>7585</td>
-         <td>60000</td>
-         <td>6574874312</td>
-         <td><Icon icon={ic_mail}/>
-          <Icon icon={ic_delete}/>
-         <Icon icon={eye} /></td>
-     </tr>
-     <tr>
-         <td>E321</td>
-         <td>Carol</td>
-         <td>Reporting Manager</td>
-         <td>AWHPD86596</td>
-         <td>1,00,000</td>
-         <td>77585</td>
-         <td>7585</td>
-         <td>70000</td>
-         <td>5474877698</td>
-         <td><Icon icon={ic_mail}/>
-          <Icon icon={ic_delete}/>
-         <Icon icon={eye} /></td>
-     </tr>
-     </tbody>
-     </table>
-      </div>
-      <Footer/>
-      </div>
+{
+this.state.people.filter(searchingFor(this.state.term)).map(function(person){
+    return (
+      <tr  key={person.id}>
+      <td>{person.empid}</td>
+      <td>{person.empname}</td>
+      <td> {person.claimtitle} </td>
+        <td> {person.description} </td>
+          <td> {person.amount} </td>
+            <td> {person.date} </td>
+            <td><Icon icon={ic_mail}/>
+             <Icon icon={ic_delete}/>
+            <Icon icon={eye} /></td>
+      </tr>
+    )
+  })
+}
+</table>
+
+       </div>
+       <Footer/>
+       </div>
     );
   }
 }

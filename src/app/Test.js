@@ -2,44 +2,53 @@ import React from "react";
 import styles from "./Layout.css";
 import {Header} from "./Header";
 import {Footer} from "./Footer";
+import {Link} from "react-router-dom";
+import {Icon} from "react-icons-kit";
+import {  eye } from 'react-icons-kit/icomoon/';
+import { ic_mail,ic_delete } from 'react-icons-kit/md/';
 
 const people = [
   { id: 1,
     empid:'E321',
-    empname: 'Sarah',
-    claimtitle: 'Product Manager',
-    description:'some text',
-    amount:500,
-    date:'09/05/2018',
-    action: 'Edit/Delete'
+    empname: 'Winslet',
+   jobtitle:'Product',
+   panno:'',
+   ctc:'',
+   earnings:'',
+   deductions:'',
+   netsalary:'',
+   ban:''
+
   },
   { id: 2,
-    empid:'E768',
-    empname: 'Kate',
-    claimtitle: 'Software Engineer',
-    description:'some text',
-    amount:500,
-    date:'09/05/2018',
-    action: 'Edit/Delete'
+    empid:'E421',
+    empname: 'Winslet',
+   jobtitle:'Product',
+   panno:'',
+   ctc:'',
+   earnings:'',
+   deductions:'',
+   netsalary:'',
+   ban:''
+
   },
   { id: 3,
-    empid:'E456',
-    empname: 'Jim',
-    claimtitle: 'Operation Manager',
-    description:'some text',
-    amount:500,
-    date:'09/05/2018',
-    action: 'Edit/Delete'
-  }
-
+    empid:'E621',
+    empname: 'Winslet',
+   jobtitle:'Product',
+   panno:'',
+   ctc:'',
+   earnings:'',
+   deductions:'',
+   netsalary:'',
+   ban:''
+  },
 ]
 function searchingFor(term){
   return function(x){
-    return x.empid.toLowerCase().includes(term.toLowerCase()) || x.jobtitle.toLowerCase().includes(term.toLowerCase()) ;
+    return x.empid.toLowerCase().includes(term.toLowerCase());
   }
 }
-
-
 export class Test extends React.Component{
   constructor(props){
     super(props)
@@ -59,7 +68,7 @@ export class Test extends React.Component{
       <div >
       <Header/>
       <div className={styles.displayContainer}>
-<p className={styles.pageHeading}>Payments</p>
+<p className={styles.pageHeading}>Statement</p>
 <hr className={styles.hrStyle}/>
       <form>
       <span className={styles.floatRight1}>
@@ -88,12 +97,15 @@ this.state.people.filter(searchingFor(this.state.term)).map(function(person){
         <td> {person.description} </td>
           <td> {person.amount} </td>
             <td> {person.date} </td>
-              <td> {person.action} </td>
+            <td><Icon icon={ic_mail}/>
+             <Icon icon={ic_delete}/>
+            <Icon icon={eye} /></td>
       </tr>
     )
   })
 }
 </table>
+
        </div>
        <Footer/>
        </div>

@@ -1,83 +1,105 @@
 import React from "react";
-import { Button, Form, FormGroup, Label, Input, FormText,Row } from 'reactstrap';
-import TextField from 'material-ui/TextField';
-import Icon from 'react-icons-kit';
-import {filter} from "react-icons-kit/fa/filter";
-import { pencil,bin,search } from 'react-icons-kit/icomoon';
-import { ic_delete, ic_create  } from 'react-icons-kit/md';
-import {Link} from "react-router-dom";
-import {activeStyle} from "../projects/Projects.css";
-import {orange,contentStyle,displayContainer,pageHeading,hrStyle,buttonStyle,floatRight1,exampletable,savebtn1,bankdiv,btnstyle} from "../Layout.css";
-import {hyperLink} from "../settings/LayoutSettings.css";
+import styles from "../Layout.css";
 import {Header} from "../Header";
 import {Footer} from "../Footer";
-export class ClaimList extends React.Component{
-  render() {
-    return(
-      <div>
-      <Header/>
-      <div className={displayContainer}>
-<p className={pageHeading}>Claims</p>
-<hr className={hrStyle}/>
-<span  className={floatRight1}>
-<form class="form-row">
-	<input type="search"  placeholder="Search" />
-  <div class="dropdown" style={{position:'relative',left:'-1vw'}} >
-    <button class="btn  btn-outline-light" type="button" id={btnstyle} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <Icon icon={filter} />
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item">Employee ID</a>
-      <a class="dropdown-item">Expense Title</a>
-      <a class="dropdown-item">Date</a>
-      <a class="dropdown-item">Amount</a>
-    </div>
-  </div>
-</form>
-</span>
-<table class="table table-bordered table-striped table-responsive-md" id={exampletable}>
-<thead>
-    <tr className={orange}>
-          <th>Employee ID</th>
-          <th>Employee Name</th>
-          <th>Expense Title</th>
-          <th>Description</th>
-          <th>Amount</th>
-          <th>Date</th>
-          <th>Actions</th>
-      </tr>
-  </thead>
-  <tbody>
-     <tr>
-         <td>E253</td>
-         <td>David</td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td className={activeStyle}></td>
-         <td>  <Link to="/AddExpenses" className={hyperLink}><Icon icon={ic_create} size={20}/></Link>
-<Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={20} /> </td>
-     </tr>
-     <tr>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td className={activeStyle}></td>
-         <td>  <Link to="/AddClaims" className={hyperLink}><Icon icon={ic_create} size={20}/></Link>
-<Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={20} /></td>
-     </tr>
+import {Link} from "react-router-dom";
 
-     </tbody>
-     </table>
-     <div className={bankdiv} style={{marginTop:'7vw',marginLeft:'-7.7vw'}}>
-       <Link to="/AddClaims"><button className="btn btn-outline-warning">
-       Add New Claim</button></Link>
+const people = [
+  { id: 1,
+    empid:'E321',
+    empname: 'Sarah',
+    claimtitle: 'Product Manager',
+    description:'some text',
+    amount:500,
+    date:'09/05/2018',
+    action: 'Edit/Delete'
+  },
+  { id: 2,
+    empid:'E768',
+    empname: 'Kate',
+    claimtitle: 'Software Engineer',
+    description:'some text',
+    amount:500,
+    date:'09/05/2018',
+    action: 'Edit/Delete'
+  },
+  { id: 3,
+    empid:'E456',
+    empname: 'Jim',
+    claimtitle: 'Operation Manager',
+    description:'some text',
+    amount:500,
+    date:'09/05/2018',
+    action: 'Edit/Delete'
+  }
+
+]
+function searchingFor(term){
+  return function(x){
+    return x.empid.toLowerCase().includes(term.toLowerCase()) || x.claimtitle.toLowerCase().includes(term.toLowerCase()) ;
+  }
+}
+export class ClaimList extends React.Component{
+  constructor(props){
+    super(props)
+      this.state = {
+        people: people,
+        term:''
+      }
+      this.searchHandler = this.searchHandler.bind(this)
+  }
+  searchHandler(event){
+    this.setState({
+      term: event.target.value
+    })
+  }
+  render(){
+    return(
+      <div >
+      <Header/>
+      <div className={styles.displayContainer}>
+<p className={styles.pageHeading}>Claim List</p>
+<hr className={styles.hrStyle}/>
+      <form>
+      <span className={styles.floatRight1}>
+      <input type="search"
+onChange={this.searchHandler}
+       />
+       </span>
+      </form>
+      <table class="table table-bordered  table-responsive-md" id={styles.exampletable}>
+      <tr className={styles.orange}>
+      <th>Employee ID </th>
+      <th> Employee Name </th>
+      <th> Claim Title</th>
+      <th> Description </th>
+      <th>Amount</th>
+      <th> Date</th>
+      <th> Actions </th>
+      </tr>
+{
+this.state.people.filter(searchingFor(this.state.term)).map(function(person){
+    return (
+      <tr  key={person.id}>
+      <td>{person.empid}</td>
+      <td>{person.empname}</td>
+      <td> {person.claimtitle} </td>
+        <td> {person.description} </td>
+          <td> {person.amount} </td>
+            <td> {person.date} </td>
+              <td> {person.action} </td>
+      </tr>
+    )
+  })
+}
+</table>
+<div className={styles.bankdiv} style={{marginTop:'7vw',marginLeft:'-7.7vw'}}>
+  <Link to="/AddClaims"><button className="btn btn-outline-warning">
+  Add New Claim</button></Link>
+  </div>
        </div>
-      </div>
-      <Footer/>
-      </div>
+       <Footer/>
+       </div>
     );
   }
 }
