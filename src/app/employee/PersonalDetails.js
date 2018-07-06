@@ -15,7 +15,6 @@ export class PersonalDetails extends React.Component{
     return(
       <div>
       <Header/>
-
        <div className={displayContainer}>
 <p className={pageHeading}>Personal Details</p>
 <hr className={hrStyle}/>

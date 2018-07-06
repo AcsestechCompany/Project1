@@ -1,10 +1,11 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import {displayContainer,buttonStyle} from "../Layout.css";
+import styles from "../Layout.css";
 import {Marketing} from "./Marketing";
 import {InformationTechnology} from "./InformationTechnology";
 import {Finance} from "./Finance";
 import {All} from "./All";
+import {HiddenInput} from "../HiddenInput";
 import {dropitem} from "./Home.css";
 import {Header} from "../Header";
 import {Footer} from "../Footer";
@@ -16,8 +17,18 @@ export class DepartmentsPage extends React.Component{
       marketing:false,
       it:false,
       finance:false,
-      all:true
+      all:true,
+      showInput: false
     };
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+
+
+  handleClick(){
+    this.setState({
+      showInput:!this.state.showInput
+    });
   }
 financefunc(){
     if(this.state.finance){
@@ -95,10 +106,10 @@ all:false
     return(
       <div>
       <Header/>
-      <div className={displayContainer}>
+      <div className={styles.displayContainer}>
       DepartmentsPage
       <div class="dropdown">
-        <button class="btn  dropdown-toggle" type="button" id={buttonStyle} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button class="btn  dropdown-toggle" type="button" id={styles.buttonStyle} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Select Department
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -112,6 +123,13 @@ all:false
       {it}
       {finance}
       {all}
+      <button type="button" class="btn btn-outline-warning" onClick={this.handleClick}>Add Department</button>
+      {this.state.showInput?
+        <p className={styles.hiddenInput}>
+        <HiddenInput/>
+       <button type="button" class="btn btn-outline-warning" onClick={this.handleClick} style={{marginTop:'2vw'}} >Save</button>
+       </p>
+      : ''}
       </div>
       <Footer/>
       </div>
