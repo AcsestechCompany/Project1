@@ -3,28 +3,44 @@ import styles from "./Layout.css";
 import {Header} from "./Header";
 import {Footer} from "./Footer";
 import {Link} from "react-router-dom";
-
+import {Icon} from "react-icons-kit";
+import { ic_edit,ic_delete } from 'react-icons-kit/md/';
 const people = [
   { id: 1,
     empid:'E321',
     empname: 'Winslet',
     remark:'',
     reason:'',
-    action: 'Edit/Delete'
+    action: <div>
+         <button className={styles.icon}>
+         <Icon icon={ic_edit}/></button>
+          <button className={styles.icon}>
+        <Icon icon={ic_delete} /></button>
+        </div>
   },
   { id: 2,
     empid:'E621',
     empname: 'Kate',
     remark:'',
     reason:'',
-    action: 'Edit/Delete'
+    action: <div>
+         <button className={styles.icon}>
+         <Icon icon={ic_edit}/></button>
+          <button className={styles.icon}>
+        <Icon icon={ic_delete} /></button>
+        </div>
   },
   { id: 3,
     empid:'E321',
     empname: 'David',
     remark:'',
     reason:'',
-    action: 'Edit/Delete'
+    action: <div>
+         <button className={styles.icon}>
+         <Icon icon={ic_edit}/></button>
+          <button className={styles.icon}>
+        <Icon icon={ic_delete} /></button>
+        </div>
   }
 ]
 function searchingFor(term){
@@ -64,10 +80,8 @@ onChange={this.searchHandler}
       <tr className={styles.orange}>
       <th>Employee ID </th>
       <th> Employee Name </th>
-      <th> Claim Title</th>
-      <th> Description </th>
-      <th>Amount</th>
-      <th> Date</th>
+      <th> Remark </th>
+      <th> Reason </th>
       <th> Actions </th>
       </tr>
 {
@@ -76,10 +90,8 @@ this.state.people.filter(searchingFor(this.state.term)).map(function(person){
       <tr  key={person.id}>
       <td>{person.empid}</td>
       <td>{person.empname}</td>
-      <td> {person.claimtitle} </td>
-        <td> {person.description} </td>
-          <td> {person.amount} </td>
-            <td> {person.date} </td>
+      <td> {person.remark} </td>
+        <td> {person.reason} </td>
               <td> {person.action} </td>
       </tr>
     )

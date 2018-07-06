@@ -1,9 +1,22 @@
 .hiddenInput{
 position:relative;
 top:2vw;
-
 }
-
+.icon{
+  background-color: white;
+   border: none;
+   color: black;
+   padding: 12px 16px;
+   font-size: 16px;
+   cursor: pointer;
+}
+.icon:hover{
+  background-color:white;
+    outline:none;
+}
+.icon:focus{
+  outline:none;
+}
 
 .radiostyle{
 position:relative;

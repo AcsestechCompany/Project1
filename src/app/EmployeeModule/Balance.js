@@ -7,14 +7,9 @@ export class Balance extends React.Component{
     return(
       <div>
       <table class="table" id={example1}>
-
-
-
-
       <thead>
       <tr>
         <th>SNo </th>
-
         <th>LEAVE TYPE </th>
         <th>AVAILABLE </th>
         <th>PENDING </th>

@@ -13,7 +13,7 @@ const people = [
     empname: 'Winslet',
    jobtitle:'Product',
    panno:'',
-   ctc:'',
+   ctc:'100000',
    earnings:'',
    deductions:'',
    netsalary:'',
@@ -77,14 +77,17 @@ onChange={this.searchHandler}
        />
        </span>
       </form>
-      <table class="table table-bordered  table-responsive-md" id={styles.exampletable}>
+      <table class="table table-bordered table-responsive-md" id={styles.exampletable}>
       <tr className={styles.orange}>
       <th>Employee ID </th>
       <th> Employee Name </th>
-      <th> Claim Title</th>
-      <th> Description </th>
-      <th>Amount</th>
-      <th> Date</th>
+      <th> Job Title</th>
+      <th> PAN Number</th>
+      <th>CTC</th>
+      <th> Earnings</th>
+      <th>Deductions </th>
+      <th> Net Salary </th>
+      <th>Bank Account Number</th>
       <th> Actions </th>
       </tr>
 {
@@ -93,10 +96,13 @@ this.state.people.filter(searchingFor(this.state.term)).map(function(person){
       <tr  key={person.id}>
       <td>{person.empid}</td>
       <td>{person.empname}</td>
-      <td> {person.claimtitle} </td>
-        <td> {person.description} </td>
-          <td> {person.amount} </td>
-            <td> {person.date} </td>
+      <td> {person.jobtitle} </td>
+        <td> {person.panno} </td>
+          <td> {person.ctc} </td>
+            <td> {person.earnings} </td>
+            <td> {person.deductions} </td>
+            <td> {person.netsalary} </td>
+            <td> {person.ban} </td>
             <td><Icon icon={ic_mail}/>
              <Icon icon={ic_delete}/>
             <Icon icon={eye} /></td>
