@@ -1,53 +1,99 @@
 import React from "react";
-import { Button, Form, FormGroup, Label, Input, FormText,Row } from 'reactstrap';
-import Icon from 'react-icons-kit';
-import {Link} from "react-router-dom";
-import { search } from 'react-icons-kit/icomoon/search';
-import {inProgress,closed} from "../projects/Projects.css";
-import {pageHeading,floatRight,hrStyle,contentStyle} from "../Layout.css";
-import { ic_create,ic_delete  } from 'react-icons-kit/md';
+import styles from "../Layout.css";
 
+
+const people = [
+  { id: 1,
+    empid:'E521',
+    empname: 'Sarah',
+    jobtitle: 'Product Manager',
+    ctc:'120000',
+    departmentname:'Marketing',
+    status:'Active',
+    action: 'Edit/Delete'
+  },
+
+  { id: 2,
+    empid:'E221',
+    empname: 'Sarah',
+    jobtitle: 'Operations Manager',
+  departmentname:'IT',
+    status:'InActive',
+    action: 'Edit/Delete'
+  },
+  { id: 3,
+    empid:'E421',
+    empname: 'Sarah',
+    jobtitle: 'Product Manager',
+    ctc:'120000',
+    departmentname:'Finance',
+    status:'Active',
+    action: 'Edit/Delete'
+  },
+
+]
+function searchingFor(term){
+  return function(x){
+    return x.empid.toLowerCase().includes(term.toLowerCase()) || x.jobtitle.toLowerCase().includes(term.toLowerCase()) ;
+  }
+}
 export class All extends React.Component{
+  constructor(props){
+    super(props)
+      this.state = {
+        people: people,
+        term:''
+      }
+      this.searchHandler = this.searchHandler.bind(this)
+  }
+  searchHandler(event){
+    this.setState({
+      term: event.target.value
+    })
+  }
   render(){
     return(
-        <div style={{marginTop:'3vw'}}>
-    <p className={pageHeading}>All employees</p>
-    <hr className={hrStyle}/>
-    <table class="table table-bordered table-striped table-responsive-md" id={contentStyle}>
-    <thead>
-          <tr style={{color:'orange'}}>
-              <th>Employee ID</th>
-              <th>Employee Name</th>
-              <th>JOb Title</th>
-              <th>Department Name</th>
-              <th>Status</th>
-              <th>Actions</th>
-          </tr>
+      <div style={{marginTop:'3vw'}}>
+<p className={styles.pageHeading}>All Employees</p>
+<hr className={styles.hrStyle}/>
+      <form>
+      <span className={styles.floatRight1}>
+      <input type="search"
+onChange={this.searchHandler}
+       />
+       </span>
+      </form>
+      <table class="table" id={styles.example1}>
+      <thead>
+      <tr>
+      <th>Employee ID </th>
+      <th> Employee Name </th>
+      <th>Job Title</th>
+      <th>ctc</th>
+      <th>Department Name</th>
+      <th>Status</th>
+      <th> Actions </th>
+      </tr>
       </thead>
-
-        <tbody>
-           <tr>
-               <td>E123</td>
-               <td>Enosh David</td>
-               <td>Product Manager</td>
-               <td>Marketing</td>
-                <td className={inProgress}>Present</td>
-               <td><Icon icon={ic_create} size={20}/>
-                   <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={19} /> </td>
-           </tr>
-                <tr>
-                    <td>E543</td>
-                    <td>David</td>
-                    <td>Product Manager</td>
-                    <td>Information Technology</td>
-                     <td className={closed}>Absent</td>
-                    <td><Icon icon={ic_create} size={20}/>
-                        <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={19} /> </td>
-                </tr>
-</tbody>
-   </table>
+{
+this.state.people.filter(searchingFor(this.state.term)).map(function(person){
+    return (
+      <tbody>
+      <tr  key={person.id}>
+      <td>{person.empid}</td>
+      <td>{person.empname}</td>
+      <td> {person.jobtitle} </td>
+        <td> {person.ctc} </td>
+          <td> {person.departmentname} </td>
+            <td> {person.status} </td>
+              <td> {person.action} </td>
+      </tr>
+      </tbody>
+    )
+  })
+}
+</table>
        </div>
-
     );
   }
 }
