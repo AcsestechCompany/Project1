@@ -411,6 +411,8 @@ color:gray;
 }
 .floatRight1{
 float:right;
+position:relative;
+bottom:0.5vw;
 }
 #link{
   color:white;

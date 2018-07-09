@@ -13,7 +13,6 @@ import {Footer} from "../Footer";
 export class EmploymentStatus extends React.Component{
   constructor(props) {
     super(props);
-
     this.state= {
       present:false,
       absent:false,
@@ -33,21 +32,21 @@ export class EmploymentStatus extends React.Component{
   absentfunc(){
     if(this.state.absent){
       return(
-        <div> <Absent/></div>
+        <div><Absent/></div>
       );
     }
   }
   onleavefunc(){
     if(this.state.onleave){
       return(
-        <div> <OnLeave/></div>
+        <div><OnLeave/></div>
       )
     }
   }
   latefunc(){
     if(this.state.late){
       return(
-        <div> <Late/></div>
+        <div><Late/></div>
       )
     }
   }
@@ -61,7 +60,7 @@ export class EmploymentStatus extends React.Component{
   allfunc(){
     if(this.state.all){
       return(
-        <div> <All/></div>
+        <div><All/></div>
       )
     }
   }
@@ -113,7 +112,6 @@ export class EmploymentStatus extends React.Component{
         absent:false,
        onleave:false,
        all:false
-
     })
   }
   allstate(){
@@ -148,7 +146,6 @@ export class EmploymentStatus extends React.Component{
       <a class="dropdown-item" id={dropitem} onClick={this.latestate.bind(this)} >Late</a>
       <a class="dropdown-item" id={dropitem} onClick={this.overtimestate.bind(this)} >Overtime</a>
       <a class="dropdown-item" id={dropitem} onClick={this.allstate.bind(this)} >All</a>
-
     </div>
   </div>
   {present}

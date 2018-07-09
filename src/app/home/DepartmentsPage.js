@@ -23,8 +23,6 @@ export class DepartmentsPage extends React.Component{
     this.handleClick = this.handleClick.bind(this);
   }
 
-
-
   handleClick(){
     this.setState({
       showInput:!this.state.showInput
@@ -66,7 +64,7 @@ allfunc(){
     )
   }
 }
-  marketing(){
+marketing(){
     this.setState({
 marketing:!this.state.marketing,
 it:false,
