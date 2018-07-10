@@ -5,8 +5,6 @@ import {imgStyle} from "../employee/LayoutSettings.css";
 import { users } from 'react-icons-kit/icomoon/users';
 import styles from "../Layout.css";
 
-
-
 export class FirstRow extends React.Component{
   render() {
     return(

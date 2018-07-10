@@ -4,9 +4,8 @@ import Icon from 'react-icons-kit';
 import {Link} from "react-router-dom";
 import { search } from 'react-icons-kit/icomoon/search';
 import {inProgress,closed} from "../projects/Projects.css";
-import {displayContainer,pageHeading,hrStyle,labelStyle,inputstyle,hyperLink,formStyle,inputStyle,textAreaStyle,tableDiv,
-  inputStyle1,labelStyle1,addNewDepartmentStyle,floatRight,verticalLine,dropDownInputStyle,buttonstyle,divStyle,radioStyle1,
-  boxText,imageText,radioStyle,labelStyleRadio,imageInput,contentStyle,iconStyle,activeStyle} from "../Layout.css";;
+import {displayContainer,pageHeading,hrStyle,formStyle,
+  floatRight,contentStyle} from "../Layout.css";;
 import { ic_create,ic_delete  } from 'react-icons-kit/md';
 
 

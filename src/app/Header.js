@@ -5,7 +5,7 @@ import { userCircle,angleDown, bell } from 'react-icons-kit/fa';
 import { arrowLeft2,spinner11 } from 'react-icons-kit/icomoon';
 import {menu} from "react-icons-kit/entypo";
 import { ic_settings } from 'react-icons-kit/md/ic_settings';
-import {Collapse,Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,UncontrolledDropdown,DropdownToggle,DropdownMenu,DropdownItem} from 'reactstrap';
+import {Navbar,NavbarToggler,NavbarBrand,Nav,NavItem,UncontrolledDropdown,DropdownToggle,DropdownMenu,DropdownItem} from 'reactstrap';
 import {dropDownStyle,hyperLink,hyperLinkLogo,dropdown,upperNav,dropItem,upperNavIcon1,settingsIcon1,dropNotify,
   dropDownLeaves,dropDownClaims,dropDownPayroll,
   notificationIcon1,dropdownContent,floatRight,cardimgleft,navitemStyle1,navitemStyleHome1,navspace,

@@ -9,14 +9,14 @@ import {displayContainer,hrStyle,pageHeading} from "../Layout.css";
 import {dateStyle} from "../employee/LayoutEmployee.css";
 import {inputstyle,formStyle,hyperLink,floatRight,
   labelStyle1,dropDownInputStyle,divStyle,boxText,imageText,imageInput,iconStyle} from "./LayoutSettings.css";
-  import {Header1} from  "../Header1";
+  import {Header} from  "../Header";
   import {Footer} from "../Footer";
 
  export class CompanyDetails extends React.Component{
    render() {
      return(
        <div>
-       <Header1/>
+       <Header/>
        <div className={displayContainer}>
 <p className={pageHeading}>Organization Details</p>
 <hr className={hrStyle}/>

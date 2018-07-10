@@ -10,8 +10,6 @@ import { thinRight,thinLeft } from 'react-icons-kit/entypo';
 import {Repotee} from "./Repotee";
 
 
-
-
 export class FourthRow extends React.Component{
 
   render(){
@@ -21,16 +19,15 @@ export class FourthRow extends React.Component{
            <Card  className={styles.repoteesCardStyle}>
            <CardHeader text={"My Repotees"}  />
            <div id="carouselExampleIndicators1" class="carousel slide" data-interval="false" >
-
              <div class="carousel-inner" >
                <div class="carousel-item active" style={{textAlign:'center'}} id={styles.item1} >
                <Row className={styles.repoteesStyle}>
 
-                  
+
                      <Repotee img={require('../employee/user1.png')}
                      text={<Circle r={5} fill={{color:'#FEC835'}}  />}
                      />
-                     <Repotee img={require('./profile22.png')}
+                     <Repotee img={require('./profile2.png')}
                      text={<Circle r={5} fill={{color:'#EF462E'}}  />}
                      />
                      <Repotee img={require('../employee/user1.png')}

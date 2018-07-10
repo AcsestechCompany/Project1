@@ -8,8 +8,7 @@ import {arrow,orange,floatRight} from "../Layout.css";
 import {Link} from "react-router-dom";
 import {CardTemplate} from "./CardTemplate";
 import {CardTemplateTab} from "./CardTemplateTab";
-import {Header1} from "../Header1";
-import {Footer} from "../Footer";
+
 
 export class EmployeeList1 extends React.Component{
   render() {

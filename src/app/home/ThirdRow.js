@@ -10,7 +10,6 @@ export class ThirdRow extends React.Component{
       <Row className={styles.rowStyle} id={styles.thirdrowstyle}>
        <Announcement/>
        <Events/>
-
      </Row>
     );
   }

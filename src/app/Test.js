@@ -3,7 +3,6 @@ import styles from "./Layout.css";
 import {Header} from "./Header";
 import {Footer} from "./Footer";
 
-
 const people = [
   { id: 1,
     empid:'E321',
@@ -38,7 +37,6 @@ const people = [
     status:'Rejected',
     action: 'Edit/Delete'
   }
-
 ]
 function searchingFor(term){
   return function(x){
@@ -103,7 +101,6 @@ this.state.people.filter(searchingFor(this.state.term)).map(function(person){
   })
 }
 </table>
-
        </div>
        <Footer/>
        </div>

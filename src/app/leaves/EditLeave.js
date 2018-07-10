@@ -6,7 +6,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Icon from 'react-icons-kit';
 import { plus } from 'react-icons-kit/icomoon/plus';
 import {Link} from "react-router-dom";
-import {Header1} from "../Header1";
+import {Header} from "../Header";
 import {Footer} from "../Footer";
 import {displayContainer,hrStyle,pageHeading,buttonStyle} from "../Layout.css";
 import {inputstyle1,inputStyle,inputstyle,textAreaStyle,
@@ -18,7 +18,7 @@ export class EditLeave extends React.Component{
 
     return(
       <div>
-      <Header1/>
+      <Header/>
       <div className={displayContainer}>
 <p className={pageHeading}>Leaves</p>
 <hr className={hrStyle}/>

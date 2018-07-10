@@ -1,5 +1,5 @@
 import React from "react";
-import {Header1} from "./Header1";
+import {Header} from "./Header";
 import {Footer} from "./Footer";
 import {displayContainer} from "./Layout.css";
 import {Row} from "reactstrap";
@@ -8,7 +8,7 @@ export class Contactus extends React.Component{
   render(){
     return(
       <div>
-      <Header1/>
+      <Header/>
       <div className={displayContainer}>
       <div style={{float:'left',marginRight:'30vw',marginBottom:'3vw'}}>
       <strong>India</strong>
