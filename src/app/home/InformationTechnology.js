@@ -3,10 +3,7 @@ import { Button, Form, FormGroup, Label, Input, FormText,Row } from 'reactstrap'
 import Icon from 'react-icons-kit';
 import {Link} from "react-router-dom";
 import { search } from 'react-icons-kit/icomoon/search';
-import {inProgress,closed} from "../projects/Projects.css";
-import {displayContainer,pageHeading,hrStyle,labelStyle,inputstyle,hyperLink,formStyle,inputStyle,textAreaStyle,tableDiv,
-  inputStyle1,labelStyle1,addNewDepartmentStyle,floatRight,verticalLine,dropDownInputStyle,buttonstyle,divStyle,radioStyle1,
-  boxText,imageText,radioStyle,labelStyleRadio,imageInput,contentStyle,iconStyle,activeStyle} from "../Layout.css";;
+import styles from "../Layout.css";
 import { ic_create,ic_delete  } from 'react-icons-kit/md';
 
 
@@ -14,10 +11,10 @@ export class InformationTechnology extends React.Component{
   render() {
     return(
       <div style={{marginTop:'3vw'}}>
-<p className={pageHeading}>Information Technology<span className={floatRight}><Icon icon={search}/></span></p>
-<hr className={hrStyle}/>
+<p className={styles.pageHeading}>Information Technology<span className={styles.floatRight}><Icon icon={search}/></span></p>
+<hr className={styles.hrStyle}/>
 
-<table class="table table-bordered table-striped table-responsive-md" id={contentStyle}>
+<table class="table table-bordered table-striped table-responsive-md" id={styles.contentStyle}>
 <thead>
       <tr style={{color:'orange'}}>
           <th>Employee ID</th>
@@ -36,7 +33,7 @@ export class InformationTechnology extends React.Component{
          <td >Product Manager</td>
          <td>1,00,000</td>
          <td>01/01/2018</td>
-          <td className={inProgress}>Active</td>
+          <td >Active</td>
          <td><Icon icon={ic_create} size={20}/>
              <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={19} /> </td>
      </tr>
@@ -46,7 +43,7 @@ export class InformationTechnology extends React.Component{
          <td >MIS Executive</td>
          <td>2,00,000</td>
          <td>05/02/2018</td>
-          <td className={closed}>inActive</td>
+          <td >inActive</td>
          <td><Icon icon={ic_create} size={20}/>
              <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={19} /> </td>
      </tr>
@@ -56,7 +53,7 @@ export class InformationTechnology extends React.Component{
          <td >Software Engineer</td>
          <td>5,00,000</td>
          <td>05/02/2018</td>
-          <td className={inProgress}>Active</td>
+          <td >Active</td>
          <td><Icon icon={ic_create} size={20}/>
               <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={19} /> </td>
      </tr>
@@ -66,7 +63,7 @@ export class InformationTechnology extends React.Component{
          <td >Product Manager</td>
          <td>2,00,000</td>
          <td>05/02/2018</td>
-          <td className={closed}>inActive</td>
+          <td >inActive</td>
          <td><Icon icon={ic_create} size={20}/>
              <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={19} /> </td>
      </tr>

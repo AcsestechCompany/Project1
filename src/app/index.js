@@ -26,16 +26,12 @@ import {AddClaims} from "./expenses/AddClaims";
 import {ClaimList} from "./expenses/ClaimList";
 import {Test} from "./Test";
 import {CompanyDetails} from "./settings/CompanyDetails";
-import {Departments} from "./settings/Departments";
-import {ViewDepartment} from "./settings/ViewDepartment";
-import {ViewShiftAttendance} from "./settings/ViewShiftAttendance";
 import {Profile} from "./profileicon/Profile";
 import {Logout} from "./profileicon/Logout";
 import {LeaveList} from "./leaves/LeaveList";
 import {EditLeave} from "./leaves/EditLeave";
 import {LeaveTypes} from "./settings/LeaveTypes";
 import {AddLeave} from "./settings/AddLeave";
-import {ViewSalaryComponents} from "./settings/ViewSalaryComponents";
 import {AddComponent} from "./settings/AddComponent";
 import {LandingPage} from "./registration/LandingPage";
 import {ViewFeatures} from "./registration/ViewFeatures";
@@ -68,9 +64,8 @@ export class App extends React.Component {
 
     return (
   <Router>
-      <div >
-
-      <Route path="/LandingPage" component={LandingPage}/>
+      <div>
+<Route path="/LandingPage" component={LandingPage}/>
 <Route path="/CreatePassword" component={CreatePassword}/>
 <Route path="/ViewFeatures" component={ViewFeatures}/>
 <Route path="/ViewFeature1" component={ViewFeature1}/>
@@ -82,7 +77,6 @@ export class App extends React.Component {
 <Route path="/Login" component={Login}/>
               <Route path="/Home" component={Home}/>
               <Route path="/Testing" component={Testing}/>
-
               <Route path="/EmployeeHome" component={EmployeeHome}/>
               <Route path="/EmployeeAttendance" component={EmployeeAttendance}/>
               <Route path="/EmployeeLeaves" component={EmployeeLeaves}/>
@@ -111,11 +105,7 @@ export class App extends React.Component {
               <Route path="/AnnouncementList" component={AnnouncementList}/>
               <Route path="/CompanyDetails" component={CompanyDetails}/>
               <Route path="/AttendanceSettings" component={AttendanceSettings}/>
-              <Route path="/Departments" component={Departments}/>
-              <Route path="/ViewDepartment" component={ViewDepartment}/>
-              <Route path="/ViewShiftAttendance" component={ViewShiftAttendance}/>
               <Route path="/AddLeave" component={AddLeave}/>
-              <Route path="/ViewSalaryComponents" component={ViewSalaryComponents}/>
               <Route path="/AddComponent" component={AddComponent}/>
               <Route path="/Logout" component={Logout}/>
               <Route path="/ViewEmployee" component={ViewEmployee}/>

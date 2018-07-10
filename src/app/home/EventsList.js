@@ -3,8 +3,7 @@ import {displayContainer,orange,exampletable,floatRight} from "../Layout.css";
 import {hrStyle,pageHeading,searchfilter} from "../Layout.css";
 import {inputstyle1} from "./CardStyling.css";
 import Icon from 'react-icons-kit';
-
-  import { filter,search  } from 'react-icons-kit/fa';
+import { filter,search  } from 'react-icons-kit/fa';
 import { ic_create,ic_delete  } from 'react-icons-kit/md';
 import {Header} from "../Header";
 import {Footer} from "../Footer";
@@ -18,9 +17,7 @@ export class EventsList extends React.Component{
       <div>
       <Header/>
       <div className={displayContainer}>
-
-      <p className={pageHeading}>Events
-  </p>
+      <p className={pageHeading}>Events</p>
       <hr className={hrStyle}/>
       <table class="table table-bordered table-responsive-md" id={exampletable}>
       <thead className={orange}>

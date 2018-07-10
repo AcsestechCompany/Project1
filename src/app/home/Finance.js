@@ -3,7 +3,7 @@ import { Button, Form, FormGroup, Label, Input, FormText,Row } from 'reactstrap'
 import Icon from 'react-icons-kit';
 import {Link} from "react-router-dom";
 import { search } from 'react-icons-kit/icomoon/search';
-import {inProgress,closed} from "../projects/Projects.css";
+
 import {displayContainer,pageHeading,hrStyle,formStyle,
   floatRight,contentStyle} from "../Layout.css";;
 import { ic_create,ic_delete  } from 'react-icons-kit/md';
@@ -36,9 +36,11 @@ export class Finance extends React.Component{
          <td >MIS Executive</td>
          <td>2,00,000</td>
          <td>05/02/2018</td>
-          <td className={closed}>inActive</td>
-         <td><Icon icon={ic_create} size={20}/>
-             <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={19} /> </td>
+        <td>inActive</td>
+         <td>
+         <Icon icon={ic_create} size={20}/>
+         <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={19} />
+        </td>
      </tr>
      <tr>
          <td>E234</td>
@@ -46,9 +48,11 @@ export class Finance extends React.Component{
          <td >Software Engineer</td>
          <td>5,00,000</td>
          <td>05/02/2018</td>
-          <td className={inProgress}>Active</td>
-         <td><Icon icon={ic_create} size={20}/>
-              <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={19} /></td>
+         <td>Active</td>
+         <td>
+              <Icon icon={ic_create} size={20}/>
+              <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={19} />
+        </td>
      </tr>
      <tr>
          <td>E543</td>
@@ -56,7 +60,7 @@ export class Finance extends React.Component{
          <td >Product Manager</td>
          <td>2,00,000</td>
          <td>05/02/2018</td>
-          <td className={closed}>inActive</td>
+          <td>inActive</td>
          <td><Icon icon={ic_create} size={20}/>
              <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={19} /> </td>
      </tr>

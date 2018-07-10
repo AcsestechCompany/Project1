@@ -1,3 +1,6 @@
+.imagestyle{
+border:none !important;
+}
 .hiddenInput{
 position:relative;
 top:2vw;
