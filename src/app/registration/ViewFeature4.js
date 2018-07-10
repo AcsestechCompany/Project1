@@ -38,7 +38,7 @@ export class ViewFeature4 extends React.Component{
       <LogoHeader/>
       <Row className={rowStyle}>
         <Col xs="4">
-        <img class="animated slideInUp" src={require('../payroll.jpg')} id={imgStyle} style={styles.fadeInUp} />
+        <img class="animated slideInUp" src={require('../images/payroll.jpg')} id={imgStyle} style={styles.fadeInUp} />
         </Col>
       <Col>
       <p id={featureHeading} class="animated slideInRight" style={styles.fadeInRight}>

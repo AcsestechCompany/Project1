@@ -150,24 +150,14 @@ border-bottom:2px solid #4AD496;
   background:
   /* top, transparent red, faked with gradient */
   linear-gradient(
-
     rgb(44, 62, 80,0.50),
     rgb(44, 62, 80,0.50)
   ),
   /* bottom, image */
-  url('./login.jpg');
-
-
+  url('./images/login.jpg');
   background-repeat:no-repeat;
-width:50%;
+  width:50%;
   height:500px;
-
-}
-
-
-.imageoverlay{
-
-
 }
 @media only screen and (max-width: 1024px) {
   .navitemStyle{
@@ -182,11 +172,6 @@ width:50%;
   #navStyle{
     position:relative;
     left:1.8vw !important;
-  }
-}
-@media only screen and (max-width: 320px){
-  .pageHeading{
-
   }
 }
 @media only screen and (max-width: 768px) {
@@ -898,7 +883,6 @@ border:none;
 .pageHeading{
   color:#FF9527;
   font-size:1vw;
-
 }
 .hrStyle{
   background-color:#FF9527 !important;

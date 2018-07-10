@@ -2,7 +2,7 @@ import React from "react";
 import {displayContainer,exploreDiv,hello,
   exploreCard1,exploreCard2,iconStyle,hyperLinkLogin,hyperLinkLogin1} from "./Layout.css";
 import {Card,CardText,CardTitle,Row} from "reactstrap";
-  import Icon from 'react-icons-kit';
+import Icon from 'react-icons-kit';
 import { plus,compass2  } from 'react-icons-kit/icomoon';
 import { ic_explore } from 'react-icons-kit/md/ic_explore';
 import { plusSquare } from 'react-icons-kit/fa/plusSquare';
@@ -15,7 +15,6 @@ export class DemoPage extends React.Component{
     return(
  <div>
  <Header/>
-
      <div className={exploreDiv}>
      <Row>
      <Link to="/CompanyDetails" >

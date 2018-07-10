@@ -4,8 +4,8 @@ import {formStyle} from "../employee/LayoutSettings.css";
 import {Form,FormGroup,Label,Input,Row} from "reactstrap";
 import {Link} from "react-router-dom";
 import {savebtn} from "../Layout.css";
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import {TextField,SelectField,MenuItem,Slider,DatePicker} from 'material-ui';
+
+
 
 export class AddNewLeave extends React.Component{
   render(){

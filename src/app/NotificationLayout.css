@@ -17,7 +17,6 @@ width:3.5vw;
 }
 @media only screen and (max-width: 768px){
   .cardStyle{
-    
     min-height:8.2vw !important;
     overflow:hidden;
   }

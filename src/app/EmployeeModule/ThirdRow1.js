@@ -22,14 +22,14 @@ export class ThirdRow1 extends React.Component{
 
       <Col xs="8" className={cardstyle1}>
       <p className={cardheading}>My Team</p>
-    
+
       <div id="myteam" class="carousel slide" data-interval="false"  >
         <div class="carousel-inner" >
           <div class="carousel-item active" style={{textAlign:'center'}} id={item} >
           <Row className={teamrow}>
-          <MyTeam image={require('../employee/user1.png')} name={"Niha"} designation={"Manager"}/>
-          <MyTeam image={require('../employee/user.png')} name={"David"} designation={"Team Mate"}/>
-          <MyTeam image={require('../employee/user1.png')} name={"Niha Fatima"} designation={"Reporting Manager"}/>
+          <MyTeam image={require('../images/user1.png')} name={"Niha"} designation={"Manager"}/>
+          <MyTeam image={require('../images/user1.png')} name={"David"} designation={"Team Mate"}/>
+          <MyTeam image={require('../images/user1.png')} name={"Niha Fatima"} designation={"Reporting Manager"}/>
           </Row>
 
           </div>

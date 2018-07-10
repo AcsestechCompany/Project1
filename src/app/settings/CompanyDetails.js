@@ -2,8 +2,7 @@ import React from "react";
 import {render} from "react-dom";
 import { Button, Form, FormGroup, Label, Input, FormText,Row,Col } from 'reactstrap';
 import {Link} from "react-router-dom";
-import {DatePicker,TextField,Slider} from 'material-ui';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 import Icon from 'react-icons-kit';
 import { arrowRight2 } from 'react-icons-kit/icomoon';
 import {displayContainer,hrStyle,pageHeading,buttonStyle,savebtn,arrowIcon,orange} from "../Layout.css";

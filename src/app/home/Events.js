@@ -7,9 +7,7 @@ import {cardStyle1,giftIcon} from "./Home.css";
 import {orange} from "../Layout.css";
 import Icon from 'react-icons-kit';
 import { gift,birthdayCake,graduationCap  } from 'react-icons-kit/fa';
-import SelectField from 'material-ui/SelectField';
-import MenuItem from 'material-ui/MenuItem';
-import {MuiThemeProvider} from "material-ui";
+
 const styles = {
   customWidth: {
     width: 130,

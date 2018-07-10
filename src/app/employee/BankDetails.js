@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Form, FormGroup, Label, Input, FormText,Row } from 'reactstrap';
-import {DatePicker,Slider,TextField} from 'material-ui';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 import Icon from 'react-icons-kit';
 import {arrowLeft2, arrowRight2,pencil,search} from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
@@ -19,7 +18,7 @@ export class BankDetails extends React.Component{
     super(props);
     this.nextmanual=this.nextmanual.bind(this);
     this.nextauto=this.nextauto.bind(this);
-    
+
 
     this.state = {
       manualcomponents:false,

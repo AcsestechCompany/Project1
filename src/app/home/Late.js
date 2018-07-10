@@ -13,7 +13,6 @@ const people = [
     status:'Active',
     action: 'Edit/Delete'
   },
-
   { id: 2,
     empid:'E221',
     empname: 'Sarah',
@@ -32,7 +31,6 @@ const people = [
     status:'Active',
     action: 'Edit/Delete'
   },
-
 ]
 function searchingFor(term){
   return function(x){
@@ -61,7 +59,7 @@ export class Late extends React.Component{
       <form>
       <span className={styles.floatRight1}>
       <input type="search"
-onChange={this.searchHandler}
+      onChange={this.searchHandler}
        />
        </span>
       </form>

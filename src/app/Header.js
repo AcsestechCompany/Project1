@@ -51,14 +51,12 @@ this.setState({
   close:false
 })
 }
-
   closestate(){
     this.setState({
       open:false,
       close:true
     })
   }
-
 render() {
   var open = this.openfunc();
   return (
@@ -67,11 +65,9 @@ render() {
       <span class={styles1.openslide}>
         <Icon icon={menu} size={40} style={{color:'white'}}  onClick={this.openstate.bind(this)}/>
         <Nav className={rightnav}>
-
           <Link className={logoright} to="/Home">
           <span style={{color:'red'}}>H</span>
           <span style={{color:'white'}}>rms</span></Link>
-
         <UncontrolledDropdown >
         <DropdownToggle nav className={notificationIconright}><Icon icon={bell} size={18} style={{color:'white'}}/></DropdownToggle>
             <DropdownMenu className={dropdownContent}>
@@ -79,7 +75,7 @@ render() {
                <Icon icon={arrowLeft2}/><span className={floatRight}><Icon icon={spinner11} size={12} style={{color:'black'}}/></span><br/><br/>
             <Card className={cardStyle}>
               <div class="row">
-                 <div class="col-md-6"><img className={cardimgleft} src={require('./profile.jpg')} id={imgStyle}/></div>
+                 <div class="col-md-6"><img className={cardimgleft} src={require('./images/profile.jpg')} id={imgStyle}/></div>
                  <div class="col-md-6" style={{marginTop:'1vw'}}>
                  <CardTitle className={cardTitle}>Jane Smith</CardTitle>
                 <CardText className={cardText}>Requested for Leave</CardText>
@@ -87,7 +83,7 @@ render() {
                 </div></Card>
             <Card className={cardStyle}>
             <div class="row">
-            <div class="col-md-6"><img className={cardimgleft} src={require('./profile.jpg')} id={imgStyle}/></div>
+            <div class="col-md-6"><img className={cardimgleft} src={require('./images/profile.jpg')} id={imgStyle}/></div>
             <div class="col-md-6" style={{marginTop:'1vw'}}>
             <CardTitle className={cardTitle}>Jane Smith</CardTitle>
             <CardText className={cardText}>Requested for Leave</CardText>
@@ -95,7 +91,7 @@ render() {
             </div></Card>
             <Card className={cardStyle}>
             <div class="row">
-            <div class="col-md-6"><img className={cardimgleft} src={require('./profile.jpg')} id={imgStyle}/></div>
+            <div class="col-md-6"><img className={cardimgleft} src={require('./images/profile.jpg')} id={imgStyle}/></div>
             <div class="col-md-6" style={{marginTop:'1vw'}}>
             <CardTitle className={cardTitle}>Jane Smit</CardTitle>
             <CardText className={cardText}>Requested for Leave</CardText>
@@ -169,7 +165,7 @@ render() {
             <Icon icon={arrowLeft2}/><Icon icon={spinner11} className={floatRight} size={12} style={{color:'black'}}/><br/><br/>
               <Card className={cardStyle}>
                 <div class="row">
-                   <div class="col-md-6"><img className={cardimgleft} src={require('./profile.jpg')} id={imgStyle}/></div>
+                   <div class="col-md-6"><img className={cardimgleft} src={require('./images/profile.jpg')} id={imgStyle}/></div>
                    <div class="col-md-6" style={{marginTop:'0.5vw'}}>
                    <CardTitle className={cardTitle}>Jane Smith</CardTitle>
                   <CardText className={cardText}>Requested for Leave</CardText>
@@ -177,7 +173,7 @@ render() {
                   </div></Card>
               <Card className={cardStyle}>
               <div class="row">
-              <div class="col-md-6"><img className={cardimgleft} src={require('./profile.jpg')} id={imgStyle}/></div>
+              <div class="col-md-6"><img className={cardimgleft} src={require('./images/profile.jpg')} id={imgStyle}/></div>
               <div class="col-md-6" style={{marginTop:'0.5vw'}}>
               <CardTitle className={cardTitle}>Jane Smith</CardTitle>
               <CardText className={cardText}>Requested for Leave</CardText>
@@ -185,7 +181,7 @@ render() {
               </div></Card>
               <Card className={cardStyle}>
               <div class="row">
-              <div class="col-md-6"><img className={cardimgleft} src={require('./profile.jpg')} id={imgStyle}/></div>
+              <div class="col-md-6"><img className={cardimgleft} src={require('./images/profile.jpg')} id={imgStyle}/></div>
               <div class="col-md-6" style={{marginTop:'0.5vw'}}>
               <CardTitle className={cardTitle}>Jane Smit</CardTitle>
               <CardText className={cardText}>Requested for Leave</CardText>

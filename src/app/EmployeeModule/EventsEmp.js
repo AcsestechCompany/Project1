@@ -6,9 +6,6 @@ import {buttonStyle,buttonStyleL,right,eventSelect} from "../home/CardStyling.cs
 import {cardStyle1,giftIcon} from "../home/Home.css";
 import {orange} from "../Layout.css";
 import Icon from 'react-icons-kit';
-
-
-import {MuiThemeProvider} from "material-ui";
 const styles = {
   customWidth: {
     width: 130,

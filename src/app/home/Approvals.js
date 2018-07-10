@@ -1,5 +1,5 @@
 import React from "react";
-import {displayContainer,orange,exampletable} from "../Layout.css";
+import {displayContainer,orange,example1} from "../Layout.css";
 import {hrStyle,pageHeading} from "../Layout.css";
 import Icon from 'react-icons-kit';
 import { ic_create,ic_delete  } from 'react-icons-kit/md';
@@ -13,8 +13,8 @@ export class AnnouncementList extends React.Component{
       <div className={displayContainer}>
       <p><span className={pageHeading}>Announcements</span></p>
       <hr className={hrStyle}/>
-      <table class="table table-bordered table-responsive-md" id={exampletable}>
-      <thead className={orange}>
+      <table class="table table-bordered table-responsive-md" id={example1}>
+      <thead>
       <tr>
       <th>Announcemnt Title</th>
       <th>Description</th>
@@ -38,9 +38,7 @@ export class AnnouncementList extends React.Component{
           <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={18} /> </td>
       </tr>
       </tbody>
-
       </table>
-
       </div>
       <Footer/>
       </div>

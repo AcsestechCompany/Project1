@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Form, FormGroup, Label, Input, FormText,Row,Col } from 'reactstrap';
-import {DatePicker,Slider,TextField} from 'material-ui';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 import Icon from 'react-icons-kit';
 import {arrowRight2,arrowLeft2,plus } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";

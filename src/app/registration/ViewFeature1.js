@@ -36,7 +36,7 @@ export class ViewFeature1 extends React.Component{
       <LogoHeader/>
       <Row className={rowStyle}>
         <Col xs="4">
-        <img  src={require('../timeandattendance.jpg')} id={imgStyle} style={styles.fadeInUp} />
+        <img  src={require('../images/timeandattendance.jpg')} id={imgStyle} style={styles.fadeInUp} />
         </Col>
       <Col>
       <p id={featureHeading}  style={styles.fadeInRight}>
