@@ -13,12 +13,34 @@ import {Footer} from "../Footer";
 import {default as UUID} from "node-uuid";
 
 export class LoginInfo extends React.Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      name: '',
+      email:''
+    }
+  }
+  handlenameChange = (evt) =>{
+    this.setState({
+      name:evt.target.value
+    });
+  }
+  handleEmailChange = (evt) =>{
+    this.setState({
+      email:evt.target.value
+    })
+  }
   componentWillMount() {
      this.id = UUID.v4();
    }
   render()
-
     {
+      var re1 = new RegExp("^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4})$");
+      var re2 = new RegExp("^([a-zA-Z]{5,25}(?: [a-zA-Z]+){0,2})$");
+      const {email,name  } = this.state;
+      const isEnabled =
+        re1.test(email) &&
+        re2.test(name);
     return(
       <div>
       <Header/>
@@ -31,11 +53,19 @@ export class LoginInfo extends React.Component{
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Name</label>
-      <Input type="text"  className={inputstyle}  pattern="[A-Za-z]{1,25}$" placeholder="" required />
+      <Input type="text"  className={inputstyle}
+      value={this.state.name}
+      onChange={this.handlenameChange}
+
+      required />
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Email ID</label>
-        <Input type="email"  className={inputstyle} placeholder="" required />
+        <Input type="email"  className={inputstyle} placeholder=""
+        value={this.state.email}
+        onChange={this.handleEmailChange}
+
+        required />
         </div>
         </div>
         <div class="form-row">
@@ -45,7 +75,7 @@ export class LoginInfo extends React.Component{
           </div>
           </div>
 
-      <Input type="submit" value="SAVE"  className={savebtn1} style={{width:'20%',marginLeft:'8vw'}}/>
+    <button disabled={!isEnabled} class="btn btn-primary">SAVE</button>
           </Form>
 
       </Col>
