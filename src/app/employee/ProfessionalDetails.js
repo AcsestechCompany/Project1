@@ -15,23 +15,62 @@ export class ProfessionalDetails extends React.Component{
     this.state={
       enable:false,
       disable:false,
-      location:''
+      location:'',
+      email: '',
+      firstname: '',
+      lastname: '',
+      location:'',
+      designation: '',
+      department:'',
+      employmenttype: '',
+      reportingmanager:'',
+      empid: '',
+      dob:''
     };
   }
 
+     handledobChange = (evt) => {
+    this.setState({ dob: evt.target.value });
+  }
+    handlefirstnameChange = (evt) => {
+      this.setState({ firstname: evt.target.value });
+    }
+    handlelastnameChange = (evt) => {
+      this.setState({lastname : evt.target.value });
+    }
+    handleempidChange = (evt) => {
+      this.setState({ empid: evt.target.value });
+    }
+    handlereportingmanagerChange = (evt) => {
+      this.setState({ reportingmanager: evt.target.value });
+    }
+  handledesignationChange = (evt) => {
+    this.setState({ designation: evt.target.value});
+  }
+    handledepartmentChange = (evt) => {
+      this.setState({department : evt.target.value });
+    }
+    handleemploymenttypeChange = (evt) => {
+      this.setState({employmenttype : evt.target.value });
+    }
     handlelocationChange = (evt) => {
       this.setState({ location: evt.target.value });
     }
+    handleEmailChange = (evt) => {
+      this.setState({ email: evt.target.value });
+    }
+    handleSubmit(){
+      alert('input submitted')
+    }
 
-
-  enabletest(){
-    this.setState({
-      enable:true,
-      disable:false
+    enabletest(){
+       this.setState({
+        enable:true,
+        disable:false
     })
   }
-  disabletest(){
-    this.setState({
+   disabletest(){
+      this.setState({
       disable:true,
       enable:false
     })
@@ -41,19 +80,19 @@ export class ProfessionalDetails extends React.Component{
       return <div><div class="form-check">
         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked
         style={{marginTop:'0.7vw'}}/>
-        <label class="form-check-label" for="gridRadios1" style={{fontSize:'0.8vw',marginTop:'0.4vw',marginLeft:'1vw'}} id={radiocheck}>
+        <label class="form-check-label" for="gridRadios1" style={{fontSize:'0.8vw',marginTop:'0.4vw',marginLeft:'1vw'}} id={styles1.radiocheck}>
           On Holidays
         </label>
       </div>
       <div class="form-check">
         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" style={{marginTop:'0.7vw'}}/>
-        <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginTop:'0.45vw',marginLeft:'1vw'}} id={radiocheck}>
+        <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginTop:'0.45vw',marginLeft:'1vw'}} id={styles1.radiocheck}>
         On Week Off
         </label>
       </div>
       <div class="form-check">
         <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" style={{marginTop:'0.7vw'}}/>
-        <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginTop:'0.4vw',marginLeft:'1vw'}} id={radiocheck}>
+        <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginTop:'0.4vw',marginLeft:'1vw'}} id={styles1.radiocheck}>
          Daily
         </label>
       </div></div>;
@@ -67,9 +106,20 @@ export class ProfessionalDetails extends React.Component{
   render() {
     var enable = this.enablefunc();
     var disable =this.disablefunc();
-    const { location } = this.state;
+    var re1 = new RegExp("^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4})$");
+    var re2 = new RegExp("^([a-zA-Z]{5,25}(?: [a-zA-Z]+){0,2})$");
+    var re3 = new RegExp("^([a-zA-Z]{1,10}([0-9]{0,10}))$");
+    const { location,email,firstname,lastname,employmenttype,reportingmanager,department,designation,empid,dob } = this.state;
     const isEnabled =
-      location.length   > 0;
+      re1.test(email) &&
+      re2.test(firstname) &&
+      re2.test(lastname) &&
+      re2.test(reportingmanager) &&
+      re2.test(location) &&
+      re2.test(department) &&
+      re3.test(empid) &&
+
+      dob.length > 0;
 
     return(
       <div>
@@ -79,32 +129,51 @@ export class ProfessionalDetails extends React.Component{
 <hr className={styles.hrStyle}/>
 <Row>
   <Col xs="10">
-      <Form className={styles1.formStyle}>
+      <Form className={styles1.formStyle} onSubmit={this.handleSubmit}>
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={styles1.labelStyle1}>First Name</label>
-          <Input type="text"  className={styles1.inputstyle} placeholder="" pattern="[a-zA-Z]{5,25}" required/>
+          <Input type="text"  className={styles1.inputstyle} placeholder=""
+          value={this.state.firstname}
+         onChange={this.handlefirstnameChange}
+
+           required/>
         </div>
         <div class="col-md-5 mb-3">
           <label className={styles1.labelStyle1}>Last Name</label>
-          <Input type="text"  className={styles1.inputstyle} placeholder="" pattern="[a-zA-Z]{5,25}"  required/>
+          <Input type="text"  className={styles1.inputstyle} placeholder=""
+          value={this.state.lastname}
+          onChange={this.handlelastnameChange}
+
+           required/>
         </div>
         </div>
         <div class="form-row">
         <div class="col-md-10 mb-3">
         <label className={styles1.labelStyle1}>Email ID</label>
-        <Input type="email"  className={styles1.inputstyle} placeholder="" required />
+        <Input type="email"  className={styles1.inputstyle}
+        value={this.state.email}
+        onChange={this.handleEmailChange}
+
+         placeholder="" required />
         </div>
         </div>
 
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={styles1.labelStyle1}>Employee ID</label>
-              <Input type="text"  className={styles1.inputstyle} placeholder="" pattern="[a-zA-Z0-9]{5,25}" required />
+              <Input type="text"  className={styles1.inputstyle} placeholder=""
+              value={this.state.empid}
+              onChange={this.handleempidChange}
+
+               required />
           </div>
           <div class="col-md-5 mb-3">
           <label className={styles1.labelStyle1}>Designation</label>
-          <Input type="select" className={styles1.inputstyle} pattern="[a-zA-Z]{5,25}" required>
+          <Input type="select" className={styles1.inputstyle}
+
+
+           required>
           <option></option>
           <option>Manager</option>
           <option>Team Lead</option>
@@ -114,7 +183,10 @@ export class ProfessionalDetails extends React.Component{
         <div class="form-row">
         <div class="col-md-5 mb-3">
         <label className={styles1.labelStyle1}>Department</label>
-        <Input type="select" className={styles1.inputstyle} pattern="[a-zA-Z]{5,25}" required>
+        <Input type="select" className={styles1.inputstyle}
+        value={this.state.department}
+        onChange={this.handledepartmentChange}
+         required>
         <option></option>
         <option>Marketing</option>
         <option>Finance</option>
@@ -122,29 +194,41 @@ export class ProfessionalDetails extends React.Component{
         </div>
         <div class="col-md-5 mb-3">
         <label className={styles1.labelStyle1}>Employment Type</label>
-        <Input type="select" className={styles1.inputstyle} pattern="[a-zA-Z]{5,25}" required>
-        <option></option>
+        <Input type="select" className={styles1.inputstyle}
+
+         required>
+         <option></option>
         <option>Full Time</option>
         <option>Part Time</option>
       </Input>
+
         </div>
           </div>
           <div class="form-row">
           <div class="col-md-10 mb-3">
           <label className={styles1.labelStyle1}>Reporting Manager</label>
-            <Input type="text"  className={styles1.inputstyle} placeholder="" pattern="[a-zA-Z]{5,25}" required/>
+            <Input type="text"  className={styles1.inputstyle} placeholder=""
+            value={this.state.reportingmanager}
+            onChange={this.handlereportingmanagerChange}
+
+           required/>
           </div>
           </div>
           <div class="form-row">
           <div class="col-md-5 mb-3">
           <label className={styles1.labelStyle1}>Date Of Joining</label>
-            <Input type="date"  className={styles1.inputstyle} placeholder=""  required/>
+            <Input type="date"  className={styles1.inputstyle} placeholder=""
+            value={this.state.dob}
+            onChange={this.handledobChange}
+
+            required/>
           </div>
             <div class="col-md-5 mb-3">
             <label className={styles1.labelStyle1}>Location</label>
             <Input type="select" className={styles1.inputstyle} pattern="[a-zA-Z]{5,25}"
             value={this.state.location}
             onChange={this.handlelocationChange}
+
             required>
             <option></option>
             <option>Hyderabad</option>
@@ -154,7 +238,7 @@ export class ProfessionalDetails extends React.Component{
             </div>
 
     <Row className={styles.overtimePay}>
-    <p style={{fontWeight:'lighter',fontSize:'0.9vw'}}>Overtime Pay</p>
+    <p style={{fontWeight:'lighter',fontSize:'0.9vw',marginLeft:'1vw'}}>Overtime Pay</p>
     <span onClick={this.enabletest.bind(this)}>
    {this.state.enable?
     <span><button type="btn btn-light" className={styles1.enableBtnactive} >Enable</button></span>:
@@ -171,13 +255,11 @@ export class ProfessionalDetails extends React.Component{
  <div className={styles1.overtimeDiv}>
 {enable}
 {disable}
+
 <button disabled={!isEnabled} class="btn btn-primary">SAVE</button>
-<div className={styles.bankdiv}>
-
-<Link to="/BankDetails" id={styles.skip1}>Skip </Link>
-
+   <div className={styles.bankdiv}>
+       <Link to="/BankDetails" id={styles.skip1}>Skip </Link>
              <span className={styles.floatRight2}>
-
 
              <Link to="/PersonalDetails" className={styles1.hyperLinkEmployee}>
              <button type="button" class="btn btn-light">
@@ -188,8 +270,8 @@ export class ProfessionalDetails extends React.Component{
              </Link>
                 </span>
                 </div>
- </div>
- </Form>
+      </div>
+      </Form>
           </Col>
           <Col>
           <div className={styles.floatRight} style={{fontSize:'0.9vw'}} id={styles1.slidertext}>

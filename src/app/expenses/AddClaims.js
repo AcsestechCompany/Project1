@@ -1,7 +1,6 @@
 import React from "react";
 import {render} from "react-dom";
 import { Button, Form, FormGroup, Label, Input, FormText,Row } from 'reactstrap';
-
 import Icon from 'react-icons-kit';
 import { plus,glass2,search } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
@@ -44,16 +43,10 @@ export class AddClaims extends React.Component{
             <label className={labelStyle1}>Amount</label>
             <Input type="text"  className={inputstyle}/>
             </div>
-
             <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Date</label>
-              <MuiThemeProvider>
-        <DatePicker hintText="date of joining"
-        underlineStyle={{display: 'none'}}
-        textFieldStyle={{position:'relative',bottom:'0.75vw',color:'lightgray'}}
-        className={dateStyle} style={{border:'1px solid #D0D3D4',height:'2vw',width:'96%'}} />
-            </MuiThemeProvider>
-
+              <Input type="date" className={inputstyle}
+              required/>
             </div>
             </div>
             <div class="form-row">
