@@ -60,16 +60,18 @@ export class PersonalDetails extends React.Component{
   render() {
     const { fathersname,email,dob,phoneno1,phoneno2,nationality,permanentadress,maritalstatus,contactperson,relationship  } = this.state;
   var re1 = new RegExp("^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4})$");
+  var re2 = new RegExp("^([a-zA-Z]{5,25}(?: [a-zA-Z]+){0,2})$");
+  var re3 = new RegExp("^([0-9]{10})$");
     const isEnabled =
           re1.test(email) &&
-          fathersname.length > 0 &&
-          phoneno1.length > 9 &&
-          phoneno2.length > 9 &&
-          nationality.length > 0 &&
-          permanentadress.length > 0 &&
-          maritalstatus.length > 0 &&
-          contactperson.length > 0 &&
-          relationship.length > 0
+          re2.test(fathersname) &&
+          re3.test(phoneno1) &&
+          re3.test(phoneno2) &&
+          re2.test(nationality) &&
+          re2.test(permanentadress) &&
+          re2.test(maritalstatus) &&
+          re2.test(contactperson)  &&
+          re2.test(relationship)  &&
           dob.length > 0;
 
 
