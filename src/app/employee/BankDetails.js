@@ -23,8 +23,56 @@ export class BankDetails extends React.Component{
     this.state = {
       manualcomponents:false,
       autocomponents:false,
-      AnnualCTC:''
+      AnnualCTC:'',
+      accountholdername:'',
+      bankname:'',
+      branchname:'',
+      accounttype:'',
+      accountno:'',
+      ifsccode:'',
+      annualctc:'',
+      monthlyctc:''
     };
+  }
+  handleaccountholdernameChange = (evt) =>{
+    this.setState({
+      accountholdername:evt.target.value
+    });
+  }
+  handlebanknameChange = (evt) =>{
+this.setState({
+  bankname:evt.target.value
+});
+  }
+  handlebranchnameChange = (evt) =>{
+    this.setState({
+      branchname:evt.target.value
+    });
+  }
+  handleaccounttypeChange = (evt) =>{
+    this.setState({
+      accounttype:evt.target.value
+    })
+  }
+  handleaccountnoChange = (evt) =>{
+    this.setState({
+      accountno:evt.target.value
+    })
+  }
+  handleifsccodeChange = (evt) =>{
+    this.setState({
+      ifsccode:evt.target.value
+    })
+  }
+  handleannualctcChange = (evt) =>{
+    this.setState({
+      annualctc:evt.target.value
+    })
+  }
+  handlemonthlyctcChange = (evt) =>{
+    this.setState({
+      monthlyctc:evt.target.value
+    })
   }
   nextmanual(){
     this.setState({
@@ -32,6 +80,7 @@ export class BankDetails extends React.Component{
   autocomponents:false
     });
   }
+
   nextauto(){
     this.setState({
       autocomponents:!this.state.autocomponents,
@@ -56,6 +105,23 @@ export class BankDetails extends React.Component{
   render() {
 var manualcomponents = this.manualdisplay();
 var autocomponents = this.autodisplay();
+const { accountholdername,bankname,branchname,accounttype,accountno,ifsccode,annualctc,monthlyctc } = this.state;
+
+var re1 = new RegExp("^([a-zA-Z]{5,25}(?: [a-zA-Z]+){0,2})$");
+var re2 = new RegExp("[0-9]{12}$");
+var re3 = new RegExp("[0-9]{11}$");
+var re4 = new RegExp("[0-9]{3,10}$");
+
+const isEnabled =
+      re1.test(accountholdername) &&
+      re1.test(bankname) &&
+      re1.test(branchname) &&
+      re1.test(accounttype) &&
+      re2.test(accountno) &&
+      re3.test(ifsccode) &&
+      re4.test(annualctc) &&
+      re4.test(monthlyctc);
+
     return(
       <div>
       <Header/>
@@ -77,31 +143,55 @@ var autocomponents = this.autodisplay();
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Account Holder Name</label>
-          <Input type="text"  className={inputstyle}  pattern="[A-Za-z]{1,25}$"  required />
+          <Input type="text"  className={inputstyle}
+          value={this.state.acountholder}
+          onChange={this.handleaccountholdernameChange}
+
+           required />
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Bank Name</label>
-    <Input type="text"  className={inputstyle} pattern="[A-Za-z]{1,25}$" required/>
+    <Input type="text"  className={inputstyle}
+    value={this.state.bankname}
+    onChange={this.handlebanknameChange}
+
+    required/>
         </div>
         </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Branch Name</label>
-  <Input type="text"  className={inputstyle} pattern="[A-Za-z]{1,25}$" required />
+  <Input type="text"  className={inputstyle}
+  value={this.state.branchname}
+  onChange={this.handlebranchnameChange}
+
+   required />
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Account Number</label>
-            <Input type="text" pattern="^\d{12}$" className={inputstyle} placeholder="12 digit A/c no"  required/>
+            <Input type="text"  className={inputstyle} placeholder="12 digit A/c no"
+            value={this.state.accountno}
+            onChange={this.handleaccountnoChange}
+
+              required/>
           </div>
           </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>IFSC Code</label>
-        <Input type="text"  className={inputstyle} pattern="^\d{11}$" placeholder="IFSC Code" maxlength={11} required />
+        <Input type="text"  className={inputstyle}  placeholder="IFSC Code"
+        value={this.state.ifsccode}
+        onChange={this.handleifsccodeChange}
+
+         required />
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Account Type</label>
-          <Input type="text"  className={inputstyle} placeholder="Type of Account" maxlength={25} required/>
+          <Input type="text"  className={inputstyle} placeholder="Type of Account"
+          value={this.state.accounttype}
+          onChange={this.handleaccounttypeChange}
+
+           required/>
           </div>
           </div>
 
@@ -110,15 +200,18 @@ var autocomponents = this.autodisplay();
 <div class="form-row">
   <div class="col-md-3 mb-3">
     <label className={labelStyle1}>Annual CTC</label>
-    <Input type="text"  className={inputstyle} pattern="^\d{1,10}$"
+    <Input type="text"  className={inputstyle}
+    value={this.state.annualctc}
+    onChange={this.handleannualctcChange}
 
 
      required/>
   </div>
   <div class="col-md-3 mb-3">
     <label className={labelStyle1}>Monthly CTC</label>
-  <Input type="text"  className={inputstyle}  maxlength={25}
-
+  <Input type="text"  className={inputstyle}
+  value={this.state.monthlyctc}
+  onChange={this.handlemonthlyctcChange}
   required/>
   </div>
   </div>
@@ -133,7 +226,7 @@ var autocomponents = this.autodisplay();
 {autocomponents}
 <div className={bankdiv}>
 
-  <Input type="submit" value="SAVE"  className={savebtn1} style={{width:'20%'}}/>
+<button disabled={!isEnabled} class="btn btn-primary">SAVE</button>
 
 <Link to="/LoginInfo" id={skip1}>Skip </Link>
 
