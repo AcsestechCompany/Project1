@@ -59,8 +59,9 @@ export class PersonalDetails extends React.Component{
     }
   render() {
     const { fathersname,email,dob,phoneno1,phoneno2,nationality,permanentadress,maritalstatus,contactperson,relationship  } = this.state;
+    var emailstyle = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
     const isEnabled =
-          email.length > 10 &&
+          email == emailstyle &&
           fathersname.length > 0 &&
           phoneno1.length > 9 &&
           phoneno2.length > 9 &&
@@ -70,6 +71,7 @@ export class PersonalDetails extends React.Component{
           contactperson.length > 0 &&
           relationship.length > 0
           dob.length > 0;
+
 
 
     return(
@@ -181,10 +183,11 @@ export class PersonalDetails extends React.Component{
                 value={this.state.email}
                 onChange={this.handleEmailChange}
                 required />
-
                 </div>
                 </div>
+                <Link to="/ProfessionalDetails">
                     <button disabled={!isEnabled} class="btn btn-primary">SAVE</button>
+                    </Link>
           </Form>
           </Col>
           <Col xs="2">
