@@ -2,14 +2,7 @@
   color:red;
   font-size:0.8vw;
 }
-.genderlabel{
-  font-size:1vw;
-  font-style:arial;
-  position:relative;
-  left:0.5vw;
-  top:2vw;
-  font-weight: lighter;
-}
+
 #genderstyle{
   position:relative;
   left:5vw;

@@ -8,7 +8,31 @@ import styles1 from "./LayoutEmployee.css";
 import {Header} from "../Header";
 import {Footer} from "../Footer";
 export class PersonalDetails extends React.Component{
+  constructor() {
+      super();
+      this.state = {
+        email: '',
+        password: '',
+      };
+    }
+
+    handleEmailChange = (evt) => {
+      this.setState({ email: evt.target.value });
+    }
+
+    handlePasswordChange = (evt) => {
+      this.setState({ password: evt.target.value });
+    }
+
+    handleSubmit = () => {
+      const { email, password } = this.state;
+      alert(`Signed up with email: ${email} password: ${password}`);
+    }
   render() {
+    const { email, password } = this.state;
+    const isEnabled =
+          email.length > 0 &&
+          password.length > 0;
     return(
       <div>
       <Header/>
@@ -23,8 +47,9 @@ export class PersonalDetails extends React.Component{
           <label className={styles1.labelStyle1}>Fathers Name</label>
     <Input type="text"  className={styles1.inputstyle}
     placeholder="Fathers Name"
-pattern="[a-zA-Z]{5,25}"
-    required="required"
+    pattern="[a-zA-Z]{5,25}"
+    value={this.state.password}
+    onChange={this.handlePasswordChange}
      /><br/>
         </div>
         <div class="col-md-5 mb-3">
@@ -37,15 +62,15 @@ pattern="[a-zA-Z]{5,25}"
                   <div class="col-md-4 mb-5" id={styles1.genderstyle}>
                   <Row className={styles1.radiorow}>
                   <FormGroup check>
-                       <Label check className={styles1.radioinput}>
-                         <Input type="radio" name="radio1" className={styles1.radiostyle}/>
+                       <Label check className={styles.radioinput}>
+                         <Input type="radio" name="radio1" className={styles.radiostyle}/>
                          Male
                        </Label>
                      </FormGroup>
                      <FormGroup check>
-                       <Label check className={styles1.radioinput}>
-                         <Input type="radio" name="radio1" className={styles1.radiostyle} />
-                         Female
+                       <Label check className={styles.radioinput}>
+                         <Input type="radio" name="radio1" className={styles.radiostyle} />
+                           Female
                        </Label>
                      </FormGroup>
                      </Row>
@@ -69,9 +94,7 @@ pattern="[a-zA-Z]{5,25}"
           <Input type="text"  className={styles1.inputstyle} placeholder="" pattern="[a-zA-Z]{5,25}" required/>
           </div>
           </div>
-
         <p className={styles.pageHeading}>Emergency Contact Details</p>
-
           <div class="form-row">
             <div class="col-md-5 mb-3">
               <label className={styles1.labelStyle1}>Contact Person Name</label>
@@ -89,10 +112,14 @@ pattern="[a-zA-Z]{5,25}"
                 </div>
                 <div class="col-md-5 mb-3">
                   <label className={styles1.labelStyle1}>Email ID</label>
-                <Input type="email"  className={styles1.inputstyle} placeholder="" required />
+                <Input type="email"  className={styles1.inputstyle} placeholder=""
+                value={this.state.email}
+                onChange={this.handleEmailChange}
+                required />
+
                 </div>
                 </div>
-              <Input type="submit" value="SAVE" style={{width:'20%'}}/>
+                    <button disabled={!isEnabled} class="btn btn-primary">Sign up</button>
           </Form>
           </Col>
           <Col xs="2">  <div  style={{fontSize:'0.9vw',position:'relative',bottom:'-2.5vw'}} id={styles1.slidertext}>
@@ -117,7 +144,7 @@ pattern="[a-zA-Z]{5,25}"
           <Link to="/ProfessionalDetails"  id={styles1.skipstyle}>Skip</Link>
           <span className={styles.floatRight}>
    <Link to="/ProfessionalDetails" className={styles1.hyperLinkEmployee}>
-            <button type="submit" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={styles.arrowIcon} /></button>
+            <button type="submit" class="btn btn-light" >Next <Icon icon={arrowRight2} size={14} className={styles.arrowIcon} /></button>
             </Link>
           </span>
           </div>
