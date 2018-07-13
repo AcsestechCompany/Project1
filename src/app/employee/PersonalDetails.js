@@ -11,28 +11,67 @@ export class PersonalDetails extends React.Component{
   constructor() {
       super();
       this.state = {
+        fathersname:'',
         email: '',
-        password: '',
+        dob: '',
+        phoneno1: '',
+        phoneno2:'',
+        permanentadress:'',
+        nationality:'',
+        maritalstatus:'',
+        contactperson:'',
+        relationship:''
       };
     }
-
+    handleFathersnameChange = (evt) => {
+      this.setState({ fathersname: evt.target.value });
+    }
     handleEmailChange = (evt) => {
       this.setState({ email: evt.target.value });
     }
-
-    handlePasswordChange = (evt) => {
-      this.setState({ password: evt.target.value });
+    handleDOBChange = (evt) => {
+      this.setState({ dob: evt.target.value });
     }
-
+    handlephoneno1Change = (evt) => {
+      this.setState({ phoneno1: evt.target.value });
+    }
+    handlephoneno2Change = (evt) => {
+      this.setState({ phoneno2: evt.target.value });
+    }
+    handlepermanentadressChange = (evt) => {
+      this.setState({ permanentadress: evt.target.value });
+    }
+    handlenationalityChange = (evt) => {
+      this.setState({ nationality: evt.target.value });
+    }
+    handlemaritalChange = (evt) => {
+      this.setState({ maritalstatus: evt.target.value });
+    }
+    handlecontactpersonChange = (evt) => {
+      this.setState({ contactperson: evt.target.value});
+    }
+    handlerelationshipChange = (evt) => {
+      this.setState({ relationship: evt.target.value });
+    }
     handleSubmit = () => {
       const { email, password } = this.state;
       alert(`Signed up with email: ${email} password: ${password}`);
     }
   render() {
-    const { email, password } = this.state;
+    const { fathersname,email,dob,phoneno1,phoneno2,nationality,permanentadress,maritalstatus,contactperson,relationship  } = this.state;
     const isEnabled =
-          email.length > 0 &&
-          password.length > 0;
+          email.length > 10 &&
+          fathersname.length > 0 &&
+          phoneno1.length > 9 &&
+          phoneno2.length > 9 &&
+          nationality.length > 0 &&
+          permanentadress.length > 0 &&
+          maritalstatus.length > 0 &&
+          contactperson.length > 0 &&
+          relationship.length > 0
+          dob.length > 0;
+
+
     return(
       <div>
       <Header/>
@@ -42,20 +81,24 @@ export class PersonalDetails extends React.Component{
 <Row>
 <Col xs="10">
       <Form className={styles1.formStyle}>
+      <p>* All fields are mandatory</p>
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={styles1.labelStyle1}>Fathers Name</label>
     <Input type="text"  className={styles1.inputstyle}
     placeholder="Fathers Name"
     pattern="[a-zA-Z]{5,25}"
-    value={this.state.password}
-    onChange={this.handlePasswordChange}
+    value={this.state.fathersname}
+    onChange={this.handleFathersnameChange}
     required
      /><br/>
         </div>
         <div class="col-md-5 mb-3">
           <label className={styles1.labelStyle1}>DOB</label>
-        <Input type="date" className={styles1.inputstyle} required/>
+        <Input type="date" className={styles1.inputstyle}
+        value={this.state.dob}
+        onChange={this.handleDOBChange}
+        required/>
         </div>
         </div>
         <div class="form-row">
@@ -78,38 +121,59 @@ export class PersonalDetails extends React.Component{
                      </div>
           <div class="col-md-5 mb-3" style={{marginLeft:'1vw'}} >
             <label className={styles1.labelStyle1}>Phone</label>
-              <Input  type="tel" pattern="^\d{10}$"  className={styles1.inputstyle} placeholder="Eg.8794098765" required />
+              <Input  type="tel" pattern="^\d{10}$"  className={styles1.inputstyle} placeholder="Eg.8794098765"
+              value={this.state.phoneno1}
+              onChange={this.handlephoneno1Change}
+              required />
           </div>
           </div>
           <div class="form-group">
       <label className={styles1.labelStyle1}>Permanent Address</label>
-      <Input type="textarea" className={styles1.inputstyletextarea} pattern="[a-zA-Z0-9]{5,25}" required/>
+      <Input type="textarea" className={styles1.inputstyletextarea} pattern="[a-zA-Z0-9]{5,25}"
+       value={this.state.permanentadress}
+       onChange={this.handlepermanentadressChange}
+      required/>
     </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={styles1.labelStyle1}>Nationality</label>
-    <Input type="text"  className={styles1.inputstyle} placeholder="" pattern="[a-zA-z]{2,25}"  required/>
+    <Input type="text" className={styles1.inputstyle} placeholder="" pattern="[a-zA-z]{2,25}"
+       value={this.state.nationality}
+       onChange={this.handlenationalityChange}
+     required/>
           </div>
           <div class="col-md-5 mb-3">
             <label className={styles1.labelStyle1}>Marital Status</label>
-          <Input type="text"  className={styles1.inputstyle} placeholder="" pattern="[a-zA-Z]{5,25}" required/>
+          <Input type="text"  className={styles1.inputstyle} placeholder="" pattern="[a-zA-Z]{5,25}"
+          value={this.state.maritalstatus}
+          onChange={this.handlemaritalChange}
+          required/>
           </div>
           </div>
         <p className={styles.pageHeading}>Emergency Contact Details</p>
           <div class="form-row">
             <div class="col-md-5 mb-3">
               <label className={styles1.labelStyle1}>Contact Person Name</label>
-          <Input type="text"  className={styles1.inputstyle} placeholder="Contact Person Name" pattern="[a-zA-Z]{5,25}" required/>
+          <Input type="text"  className={styles1.inputstyle} placeholder="Contact Person Name" pattern="[a-zA-Z]{5,25}"
+           value={this.state.contactperson}
+           onChange={this.handlecontactpersonChange}
+           required/>
             </div>
             <div class="col-md-5 mb-3">
               <label className={styles1.labelStyle1}>Phone</label>
-              <Input type="tel" pattern="^\d{10}$" className={styles1.inputstyle} placeholder="Eg.8978987898"   required/>
+              <Input type="tel" pattern="^\d{10}$" className={styles1.inputstyle} placeholder="Eg.8978987898"
+              value={this.state.phoneno2}
+              onChange={this.handlephoneno2Change}
+                required/>
             </div>
             </div>
               <div class="form-row">
                 <div class="col-md-5 mb-3">
                   <label className={styles1.labelStyle1}>Relationship</label>
-                <Input type="text"  className={styles1.inputstyle} placeholder="" pattern="[a-zA-z]{5,25}" required />
+                <Input type="text"  className={styles1.inputstyle} placeholder="" pattern="[a-zA-z]{5,25}"
+                value={this.state.relationship}
+                onChange={this.handlerelationshipChange}
+                required />
                 </div>
                 <div class="col-md-5 mb-3">
                   <label className={styles1.labelStyle1}>Email ID</label>
@@ -123,11 +187,13 @@ export class PersonalDetails extends React.Component{
                     <button disabled={!isEnabled} class="btn btn-primary">SAVE</button>
           </Form>
           </Col>
-          <Col xs="2">  <div  style={{fontSize:'0.9vw',position:'relative',bottom:'-2.5vw'}} id={styles1.slidertext}>
+          <Col xs="2">
+          <div  style={{fontSize:'0.9vw',position:'relative',bottom:'-2.5vw'}} id={styles1.slidertext}>
             <p>
             <Link to="/PersonalDetails" className={styles.orange} >
                   Personal Details
-            </Link></p>
+            </Link>
+            </p>
             <p>
             <Link to="/ProfessionalDetails" className={styles1.hyperLinkEmployee}>
             Professional Details

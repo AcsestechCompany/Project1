@@ -14,9 +14,16 @@ export class ProfessionalDetails extends React.Component{
   this.disabletest =this.disabletest.bind(this);
     this.state={
       enable:false,
-      disable:false
+      disable:false,
+      location:''
     };
   }
+
+    handlelocationChange = (evt) => {
+      this.setState({ location: evt.target.value });
+    }
+
+
   enabletest(){
     this.setState({
       enable:true,
@@ -60,6 +67,10 @@ export class ProfessionalDetails extends React.Component{
   render() {
     var enable = this.enablefunc();
     var disable =this.disablefunc();
+    const { location } = this.state;
+    const isEnabled =
+      location.length   > 0;
+
     return(
       <div>
       <Header/>
@@ -131,7 +142,10 @@ export class ProfessionalDetails extends React.Component{
           </div>
             <div class="col-md-5 mb-3">
             <label className={styles1.labelStyle1}>Location</label>
-            <Input type="select" className={styles1.inputstyle} pattern="[a-zA-Z]{5,25}" required>
+            <Input type="select" className={styles1.inputstyle} pattern="[a-zA-Z]{5,25}"
+            value={this.state.location}
+            onChange={this.handlelocationChange}
+            required>
             <option></option>
             <option>Hyderabad</option>
             <option>Bangalore</option>
@@ -157,7 +171,7 @@ export class ProfessionalDetails extends React.Component{
  <div className={styles1.overtimeDiv}>
 {enable}
 {disable}
-<Input type="submit" value="SAVE" style={{width:'20%',marginLeft:'-8vw',marginTop:'2vw'}}/>
+<button disabled={!isEnabled} class="btn btn-primary">SAVE</button>
 <div className={styles.bankdiv}>
 
 <Link to="/BankDetails" id={styles.skip1}>Skip </Link>
