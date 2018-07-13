@@ -50,6 +50,7 @@ export class PersonalDetails extends React.Component{
     pattern="[a-zA-Z]{5,25}"
     value={this.state.password}
     onChange={this.handlePasswordChange}
+    required
      /><br/>
         </div>
         <div class="col-md-5 mb-3">
@@ -119,7 +120,7 @@ export class PersonalDetails extends React.Component{
 
                 </div>
                 </div>
-                    <button disabled={!isEnabled} class="btn btn-primary">Sign up</button>
+                    <button disabled={!isEnabled} class="btn btn-primary">SAVE</button>
           </Form>
           </Col>
           <Col xs="2">  <div  style={{fontSize:'0.9vw',position:'relative',bottom:'-2.5vw'}} id={styles1.slidertext}>
