@@ -33,19 +33,37 @@ export class PersonalDetails extends React.Component{
       });
     }
     handleEmailChange = (evt) => {
-      this.setState({ email: evt.target.value });
+      this.setState({
+        email: evt.target.value,
+        showErrors:true
+       });
     }
     handleDOBChange = (evt) => {
-      this.setState({ dob: evt.target.value });
+      this.setState({
+        dob: evt.target.value,
+        showErrors:true
+       });
     }
     handlephoneno1Change = (evt) => {
-      this.setState({ phoneno1: evt.target.value });
+      this.setState({
+        phoneno1: evt.target.value,
+        errors:true,
+        showErrors:true
+      });
     }
     handlephoneno2Change = (evt) => {
-      this.setState({ phoneno2: evt.target.value });
+      this.setState({
+        phoneno2: evt.target.value,
+        errors:true,
+        showErrors:true
+      });
     }
     handlepermanentadressChange = (evt) => {
-      this.setState({ permanentadress: evt.target.value });
+      this.setState({
+        permanentadress: evt.target.value,
+        errors:true,
+        showErrors:true
+       });
     }
     handlenationalityChange = (evt) => {
       this.setState({
@@ -57,19 +75,22 @@ export class PersonalDetails extends React.Component{
     handlemaritalChange = (evt) => {
       this.setState({
         maritalstatus: evt.target.value,
-        errors:true
+        errors:true,
+        showErrors:true
        });
     }
     handlecontactpersonChange = (evt) => {
       this.setState({
          contactperson: evt.target.value,
-         errors:true
+         errors:true,
+         showErrors:true
       });
     }
     handlerelationshipChange = (evt) => {
       this.setState({
         relationship: evt.target.value ,
-        errors:true
+        errors:true,
+        showErrors:true
       });
     }
     handleSubmit = () => {
@@ -81,18 +102,24 @@ export class PersonalDetails extends React.Component{
   var re1 = new RegExp("^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4})$");
   var re2 = new RegExp("^([a-zA-Z]{0,25}(?: [a-zA-Z]+){0,2})$");
   var re3 = new RegExp("^([0-9]{10})$");
+  var re4 = new RegExp("^([a-zA-Z0-9-/:.]{0,50})$");
+
   const fncheck = re2.test(fathersname);
   const natinalitycheck = re2.test(nationality);
   const maritalcheck = re2.test(maritalstatus);
   const cpcheck = re2.test(contactperson);
   const relationshipcheck = re2.test(relationship);
+  const addresscheck = re4.test(permanentadress);
+  const phone1check = re3.test(phoneno1);
+  const phone2check = re3.test(phoneno2);
+
     const isEnabled =
           re1.test(email) &&
           re2.test(fathersname) &&
           re3.test(phoneno1) &&
           re3.test(phoneno2) &&
           re2.test(nationality) &&
-          re2.test(permanentadress) &&
+          re4.test(permanentadress) &&
           re2.test(maritalstatus) &&
           re2.test(contactperson)  &&
           re2.test(relationship)  &&
@@ -128,9 +155,19 @@ export class PersonalDetails extends React.Component{
         value={this.state.dob}
         onChange={this.handleDOBChange}
         required/>
-         {this.state.showErrors ? <p className={styles.errortext}>*This field is required </p> : ''}
-        </div>
+         {this.state.showErrors ?
+            <span>
+            {this.state.dob == '' ?
+              <span className={styles.errortext}>*This field is required</span>
+              :
+              ''
+            }
 
+            </span>
+           :
+           ''
+         }
+        </div>
         </div>
 
         <div class="form-row">
@@ -158,7 +195,21 @@ export class PersonalDetails extends React.Component{
               value={this.state.phoneno1}
               onChange={this.handlephoneno1Change}
               required />
-               {this.state.showErrors ? <p className={styles.errortext}>*This field is required </p> : ''}
+              {this.state.errors ?
+                <span> {phone1check ? '' :
+                 <span className={styles.errortext}> *Phone Number should be 10 digits </span> } </span> : ''}
+              {this.state.showErrors ?
+                 <span>
+                 {this.state.phoneno1 == '' ?
+                   <span className={styles.errortext}>*This field is required</span>
+                   :
+                   ''
+                 }
+
+                 </span>
+                :
+                ''
+              }
           </div>
           </div>
           <div class="form-group">
@@ -167,7 +218,19 @@ export class PersonalDetails extends React.Component{
        value={this.state.permanentadress}
        onChange={this.handlepermanentadressChange}
       required/>
-       {this.state.showErrors ? <p className={styles.errortext}>*This field is required </p> : ''}
+      {this.state.errors ? <span> {addresscheck ? '' :
+       <span className={styles.errortext}> *Address  cannnot exceed 50 characters </span> } </span> : ''}
+      {this.state.showErrors ?
+         <span>
+         {this.state.permanentadress == '' ?
+           <span className={styles.errortext}>*This field is required</span>
+           :
+           ''
+         }
+         </span>
+        :
+        ''
+      }
     </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
@@ -176,8 +239,19 @@ export class PersonalDetails extends React.Component{
        value={this.state.nationality}
        onChange={this.handlenationalityChange}
      required/>
-     {this.state.errors ? <p> {natinalitycheck ? '' :
-      <p className={styles.errortext}> *Nationality cannot contain letters or special characters   & cannnot exceed 25 characters </p> } </p> : ''}
+     {this.state.errors ? <span> {natinalitycheck ? '' :
+      <span className={styles.errortext}> *Nationality cannot contain letters or special characters   & cannnot exceed 25 characters </span> } </span> : ''}
+      {this.state.showErrors ?
+         <span>
+         {this.state.nationality == '' ?
+           <span className={styles.errortext}>*This field is required</span>
+           :
+           ''
+         }
+         </span>
+        :
+        ''
+      }
           </div>
           <div class="col-md-5 mb-3">
             <label className={styles1.labelStyle1}>Marital Status</label>
@@ -187,6 +261,17 @@ export class PersonalDetails extends React.Component{
           required/>
           {this.state.errors ? <p> {maritalcheck ? '' :
           <p className={styles.errortext}> *Marital Status cannot contain letters or special characters   & cannnot exceed 25 characters </p> } </p> : ''}
+          {this.state.showErrors ?
+             <span>
+             {this.state.maritalstatus == '' ?
+               <span className={styles.errortext}>*This field is required</span>
+               :
+               ''
+             }
+             </span>
+            :
+            ''
+          }
           </div>
           </div>
         <p className={styles.pageHeading}>Emergency Contact Details</p>
@@ -197,8 +282,19 @@ export class PersonalDetails extends React.Component{
            value={this.state.contactperson}
            onChange={this.handlecontactpersonChange}
            required/>
-           {this.state.errors ? <p> {cpcheck ? '' :
-            <p className={styles.errortext}> *Nationality cannot contain letters or special characters   & cannnot exceed 25 characters</p> } </p> : ''}
+           {this.state.errors ? <span> {cpcheck ? '' :
+            <span className={styles.errortext}> *Nationality cannot contain letters or special characters   & cannnot exceed 25 characters</span> } </span> : ''}
+            {this.state.showErrors ?
+               <span>
+               {this.state.contactperson == '' ?
+                 <span className={styles.errortext}>*This field is required</span>
+                 :
+                 ''
+               }
+               </span>
+              :
+              ''
+            }
             </div>
             <div class="col-md-5 mb-3">
               <label className={styles1.labelStyle1}>Phone</label>
@@ -206,6 +302,26 @@ export class PersonalDetails extends React.Component{
               value={this.state.phoneno2}
               onChange={this.handlephoneno2Change}
                 required/>
+                {this.state.errors ?
+                  <span>
+                  {
+                    phone2check ? '' :
+                   <span className={styles.errortext}> *Phone Number should be 10 digits </span>
+                  }
+                   </span>
+                   : ''}
+
+                {this.state.showErrors ?
+                   <span>
+                   {this.state.phoneno2 == '' ?
+                     <span className={styles.errortext}>*This field is required</span>
+                     :
+                     ''
+                   }
+                   </span>
+                  :
+                  ''
+                }
             </div>
             </div>
               <div class="form-row">
@@ -218,6 +334,17 @@ export class PersonalDetails extends React.Component{
                 {this.state.errors ? <p> {relationshipcheck ? '' :
                 <p className={styles.errortext}> *Relationship cannot contain letters or special characters  & cannnot exceed 25 characters  </p> } </p>
                 : ''}
+                {this.state.showErrors ?
+                   <span>
+                   {this.state.relationship == '' ?
+                     <span className={styles.errortext}>*This field is required</span>
+                     :
+                     ''
+                   }
+                   </span>
+                  :
+                  ''
+                }
                 </div>
                 <div class="col-md-5 mb-3">
                   <label className={styles1.labelStyle1}>Email ID</label>
@@ -235,6 +362,7 @@ export class PersonalDetails extends React.Component{
 
 <button class="btn btn-light" id={styles1.savebtnstyle} disabled>SAVE</button>
                       }
+
           </Form>
           </Col>
           <Col xs="2">

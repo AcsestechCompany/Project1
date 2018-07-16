@@ -47,13 +47,10 @@ export class EmpDocs extends React.Component{
 
              <span className={floatRight2}>
 
-
              <Link to="/JobHistory" className={hyperLinkEmployee} >
              <button type="button" class="btn btn-light">
              <Icon icon={arrowLeft2} className={arrowIconL} size={14}/>Prev</button>
                </Link>
-
-
 
                 </span>
 </div>
