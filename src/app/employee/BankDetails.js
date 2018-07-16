@@ -89,14 +89,14 @@ this.setState({
   manualdisplay(){
     if(this.state.manualcomponents){
       return(
-        <Auto/>
+        <Manual/>
       );
     }
   }
     autodisplay(){
       if(this.state.autocomponents){
         return(
-        <Manual/>
+        <Auto/>
         );
       }
     }
