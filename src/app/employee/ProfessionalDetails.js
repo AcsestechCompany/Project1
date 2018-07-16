@@ -255,8 +255,9 @@ export class ProfessionalDetails extends React.Component{
  <div className={styles1.overtimeDiv}>
 {enable}
 {disable}
-
+<Link to="/BankDetails">
 <button disabled={!isEnabled} class="btn btn-primary">SAVE</button>
+</Link>
    <div className={styles.bankdiv}>
        <Link to="/BankDetails" id={styles.skip1}>Skip </Link>
              <span className={styles.floatRight2}>

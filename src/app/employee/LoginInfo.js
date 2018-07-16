@@ -74,8 +74,9 @@ export class LoginInfo extends React.Component{
       <Input type="text"  className={inputstyle} value={this.id} placeholder="" disabled />
           </div>
           </div>
-
+<Link to="/JobHistory">
     <button disabled={!isEnabled} class="btn btn-primary">SAVE</button>
+    </Link>
           </Form>
 
       </Col>

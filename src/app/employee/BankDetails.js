@@ -138,7 +138,6 @@ const isEnabled =
 <p><Link to="/EmpDocs" className={hyperLinkEmployee}>Employee Documents</Link></p>
 </div>
 
-
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Account Holder Name</label>
@@ -224,8 +223,9 @@ const isEnabled =
 {manualcomponents}
 {autocomponents}
 <div className={bankdiv}>
-
+<Link to="/LoginInfo">
 <button disabled={!isEnabled} class="btn btn-primary">SAVE</button>
+</Link>
 
 <Link to="/LoginInfo" id={skip1}>Skip </Link>
 
