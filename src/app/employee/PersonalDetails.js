@@ -20,11 +20,19 @@ export class PersonalDetails extends React.Component{
         nationality:'',
         maritalstatus:'',
         contactperson:'',
-        relationship:''
+        relationship:'',
+        errors:false,
+        showErrors:false
       };
     }
     handleFathersnameChange = (evt) => {
-      this.setState({ fathersname: evt.target.value });
+      this.setState({
+
+        fathersname: evt.target.value ,
+        errors:true
+
+      });
+
     }
     handleEmailChange = (evt) => {
       this.setState({ email: evt.target.value });
@@ -58,10 +66,11 @@ export class PersonalDetails extends React.Component{
       alert(`Signed up with email: ${email} password: ${password}`);
     }
   render() {
-    const { fathersname,email,dob,phoneno1,phoneno2,nationality,permanentadress,maritalstatus,contactperson,relationship  } = this.state;
+  const { fathersname,email,dob,phoneno1,phoneno2,nationality,permanentadress,maritalstatus,contactperson,relationship  } = this.state;
   var re1 = new RegExp("^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4})$");
-  var re2 = new RegExp("^([a-zA-Z]{5,25}(?: [a-zA-Z]+){0,2})$");
+  var re2 = new RegExp("^([a-zA-Z]{0,25}(?: [a-zA-Z]+){0,2})$");
   var re3 = new RegExp("^([0-9]{10})$");
+  const fncheck = re2.test(fathersname);
     const isEnabled =
           re1.test(email) &&
           re2.test(fathersname) &&
@@ -73,19 +82,16 @@ export class PersonalDetails extends React.Component{
           re2.test(contactperson)  &&
           re2.test(relationship)  &&
           dob.length > 0;
-
-
-
     return(
       <div>
       <Header/>
        <div className={styles.displayContainer}>
-<p className={styles.pageHeading}>Personal Details</p>
+<p className={styles.pageHeading}>Personal Details * All fields are mandatory</p>
 <hr className={styles.hrStyle}/>
 <Row>
 <Col xs="10">
       <Form className={styles1.formStyle}>
-      <p>* All fields are mandatory</p>
+
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={styles1.labelStyle1}>Fathers Name</label>
@@ -95,7 +101,8 @@ export class PersonalDetails extends React.Component{
     value={this.state.fathersname}
     onChange={this.handleFathersnameChange}
     required
-     /><br/>
+     />
+       {this.state.errors ? <p> {fncheck ? '' :  <p className={styles.errortext}> *Name cannot contain letters or special characters </p> } </p> : ''}
         </div>
         <div class="col-md-5 mb-3">
           <label className={styles1.labelStyle1}>DOB</label>
@@ -187,9 +194,14 @@ export class PersonalDetails extends React.Component{
                 required />
                 </div>
                 </div>
-                <Link to="/ProfessionalDetails">
-                    <button disabled={!isEnabled} class="btn btn-primary">SAVE</button>
-                    </Link>
+                {isEnabled ?
+                  <Link to="/ProfessionalDetails">
+                        <button  class="btn btn-primary">SAVE</button>
+                        </Link>
+                  :
+
+<button class="btn btn-light" id={styles1.savebtnstyle} disabled>SAVE</button>
+                      }
           </Form>
           </Col>
           <Col xs="2">
