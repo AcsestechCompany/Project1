@@ -13,13 +13,45 @@ export class JobHistory extends React.Component{
   constructor(props) {
   super(props);
   this.state = {
-    value: new Date()
+    value: new Date(),
+    companyname:'',
+    department:'',
+    designation:'',
+    reportingmanager:''
   }
+}
+handlecompanynameChange = (evt) =>{
+  this.setState({
+    companyname:evt.target.value
+  })
+}
+handledepartmentChange = (evt) =>{
+  this.setState({
+    department:evt.target.value
+  })
+}
+handledesignationChange = (evt) =>{
+  this.setState({
+    designation:evt.target.value
+  })
+}
+handlereportingmanagerChange = (evt) =>{
+  this.setState({
+    reportingmanager:evt.target.value
+  })
 }
   handleChange = (event, value) => {
    this.setState({value});
  }
   render() {
+    var re1 = new RegExp("^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4})$");
+    var re2 = new RegExp("^([a-zA-Z]{5,25}(?: [a-zA-Z]+){0,2})$");
+    const {companyname,department,designation,reportingmanager } = this.state;
+    const isEnabled =
+      re2.test(companyname) &&
+      re2.test(department) &&
+      re2.test(designation) &&
+      re2.test(reportingmanager);
     return(
   <div>
   <Header/>
@@ -39,35 +71,56 @@ export class JobHistory extends React.Component{
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Company Name</label>
-          <Input type="text"  className={inputstyle} placeholder=""  pattern="[A-Za-z]{1,25}$" required/>
+          <Input type="text"  className={inputstyle} placeholder=""
+          value={this.state.companyname}
+          onChange={this.handlecompanynameChange}
+
+           required/>
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Department</label>
-  <Input type="text"  className={inputstyle} placeholder="" pattern="[A-Za-z]{1,25}$" required/>
+  <Input type="text"  className={inputstyle} placeholder=""
+  value={this.state.department}
+  onChange={this.handledepartmentChange}
+
+   required/>
         </div>
         </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Designation</label>
-            <Input type="text"  className={inputstyle} placeholder=""  pattern="[A-Za-z]{1,25}$" required/>
+            <Input type="text"  className={inputstyle} placeholder=""
+            value={this.state.designation}
+            onChange={this.handledesignationChange}
+
+             required/>
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Reporting Mananger</label>
-          <Input type="text"  className={inputstyle} placeholder=""  pattern="[A-Za-z]{1,25}$" required/>
+          <Input type="text"  className={inputstyle} placeholder=""
+          value={this.state.reportingmanager}
+          onChange={this.handlereportingmanagerChange}
+
+          required/>
           </div>
           </div>
 
         <div class="form-row">
           <div class="col-md-5 mb-3">
-            <label className={labelStyle1}>Designation</label>
-            <Input type="date"  className={inputstyle} placeholder=""  required/>
+            <label className={labelStyle1}>Date Of Joining</label>
+            <Input type="date"  className={inputstyle} placeholder=""
+
+
+             required/>
           </div>
           <div class="col-md-5 mb-3">
-            <label className={labelStyle1}>Reporting Mananger</label>
-          <Input type="date"  className={inputstyle} placeholder=""   required/>
+            <label className={labelStyle1}>Date of Releiving</label>
+          <Input type="date"  className={inputstyle} placeholder=""
+
+          required/>
           </div>
           </div>
-            <Input type="submit" value="ADD"  className={savebtn1} style={{width:'20%',marginLeft:'8vw'}}/>
+              <button disabled={!isEnabled} class="btn btn-primary">SAVE</button>
 </Form>
 <div className={bankdiv}>
 <Link to="/EmpDocs" id={skip1}>Skip </Link>

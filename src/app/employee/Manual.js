@@ -3,6 +3,8 @@ import {displayContainer,contentStyle1} from "../Layout.css";
 import Icon from 'react-icons-kit';
 import { cross } from 'react-icons-kit/entypo/cross';
 export class Manual extends React.Component{
+
+
   render(){
     return(
       <div>

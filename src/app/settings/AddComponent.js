@@ -54,8 +54,8 @@ export class AddComponent extends React.Component{
            <label className={labelStyle1}>Component Type</label>
            <Input type="select" name="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" required>
                   <option></option>
-                  <option>Select</option>
-                  <option></option>
+                  <option>Earnings</option>
+                  <option>Deductions</option>
 
                 </Input>
            </div>

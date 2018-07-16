@@ -19,7 +19,6 @@ export class BankDetails extends React.Component{
     this.nextmanual=this.nextmanual.bind(this);
     this.nextauto=this.nextauto.bind(this);
 
-
     this.state = {
       manualcomponents:false,
       autocomponents:false,
