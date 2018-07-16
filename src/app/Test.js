@@ -12,12 +12,17 @@ export class Test extends React.Component{
       email : '',
       emailtest:'',
       showErrors:false,
+      errors:false
 
     }
   }
   handleEmailChange = (evt) => {
-  this.setState({ email: evt.target.value });
+  this.setState({
+    email: evt.target.value ,
+    errors:true
+  });
   }
+
 
 
   render(){
@@ -28,16 +33,15 @@ export class Test extends React.Component{
 
     return(
       <div>
+
         <Header/>
 
          <div className={styles.displayContainer}>
          <form onSubmit={this.handleSubmit}>
   <input type="text" value={this.state.email}
   onChange={this.handleEmailChange}/>
-  {this.state.showErrors ? <p> Match the required email format </p> :
-  ''}
 
-  {emailcheck ? '' :  <p className={styles.errortext}> *Match the required email format </p> }
+  {this.state.errors ? <p> { emailcheck ? '' :  <p className={styles.errortext}> *Match the required email format </p> } </p> : ''}
 
   <br/><br/>
 
@@ -47,6 +51,7 @@ export class Test extends React.Component{
 
         </div>
         <Footer/>
+
     </div>
   );
   }
