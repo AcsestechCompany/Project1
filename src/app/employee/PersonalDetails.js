@@ -259,8 +259,8 @@ export class PersonalDetails extends React.Component{
           value={this.state.maritalstatus}
           onChange={this.handlemaritalChange}
           required/>
-          {this.state.errors ? <p> {maritalcheck ? '' :
-          <p className={styles.errortext}> *Marital Status cannot contain letters or special characters   & cannnot exceed 25 characters </p> } </p> : ''}
+          {this.state.errors ? <span> {maritalcheck ? '' :
+          <span className={styles.errortext}> *Marital Status cannot contain letters or special characters & cannnot exceed 25 characters </span> } </span> : ''}
           {this.state.showErrors ?
              <span>
              {this.state.maritalstatus == '' ?
@@ -331,8 +331,8 @@ export class PersonalDetails extends React.Component{
                 value={this.state.relationship}
                 onChange={this.handlerelationshipChange}
                 required />
-                {this.state.errors ? <p> {relationshipcheck ? '' :
-                <p className={styles.errortext}> *Relationship cannot contain letters or special characters  & cannnot exceed 25 characters  </p> } </p>
+                {this.state.errors ? <span> {relationshipcheck ? '' :
+                <span className={styles.errortext}> *Relationship cannot contain letters or special characters  & cannnot exceed 25 characters  </span> } </span>
                 : ''}
                 {this.state.showErrors ?
                    <span>
@@ -359,10 +359,8 @@ export class PersonalDetails extends React.Component{
                         <button  class="btn btn-primary">SAVE</button>
                         </Link>
                   :
-
-<button class="btn btn-light" id={styles1.savebtnstyle} disabled>SAVE</button>
+ <button class="btn btn-light" id={styles1.savebtnstyle} disabled>SAVE</button>
                       }
-
           </Form>
           </Col>
           <Col xs="2">

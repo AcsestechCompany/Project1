@@ -108,8 +108,9 @@ const { accountholdername,bankname,branchname,accounttype,accountno,ifsccode,ann
 
 var re1 = new RegExp("^([a-zA-Z]{5,25}(?: [a-zA-Z]+){0,2})$");
 var re2 = new RegExp("[0-9]{12}$");
-var re3 = new RegExp("[0-9]{11}$");
+
 var re4 = new RegExp("[0-9]{3,10}$");
+var re3 = new RegExp("^[A-Za-z]{4}[0-9]{6,7}$");
 
 const isEnabled =
       re1.test(accountholdername) &&
