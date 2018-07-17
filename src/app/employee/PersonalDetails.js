@@ -51,34 +51,26 @@ export class PersonalDetails extends React.Component{
     handlephoneno2Change = (evt) => {
       this.setState({
         phoneno2: evt.target.value
-
       });
     }
     handlepermanentadressChange = (evt) => {
       this.setState({
         permanentadress: evt.target.value
-
-
        });
     }
     handlenationalityChange = (evt) => {
       this.setState({
         nationality: evt.target.value
-
              });
     }
     handlemaritalChange = (evt) => {
       this.setState({
         maritalstatus: evt.target.value
-
-
        });
     }
     handlecontactpersonChange = (evt) => {
       this.setState({
          contactperson: evt.target.value
-
-
       });
     }
     handlerelationshipChange = (evt) => {

@@ -3,34 +3,51 @@ import styles from "../Layout.css";
 import {Header} from "../Header";
 import {Footer} from "../Footer";
 import {Link} from "react-router-dom";
+import Icon from 'react-icons-kit';
+import { ic_edit,ic_delete } from 'react-icons-kit/md/';
 
 const people = [
   { id: 1,
     empid:'E321',
     empname: 'Sarah',
-    claimtitle: 'Product Manager',
+    claimtitle: 'Injured during work',
     description:'some text',
     amount:500,
     date:'09/05/2018',
-    action: 'Edit/Delete'
+    action:    <div>
+         <button className={styles.icon}>
+         <Icon icon={ic_edit}/></button>
+          <button className={styles.icon}>
+        <Icon icon={ic_delete} /></button>
+        </div>
   },
   { id: 2,
     empid:'E768',
     empname: 'Kate',
-    claimtitle: 'Software Engineer',
+    claimtitle: '',
     description:'some text',
     amount:500,
     date:'09/05/2018',
-    action: 'Edit/Delete'
+    action:    <div>
+         <button className={styles.icon}>
+         <Icon icon={ic_edit}/></button>
+          <button className={styles.icon}>
+        <Icon icon={ic_delete} /></button>
+        </div>
   },
   { id: 3,
     empid:'E456',
     empname: 'Jim',
-    claimtitle: 'Operation Manager',
+    claimtitle: '',
     description:'some text',
     amount:500,
     date:'09/05/2018',
-    action: 'Edit/Delete'
+    action:    <div>
+         <button className={styles.icon}>
+         <Icon icon={ic_edit}/></button>
+          <button className={styles.icon}>
+        <Icon icon={ic_delete} /></button>
+        </div>
   }
 
 ]
