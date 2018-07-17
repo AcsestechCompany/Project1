@@ -17,7 +17,9 @@ export class JobHistory extends React.Component{
     companyname:'',
     department:'',
     designation:'',
-    reportingmanager:''
+    reportingmanager:'',
+    dob1:'',
+    dob2:''
   }
 }
 handlecompanynameChange = (evt) =>{
@@ -40,18 +42,31 @@ handlereportingmanagerChange = (evt) =>{
     reportingmanager:evt.target.value
   })
 }
+handledobchange1 = (evt) =>{
+  this.setState({
+    dob1:evt.target.value
+  })
+}
+handledobchange2 = (evt) =>{
+  this.setState({
+    dob2:evt.target.value
+  })
+}
   handleChange = (event, value) => {
    this.setState({value});
  }
   render() {
     var re1 = new RegExp("^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4})$");
-    var re2 = new RegExp("^([a-zA-Z]{5,25}(?: [a-zA-Z]+){0,2})$");
-    const {companyname,department,designation,reportingmanager } = this.state;
+    var re2 = new RegExp("^([a-zA-Z]{4,25}(?: [a-zA-Z]+){0,2})$");
+    const {companyname,department,designation,reportingmanager,dob1,dob2 } = this.state;
     const isEnabled =
       re2.test(companyname) &&
       re2.test(department) &&
       re2.test(designation) &&
-      re2.test(reportingmanager);
+      re2.test(reportingmanager) &&
+      dob1.length > 0 &&
+      dob2.length > 0
+      ;
     return(
   <div>
   <Header/>
@@ -74,7 +89,8 @@ handlereportingmanagerChange = (evt) =>{
           <Input type="text"  className={inputstyle} placeholder=""
           value={this.state.companyname}
           onChange={this.handlecompanynameChange}
-
+          pattern="^([a-zA-Z]{4,25}(?: [a-zA-Z]+){0,2})$"
+          title="Name cannot have letters,symbols cannot be < 4 or > 25 characters"
            required/>
         </div>
         <div class="col-md-5 mb-3">
@@ -82,7 +98,8 @@ handlereportingmanagerChange = (evt) =>{
   <Input type="text"  className={inputstyle} placeholder=""
   value={this.state.department}
   onChange={this.handledepartmentChange}
-
+  pattern="^([a-zA-Z]{4,25}(?: [a-zA-Z]+){0,2})$"
+  title="Name cannot have letters,symbols cannot be < 4 or > 25 characters"
    required/>
         </div>
         </div>
@@ -92,7 +109,8 @@ handlereportingmanagerChange = (evt) =>{
             <Input type="text"  className={inputstyle} placeholder=""
             value={this.state.designation}
             onChange={this.handledesignationChange}
-
+            pattern="^([a-zA-Z]{4,25}(?: [a-zA-Z]+){0,2})$"
+            title="Name cannot have letters,symbols cannot be < 4 or > 25 characters"
              required/>
           </div>
           <div class="col-md-5 mb-3">
@@ -100,7 +118,9 @@ handlereportingmanagerChange = (evt) =>{
           <Input type="text"  className={inputstyle} placeholder=""
           value={this.state.reportingmanager}
           onChange={this.handlereportingmanagerChange}
-
+          pattern="^([a-zA-Z]{4,25}(?: [a-zA-Z]+){0,2})$"
+          title="Name cannot have letters,symbols cannot be < 4 or > 25 characters"       pattern="^([a-zA-Z]{4,25}(?: [a-zA-Z]+){0,2})$"
+                 title="Name cannot have letters,symbols cannot be < 4 or > 25 characters"
           required/>
           </div>
           </div>
@@ -109,6 +129,8 @@ handlereportingmanagerChange = (evt) =>{
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Date Of Joining</label>
             <Input type="date"  className={inputstyle} placeholder=""
+            value={this.state.dob1}
+            onChange={this.handledobchange1}
 
 
              required/>
@@ -116,24 +138,21 @@ handlereportingmanagerChange = (evt) =>{
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Date of Releiving</label>
           <Input type="date"  className={inputstyle} placeholder=""
+          value={this.state.dob2}
+          onChange={this.handledobchange2}
 
           required/>
           </div>
           </div>
-              <button disabled={!isEnabled} class="btn btn-primary">SAVE</button>
+            {isEnabled ?
+              <Link to="/EmpDocs">
+                <button  class="btn btn-primary">SAVE</button>
+                </Link> :
+                  <button  class="btn btn-primary">SAVE</button>
+
+            }
 </Form>
-<div className={bankdiv}>
-<Link to="/EmpDocs" id={skip1}>Skip </Link>
-             <span className={floatRight2}>
-             <Link to="/LoginInfo" className={hyperLinkEmployee} style={{marginRight:'1vw'}}>
-             <button type="button" class="btn btn-light">
-             <Icon icon={arrowLeft2} className={arrowIconL} size={14} />Prev </button>
-               </Link>
-             <Link to="/EmpDocs" className={hyperLinkEmployee}>
-             <button type="button" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIconR} /></button>
-             </Link>
-                </span>
-</div>
+
        </div>
        <Footer/>
        </div>

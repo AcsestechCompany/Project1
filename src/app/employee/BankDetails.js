@@ -109,7 +109,7 @@ const { accountholdername,bankname,branchname,accounttype,accountno,ifsccode,ann
 var re1 = new RegExp("^([a-zA-Z]{5,25}(?: [a-zA-Z]+){0,2})$");
 var re2 = new RegExp("[0-9]{12}$");
 
-var re4 = new RegExp("[0-9]{3,10}$");
+var re4 = new RegExp("[0-9]{4,10}$");
 var re3 = new RegExp("^[A-Za-z]{4}[0-9]{6,7}$");
 
 const isEnabled =
@@ -145,6 +145,8 @@ const isEnabled =
           <Input type="text"  className={inputstyle}
           value={this.state.acountholder}
           onChange={this.handleaccountholdernameChange}
+          pattern="^([a-zA-Z]{4,25}(?: [a-zA-Z]+){0,2})$"
+          title="Name cannot have letters,symbols cannot be < 4 or > 25 characters"
 
            required />
         </div>
@@ -153,6 +155,8 @@ const isEnabled =
     <Input type="text"  className={inputstyle}
     value={this.state.bankname}
     onChange={this.handlebanknameChange}
+    pattern="^([a-zA-Z]{4,25}(?: [a-zA-Z]+){0,2})$"
+    title="Name cannot have letters,symbols cannot be < 4 or > 25 characters"
 
     required/>
         </div>
@@ -163,6 +167,8 @@ const isEnabled =
   <Input type="text"  className={inputstyle}
   value={this.state.branchname}
   onChange={this.handlebranchnameChange}
+  pattern="^([a-zA-Z]{4,25}(?: [a-zA-Z]+){0,2})$"
+  title="Name cannot have letters,symbols cannot be < 4 or > 25 characters"
 
    required />
           </div>
@@ -171,6 +177,8 @@ const isEnabled =
             <Input type="text"  className={inputstyle} placeholder="12 digit A/c no"
             value={this.state.accountno}
             onChange={this.handleaccountnoChange}
+            pattern="[0-9]{12}$"
+            title="Account should be 12 digits"
 
               required/>
           </div>
@@ -181,6 +189,8 @@ const isEnabled =
         <Input type="text"  className={inputstyle}  placeholder="IFSC Code"
         value={this.state.ifsccode}
         onChange={this.handleifsccodeChange}
+        pattern="^[A-Za-z]{4}[0-9]{6,7}$"
+        title="IFSC should start with letters(4) not > 11 digits"
 
          required />
           </div>
@@ -189,7 +199,8 @@ const isEnabled =
           <Input type="text"  className={inputstyle} placeholder="Type of Account"
           value={this.state.accounttype}
           onChange={this.handleaccounttypeChange}
-
+          pattern="^([a-zA-Z]{4,25}(?: [a-zA-Z]+){0,2})$"
+          title="Name cannot have letters,symbols cannot be < 4 or > 25 characters"
            required/>
           </div>
           </div>
@@ -202,6 +213,8 @@ const isEnabled =
     <Input type="text"  className={inputstyle}
     value={this.state.annualctc}
     onChange={this.handleannualctcChange}
+    pattern="^[0-9]{4,25}$"
+    title="should not have characters shoudn't be < 4 > 25"
 
 
      required/>
@@ -211,6 +224,8 @@ const isEnabled =
   <Input type="text"  className={inputstyle}
   value={this.state.monthlyctc}
   onChange={this.handlemonthlyctcChange}
+  pattern="^[0-9]{4,25}$"
+  title="should not have characters shoudn't be < 4 > 25"
   required/>
   </div>
   </div>
@@ -223,27 +238,14 @@ const isEnabled =
 </div>
 {manualcomponents}
 {autocomponents}
-<div className={bankdiv}>
-<Link to="/LoginInfo">
-<button disabled={!isEnabled} class="btn btn-primary">SAVE</button>
-</Link>
 
-<Link to="/LoginInfo" id={skip1}>Skip </Link>
+{isEnabled ?
+  <Link to="/LoginInfo">
+  <button  class="btn btn-primary">SAVE</button>
+  </Link> :
+  <button class="btn btn-primary">SAVE</button>
+}
 
-             <span className={floatRight2}>
-
-
-             <Link to="/ProfessionalDetails" className={hyperLinkEmployee} style={{marginRight:'1vw'}}>
-             <button type="button" class="btn btn-light">
-             <Icon icon={arrowLeft2} className={arrowIconL} size={14} />Prev </button>
-               </Link>
-
-
-             <Link to="/LoginInfo" className={hyperLinkEmployee}>
-             <button type="button" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIconR} /></button>
-             </Link>
-                </span>
-                </div>
             </Form>
 
        </div>

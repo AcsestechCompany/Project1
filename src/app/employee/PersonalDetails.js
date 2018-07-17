@@ -29,7 +29,6 @@ export class PersonalDetails extends React.Component{
       this.setState({
         fathersname: evt.target.value,
         showError1:true
-
       });
     }
     handleEmailChange = (evt) => {
@@ -274,7 +273,7 @@ export class PersonalDetails extends React.Component{
             </div>
           </Col>
           </Row>
-        
+
           <div>
           </div>
        </div>

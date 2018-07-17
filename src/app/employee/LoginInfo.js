@@ -36,7 +36,7 @@ export class LoginInfo extends React.Component{
   render()
     {
       var re1 = new RegExp("^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4})$");
-      var re2 = new RegExp("^([a-zA-Z]{5,25}(?: [a-zA-Z]+){0,2})$");
+      var re2 = new RegExp("^([a-zA-Z]{4,25}(?: [a-zA-Z]+){0,2})$");
       const {email,name  } = this.state;
       const isEnabled =
         re1.test(email) &&
@@ -56,6 +56,8 @@ export class LoginInfo extends React.Component{
       <Input type="text"  className={inputstyle}
       value={this.state.name}
       onChange={this.handlenameChange}
+      pattern="^([a-zA-Z]{4,25}(?: [a-zA-Z]+){0,2})$"
+      title="Name cannot have letters,symbols cannot be < 4 or > 25 characters"
 
       required />
         </div>
@@ -74,9 +76,13 @@ export class LoginInfo extends React.Component{
       <Input type="text"  className={inputstyle} value={this.id} placeholder="" disabled />
           </div>
           </div>
-<Link to="/JobHistory">
-    <button disabled={!isEnabled} class="btn btn-primary">SAVE</button>
-    </Link>
+          {isEnabled ?
+            <Link to="/JobHistory">
+                <button  class="btn btn-primary">SAVE</button>
+                </Link> :
+                <button class="btn btn-primary">SAVE</button>
+          }
+
           </Form>
 
       </Col>
@@ -90,30 +96,8 @@ export class LoginInfo extends React.Component{
       <p><Link to="/JobHistory" className={hyperLinkEmployee}>Job History</Link></p>
       <p><Link to="/EmpDocs" className={hyperLinkEmployee}>Employee Documents</Link></p>
       </div>
-
          </Col>
          </Row>
-      <div className={bankdiv}>
-
-
-
-
-      <Link to="/JobHistory" id={skip1}>Skip </Link>
-
-                   <span className={floatRight2}>
-
-
-                   <Link to="/BankDetails" className={hyperLinkEmployee} style={{marginRight:'1vw'}}>
-                   <button type="button" class="btn btn-light">
-                   <Icon icon={arrowLeft2} className={arrowIconL} size={14} />Prev </button>
-                     </Link>
-
-
-                   <Link to="/JobHistory" className={hyperLinkEmployee}>
-                   <button type="button" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIconR} /></button>
-                   </Link>
-                      </span>
-</div>
 
        </div>
        <Footer/>

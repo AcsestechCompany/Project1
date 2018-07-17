@@ -37,20 +37,11 @@ export class EmpDocs extends React.Component{
         </div>
         </Row>
 </Form>
-
-<div className={bankdiv} style={{marginTop:'10vw'}}>
-
 <Link to="/ViewEmployee">
 <button type="button" class="btn btn-outline-warning"  id={savebtn1} style={{marginLeft:'1vw'}}>Submit</button>
 </Link>
-<Link to="/ViewEmployee" id={skip1}>Skip </Link>
-             <span className={floatRight2}>
-             <Link to="/JobHistory" className={hyperLinkEmployee} >
-             <button type="button" class="btn btn-light">
-             <Icon icon={arrowLeft2} className={arrowIconL} size={14}/>Prev</button>
-               </Link>
-                </span>
-</div>
+
+
        </div>
        <Footer/>
        </div>
