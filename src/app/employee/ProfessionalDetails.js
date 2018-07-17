@@ -25,7 +25,9 @@ export class ProfessionalDetails extends React.Component{
       employmenttype: '',
       reportingmanager:'',
       empid: '',
-      dob:''
+      dob:'',
+      errors:false,
+      showErrors:false
     };
   }
 
@@ -33,10 +35,19 @@ export class ProfessionalDetails extends React.Component{
     this.setState({ dob: evt.target.value });
   }
     handlefirstnameChange = (evt) => {
-      this.setState({ firstname: evt.target.value });
+      this.setState({
+        firstname: evt.target.value,
+        errors:true,
+        showErrors:true
+
+       });
     }
     handlelastnameChange = (evt) => {
-      this.setState({lastname : evt.target.value });
+      this.setState({
+        lastname : evt.target.value,
+        errors:true,
+        showErrors:true
+       });
     }
     handleempidChange = (evt) => {
       this.setState({ empid: evt.target.value });
@@ -75,40 +86,14 @@ export class ProfessionalDetails extends React.Component{
       enable:false
     })
   }
-  enablefunc(){
-    if(this.state.enable){
-      return <div><div class="form-check">
-        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked
-        style={{marginTop:'0.7vw'}}/>
-        <label class="form-check-label" for="gridRadios1" style={{fontSize:'0.8vw',marginTop:'0.4vw',marginLeft:'1vw'}} id={styles1.radiocheck}>
-          On Holidays
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" style={{marginTop:'0.7vw'}}/>
-        <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginTop:'0.45vw',marginLeft:'1vw'}} id={styles1.radiocheck}>
-        On Week Off
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2" style={{marginTop:'0.7vw'}}/>
-        <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginTop:'0.4vw',marginLeft:'1vw'}} id={styles1.radiocheck}>
-         Daily
-        </label>
-      </div></div>;
-    }
-  }
-  disablefunc(){
-    if(this.state.disable){
-      return <div></div>;
-    }
-  }
+
   render() {
-    var enable = this.enablefunc();
-    var disable =this.disablefunc();
+
     var re1 = new RegExp("^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4})$");
-    var re2 = new RegExp("^([a-zA-Z]{5,25}(?: [a-zA-Z]+){0,2})$");
+    var re2 = new RegExp("^([a-zA-Z]{4,25}(?: [a-zA-Z]+){0,2})$");
     var re3 = new RegExp("^([a-zA-Z]{1,10}([0-9]{0,10}))$");
+      const fncheck = re2.test(firstname);
+      const lncheck = re2.test(lastname);
     const { location,email,firstname,lastname,employmenttype,reportingmanager,department,designation,empid,dob } = this.state;
     const isEnabled =
       re1.test(email) &&
@@ -136,16 +121,20 @@ export class ProfessionalDetails extends React.Component{
           <Input type="text"  className={styles1.inputstyle} placeholder=""
           value={this.state.firstname}
          onChange={this.handlefirstnameChange}
-
+         pattern="^([a-zA-Z]{4,25}(?: [a-zA-Z]+){0,2})$"
+         title="Name cannot have letters,symbols cannot be < 4 or > 25 characters"
            required/>
+
         </div>
         <div class="col-md-5 mb-3">
           <label className={styles1.labelStyle1}>Last Name</label>
           <Input type="text"  className={styles1.inputstyle} placeholder=""
           value={this.state.lastname}
           onChange={this.handlelastnameChange}
-
+          pattern="^([a-zA-Z]{4,25}(?: [a-zA-Z]+){0,2})$"
+          title="Name cannot have letters,symbols cannot be < 4 or > 25 characters"
            required/>
+
         </div>
         </div>
         <div class="form-row">
@@ -165,13 +154,14 @@ export class ProfessionalDetails extends React.Component{
               <Input type="text"  className={styles1.inputstyle} placeholder=""
               value={this.state.empid}
               onChange={this.handleempidChange}
+              pattern="^[A-Z]{1}[0-9]{1,3}$"
+              title="Eg.E098"
 
                required />
           </div>
           <div class="col-md-5 mb-3">
           <label className={styles1.labelStyle1}>Designation</label>
           <Input type="select" className={styles1.inputstyle}
-
 
            required>
           <option></option>
@@ -210,6 +200,8 @@ export class ProfessionalDetails extends React.Component{
             <Input type="text"  className={styles1.inputstyle} placeholder=""
             value={this.state.reportingmanager}
             onChange={this.handlereportingmanagerChange}
+            pattern="^([a-zA-Z]{4,25}(?: [a-zA-Z]+){0,2})$"
+            title="Name cannot have letters,symbols cannot be < 4 or > 25 characters"
 
            required/>
           </div>
@@ -236,42 +228,47 @@ export class ProfessionalDetails extends React.Component{
           </Input>
             </div>
             </div>
+            <Row className={styles.overtimePay}>
+                <p style={{fontWeight:'lighter',fontSize:'0.9vw',marginLeft:'1vw'}}>Overtime Pay</p>
+                <div class="col-md-4 mb-5" id={styles1.genderstyle}>
+                <FormGroup check>
+                     <Label check className={styles.radioinput}>
+                       <Input type="radio" value="on Holidays" name="overtime" className={styles.radiostyle}/>
+                       On Holidays
+                     </Label>
+                   </FormGroup>
+                   <FormGroup check>
+                     <Label check className={styles.radioinput}>
+                       <Input type="radio" value="On Weekoff" name="overtime" className={styles.radiostyle} />
+                         On Weekoff
+                     </Label>
+                   </FormGroup>
+                   <FormGroup check>
+                     <Label check className={styles.radioinput}>
+                       <Input type="radio" value="Daily" name="overtime" className={styles.radiostyle} />
+                         Daily
+                     </Label>
+                   </FormGroup>
+                   <FormGroup check>
+                     <Label check className={styles.radioinput}>
+                       <Input type="radio" value="None" name="overtime" className={styles.radiostyle} />
+                         None
+                     </Label>
+                   </FormGroup>
 
-    <Row className={styles.overtimePay}>
-    <p style={{fontWeight:'lighter',fontSize:'0.9vw',marginLeft:'1vw'}}>Overtime Pay</p>
-    <span onClick={this.enabletest.bind(this)}>
-   {this.state.enable?
-    <span><button type="btn btn-light" className={styles1.enableBtnactive} >Enable</button></span>:
-    <span><button type="btn btn-light" className={styles1.enableBtn} >Enable</button></span>
-   }
-    </span>
-    <span onClick={this.disabletest.bind(this)}>
-   {this.state.disable?
-    <span><button type="button" className={styles1.disableBtnactive}>Disable</button></span>:
-    <span><button type="btn btn-light" className={styles1.disableBtn}>Disable</button></span>
-   }
-    </span>
- </Row>
- <div className={styles1.overtimeDiv}>
-{enable}
-{disable}
-<Link to="/BankDetails">
-<button disabled={!isEnabled} class="btn btn-primary">SAVE</button>
-</Link>
-   <div className={styles.bankdiv}>
-       <Link to="/BankDetails" id={styles.skip1}>Skip </Link>
-             <span className={styles.floatRight2}>
+                   </div>
+             </Row>
 
-             <Link to="/PersonalDetails" className={styles1.hyperLinkEmployee}>
-             <button type="button" class="btn btn-light">
-             <Icon icon={arrowLeft2} className={styles1.arrowIconL} size={14} />Prev </button>
-               </Link>
-             <Link to="/BankDetails" className={styles1.hyperLinkEmployee} >
-             <button type="button" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={styles1.arrowIconR} /></button>
-             </Link>
-                </span>
-                </div>
-      </div>
+
+{isEnabled ?
+  <Link to="/BankDetails">
+  <button class="btn btn-primary">SAVE</button>
+  </Link> :
+  <button class="btn btn-primary">SAVE</button>
+}
+
+
+
       </Form>
           </Col>
           <Col>

@@ -136,8 +136,8 @@ import {formStyle,floatRight} from "./LayoutSettings.css";
               </div>
               </div>
 
-                        <p><Link to="/AttendanceSettings"><button type="button" class="btn btn-outline-warning" id={savebtn} >
-                        Save</button></Link>
+                        <p><button  class="btn btn-primary" >
+                        Save</button>
                         <span className={floatRight} style={{position:'relative',top:'0.85vw'}}>
                         <Link to="/AttendanceSettings" className={hyperLinkEmployee}>
                         <button type="button" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIcon} /></button>
