@@ -94,7 +94,7 @@ export class PersonalDetails extends React.Component{
   const { fathersname,email,dob,phoneno1,phoneno2,nationality,permanentadress,maritalstatus,contactperson,relationship  } = this.state;
   var re1 = new RegExp("^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4})$");
   var re2 = new RegExp("^([a-zA-Z]{2,25}(?: [a-zA-Z]+){0,2})$");
-  var re3 = new RegExp("^([0-9]{0,10})$");
+  var re3 = new RegExp("^[6-9]{1}[0-9]{5}[0-9]{4}$");
   var re4 = new RegExp("^([a-zA-Z0-9-/:.]{1,50})$");
 
   const fncheck = re2.test(fathersname);
@@ -179,7 +179,6 @@ export class PersonalDetails extends React.Component{
               title="cannot start with < 6 shouldn't be less than 8 digits"
               required />
           </div>
-
           </div>
           <div class="form-group">
       <label className={styles1.labelStyle1}>Permanent Address</label>
