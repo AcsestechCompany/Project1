@@ -12,19 +12,39 @@ import {Header} from "../Header";
 import {Footer} from "../Footer";
 
 export class AddClaims extends React.Component{
-  constructor(){
-    super();
-    this.state = {value: ''};
-    this.onChange = this.onChange.bind(this);
- }
-
- onChange(e){
-    const re = /^[0-9\b]+$/;
-    if (e.target.value == '' || re.test(e.target.value)) {
-       this.setState({value: e.target.value})
+  constructor(props){
+    super(props);
+    this.state =
+    {
+      expense:'',
+      amount:'',
+      dob:''
     }
  }
+handledobchange = (evt) =>{
+  this.setState({
+    dob:evt.target.value
+  })
+}
+handleExpensechange = (evt) =>{
+  this.setState({
+    expense:evt.target.value
+  })
+}
+handleAmountchange = (evt) =>{
+  this.setState({
+    amount:evt.target.value
+  })
+}
   render() {
+    var re1 = new RegExp("^([a-zA-Z]{4,25}(?: [a-zA-Z]+){0,2})$");
+    var re2 = new RegExp("^[0-9]{3,7}$");
+    const {expense,amount,dob} = this.state;
+    const isEnabled =
+      re1.test(expense) &&
+      re2.test(amount) &&
+      dob.length > 0;
+
     return(
       <div>
       <Header/>
@@ -35,18 +55,32 @@ export class AddClaims extends React.Component{
        <div class="form-row">
        <div class="col-md-10 mb-3">
          <label className={labelStyle1}>Expense Name</label>
-         <Input className={inputstyle} type="text"   onChange={this.onChange}  />
+         <Input className={inputstyle} type="text"
+         value={this.state.expense}
+          onChange={this.handleExpensechange}
+          title="Expense cannot be letters,symbols or special characters < 4 or > 25"
+           required/>
          </div>
          </div>
             <div class="form-row">
             <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Amount</label>
-            <Input type="text"  className={inputstyle}/>
+            <Input type="text"  className={inputstyle}
+            value={this.state.amount}
+            onChange={this.handleAmountchange}
+            required
+            title="Amount can be only digits neither <3 or >7"
+            />
             </div>
             <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Date</label>
               <Input type="date" className={inputstyle}
-              required/>
+              required
+              value={this.state.dob}
+              onChange={this.handledobchange}
+
+
+              />
             </div>
             </div>
             <div class="form-row">
@@ -55,9 +89,12 @@ export class AddClaims extends React.Component{
                  <Input className={inputstyletextarea} type="textarea"  rows="3" name="text" />
               </div>
               </div>
+{isEnabled?
+  <Link to="/ClaimList"><button className="btn btn-outline-warning" >
+  Submit</button></Link> :
+  <button className="btn btn-outline-warning">Submit</button>
+}
 
-           <Link to="/ClaimList"><button className="btn btn-outline-warning" >
-           Submit</button></Link>
           </Form>
       </div>
       <Footer/>

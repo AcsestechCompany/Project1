@@ -80,26 +80,10 @@ Employee List
 <p>
 <Link to="/AddEmployee"><button className="btn btn-outline-warning" id={buttonStyle}>
 Add New Employee</button></Link>
-<span  className={floatRight1}>
-<form class="form-row">
 
-	<input type="search"  placeholder="Search" />
-  <div class="dropdown" style={{position:'relative',left:'-1vw'}} >
-    <button class="btn  btn-outline-light" type="button" id={btnstyle} data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <Icon icon={filter} />
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item">New Joinees</a>
-      <a class="dropdown-item">Department Manager</a>
-      <a class="dropdown-item">Present Employees</a>
-      <a class="dropdown-item">On Leave</a>
-    </div>
-  </div>
-</form>
-</span>
 </p>
-
 {first}
+
 {second}
 {third}
 
