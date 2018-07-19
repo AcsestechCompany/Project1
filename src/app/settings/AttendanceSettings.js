@@ -92,12 +92,12 @@ export class AttendanceSettings extends React.Component {
               <div class="form-row">
               <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Work Start Time</label>
-         <Input className={inputstyle} type="date" name="text"
+         <Input className={inputstyle} type="time" name="text"
           value={this.state.starttime} onChange={this.handleStartChange} required  />
              </div>
              <div class="col-md-5 mb-3">
              <label className={labelStyle1}>Work End Time</label>
-           <Input className={inputstyle} type="date" name="text"
+           <Input className={inputstyle} type="time" name="text"
            value={this.state.endtime} onChange={this.handleEndChange} required  />
             </div>
             </div>
@@ -109,7 +109,7 @@ export class AttendanceSettings extends React.Component {
                  <div class="form-row">
                  <div class="col-md-5 mb-3">
                  <label className={labelStyle1}>Late Mark After Time</label>
-             <Input className={inputstyle} type="date" name="text"
+             <Input className={inputstyle} type="time" name="text"
              value={this.state.latetime} onChange={this.handleLateChange} required  />
                 </div>
                 <div class="col-md-5 mb-3">
