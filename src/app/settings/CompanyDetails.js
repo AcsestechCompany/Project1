@@ -60,11 +60,13 @@ import {Footer} from "../Footer";
      handleAddressChange = (evt) => {
        this.setState({
          address: evt.target.value
+
        });
      }
      handleStateChange = (evt) => {
        this.setState({
          state: evt.target.value
+
 
         });
      }
@@ -81,6 +83,7 @@ import {Footer} from "../Footer";
      handlePhoneChange = (evt) => {
        this.setState({
           phoneno: evt.target.value
+
 
        });
      }
@@ -125,11 +128,21 @@ import {Footer} from "../Footer";
       var re7 = new RegExp("^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4})$");
 
 
+    //   const orgnamencheck = re2.test(orgname);
+    //   const  webcheck= re1.test(website);
+    //   const addresscheck = re4.test(address);
+    //   const phonecheck = re3.test(phoneno);
+    //   const regnumbercheck = re5.test(regnumber);
+    //   const pancheck = re6.test(pannumber);
+    //   const tancheck = re6.test(tannumber);
+    //   const tancirclecheck = re6.test(tancircle);
+
+
        const isEnabled =
 
 
+            re1.test(webname)&&
               re2.test(orgname) &&
-              re1.test(webname)
               re3.test(phoneno) &&
              re4.test(address) &&
               re5.test(regnumber) &&
@@ -152,13 +165,11 @@ import {Footer} from "../Footer";
         <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Organization Name</label>
-          <Input type="text"  className={inputstyle} placeholder="" pattern="[a-z]{5,25}"  title="Name must be letters only" value={this.state.orgname} onChange={this.handleOrganizationnameChange} required />
+          <Input type="text"  className={inputstyle} placeholder="" placeholder="Company Nmae" pattern="[a-z]{5,25}"  title="Name must be letters only" value={this.state.orgname} onChange={this.handleOrganizationnameChange} required />
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Website URL</label>
-         <Input type="text"  className={inputstyle}
-         pattern="^(http:\/\/|https:\/\/)?(www.)?([a-zA-Z0-9]+).[a-zA-Z0-9]*.[a-z]{3}.?([a-z]+)?$"
-         value={this.state.webname} onChange={this.handleWebsiteChange} required />
+         <Input type="text"  className={inputstyle}  value={this.state.webname} onChange={this.handleWebsiteChange} pattern="^(http:\/\/|https:\/\/)?(www.)?([a-zA-Z0-9]+).[a-zA-Z0-9]*.[a-z]{3}.?([a-z]+)?$"  placeholder="www.example.com" title="website start with httpp:// or www." required />
         </div>
         </div>
         <div class="form-row">
@@ -172,13 +183,14 @@ import {Footer} from "../Footer";
              <option></option>
              <option>Farming</option>
              <option>Information Technology</option>
+
            </Input>
       </div>
       </div>
         <div class="form-row">
         <div class="col-md-12 mb-3">
           <label className={labelStyle1}>Address</label>
-        <Input type="text"  className={inputstyletextarea} placeholder="" pattern="[a-zA-Z0-9]{5,25}" value={this.state.address} onChange={this.handleAddressChange} required />
+        <Input type="text"  className={inputstyletextarea} placeholder="" pattern="[a-zA-Z0-9]{5,25}" value={this.state.address} onChange={this.handleAddressChange} title="address has mixed of letter and num"required />
         </div>
         </div>
         <div class="form-row">
@@ -206,11 +218,11 @@ import {Footer} from "../Footer";
   <div class="form-row">
     <div class="col-md-5 mb-3">
       <label className={labelStyle1}>Phone Number</label>
-<Input type="tel" pattern="^\d{10}$" className={inputstyle} placeholder="Eg.8978987898" value={this.state.phoneno} onChange={this.handlePhoneChange}  required/>
+<Input type="tel" pattern="^\d{10}$" className={inputstyle} placeholder="Eg.8978987898" value={this.state.phoneno} onChange={this.handlePhoneChange} title="Phone number must be 10 digits Only" required/>
     </div>
     <div class="col-md-5 mb-3">
       <label className={labelStyle1}>Email ID</label>
-<Input type="email"  className={inputstyle} placeholder="" value={this.state.email} onChange={this.handleEmailChange}required/>
+<Input type="email"  className={inputstyle} placeholder="" value={this.state.email} onChange={this.handleEmailChange} placeholder="example@gmail.com"required/>
     </div>
     </div>
     <p className={pageHeading} style={{marginTop:'2vw'}}>Registration Details</p>
@@ -218,17 +230,19 @@ import {Footer} from "../Footer";
     <div class="form-row">
       <div class="col-md-4 mb-3">
         <label className={labelStyle1}>Registration Number</label>
-      <Input type="text"  className={inputstyle} placeholder="register number"
-
+      <Input type="text"  className={inputstyle} placeholder="Eg.1234567890"
+      pattern="^\d{10}$"
       value={this.state.regnumber}
        onChange={this.handleRegnumberChange}
+       title="RegistrationNumber must be 10 digits"
         required/>
       </div>
       <div class="col-md-4 mb-3">
         <label className={labelStyle1}>PAN</label>
         <Input type="text"  className={inputstyle} placeholder=""
         pattern="^([A-Za-z]{5}\d{4}[A-Za-z]{1})$"
-
+        placeholder="ABCDE1234F"
+        title="must be numbers and letters format is ABCDE1234F"
          value={this.state.pannumber} onChange={this.handlePannumberChange} required />
       </div>
       </div>
@@ -237,17 +251,21 @@ import {Footer} from "../Footer";
           <label className={labelStyle1}>TAN</label>
           <Input type="text"  className={inputstyle} placeholder=""
           pattern="^([A-Za-z]{5}\d{4}[A-Za-z]{1})$"
+          placeholder="ABCDE1234F"
+          title="must be numbers and letters format is ABCDE1234F"
           value={this.state.tannumber} onChange={this.handleTannumberChange} required />
         </div>
         <div class="col-md-4 mb-3">
           <label className={labelStyle1}>TAN Circle Number</label>
     <Input type="text" className={inputstyle} placeholder=""
     pattern="^([A-Za-z]{5}\d{4}[A-Za-z]{1})$"
+    placeholder="ABCDE1234F"
+    title="must be numbers and letters format is ABCDE1234F"
     value={this.state.tancircle} onChange={this.handleTancircleChange}required />
         </div>
         </div>
         {isEnabled ? <Link to="/AttendanceSettings"> <button  class="btn btn-primary">SAVE</button> </Link> :
-        <button class="btn btn-primary">SAVE</button>
+        <button class="btn btn-warning">SAVE</button>
           }
            </Form>
            </Col>
