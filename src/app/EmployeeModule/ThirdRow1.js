@@ -37,9 +37,9 @@ export class ThirdRow1 extends React.Component{
 
           <div class="carousel-item" style={{textAlign:'center'}} id={item}>
            <Row className={teamrow}>
-          <MyTeam image={require('../employee/user.png')} name={"David"} designation={"Team Mate"}/>
-          <MyTeam image={require('../employee/user1.png')} name={"Niha Fatima"} designation={"Reporting Manager"}/>
-            <MyTeam image={require('../employee/user1.png')} name={"Kate"} designation={"Manager"}/>
+          <MyTeam image={require('../images/user.png')} name={"David"} designation={"Team Mate"}/>
+          <MyTeam image={require('../images/user1.png')} name={"Niha Fatima"} designation={"Reporting Manager"}/>
+            <MyTeam image={require('../images/user1.png')} name={"Kate"} designation={"Manager"}/>
             </Row>
           </div>
 

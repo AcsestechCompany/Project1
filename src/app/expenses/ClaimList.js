@@ -110,13 +110,16 @@ this.state.people.filter(searchingFor(this.state.term)).map(function(person){
   })
 }
 </table>
+
 <div className={styles.bankdiv} style={{marginTop:'7vw',marginLeft:'-0.3vw'}}>
   <Link to="/AddClaims"><button className="btn btn-outline-warning">
-  Add New Claim</button></Link>
+  Add New Claim</button>
+  </Link>
   </div>
        </div>
        <Footer/>
        </div>
+       
     );
   }
 }

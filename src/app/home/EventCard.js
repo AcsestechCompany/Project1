@@ -8,7 +8,7 @@ export class EventCard extends React.Component{
     return(
       <Card className={cardStyle6}>
         <div class="row">
-           <div class="col-md-2"><img className={cardimgleft} src={require('./profile2.png')} id={imgStyle}/></div>
+           <div class="col-md-2"><img className={cardimgleft} src={require('../images/profile2.png')} id={imgStyle}/></div>
            <div class="col-md-6" >
            <CardTitle className={cardTitle}>{this.props.title}</CardTitle>
            <CardText className={cardText}>{this.props.text}</CardText></div>

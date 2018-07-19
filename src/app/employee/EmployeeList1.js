@@ -7,7 +7,7 @@ import { smallRight } from 'react-icons-kit/entypo/';
 import {arrow,orange,floatRight1} from "../Layout.css";
 import {Link} from "react-router-dom";
 import {CardTemplate} from "./CardTemplate";
-import {CardTemplateTab} from "./CardTemplateTab";
+
 
 const people = [
   { id: 1,

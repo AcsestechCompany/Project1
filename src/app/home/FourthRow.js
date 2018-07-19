@@ -24,19 +24,19 @@ export class FourthRow extends React.Component{
                <Row className={styles.repoteesStyle}>
 
 
-                     <Repotee img={require('../employee/user1.png')}
+                     <Repotee img={require('../images/user1.png')}
                      text={<Circle r={5} fill={{color:'#FEC835'}}  />}
                      />
-                     <Repotee img={require('./profile2.png')}
+                     <Repotee img={require('../images/profile2.png')}
                      text={<Circle r={5} fill={{color:'#EF462E'}}  />}
                      />
-                     <Repotee img={require('../employee/user1.png')}
+                     <Repotee img={require('../images/user1.png')}
                      text={<Circle r={5} fill={{color:'#29A751'}}  />}
                      />
-                     <Repotee img={require('./profile2.png')}
+                     <Repotee img={require('../images/profile2.png')}
                      text={<Circle r={5} fill={{color:'#FEC835'}}  />}
                      />
-                     <Repotee img={require('./profile.jpg')}
+                     <Repotee img={require('../images/profile.jpg')}
                      text={<Circle r={5} fill={{color:'#FEC835'}}  />}
                      />
 

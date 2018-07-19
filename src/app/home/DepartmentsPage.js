@@ -18,11 +18,16 @@ export class DepartmentsPage extends React.Component{
       it:false,
       finance:false,
       all:true,
-      showInput: false
+      showInput: false,
+      department:''
     };
     this.handleClick = this.handleClick.bind(this);
   }
-
+handleAdddepartment = (evt) => {
+  this.setState({
+    department:evt.target.value
+  })
+}
   handleClick(){
     this.setState({
       showInput:!this.state.showInput
@@ -111,10 +116,11 @@ all:false
           Select Department
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" id={dropitem}><span onClick={this.marketing.bind(this)} >Marketing</span></a>
-          <a class="dropdown-item" id={dropitem}><span onClick={this.it.bind(this)} >Information Technology</span></a>
-          <a class="dropdown-item" id={dropitem}><span onClick={this.finance.bind(this)} >Finance</span></a>
-          <a class="dropdown-item" id={dropitem}><span onClick={this.all.bind(this)} >All</span></a>
+          <a class="dropdown-item" id={dropitem}><span onClick={this.marketing.bind(this)}>Marketing</span></a>
+          <a class="dropdown-item" id={dropitem}><span onClick={this.it.bind(this)}>Information Technology</span></a>
+          <a class="dropdown-item" id={dropitem}><span onClick={this.finance.bind(this)}>Finance</span></a>
+          <a class="dropdown-item" id={dropitem}><span onClick={this.all.bind(this)}>All</span></a>
+
         </div>
       </div>
       {marketing}
@@ -124,8 +130,10 @@ all:false
       <button type="button" class="btn btn-outline-warning" onClick={this.handleClick}>Add Department</button>
       {this.state.showInput?
         <p className={styles.hiddenInput}>
-        <HiddenInput/>
+        <form>
+    <HiddenInput/>
        <button type="button" class="btn btn-outline-warning" onClick={this.handleClick} style={{marginTop:'2vw'}} >Save</button>
+       </form>
        </p>
       : ''}
       </div>
