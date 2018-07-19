@@ -7,8 +7,11 @@ export class Test extends React.Component{
   render(){
     return(
       <div>
-      <Header/>
-      <div className={styles.displayContainer}>Test</div>
+      <Header />
+      <div className={styles.displayContainer} >
+      Testing Page
+      <input placeholder="Date" class="textbox-n" type="date" onfocus="(this.type='date')"  id="date"/>
+      </div>
       <Footer/>
       </div>
     );

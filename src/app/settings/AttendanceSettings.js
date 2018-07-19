@@ -13,22 +13,10 @@ import {Footer} from "../Footer";
 export class AttendanceSettings extends React.Component {
   constructor(props) {
    super(props);
-   this.state = {value24: null, valueStart: null,valueEnd: null,valueLateMark: null};
+
  }
 
- handleChangeTimePicker24 = (event, date) => {
-   this.setState({value24: date});
- };
 
- handleChangeTimePickerStart = (event, date) => {
-   this.setState({valueStart: date});
- };
- handleChangeTimePickerEnd = (event, date) => {
-   this.setState({valueEnd: date});
- };
- handleChangeTimePickerLateMark = (event, date) => {
-   this.setState({valueLateMark: date});
- };
   render() {
 
     return(

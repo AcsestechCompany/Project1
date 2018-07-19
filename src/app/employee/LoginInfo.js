@@ -78,9 +78,9 @@ export class LoginInfo extends React.Component{
           </div>
           {isEnabled ?
             <Link to="/JobHistory">
-                <button  class="btn btn-primary">SAVE</button>
+                <button  class="btn btn-primary">INVITE</button>
                 </Link> :
-                <button class="btn btn-primary">SAVE</button>
+                <button class="btn btn-primary">INVITE</button>
           }
 
           </Form>

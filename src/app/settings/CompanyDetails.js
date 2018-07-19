@@ -124,19 +124,8 @@ import {Footer} from "../Footer";
      var re6 = new RegExp("^([A-Za-z]{5}[0-9]{4}[A-Za-z]{1})$");
       var re7 = new RegExp("^([a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4})$");
 
-    //   const orgnamencheck = re2.test(orgname);
-    //   const  webcheck= re1.test(website);
-    //   const addresscheck = re4.test(address);
-    //   const phonecheck = re3.test(phoneno);
-    //   const regnumbercheck = re5.test(regnumber);
-    //   const pancheck = re6.test(pannumber);
-    //   const tancheck = re6.test(tannumber);
-    //   const tancirclecheck = re6.test(tancircle);
-
 
        const isEnabled =
-
-
 
 
               re2.test(orgname) &&
@@ -183,7 +172,6 @@ import {Footer} from "../Footer";
              <option></option>
              <option>Farming</option>
              <option>Information Technology</option>
-
            </Input>
       </div>
       </div>
