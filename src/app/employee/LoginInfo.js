@@ -82,7 +82,6 @@ export class LoginInfo extends React.Component{
                 </Link> :
                 <button class="btn btn-primary">INVITE</button>
           }
-
           </Form>
 
       </Col>

@@ -12,14 +12,67 @@ import {Header} from "../Header";
 import {Footer} from "../Footer";
 export class AttendanceSettings extends React.Component {
   constructor(props) {
-   super(props);
-
+   super();
+   this.state = {
+     shiftname:'',
+     starttime:'',
+     endtime:'',
+     description:'',
+     latetime:'',
+     overtime:'',
+     error1:false,
+     showError1:false
+   };
  }
 
+ handleShiftChange = (evt) => {
+   this.setState({
+     shiftname: evt.target.value,
+     showError1:true
+   });
+ }
+ handleStartChange = (evt) => {
+   this.setState({
+     starttime : evt.target.value
 
+    });
+ }
+ handleEndChange = (evt) => {
+   this.setState({
+     endtime : evt.target.value,
+     error1:true
+    });
+ }
+ handleDescriptionChange = (evt) => {
+   this.setState({
+     description: evt.target.value
+   });
+ }
+ handleLateChange = (evt) => {
+   this.setState({
+     latetime: evt.target.value,
+     showError1:true
+   });
+ }
+ handleOverChange = (evt) => {
+   this.setState({
+     overtime : evt.target.value
+
+    });
+ }
   render() {
 
+
+    const {shiftname,starttime,endtime,description,latetime,overtime} = this.state;
+    var re1 = new RegExp("^([a-zA-Z]{2,25}(?: [a-zA-Z]+){0,2})$");
+
+    const isEnabled =
+    re1.test(shiftname)&&
+    description.length>0;
+
     return(
+
+
       <div>
       <Header/>
              <div className={displayContainer}>
@@ -32,31 +85,37 @@ export class AttendanceSettings extends React.Component {
             <div class="form-row">
             <div class="col-md-10 mb-3">
                 <label className={labelStyle1}>Shift Name</label>
-        <Input type="text" className={inputstyle} placeholder="" pattern="[a-zA-Z]{5,25}" required />
+        <Input type="text" className={inputstyle} placeholder="" value={this.state.shiftname}
+        onChange={this.handleShiftChange} pattern="[a-zA-Z]{5,25}" title="name must be letters only" required />
                 </div>
                 </div>
               <div class="form-row">
               <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Work Start Time</label>
-         <Input className={inputstyle} type="date" name="text"  required  />
+         <Input className={inputstyle} type="date" name="text"
+          value={this.state.starttime} onChange={this.handleStartChange} required  />
              </div>
              <div class="col-md-5 mb-3">
              <label className={labelStyle1}>Work End Time</label>
-           <Input className={inputstyle} type="date" name="text"  required  />
+           <Input className={inputstyle} type="date" name="text"
+           value={this.state.endtime} onChange={this.handleEndChange} required  />
             </div>
             </div>
               <FormGroup>
                    <Label className={labelStyle1}>Description</Label>
-                   <Input className={inputstyletextarea} type="textarea" name="text" pattern="[a-zA-Z]{5,25}" required  />
+                   <Input className={inputstyletextarea} type="textarea" name="text" pattern="[a-zA-Z]{5,25}"
+                   value={this.state.description} onChange={this.handleDescriptionChange} required  />
                  </FormGroup>
                  <div class="form-row">
                  <div class="col-md-5 mb-3">
                  <label className={labelStyle1}>Late Mark After Time</label>
-             <Input className={inputstyle} type="date" name="text"  required  />
+             <Input className={inputstyle} type="date" name="text"
+             value={this.state.latetime} onChange={this.handleLateChange} required  />
                 </div>
                 <div class="col-md-5 mb-3">
                  <label className={labelStyle1}>Over Time</label>
-                 <Input type="select" name="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" required>
+                 <Input type="select" name="select" className={inputstyle} pattern="[a-zA-Z]{5,25}"
+                  value={this.state.overtime} onChange={this.handleOverChange}   required>
                  <option></option>
                       <option>Enable</option>
                       <option>Disable</option>
@@ -83,6 +142,9 @@ export class AttendanceSettings extends React.Component {
             </div>
             </div>
             </Row>
+            {isEnabled ? <Link to="/AddLeave"> <button  class="btn btn-primary">SAVE</button> </Link> :
+            <button class="btn btn-primary">SAVE</button>
+              }
                  </Form>
                  </Col>
                  <Col xs="2">
@@ -96,26 +158,7 @@ export class AttendanceSettings extends React.Component {
 
                     </Col>
                  </Row>
-<p style={{marginTop:'3vw'}}>
-              <Link to="/AddLeave">
-              <button className="btn btn-outline-warning">
-              Save</button></Link>
 
-              <Link to="/AddLeave"  id={skipstyle}>Skip</Link>
-              <span className={floatRight} style={{position:'relative',top:'0.85vw'}}>
-
-
-              <Link to="/CompanyDetails" className={hyperLinkEmployee}>
-              <button type="button" class="btn btn-light">
-              <Icon icon={arrowLeft2} className={arrowIcon} size={14} />Prev </button>
-                </Link>
-
-
-              <Link to="/AddLeave" className={hyperLinkEmployee} >
-              <button type="button" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIcon} /></button>
-              </Link>
-                 </span>
-                 </p>
 
              </div>
              <Footer/>

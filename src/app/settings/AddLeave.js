@@ -13,7 +13,68 @@ import {Header} from "../Header";
 import {Footer} from "../Footer";
 
 export class AddLeave extends React.Component{
+constructor(props){
+  super();
+  this.state = {
+    leavename:'',
+    totalcount:'',
+    maxleave:'',
+    description:'',
+    probation:'',
+    halfday:'',
+    error1:false,
+    showError1:false
+  };
+}
+
+handleLeaveChange = (evt) => {
+  this.setState({
+    leavename: evt.target.value,
+    showError1:true
+  });
+}
+handleTotalChange = (evt) => {
+  this.setState({
+    totalcount : evt.target.value
+
+   });
+}
+handleMaxleaveChange = (evt) => {
+  this.setState({
+    maxleave : evt.target.value,
+    error1:true
+   });
+}
+handleDescriptionChange = (evt) => {
+  this.setState({
+    description: evt.target.value
+  });
+}
+handleProbationChange = (evt) => {
+  this.setState({
+    probation: evt.target.value,
+  });
+}
+handleHalfdayChange = (evt) => {
+  this.setState({
+  halfday : evt.target.value
+
+   });
+}
+
   render() {
+
+    const {leavename,totalcount,maxleave,description,probation,halfday} = this.state;
+    var re1 = new RegExp("^([a-zA-Z]{2,25}(?: [a-zA-Z]+){0,2})$");
+
+    const isEnabled =
+    re1.test(leavename)&&
+    description.length>0&&
+    totalcount.length>0&&
+    maxleave.length>0&&
+    probation.length>0&&
+    halfday.length>0;
+
 
     return(
       <div>
@@ -30,30 +91,35 @@ export class AddLeave extends React.Component{
        <div class="col-md-10 mb-3">
 
          <label className={labelStyle1}>Leave Name</label>
-           <Input type="text"  className={inputstyle} placeholder="" pattern="[a-zA-Z]{5,25}" required/>
+           <Input type="text"  className={inputstyle} placeholder="" pattern="[a-zA-Z]{5,25}"
+           value={this.state.leavename} onChange={this.handleLeaveChange} title="Leave Name Should be letters Only"required/>
          </div>
          </div>
 
        <div class="form-row">
          <div class="col-md-5 mb-3">
            <label className={labelStyle1}>Total Count</label>
-            <Input type="text"  className={inputstyle} placeholder="" pattern="[0-9]{1,25}" required />
+            <Input type="text"  className={inputstyle} placeholder="" pattern="[0-9]{1,25}"
+            value={this.state.totalcount} onChange={this.handleTotalChange}  title="use numbers only" required />
 
          </div>
          <div class="col-md-5 mb-3">
            <label className={labelStyle1}>Maximum Leaves Per Month</label>
-          <Input type="text"  className={inputstyle} placeholder="" pattern="[0-9]{2,25}" required />
+          <Input type="text"  className={inputstyle} placeholder="" pattern="[0-9]{2,25}"
+          value={this.state.maxleave} onChange={this.handleMaxleaveChange}  title="use numbers only" required />
 
          </div>
          </div>
        <FormGroup>
             <Label className={labelStyle1}>Description</Label>
-            <Input className={inputstyletextarea} type="textarea" name="text" pattern="[a-zA-Z0-9]{5,25}" required/>
+            <Input className={inputstyletextarea} type="textarea" name="text" pattern="[a-zA-Z0-9]{5,25}"
+            value={this.state.description} onChange={this.handleDescriptionChange} required/>
           </FormGroup>
            <div class="form-row">
            <div class="col-md-5 mb-3">
            <label className={labelStyle1}>In Probation</label>
-           <Input type="select" name="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" required>
+           <Input type="select" name="select" className={inputstyle} pattern="[a-zA-Z]{5,25}"
+           value={this.state.probation} onChange={this.handleProbationChange} required>
            <option></option>
        <option>Yes</option>
        <option>No</option>
@@ -62,7 +128,8 @@ export class AddLeave extends React.Component{
            </div>
 <div class="col-md-5 mb-3">
 <label className={labelStyle1}>Half Day</label>
-<Input type="select" name="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" required>
+<Input type="select" name="select" className={inputstyle} pattern="[a-zA-Z]{5,25}"
+value={this.state.halfday} onChange={this.handleHalfdayChange} required>
        <option></option>
        <option>Approved</option>
        <option>Rejected</option>
@@ -87,6 +154,9 @@ export class AddLeave extends React.Component{
    </div>
    </div>
       </Row>
+      {isEnabled ? <Link to="/AddComponent"> <button  class="btn btn-primary">SAVE</button> </Link> :
+      <button class="btn btn-primary">SAVE</button>
+        }
           </Form>
           </Col>
           <Col>
@@ -99,27 +169,8 @@ export class AddLeave extends React.Component{
           </div>
           </Col>
           </Row>
-<p style={{marginTop:'3vw'}}>
-       <Link to="/AddComponent">
-       <button className="btn btn-outline-warning" id={savebtn}>
-       Save</button></Link>
-       <Link to="/AddComponent"  id={skipstyle}>
-      Skip
-      </Link>
-
-      <span className={floatRight} style={{position:'relative',top:'0.85vw'}}>
 
 
-      <Link to="/AttendanceSettings" className={hyperLinkEmployee}>
-      <button type="button" class="btn btn-light">
-      <Icon icon={arrowLeft2} className={arrowIcon} size={14} />Prev </button>
-        </Link>
-
-      <Link to="/AddComponent" className={hyperLinkEmployee} >
-      <button type="button" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIcon} /></button>
-      </Link>
-         </span>
-       </p>
       </div>
       <Footer/>
       </div>

@@ -26,3 +26,4 @@ disablefunc(){
     return <div></div>;
   }
 }
+<a href={"mailto:" + this.state.email} >email</a>
