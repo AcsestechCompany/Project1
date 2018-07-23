@@ -165,7 +165,7 @@ import {Footer} from "../Footer";
         <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Organization Name</label>
-          <Input type="text"  className={inputstyle} placeholder="" placeholder="Company Nmae" pattern="[a-z]{5,25}"  title="Name must be letters only" value={this.state.orgname} onChange={this.handleOrganizationnameChange} required />
+          <Input type="text"  className={inputstyle} placeholder="" placeholder="Company Name" pattern="[a-z]{5,25}"  title="Name must be letters only" value={this.state.orgname} onChange={this.handleOrganizationnameChange} required />
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Website URL</label>
@@ -183,7 +183,6 @@ import {Footer} from "../Footer";
              <option></option>
              <option>Farming</option>
              <option>Information Technology</option>
-
            </Input>
       </div>
       </div>

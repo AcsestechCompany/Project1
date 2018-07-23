@@ -8,7 +8,6 @@ export class Test extends React.Component{
     return(
       <div>
       <Header/>
-
       <div className={styles.displayContainer}>
       Test
       </div>
