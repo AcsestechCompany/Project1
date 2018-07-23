@@ -34,7 +34,6 @@ export class AttendanceSettings extends React.Component {
  handleStartChange = (evt) => {
    this.setState({
      starttime : evt.target.value
-
     });
  }
  handleEndChange = (evt) => {
@@ -57,22 +56,20 @@ export class AttendanceSettings extends React.Component {
  handleOverChange = (evt) => {
    this.setState({
      overtime : evt.target.value
-
     });
  }
   render() {
-
 
     const {shiftname,starttime,endtime,description,latetime,overtime} = this.state;
     var re1 = new RegExp("^([a-zA-Z]{2,25}(?: [a-zA-Z]+){0,2})$");
 
     const isEnabled =
     re1.test(shiftname)&&
+    starttime.length>0 &&
+    endtime.length>0 &&
     description.length>0;
 
     return(
-
-
       <div>
       <Header/>
              <div className={displayContainer}>

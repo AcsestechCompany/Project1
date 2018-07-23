@@ -133,7 +133,6 @@ value={this.state.halfday} onChange={this.handleHalfdayChange} required>
        <option></option>
        <option>Approved</option>
        <option>Rejected</option>
-
      </Input>
 </div>
       </div>
@@ -169,8 +168,6 @@ value={this.state.halfday} onChange={this.handleHalfdayChange} required>
           </div>
           </Col>
           </Row>
-
-
       </div>
       <Footer/>
       </div>
