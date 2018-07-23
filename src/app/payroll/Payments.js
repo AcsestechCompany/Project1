@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../Layout.css";
 import {Header} from "../Header";
 import {Footer} from "../Footer";
+import { ic_edit,ic_delete } from 'react-icons-kit/md/';
 
 const people = [
   { id: 1,
@@ -11,7 +12,12 @@ const people = [
     ctc:100000,
     effectivedate:'09/05/2018',
     status:'Active',
-    action: 'Edit/Delete'
+    action:     action:    <div>
+             <button className={styles.icon}>
+             <Icon icon={ic_edit}/></button>
+              <button className={styles.icon}>
+            <Icon icon={ic_delete} /></button>
+            </div>
   },
   { id: 2,
     empid:'E123',
@@ -20,7 +26,12 @@ const people = [
     ctc:100000,
     effectivedate:'09/05/2018',
     status:'Active',
-    action: 'Edit/Delete'
+    action:     action:    <div>
+             <button className={styles.icon}>
+             <Icon icon={ic_edit}/></button>
+              <button className={styles.icon}>
+            <Icon icon={ic_delete} /></button>
+            </div>
   },
   { id: 3,
     empid:'E123',
@@ -29,7 +40,12 @@ const people = [
     ctc:100000,
     effectivedate:'09/05/2018',
     status:'Active',
-    action: 'Edit/Delete'
+    action:     action:    <div>
+             <button className={styles.icon}>
+             <Icon icon={ic_edit}/></button>
+              <button className={styles.icon}>
+            <Icon icon={ic_delete} /></button>
+            </div>
   }
 
 ]

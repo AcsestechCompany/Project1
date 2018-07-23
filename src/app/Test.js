@@ -9,7 +9,7 @@ export class Test extends React.Component{
       <div>
       <Header/>
       <div className={styles.displayContainer}>
-      Test
+       Test
       </div>
       <Footer/>
       </div>
