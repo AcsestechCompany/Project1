@@ -14,7 +14,6 @@ export class Announcement extends React.Component{
        <Card body  className={cardStyle1}>
 
           <CardHeaderAnnounce  />
-
           <AnnouncementCard2 title={"Thursday Concession Day Ticket"}
           text={"Allows admission on Thursday 12 July to students (with a valid student card), children 14 to 17 and customers 60 and over..."} time={"1 Hour ago"}/>
           <AnnouncementCard2 />

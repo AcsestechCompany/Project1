@@ -47,7 +47,6 @@ import { angleLeft,angleRight } from 'react-icons-kit/fa';
                </div>
              </div>
              <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-
                   <Icon icon={angleLeft} id={holidaysLeft} size={50} />
                <span class="sr-only">Previous</span>
              </a>
@@ -56,7 +55,6 @@ import { angleLeft,angleRight } from 'react-icons-kit/fa';
              </a>
            </div>
            </Card>
-
            </Col>
      );
    }

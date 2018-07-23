@@ -1,51 +1,92 @@
 import React from "react";
-import {displayContainer,orange,exampletable} from "../Layout.css";
+import styles from "../Layout.css";
 import {hrStyle,pageHeading} from "../Layout.css";
 import Icon from 'react-icons-kit';
-import { ic_create,ic_delete  } from 'react-icons-kit/md';
+import { ic_edit,ic_delete  } from 'react-icons-kit/md';
 import {Header} from "../Header";
 import {Footer} from "../Footer";
 import {labelStylepopup,savebtn1,btnstyle} from "../Layout.css";
 import {inputstyle,modalbutton,labelStyle1,labelStyle2} from "../admin/LayoutAdmin.css";
-import styles from "../Layout.css";
+
+const announcements = [
+  { id: 1,
+    announcementtitle:'Thursday Concession Day Ticket',
+    desc:'Allows admission on Thursday 12 July',
+    date:'20/05/18',
+    action:    <div>
+         <button className={styles.icon}>
+         <Icon icon={ic_edit}/></button>
+          <button className={styles.icon}>
+        <Icon icon={ic_delete} /></button>
+        </div>
+  },
+  { id: 2,
+    announcementtitle:'Demo of the product',
+    desc:'Details of the Product development',
+    date:'03/06/18',
+    action:    <div>
+         <button className={styles.icon}>
+         <Icon icon={ic_edit}/></button>
+          <button className={styles.icon}>
+        <Icon icon={ic_delete} /></button>
+        </div>
+  }
+]
+function searchingFor(term){
+  return function(x){
+    return x.announcementtitle.toLowerCase().includes(term.toLowerCase()) || x.date.toLowerCase().includes(term.toLowerCase()) ;
+  }
+}
 export class AnnouncementList extends React.Component{
+  constructor(props){
+    super(props)
+      this.state = {
+        announcements: announcements,
+        term:''
+      }
+      this.searchHandler = this.searchHandler.bind(this)
+  }
+  searchHandler(event){
+    this.setState({
+      term: event.target.value
+    })
+  }
   render(){
     return(
       <div>
       <Header/>
-      <div className={displayContainer}>
-      <p><span className={pageHeading}>Announcements</span></p>
-      <hr className={hrStyle}/>
-      <table class="table table-bordered table-responsive-md" id={exampletable}>
-      <thead className={orange}>
-      <tr>
-      <th>Announcemnt Title</th>
+      <div className={styles.displayContainer}>
+  <p className={styles.pageHeading}>Claim List</p>
+  <hr className={styles.hrStyle}/>
+      <form>
+      <span className={styles.floatRight1}>
+      <input type="search"
+  onChange={this.searchHandler}
+       />
+       </span>
+      </form>
+      <table class="table table-bordered  table-responsive-md" id={styles.exampletable}>
+      <tr className={styles.orange}>
+      <th>Announcement Title</th>
       <th>Description</th>
       <th>Date</th>
-      <th>Actions</th>
+      <th> Actions </th>
       </tr>
-      </thead>
-      <tbody>
-      <tr>
-      <td>Thursday Concession Day Ticket</td>
-      <td>Allows admission on Thursday 12 July to students (with a valid student card), children 14 to 17 and customers 60 and over...</td>
-      <td>09/04/2018</td>
-      <td>
-          <Icon icon={ic_create} size={20}/>
-          <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={18} />
-      </td>
+  {
+  this.state.announcements.filter(searchingFor(this.state.term)).map(function(person){
+    return (
+      <tr  key={person.id}>
+              <td>{person.announcementtitle}</td>
+              <td>{person.desc}</td>
+              <td>{person.date}</td>
+              <td> {person.action} </td>
       </tr>
-      <tr>
-      <td>Thursday Concession Day Ticket</td>
-      <td>Allows admission on Thursday 12 July to students (with a valid student card), children 14 to 17 and customers 60 and over...</td>
-      <td>09/04/2018</td>
-      <td>
-      <Icon icon={ic_create} size={20}/>
-          <Icon icon={ic_delete} style={{marginLeft:'1vw'}} size={18} />
-</td>
-</tr>
-</tbody>
-</table>
+    )
+  })
+  }
+  </table>
+
+
 <span class="btn btn-link" data-toggle="modal" id={modalbutton} data-target="#exampleModalCenter" id={styles.modal}>
 Add Announcement
    </span>
@@ -53,7 +94,7 @@ Add Announcement
      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
        <div class="modal-content">
          <div class="modal-header">
-           <h5 class="modal-title" id="exampleModalLongTitle" className={orange}>Add Announcemnt</h5>
+           <h5 class="modal-title" id="exampleModalLongTitle" className={styles.orange}>Add Announcemnt</h5>
            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
              <span aria-hidden="true">&times;</span>
            </button>
