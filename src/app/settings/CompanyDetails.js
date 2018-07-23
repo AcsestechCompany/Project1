@@ -265,7 +265,7 @@ import {Footer} from "../Footer";
         </div>
         </div>
         {isEnabled ? <Link to="/AttendanceSettings"> <button  class="btn btn-primary">SAVE</button> </Link> :
-        <button class="btn btn-warning">SAVE</button>
+        <button class="btn btn-primary">SAVE</button>
           }
            </Form>
            </Col>

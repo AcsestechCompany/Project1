@@ -36,7 +36,6 @@ handleComponentChange = (evt) => {
 handleCalculationChange = (evt) => {
   this.setState({
     calcon : evt.target.value
-
    });
 }
 handleTaxableChange = (evt) => {
