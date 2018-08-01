@@ -29,7 +29,6 @@ export class CreatePassword extends React.Component{
   }
   onSubmit(){
     const { psw,confirmpsw  } = this.state;
-
     if(psw != confirmpsw){
       return false;
     }
@@ -59,19 +58,13 @@ export class CreatePassword extends React.Component{
   <div class="form-group">
       <Input type="password"  className={forminput} placeholder="Confirm" value={this.state.confirmpsw} onChange={this.handlepsw1} required />
   </div>
-  {isEnabled1 ? '' : <p> Password Mismatch</p>}
+  {isEnabled1 ? '' : <p style={{color:'red'}}> Password Mismatch</p>}
   {(isEnabled && isEnabled1) ?
     <Link to="/DemoPage"><Button outline className={submit}>Submit</Button>
     </Link>
-
     :
       <Button outline className={submit} >Submit</Button>
-
-
-
    }
-
-
 </form>
       </div>
       </div>

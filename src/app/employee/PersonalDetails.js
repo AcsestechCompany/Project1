@@ -225,7 +225,6 @@ export class PersonalDetails extends React.Component{
                 value={this.state.relationship}
                 onChange={this.handlerelationshipChange}
                 required />
-
                 </div>
                 <div class="col-md-5 mb-3">
                   <label className={styles1.labelStyle1}>Email ID</label>
