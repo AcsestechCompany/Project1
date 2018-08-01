@@ -1,11 +1,11 @@
 import React from "react";
 import {displayContainer,pageHeading,hrStyle} from "../Layout.css";
-import {
-  formStyle,inputStyle,labelStyle,buttonstyle} from "../settings/LayoutSettings.css";
+import {formStyle,inputStyle,labelStyle,buttonstyle} from "../settings/LayoutSettings.css";
 import {Form,FormGroup, Label, Input,Button} from "reactstrap";
 import {labelStyle1,inputstyle} from "../employee/LayoutEmployee.css";
 import {Header} from "../Header";
 import {Footer} from "../Footer";
+
 export class Profile extends React.Component{
   render() {
     return(
@@ -14,7 +14,7 @@ export class Profile extends React.Component{
   <div className={displayContainer}>
   <p className={pageHeading}>Profile Settings</p>
   <hr className={hrStyle}/>
-<Form className={formStyle}>
+      <Form className={formStyle}>
   <div class="form-row">
   <div class="col-md-5 mb-3">
   <label className={labelStyle1}>First Name</label>
@@ -29,8 +29,8 @@ export class Profile extends React.Component{
   <div class="col-md-10 mb-3">
     <label className={labelStyle1}>Designation</label>
     <input id={inputstyle} class="form-control" type="text" name=""  placeholder="" />
-</div>
-</div>
+  </div>
+  </div>
   <div class="form-row">
   <div class="col-md-5 mb-3">
   <label className={labelStyle1}>Location</label>
@@ -47,7 +47,7 @@ export class Profile extends React.Component{
     <input id={inputstyle} class="form-control" type="text" name=""  placeholder="" />
   </div>
   </div>
-  <Button className="btn btn-outline-warning">
+  <Button className="btn btn-primary">
   Save</Button>
   <p style={{marginTop:'1vw',fontWeight:'bold'}}>Change Password</p>
   <div class="form-row">
@@ -60,14 +60,13 @@ export class Profile extends React.Component{
   <input type="text" class="form-control" id={inputstyle}/>
   </div>
   </div>
-  <Button className="btn btn-outline-warning">
-  Save</Button>
-</Form>
-
+  <button className="btn btn-primary">
+  Save
+  </button>
+  </Form>
   </div>
   <Footer/>
   </div>
     );
-
   }
 }

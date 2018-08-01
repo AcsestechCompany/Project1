@@ -12,6 +12,22 @@
       <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"></link>
 
       <title>HRMS Application</title>
+      <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("user_mGkEw6AjgCqqf5Di5A6yS");
+
+       })();
+    </script>
+    <script type="text/javascript">
+ window.onload = function() {
+     document.getElementById('contactform').addEventListener('submit', function(event) {
+         event.preventDefault();
+
+            emailjs.sendForm('acsestech@gmail.com', 'inviting_employees', this);
+     });
+ }
+</script>
    </head>
    <body>
 

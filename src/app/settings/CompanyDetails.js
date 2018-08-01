@@ -137,10 +137,7 @@ import {Footer} from "../Footer";
     //   const tancheck = re6.test(tannumber);
     //   const tancirclecheck = re6.test(tancircle);
 
-
        const isEnabled =
-
-
             re1.test(webname)&&
               re2.test(orgname) &&
               re3.test(phoneno) &&
